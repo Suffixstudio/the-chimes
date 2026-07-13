@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light" />
+<meta name="description" content="The story of the 1887 Crescent Bath House in Lake Elsinore, from mineral-springs spa to National Register landmark. Guided tours by appointment, and how to support its preservation." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='700' font-size='21' fill='%23F3ECDD' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="business.business" />
+<meta property="og:title" content="History &amp; Tours" />
+<meta property="og:description" content="The story of the 1887 Crescent Bath House in Lake Elsinore, from mineral-springs spa to National Register landmark. Guided tours by appointment, and how to support its preservation." />
+<meta property="og:image" content="https://the-chimes.netlify.app/images/og/history-tours.jpg" />
+<meta property="og:url" content="https://the-chimes.netlify.app/history-tours.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="History &amp; Tours | Lake Elsinore" />
+<meta name="twitter:description" content="The story of the 1887 Crescent Bath House in Lake Elsinore, from mineral-springs spa to National Register landmark. Guided tours by appointment, and how to support its preservation." />
+<meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/history-tours.jpg" />
+<title>History &amp; Tours · The Chimes · Historic Crescent Bath House</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  "name": "The Chimes",
+  "alternateName": ["Crescent Bath House", "The Crescent House"],
+  "description": "The story of the 1887 Crescent Bath House in Lake Elsinore, from mineral-springs spa to National Register landmark. Guided tours by appointment, and how to support its preservation.",
+  "url": "https://the-chimes.netlify.app/history-tours.html",
+  "telephone": "+1-951-000-0000",
+  "address": {"@type":"PostalAddress","streetAddress":"201 W. Graham Avenue","addressLocality":"Lake Elsinore","addressRegion":"CA","postalCode":"92530","addressCountry":"US"},
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Indoor and outdoor event options","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Historic landmark","value":true},
+    {"@type":"LocationFeatureSpecification","name":"On-site parking","value":true}
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="interior.css" />
+<style>
+  /* the history timeline, only used on this page */
+  .tl{margin-top:3rem;border-left:2px solid var(--brass);padding-left:clamp(1.2rem,3vw,2.2rem);}
+  .tl-item{position:relative;padding-bottom:2.4rem;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:"";position:absolute;left:calc(-1 * clamp(1.2rem,3vw,2.2rem) - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--brass);}
+  .tl-year{display:block;font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-deep,#9A7B33);margin-bottom:.35rem;}
+  .tl-item h3{font-size:1.35rem;margin-bottom:.5rem;}
+  .tl-item p{color:#473c34;max-width:62ch;}
+
+  /* ---- only this page's own styling ---- */
+  :root{color-scheme: light;
+    --ink:#211A16;--forest:#2F4A3A;--forest-deep:#1E3227;--brass:#C29B4E;--brass-light:#D9BA77;--brass-deep:#9A7B33;
+    --parchment:#F3ECDD;--parchment-2:#ECE1CC;--cream-card:#FBF7EE;--smoke:#8A7B6A;--line:rgba(33,26,22,.14);
+    --accent:var(--forest); --accent-deep:var(--forest-deep);}
+  body{margin:0;background:#F3ECDD;border-top:4px solid var(--forest);color:#211A16;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--forest);display:inline-block;}
+  .section{padding:clamp(4.5rem,9vw,8rem) 0;}
+  .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
+  .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
+  .dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;white-space:nowrap;}
+  .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
+  .hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
+  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;background:#1E3227;}
+  .steps{background:var(--cream-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .quote-band{background:var(--parchment-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .charm img{width:100%;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
+  .final{background:linear-gradient(165deg,var(--forest),var(--forest-deep));color:#F1E6D3;text-align:center;position:relative;overflow:hidden;}
+  footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 0 2.4rem;}
+  .modal-head{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#F4E9D6;padding:1.8rem 2rem 1.6rem;position:relative;}
+  .charm img{cursor:zoom-in;}
+  @media(max-width:1024px){
+    .dropdown-menu a{padding:.72rem 1rem;}
+    .dd-toggle{width:100%;justify-content:space-between;}
+  }
+  @media(max-width:520px){
+    body{font-size:16px;}
+  }
+  @media (prefers-color-scheme: dark){
+    body{background:#F3ECDD !important;}
+    body{color:#211A16 !important;}
+    .dropdown-menu a{color:#4a3f36 !important;}
+    .dd-toggle{color:#4a3f36 !important;}
+    .quote-band{background:#ECE1CC !important;}
+    .final{background:#2F4A3A !important;color:#F1E6D3 !important;}
+    .hero{background:#2F4A3A !important;color:#F1E6D3 !important;}
+    footer{background:#1E3227 !important;}
+  }
+
+/* the archive postcard is wide, the wall of portraits is upright. Stack them and let
+   each keep its own shape rather than forcing both into one box. */
+.hist-pair{display:grid;gap:clamp(.8rem,2vw,1.2rem);}
+.hist-pair img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:4px;}
+@media (min-width:700px){ .hist-pair{grid-template-columns:1fr;} }
+
+/* the honeypot. Invisible to people. Bots fill it in and get dropped. */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+</style>
+</head>
+<body class="theme-forest">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <div class="has-dropdown">
+        <button class="dd-toggle" id="exploreToggle" aria-expanded="false">Explore <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <span class="dd-label">Events &amp; Rentals</span>
+          <a href="weddings.html">Weddings</a>
+          <a href="social-events.html">Social Events</a>
+          <a href="corporate-events.html">Corporate Events</a>
+          <a href="photo-film.html">Photo &amp; Film</a>
+          <span class="dd-label">Work</span>
+          <a href="workspace.html">Workspace &amp; Offices</a>
+          <a href="virtual-office.html">Virtual Office</a>
+          <span class="dd-label">Discover</span>
+          <a href="history-tours.html" aria-current="page">History &amp; Tours</a>
+          <a href="borsellino-travel.html">Borsellino Travel</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
+      <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
+      <button class="btn btn-primary nav-book" data-modal-open data-interest="tour">Get in touch</button>
+    </nav>
+    <div class="nav-mobile-controls">
+      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">ES</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">History &amp; Tours</span>
+        <h1>Step inside<br><em>1887.</em></h1>
+        <p class="lead">The Chimes began as the Crescent Bath House, a celebrated mineral-springs spa and one of the original buildings of Lake Elsinore. Come walk its halls, hear its stories, and help keep it standing for the next hundred years.</p>
+        <div class="hero-cta">
+          <button class="btn btn-brass" data-modal-open data-interest="tour">Book a tour</button>
+          <a href="#preserve" class="btn btn-ghost">Preserve a piece of history</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <figure class="hero-photo" style="margin:0;">
+          <img src="images/history-hero.jpg" alt="Vintage photograph of the Crescent Bath House in Lake Elsinore, showing its ornate Moorish arches and grand two-story veranda" />
+          <div class="hero-badge">The Crescent Bath House ·<br>Lake Elsinore</div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="The building at a glance">
+  <div class="container facts-row reveal">
+    <span class="fact">Built 1887</span>
+    <span class="fact">National Register, 1975</span>
+    <span class="fact">Tours by appointment</span>
+    <span class="fact">Group visits welcome</span>
+  </div>
+</section>
+
+<section class="quote-band">
+  <div class="container quote-inner reveal">
+    <p>Few buildings in this valley have lived as many lives as this one.</p>
+  </div>
+</section>
+
+<section class="section" id="history">
+  <div class="container">
+    <div class="reveal" style="max-width:52ch;">
+      <span class="eyebrow">Our History</span>
+      <h2 style="margin-top:.7rem;">The most storied address in the valley.</h2>
+      <p style="color:#473c34;max-width:58ch;margin-top:1rem;">Each era left its mark on these redwood walls, and that history is exactly what we protect as the building opens its next chapter.</p>
+    </div>
+
+    <div class="tl reveal">
+      <div class="tl-item">
+        <span class="tl-year">1887</span>
+        <h3>A famous mineral-springs spa</h3>
+        <p>Designed by Frank Ferris and funded by city founder Franklin Heald, the Moorish-style bath house offered ten sunken porcelain tubs, mud baths, and a mineral plunge, all fed by a hot sulfur spring that surfaced at 132°F. Guests travelled from across the country to soak in its waters, prized as a remedy for arthritis, rheumatism, and the aches of the age.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Early 1900s</span>
+        <h3>The social heart of town</h3>
+        <p>With its sunken plunge pool and grand halls, the bath house became a gathering place for social events and musical entertainment in the young resort city of Elsinore.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Mid-century</span>
+        <h3>A landmark that adapted</h3>
+        <p>As the town changed, so did the building. It served as a rooming house and then an interior-design studio, while its one-of-a-kind façade kept watch over downtown.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">1972 to 2002</span>
+        <h3>The name that stuck</h3>
+        <p>Owners Lory and Wilma Watts renamed it The Chimes and ran a beloved antique shop here for three decades. In 1975 the building was listed on the National Register of Historic Places.</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-year">Today</span>
+        <h3>Restored for what's next</h3>
+        <p>Preserved on the outside and thoughtfully modernised within, The Chimes reopens as a home for gatherings, workspace, and celebrations, ready to write its next hundred years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="charm section" id="archive">
+  <div class="container charm">
+    <div class="reveal hist-pair">
+      <img src="images/history-archive.jpg" loading="lazy" decoding="async" alt="An early postcard view of the Crescent Bath House, Lake Elsinore, California" data-es-alt="Una postal antigua de la Crescent Bath House, Lake Elsinore, California" />
+      <img src="images/history-notables.jpg" loading="lazy" decoding="async" alt="Framed portraits of Lake Elsinore notables on a wall inside The Chimes" data-es-alt="Retratos enmarcados de personajes destacados de Lake Elsinore dentro de The Chimes" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">From the archive</span>
+      <h2 style="margin-top:.7rem;">The building people travelled to see.</h2>
+      <p>In its first decades, people came from across the country for the mineral springs. The Crescent Bath House was not a local curiosity, it was a destination, and postcards of it were carried home across the state.</p>
+      <p style="color:#473c34;">The façade you see on Graham Avenue today is the same one they photographed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tours" style="background:var(--parchment-2);">
+  <div class="container">
+    <div class="reveal" style="max-width:50ch;">
+      <span class="eyebrow">Guided Tours</span>
+      <h2 style="margin-top:.7rem;">See it for yourself.</h2>
+      <p style="color:#473c34;max-width:58ch;margin-top:1rem;">Step past the front doors on a guided walk-through of the 1887 landmark. Hear the stories behind the mineral springs, the grand halls, and the Moorish architecture, and see the details that photos never quite capture.</p>
+    </div>
+    <div class="why-grid" style="margin-top:2.6rem;">
+      <div class="why-item reveal"><div class="dot">01</div><div><h3>Walk the historic halls</h3><p>A guided walk through the original architecture, the grand rooms, and the details that survived.</p></div></div>
+      <div class="why-item reveal"><div class="dot">02</div><div><h3>Hear the whole story</h3><p>The full history of the Crescent Bath House and its many lives, from spa to antique shop to landmark.</p></div></div>
+      <div class="why-item reveal"><div class="dot">03</div><div><h3>For groups and the curious</h3><p>History lovers, school and community groups, and anyone who has driven past for years and wondered.</p></div></div>
+      <div class="why-item reveal"><div class="dot">04</div><div><h3>By appointment</h3><p>Private and small-group tours arranged around your schedule. Tell us a day and we'll make it work. <span class="todo">confirm whether tours are free, by donation, or a set price.</span></p></div></div>
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:2.8rem;">
+      <button class="btn btn-primary" data-modal-open data-interest="tour">Request a tour</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="preserve">
+  <div class="container">
+    <div class="reveal" style="max-width:52ch;">
+      <span class="eyebrow">Preservation</span>
+      <h2 style="margin-top:.7rem;">Preserve a piece of history.</h2>
+      <p style="color:#473c34;max-width:58ch;margin-top:1rem;">A landmark this old is never truly finished. Every gift helps maintain and restore the building so it stands for the generations that follow. <span class="todo">add the nonprofit's name, and confirm whether gifts are tax-deductible.</span></p>
+    </div>
+    <div class="setting" style="grid-template-columns:repeat(2,1fr);">
+      <article class="set-card reveal">
+        <span class="n">Make a gift</span>
+        <h3>Give to the restoration</h3>
+        <p>Any amount helps fund upkeep, repairs, and the careful restoration of the building's historic details. Give once, or become a recurring supporter.</p>
+        <p style="margin-top:1rem;"><span class="todo">choose a donation service (PayPal, Zeffy, Givebutter) so this button can take real gifts. Until then it sends an inquiry.</span></p>
+        <button class="btn btn-brass" data-modal-open data-interest="donate" style="margin-top:1rem;">Give to the restoration</button>
+      </article>
+      <article class="set-card reveal">
+        <span class="n">Give in kind</span>
+        <h3>Donate goods or services</h3>
+        <p>Materials, period furnishings, and professional trades all help preserve the building. If you would like to contribute something other than money, tell us what you have in mind and we'll follow up.</p>
+        <button class="btn btn-ghost" data-modal-open data-interest="inkind" style="margin-top:1rem;">Offer an in-kind gift</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="final section" id="contact-final">
+  <div class="container reveal">
+    <span class="eyebrow">Come see it</span>
+    <h2>The stories are better in person.</h2>
+    <p>Tell us a day that works and we'll walk you through the building ourselves.</p>
+    <button class="btn btn-brass" data-modal-open data-interest="tour">Book a tour</button>
+    <p class="phone">CALL · <a href="tel:+19510000000">(951) 000-0000</a> &nbsp;·&nbsp; <a href="mailto:hello@thechimes.example">hello@thechimes.example</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-inner">
+      <div class="foot-mark">
+        <div class="name">THE CHIMES</div>
+        <div class="tag">Preserving the past, building what's next.</div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>History &amp; Tours</h4>
+          <a href="#history">Our History</a>
+          <a href="#tours">Guided Tours</a>
+          <a href="#preserve">Preservation</a>
+        </div>
+        <div class="foot-col">
+          <h4>The Chimes</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#office">Office Suites</a>
+          <a href="index.html#events">Event Hall</a>
+          <a href="index.html#heritage">Our History</a>
+          <a href="workspace.html">Workspace &amp; Offices</a>
+          <a href="photo-film.html">Photo &amp; Film</a>
+          <a href="borsellino-travel.html">Borsellino Travel</a>
+        </div>
+        <div class="foot-col">
+          <h4>Follow</h4>
+          <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="foot-col">
+          <h4>Visit</h4>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+          <a href="tel:+19510000000">(951) 000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span>History · Events · Office Leasing</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BOOKING MODAL ===================== -->
+<div class="modal-overlay" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-head">
+      <span class="eyebrow">The Chimes</span>
+      <h3 id="modalTitle">Check your availability</h3>
+      <p>Tell us about your day and we'll be in touch within one to two business days.</p>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <!--
+        TO GO LIVE: add your Formspree action ("https://formspree.io/f/XXXXXXX") + method="POST" to the form
+        and delete the e.preventDefault() success block in the script, OR add Netlify's data-netlify="true".
+      -->
+      <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="chimes-inquiry" />
+            <input type="hidden" name="page" value="history-tours" />
+            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="field">
+          <label for="interest">This inquiry is about</label>
+          <select id="interest" name="interest">
+            <option value="tour">A guided tour</option>
+            <option value="group">A group or school visit</option>
+            <option value="donate">Giving to the restoration</option>
+            <option value="inkind">An in-kind donation</option>
+          </select>
+        </div>
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field-row">
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" /></div>
+          <div class="field"><label for="guests">Estimated guests</label><input id="guests" name="guests" type="number" min="1" placeholder="Optional" /></div>
+        </div>
+        <div class="field"><label for="message">Tell us about the day</label><textarea id="message" name="message" placeholder="Your vision, must-haves, or any questions."></textarea></div>
+        <button type="submit" class="btn btn-primary">Send inquiry</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="check">✓</div>
+        <h4>Thank you, we've got it.</h4>
+        <p>We'll reach out shortly to talk through your date and details.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LIGHTBOX ===================== -->
+
+<!-- ===================== STICKY CTA ===================== -->
+<div class="sticky-cta" id="stickyCta"><button class="btn btn-brass" data-modal-open data-interest="tour">Get in touch</button></div>
+
+
+
+<!-- The words for this page. app.js supplies the behavior. -->
+<script>
+  var MODAL_LABELS={
+    en:{tour:'Book a tour',group:'A group visit',donate:'Give to the restoration',inkind:'Offer an in-kind gift'},
+    es:{tour:'Agende un recorrido',group:'Una visita de grupo',donate:'Apoye la restauración',inkind:'Ofrezca una donación en especie'}
+  };
+  var MODAL_DEFAULT={en:'Book a tour',es:'Agende un recorrido'};
+
+  var I18N = [
+    [".wordmark .sub", "Histórica Crescent Bath House · Est. 1887"],
+    [".nav-book", "Contáctenos"],
+    ["#navLinks > a[href=\"index.html\"]", "Inicio"],
+    ["#exploreToggle", "Explorar <span class=\"caret\">▾</span>"],
+    [".dropdown-menu span.dd-label:nth-of-type(1)", "Eventos y Alquileres"],
+    [".dropdown-menu span.dd-label:nth-of-type(2)", "Trabajo"],
+    [".dropdown-menu span.dd-label:nth-of-type(3)", "Descubrir"],
+    [".dropdown-menu a[href=\"weddings.html\"]", "Bodas"],
+    [".dropdown-menu a[href=\"social-events.html\"]", "Eventos Sociales"],
+    [".dropdown-menu a[href=\"corporate-events.html\"]", "Eventos Corporativos"],
+    [".dropdown-menu a[href=\"photo-film.html\"]", "Fotografía y Cine"],
+    [".dropdown-menu a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
+    [".dropdown-menu a[href=\"virtual-office.html\"]", "Oficina Virtual"],
+    [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
+    [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
+    [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
+    [".hero-badge", "El Crescent Bath House ·<br>Lake Elsinore"],
+    [".hero .eyebrow", "Historia y Recorridos"],
+    [".hero h1", "Entre a<br><em>1887.</em>"],
+    [".hero .lead", "The Chimes empezó como el Crescent Bath House, un célebre balneario de aguas minerales y uno de los edificios originales de Lake Elsinore. Venga a caminar sus pasillos, escuche sus historias, y ayúdenos a mantenerlo en pie otros cien años."],
+    [".hero-cta .btn-brass", "Reserve una Visita"],
+    [".hero-cta .btn-ghost", "Preserve un pedazo de historia"],
+    [".facts .fact:nth-child(1)", "Construido en 1887"],
+    [".facts .fact:nth-child(2)", "Registro Nacional, 1975"],
+    [".facts .fact:nth-child(3)", "Recorridos con cita"],
+    [".facts .fact:nth-child(4)", "Visitas de grupo bienvenidas"],
+    [".quote-inner p", "Pocos edificios en este valle han vivido tantas vidas como este."],
+    ["#history .eyebrow", "Nuestra historia"],
+    ["#history h2", "La dirección con más historias del valle."],
+    ["#history > .container > .reveal > p", "Cada época dejó su huella en estos muros de secuoya, y esa historia es justo lo que protegemos mientras el edificio abre su próximo capítulo."],
+    [".tl .tl-item:nth-child(1) h3", "Un célebre balneario de aguas minerales"],
+    [".tl .tl-item:nth-child(1) p", "Diseñado por Frank Ferris y financiado por el fundador de la ciudad, Franklin Heald, el balneario de estilo morisco ofrecía diez tinas de porcelana hundidas, baños de lodo y una alberca mineral, todo alimentado por un manantial de azufre caliente que brotaba a 132 °F. Llegaban visitantes de todo el país a sumergirse en sus aguas, valoradas como remedio para la artritis, el reumatismo y los dolores de la época."],
+    [".tl .tl-item:nth-child(2) .tl-year", "Principios de 1900"],
+    [".tl .tl-item:nth-child(2) h3", "El corazón social del pueblo"],
+    [".tl .tl-item:nth-child(2) p", "Con su alberca hundida y sus grandes salones, el balneario se convirtió en punto de reunión para eventos sociales y entretenimiento musical en la joven ciudad turística de Elsinore."],
+    [".tl .tl-item:nth-child(3) .tl-year", "Mediados de siglo"],
+    [".tl .tl-item:nth-child(3) h3", "Un edificio que se adaptó"],
+    [".tl .tl-item:nth-child(3) p", "Conforme cambió el pueblo, cambió el edificio. Sirvió como casa de huéspedes y luego como estudio de diseño de interiores, mientras su fachada única seguía vigilando el centro."],
+    [".tl .tl-item:nth-child(4) .tl-year", "1972 a 2002"],
+    [".tl .tl-item:nth-child(4) h3", "El nombre que se quedó"],
+    [".tl .tl-item:nth-child(4) p", "Los dueños Lory y Wilma Watts lo rebautizaron The Chimes y operaron aquí una querida tienda de antigüedades durante tres décadas. En 1975 el edificio fue inscrito en el Registro Nacional de Lugares Históricos."],
+    [".tl .tl-item:nth-child(5) .tl-year", "Hoy"],
+    [".tl .tl-item:nth-child(5) h3", "Restaurado para lo que sigue"],
+    [".tl .tl-item:nth-child(5) p", "Conservado por fuera y cuidadosamente modernizado por dentro, The Chimes reabre como un hogar para reuniones, trabajo y celebraciones, listo para escribir sus próximos cien años."],
+    ["#archive .eyebrow", "Del archivo"],
+    ["#archive h2", "El edificio al que la gente viajaba a ver."],
+    ["#archive .reveal:nth-of-type(2) p:nth-of-type(1)", "En sus primeras décadas, la gente venía de todo el país por las aguas minerales. El Crescent Bath House no era una curiosidad local, era un destino, y sus postales se llevaban a casa por todo el estado."],
+    ["#archive .reveal:nth-of-type(2) p:nth-of-type(2)", "La fachada que ve hoy en Graham Avenue es la misma que ellos fotografiaron."],
+    ["#tours .eyebrow", "Recorridos guiados"],
+    ["#tours h2", "Compruébelo usted mismo."],
+    ["#tours > .container > .reveal > p", "Cruce las puertas principales en un recorrido guiado por este edificio histórico de 1887. Escuche las historias detrás de las aguas minerales, los grandes salones y la arquitectura morisca, y vea los detalles que las fotos nunca alcanzan a capturar."],
+    [".why-grid .why-item:nth-child(1) h3", "Camine por los pasillos históricos"],
+    [".why-grid .why-item:nth-child(1) p", "Un recorrido guiado por la arquitectura original, los grandes salones y los detalles que sobrevivieron."],
+    [".why-grid .why-item:nth-child(2) h3", "Escuche la historia completa"],
+    [".why-grid .why-item:nth-child(2) p", "Toda la historia del Crescent Bath House y sus muchas vidas, de balneario a tienda de antigüedades a edificio histórico."],
+    [".why-grid .why-item:nth-child(3) h3", "Para grupos y curiosos"],
+    [".why-grid .why-item:nth-child(3) p", "Amantes de la historia, grupos escolares y comunitarios, y cualquiera que haya pasado por enfrente durante años preguntándose qué hay adentro."],
+    [".why-grid .why-item:nth-child(4) h3", "Con cita"],
+    ["#tours .btn", "Solicite un recorrido"],
+    ["#preserve .eyebrow", "Preservación"],
+    ["#preserve h2", "Preserve un pedazo de historia."],
+    [".setting .set-card:nth-child(1) .n", "Haga un donativo"],
+    [".setting .set-card:nth-child(1) h3", "Apoye la restauración"],
+    [".setting .set-card:nth-child(1) p:nth-of-type(1)", "Cualquier cantidad ayuda a financiar el mantenimiento, las reparaciones y la cuidadosa restauración de los detalles históricos del edificio. Done una vez, o conviértase en donante recurrente."],
+    [".setting .set-card:nth-child(1) .btn", "Apoye la restauración"],
+    [".setting .set-card:nth-child(2) .n", "En especie"],
+    [".setting .set-card:nth-child(2) h3", "Done bienes o servicios"],
+    [".setting .set-card:nth-child(2) p", "Materiales, muebles de época y oficios profesionales también ayudan a preservar el edificio. Si quiere aportar algo que no sea dinero, cuéntenos qué tiene en mente y le contactaremos."],
+    [".setting .set-card:nth-child(2) .btn", "Ofrezca una donación en especie"],
+    ["#contact-final .eyebrow", "Venga a verlo"],
+    ["#contact-final h2", "Las historias son mejores en persona."],
+    ["#contact-final p:not(.phone)", "Díganos un día que le funcione y lo llevamos a recorrer el edificio nosotros mismos."],
+    ["#contact-final .btn-brass", "Reserve una Visita"],
+    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19510000000\">(951) 000-0000</a> &nbsp;·&nbsp; <a href=\"mailto:hello@thechimes.example\">hello@thechimes.example</a>"],
+    [".foot-mark .tag", "Preservando el pasado, construyendo el futuro."],
+    [".foot-cols .foot-col:nth-of-type(1) h4", "Historia y Recorridos"],
+    [".foot-cols .foot-col:nth-of-type(3) h4", "Síganos"],
+    [".foot-cols a[href=\"#history\"]", "Nuestra historia"],
+    [".foot-cols a[href=\"#tours\"]", "Recorridos guiados"],
+    [".foot-cols a[href=\"#preserve\"]", "Preservación"],
+    [".foot-cols a[href=\"index.html\"]", "Inicio"],
+    [".foot-cols a[href=\"index.html#office\"]", "Suites de oficina"],
+    [".foot-cols a[href=\"index.html#events\"]", "Salón de eventos"],
+    [".foot-cols a[href=\"index.html#heritage\"]", "Historia"],
+    [".foot-cols a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
+    [".foot-cols a[href=\"photo-film.html\"]", "Fotografía y Cine"],
+    [".foot-cols a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
+    [".foot-cols .foot-col:nth-of-type(4) h4", "Visita"],
+    [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
+    [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(2)", "Historia · Eventos · Arrendamiento de oficinas"],
+    [".modal-head p", "Cuéntenos qué le interesa y le contactaremos en uno o dos días hábiles."],
+    ["label[for=\"interest\"]", "Esta consulta es sobre"],
+    ["#interest option[value=\"tour\"]", "Un recorrido guiado"],
+    ["#interest option[value=\"group\"]", "Una visita de grupo o escolar"],
+    ["#interest option[value=\"donate\"]", "Apoyar la restauración"],
+    ["#interest option[value=\"inkind\"]", "Una donación en especie"],
+    ["label[for=\"name\"]", "Nombre completo"],
+    ["label[for=\"email\"]", "Correo electrónico"],
+    ["label[for=\"phone\"]", "Teléfono"],
+    ["label[for=\"date\"]", "Fecha preferida"],
+    ["label[for=\"guests\"]", "Personas estimadas"],
+    ["label[for=\"message\"]", "Cuéntenos qué le interesa"],
+    ["#bookForm button[type=\"submit\"]", "Enviar consulta"],
+    ["#formSuccess h4", "Gracias, lo recibimos."],
+    ["#formSuccess p", "Le contactaremos pronto."],
+    ["#stickyCta .btn", "Contáctenos"]
+  ];
+
+  var I18N_ATTR = [
+    ["#archive img", "alt", "Una postal antigua del Crescent Bath House, Lake Elsinore, California"],
+    ["#guests", "placeholder", "Opcional"],
+    ["#message", "placeholder", "Qué le gustaría ver o preguntar."],
+  ];
+</script>
+<script src="app.js"></script>
+</body>
+</html>

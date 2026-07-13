@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workspace &amp; Offices · The Chimes · Historic Crescent Bath House</title>
+<meta name="description" content="Shared workspace, private offices, meeting rooms, and a virtual business address inside the 1887 Crescent Bath House in Lake Elsinore. Work somewhere with a story." />
+<meta property="og:title" content="Workspace &amp; Offices · The Chimes" />
+  <meta property="og:image" content="https://the-chimes.netlify.app/images/og/workspace.jpg" />
+<meta property="og:description" content="Coworking desks, private offices, meeting rooms, and virtual offices in a restored 1887 landmark." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23D9BA77' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="interior.css" />
+<style>
+/* ---- only this page's own styling. Everything shared lives in
+       styles.css and interior.css, which load above. ---- */
+:root{color-scheme:light;--ink:#211A16;--forest:#2F4A3A;--forest-deep:#1E3227;--brass:#C29B4E;--brass-light:#D9BA77;--parchment:#F3ECDD;--parchment-2:#ECE1CC;--cream-card:#FBF7EE;--smoke:#8A7B6A;--line:rgba(33,26,22,.14);--brass-deep:#9A7B33;}
+img{max-width:100%;}
+html{background:#F3ECDD;}
+body{margin:0;background:#F3ECDD;border-top:4px solid var(--forest);color:#211A16;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
+.section{padding:clamp(4rem,8vw,7rem) 0;}
+h1{color:var(--ink);}
+h2{color:var(--ink);}
+h3{margin:0;color:var(--ink);}
+h1{font-size:clamp(2.7rem,6.5vw,4.8rem);}
+h2{font-size:clamp(1.9rem,4vw,3rem);}
+h3{font-size:1.4rem;}
+p{margin:0;}
+a{color:inherit;}
+.eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--brass-deep);display:inline-flex;}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--forest);display:inline-block;}
+.btn{font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:.92rem;padding:.95rem 1.7rem;text-decoration:none;border:1px solid transparent;cursor:pointer;}
+.btn-primary{background:var(--forest);color:#F6EFE2;}
+.btn-primary:hover{background:var(--forest-deep);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink);}
+.btn-ghost:hover{background:var(--ink);color:#F4E9D6;}
+.btn-brass{background:var(--brass);color:#231a10;}
+.btn-brass:hover{background:var(--brass-light);}
+header.nav{background:rgba(243,236,221,.92);}
+.wordmark{color:var(--ink);}
+.nav-links>a{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+.dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+.nav-links>a:hover{color:var(--forest);}
+.dd-toggle:hover{color:var(--forest);}
+.dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
+.dropdown-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(6px);background:var(--cream-card);border:1px solid var(--line);box-shadow:0 20px 50px -20px rgba(33,26,22,.4);padding:1rem 1.1rem;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;}
+.has-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.has-dropdown.open .dropdown-menu{transform:translateX(-50%) translateY(0);}
+.dropdown-menu::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px;}
+.dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;}
+.dropdown-menu a:hover{background:var(--parchment-2);color:var(--forest);}
+.dropdown-menu a[aria-current="page"]{color:var(--forest);}
+.nav-call{text-decoration:none;font-size:.84rem;font-weight:600;color:var(--forest);}
+.nav-book{font-size:.85rem;padding:.6rem 1.2rem;}
+.nav-call-mobile{width:40px;height:40px;border:1px solid var(--forest);color:var(--forest);}
+.menu-btn{background:none;padding:.5rem .8rem;}
+.hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
+.hero::after{position:absolute;}
+.hero .eyebrow{color:var(--brass-light);}
+.hero .eyebrow::before{background:var(--brass-light);}
+.hero h1{color:#F7EEDB;}
+.hero .lead{margin:1.5rem 0 0;}
+.hero .btn-ghost{color:#F4E9D6;border-color:rgba(244,233,214,.5);}
+.hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;}
+.hero-badge{background:var(--brass);}
+.amenities{background:var(--cream-card);}
+.amenities .head{text-align:center;max-width:60ch;margin:0 auto 2.6rem;}
+.amenities .head .eyebrow{justify-content:center;}
+.chips{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(1.6rem,3vw,2.8rem);row-gap:0;}
+.chip{display:flex;align-items:center;gap:.8rem;padding:.82rem .1rem;border-top:1px solid var(--line);font-size:1rem;font-weight:500;letter-spacing:.005em;color:var(--ink);opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease,color .25s ease;}
+.chip.in{opacity:1;transform:none;}
+.chip:hover{color:var(--forest);}
+.chip .dot{width:6px;height:6px;background:var(--brass-deep);transform:rotate(45deg);border-radius:1px;flex:none;transition:background .25s ease;}
+.chip:hover .dot{background:var(--brass);}
+.spaces-intro{background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;padding:clamp(3.5rem,6.5vw,5.5rem) 0;}
+.spaces-intro .eyebrow{color:var(--brass-light);}
+.spaces-intro .eyebrow::before{background:var(--brass-light);}
+.spaces-intro h2{color:#F7EEDB;margin-top:.65rem;}
+.spaces-intro .lead{color:#F1E6D3;}
+.spaces-photos{padding:clamp(3rem,5.5vw,4.75rem) 0;}
+.spaces-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.2rem,2.5vw,1.8rem);}
+.space-card{background:var(--cream-card);border:1px solid var(--line);border-radius:5px;overflow:hidden;display:flex;flex-direction:column;transition:transform .28s ease,box-shadow .28s ease;}
+.space-card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -26px rgba(33,26,22,.4);}
+.space-media{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:zoom-in;}
+.space-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;display:block;}
+.space-card:hover .space-media img{transform:scale(1.06);}
+.space-media .zoom{position:absolute;top:10px;right:10px;background:rgba(30,50,39,.82);color:#F1E6D3;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .6rem;border-radius:2px;opacity:0;transition:opacity .25s;}
+.space-media:hover .zoom{opacity:1;}
+.space-body{padding:1.5rem 1.6rem 1.7rem;display:flex;flex-direction:column;flex:1;}
+.space-body .tag{font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-deep);}
+.space-body h3{font-size:1.6rem;margin:.5rem 0 .5rem;}
+.space-body p{font-size:.94rem;color:#4a3f36;margin-bottom:1.1rem;}
+.space-meta{font-size:.82rem;color:var(--smoke);margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem;}
+.space-meta b{color:var(--forest);font-weight:600;}
+.space-body .btn{align-self:flex-start;margin-top:auto;font-size:.85rem;padding:.7rem 1.3rem;}
+.space-card.novideo .space-media{background:linear-gradient(160deg,var(--forest),var(--forest-deep));display:flex;align-items:center;justify-content:center;cursor:default;}
+.space-card.novideo .space-media .vo-mark{font-family:"Cinzel",serif;color:var(--brass-light);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;text-align:center;}
+.space-card.novideo .space-media .vo-mark span{display:block;font-family:"Cormorant Garamond",serif;font-size:3.2rem;color:#F1E6D3;letter-spacing:0;margin-bottom:.3rem;text-transform:none;}
+.pricing{background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;}
+.pricing .head{max-width:60ch;}
+.pricing .head .eyebrow{color:var(--brass-light);}
+.pricing .head .eyebrow::before{background:var(--brass-light);}
+.pricing h2{color:#F7EEDB;}
+.pricing .head p{color:rgba(241,230,211,.82);margin-top:1.2rem;}
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.2rem;margin-top:2.6rem;}
+.price-card{background:rgba(255,255,255,.05);border:1px solid rgba(217,186,119,.28);border-radius:5px;padding:1.6rem 1.5rem;}
+.price-card h4{font-family:"Cinzel",serif;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-light);margin:0 0 .6rem;}
+.price-card .amt{font-family:"Cormorant Garamond",serif;font-size:1.9rem;color:#F7EEDB;line-height:1.1;}
+.price-card .amt small{display:block;font-family:"Hanken Grotesk",sans-serif;font-size:.78rem;color:rgba(241,230,211,.6);letter-spacing:.04em;margin-top:.4rem;text-transform:none;}
+.price-note{margin-top:2rem;font-size:.86rem;color:rgba(241,230,211,.7);max-width:70ch;}
+.price-note .flag{color:var(--brass-light);font-weight:600;}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.4rem);margin-top:2.6rem;}
+.trio-item .n{font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.18em;color:var(--brass);text-transform:uppercase;}
+.trio-item h3{font-size:1.55rem;margin:.5rem 0 .6rem;}
+.trio-item p{font-size:.94rem;color:#4a3f36;}
+.welcome-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;}
+.welcome-photo{margin:0;border:8px solid var(--cream-card);box-shadow:0 24px 50px -28px rgba(33,26,22,.45);}
+.welcome-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;}
+.contact{background:var(--cream-card);}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;}
+.contact-info .eyebrow{margin-bottom:1.2rem;}
+.contact-info h2{margin-bottom:1.2rem;}
+.info-row{display:flex;gap:.8rem;padding:.9rem 0;border-top:1px solid var(--line);font-size:.95rem;}
+.info-row:first-of-type{border-top:none;}
+.info-row .k{font-family:"Cinzel",serif;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-deep);min-width:100px;padding-top:.2rem;}
+.info-row a{color:var(--forest);font-weight:600;text-decoration:none;}
+.placeholder{color:var(--smoke);font-style:italic;}
+.contact-info{background:var(--parchment);border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:clamp(1.6rem,3vw,2.4rem);}
+form.inq{background:var(--parchment);border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:clamp(1.6rem,3vw,2.2rem);}
+.field{margin-bottom:1rem;}
+.field label{letter-spacing:.02em;color:#57493d;}
+.field input{padding:.7rem .8rem;border-radius:3px;background:#FBF7EE;font-family:inherit;}
+.field select{padding:.7rem .8rem;border-radius:3px;background:#FBF7EE;font-family:inherit;}
+.field textarea{padding:.7rem .8rem;border-radius:3px;background:#FBF7EE;font-family:inherit;}
+.field textarea{min-height:96px;}
+.field-row{gap:.8rem;}
+form.inq .btn{width:100%;text-align:center;margin-top:.3rem;}
+.form-success{padding:1.4rem 0 .4rem;}
+.form-success .check{background:var(--forest);}
+.turnkey-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(2rem,4vw,3.4rem);align-items:center;margin-top:2.6rem;}
+.turnkey-photo{margin:0;border:8px solid var(--parchment);box-shadow:0 24px 50px -28px rgba(33,26,22,.42);}
+.turnkey-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;}
+.turnkey-grid .chips{justify-content:flex-start;}
+.why{background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;}
+.why h2{color:#F7EEDB;}
+.why .eyebrow{color:var(--brass-light);}
+.why .eyebrow::before{background:var(--brass-light);}
+.why .trio-item .n{color:var(--brass-light);}
+.why .trio-item h3{color:#F7EEDB;}
+.why .trio-item p{color:rgba(241,230,211,.82);}
+footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 0 2.4rem;}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;padding-bottom:2.4rem;border-bottom:1px solid rgba(241,230,211,.14);}
+.foot-mark b{font-family:"Cinzel",serif;font-weight:700;font-size:1.25rem;letter-spacing:.14em;color:#F1E6D3;display:block;}
+.foot-mark .tag{color:rgba(241,230,211,.7);margin-top:.7rem;max-width:28ch;}
+.foot-col h4{font-size:.66rem;letter-spacing:.2em;}
+.foot-col a{color:rgba(241,230,211,.72);font-size:.9rem;margin-bottom:.5rem;}
+.foot-col a:hover{color:var(--brass-light);}
+.foot-base{padding-top:1.6rem;font-size:.78rem;color:rgba(241,230,211,.5);}
+.foot-legal a{color:var(--brass-light);text-decoration:none;}
+.foot-legal a:hover{text-decoration:underline;}
+.lightbox{background:rgba(20,14,10,.9);transition:opacity .25s;}
+.lightbox img{max-width:92vw;border-radius:3px;}
+.lightbox .lb-close{position:absolute;top:1.2rem;right:1.4rem;background:rgba(255,255,255,.14);border:none;color:#F4E9D6;width:44px;height:44px;border-radius:50%;font-size:1.3rem;cursor:pointer;}
+.lightbox .lb-cap{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;color:rgba(241,230,211,.85);font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;}
+.sticky-cta .btn{box-shadow:0 14px 34px -12px rgba(30,50,39,.6);}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+.nav-lang{background:none;border:1px solid var(--line);border-radius:2px;padding:.42rem .72rem;font-family:inherit;font-size:.8rem;font-weight:600;color:var(--forest);cursor:pointer;letter-spacing:.02em;transition:background .2s ease,color .2s ease,border-color .2s ease;}
+.nav-lang:hover{background:var(--forest);color:#F1E6D3;border-color:var(--forest);}
+.nav-lang-mobile{background:none;border:1px solid var(--forest);border-radius:2px;min-width:40px;height:40px;padding:0 .55rem;font-family:inherit;font-size:.78rem;font-weight:700;color:var(--forest);cursor:pointer;letter-spacing:.03em;}
+.nav-lang-mobile:active{background:var(--forest);color:#F1E6D3;}
+@media (max-width:1024px){
+  .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--parchment);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:.5rem 0;display:none;box-shadow:0 20px 40px -20px rgba(33,26,22,.35);}
+  .nav-links.open{display:flex;}
+  .nav-links>a{width:100%;padding:.75rem clamp(1.2rem,4vw,3rem);}
+  .has-dropdown{width:100%;padding:.75rem clamp(1.2rem,4vw,3rem);}
+  .has-dropdown .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;padding:.2rem 0 .6rem 1rem;min-width:0;}
+  .has-dropdown .dropdown-menu::before{display:none;}
+  .dd-toggle{width:100%;justify-content:space-between;}
+  .nav-mobile-controls{display:flex;}
+  .nav-lang{display:none;}
+  .menu-btn{display:block;}
+  .hero-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:minmax(0,1fr);}
+  .welcome-grid{grid-template-columns:1fr;}
+  .turnkey-grid{grid-template-columns:1fr;}
+  .trio{grid-template-columns:1fr;}
+  .foot-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:680px){
+  .spaces-grid{grid-template-columns:1fr;}
+  .chips{grid-template-columns:1fr;}
+  .foot-top{grid-template-columns:1fr;}
+  .hero-badge{left:8px;bottom:-14px;}
+}
+@media (max-width:520px){
+  .field-row{grid-template-columns:1fr;}
+  body{font-size:16px;}
+  .wordmark .sub{font-size:.46rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1 !important;transform:none !important;transition:none;}
+  .chip{opacity:1 !important;transform:none !important;transition:none;}
+  .btn{transition:none;}
+  .space-card{transition:none;}
+  .space-media img{transition:none;}
+}
+@media (prefers-color-scheme: dark){
+  html{background:#F3ECDD !important;}
+  body{background:#F3ECDD !important;}
+  header.nav{background:#F3ECDD !important;}
+  body{color:#211A16 !important;}
+  .amenities{background:#FBF7EE !important;}
+  .contact{background:#FBF7EE !important;}
+  .space-card{background:#FBF7EE !important;}
+  form.inq{background:#FBF7EE !important;}
+  footer{background:#1E3227 !important;}
+  .hero{background:#1E3227 !important;}
+  .pricing{background:#1E3227 !important;}
+}
+
+/* the honeypot. Invisible to people. Bots fill it in and get dropped. */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+</style>
+</head>
+<body class="theme-forest">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub" data-es="Histórica Crescent Bath House · Est. 1887">Historic Crescent Bath House · Est. 1887</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary" data-es-aria="Principal">
+      <a href="index.html" data-es="Inicio">Home</a>
+      <div class="has-dropdown">
+        <button class="dd-toggle" id="exploreToggle" aria-expanded="false" data-es='Explorar <span class="caret">▾</span>'>Explore <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <span class="dd-label" data-es="Eventos y Alquileres">Events &amp; Rentals</span>
+          <a href="weddings.html" data-es="Bodas">Weddings</a>
+          <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
+          <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+          <a href="photo-film.html" data-es="Fotografía y Cine">Photo &amp; Film</a>
+          <span class="dd-label" data-es="Trabajo">Work</span>
+          <a href="workspace.html" aria-current="page" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+          <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+          <span class="dd-label" data-es="Descubrir">Discover</span>
+          <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+          <a href="borsellino-travel.html" data-es="Borsellino Travel">Borsellino Travel</a>
+          <a href="contact.html" data-es="Contacto">Contact</a>
+        </div>
+      </div>
+      <button class="nav-lang js-lang" type="button" data-label-es="Español" data-label-en="English" aria-label="Cambiar a español">Español</button>
+      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes" data-es-aria="Llamar a The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
+      <a class="btn btn-primary nav-book" href="#inquire" data-preset="Tour the space" data-es="Reserve una Visita">Book a Tour</a>
+    </nav>
+    <div class="nav-mobile-controls">
+      <button class="nav-lang-mobile js-lang" type="button" data-label-es="ES" data-label-en="EN" aria-label="Cambiar a español">ES</button>
+      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes" data-es-aria="Llamar a The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</span>
+        <h1 data-es='Trabaje en un lugar<br><em>con historia.</em>'>Work somewhere<br><em>with a story.</em></h1>
+        <p class="lead" data-es="Espacios de trabajo compartidos, oficinas privadas, salas de reuniones y una dirección comercial virtual, todo dentro de la restaurada Crescent Bath House de 1887. Cambie el anodino parque de oficinas por madera tallada, ventanales altos y una dirección emblemática en el corazón de Lake Elsinore.">Shared workspace, private offices, meeting rooms, and a virtual business address, all inside the restored 1887 Crescent Bath House. Trade the beige office park for carved wood, tall windows, and a landmark address in the heart of Lake Elsinore.</p>
+        <div class="hero-cta">
+          <a class="btn btn-brass" href="#spaces" data-es="Explore los espacios">Explore the spaces</a>
+          <a class="btn btn-ghost" href="#inquire" data-preset="Tour the space" data-es="Reserve una Visita">Book a tour</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <figure class="hero-photo" style="margin:0;">
+          <img src="images/workspace-1.jpg" alt="The historic stained-glass front entrance of The Chimes at 201 W. Graham Ave" data-es-alt="La histórica entrada principal con vitrales de The Chimes en 201 W. Graham Ave" />
+          <div class="hero-badge" data-es='Amueblado ·<br>Histórico · Flexible'>Furnished ·<br>Historic · Flexible</div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AMENITIES ===================== -->
+<section class="section amenities">
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow" data-es="Lo que incluye">What's included</span>
+      <h2 data-es="Llave en mano, con carácter.">Turnkey, with character.</h2>
+      <p style="color:#4a3f36;margin-top:1rem;" data-es="Todo lo que espera de un espacio de trabajo moderno, dentro de un edificio que ningún otro en el valle puede igualar.">Everything you'd expect from a modern workspace, set inside a building nothing else in the valley can match.</p>
+    </div>
+    <div class="turnkey-grid reveal">
+      <figure class="turnkey-photo"><img data-es-alt="El salón de The Chimes con un piano de cola, un candelabro de cristal y muebles victorianos de terciopelo" src="images/workspace-2.jpg" alt="The Chimes lounge with a grand piano, crystal chandelier, and Victorian velvet furniture" loading="lazy" /></figure>
+      <div class="chips" id="chips">
+      <span class="chip" data-es='<span class="dot"></span>Totalmente amueblado'><span class="dot"></span>Fully furnished</span>
+      <span class="chip" data-es='<span class="dot"></span>Wifi de alta velocidad'><span class="dot"></span>High-speed Wi-Fi</span>
+      <span class="chip" data-es='<span class="dot"></span>Café y refrigerios'><span class="dot"></span>Coffee &amp; refreshments</span>
+      <span class="chip" data-es='<span class="dot"></span>Salas de reuniones y conferencias'><span class="dot"></span>Meeting &amp; conference rooms</span>
+      <span class="chip" data-es='<span class="dot"></span>Dirección comercial para correspondencia'><span class="dot"></span>Business mailing address</span>
+      <span class="chip" data-es='<span class="dot"></span>Gestión de correo y paquetes'><span class="dot"></span>Mail &amp; package handling</span>
+      <span class="chip" data-es='<span class="dot"></span>Impresión'><span class="dot"></span>Printing</span>
+      <span class="chip" data-es='<span class="dot"></span>Entorno histórico en el centro'><span class="dot"></span>Historic downtown setting</span>
+      <span class="chip" data-es='<span class="dot"></span>Condiciones flexibles'><span class="dot"></span>Flexible terms</span>
+      <span class="chip" data-es='<span class="dot"></span>Luz natural'><span class="dot"></span>Natural light</span>
+      <span class="chip" data-es='<span class="dot"></span>Anfitrión en el lugar'><span class="dot"></span>On-site host</span>
+      <span class="chip" data-es='<span class="dot"></span>Espacio para eventos en el lugar'><span class="dot"></span>Event space on site</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPACES ===================== -->
+<section id="spaces">
+  <div class="spaces-intro">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow" data-es="Los Espacios">The Spaces</span>
+        <h2 data-es="Espacio para trabajar, reunirse y crecer.">Room to work, meet, and grow.</h2>
+        <p class="lead" style="max-width:56ch;margin-top:1.2rem;" data-es="Desde un escritorio por día hasta una oficina privada o una sala de juntas completa, elija el espacio que se ajuste a su día. Toque cualquier sala para verla de cerca.">From a drop-in desk to a private office or a full boardroom, choose the setting that fits the day. Tap any room to see it up close.</p>
+      </div>
+    </div>
+  </div>
+  <div class="spaces-photos">
+    <div class="container">
+    <div class="spaces-grid">
+
+      <div class="space-card reveal">
+        <div class="space-media" data-cap="Shared Workspace · The Chimes" data-es-cap="Espacio de Trabajo Compartido · The Chimes">
+          <img src="images/workspace-3.jpg" alt="Shared workspace with bookcases, a work table, and leather chairs" data-es-alt="Espacio de trabajo compartido con libreros, una mesa de trabajo y sillas de cuero" loading="lazy" />
+          <span class="zoom" data-es="Ver">View</span>
+        </div>
+        <div class="space-body">
+          <span class="tag" data-es="Espacio de Trabajo Compartido">Shared Workspace</span>
+          <h3 data-es="Escritorios de coworking">Coworking desks</h3>
+          <p data-es="Venga por el día o conviértalo en su lugar habitual. Salas cómodas con paneles de madera y la tranquilidad de un edificio histórico, en lugar del murmullo de una oficina abierta.">Drop in for the day or make it your regular spot. Comfortable, wood-panelled rooms with the quiet of a historic building instead of an open-plan hum.</p>
+          <div class="space-meta" data-es='<b>Por hora y membresía</b> · flexible'><b>Hourly &amp; membership</b> · flexible</div>
+          <a class="btn btn-primary" href="#inquire" data-preset="Shared workspace" data-es="Consultar">Inquire</a>
+        </div>
+      </div>
+
+      <div class="space-card reveal">
+        <div class="space-media" data-cap="Private Office · The Chimes" data-es-cap="Oficina Privada · The Chimes">
+          <img src="images/workspace-4.jpg" alt="Private office with an antique writing desk, lamp, and framed art" data-es-alt="Oficina privada con un escritorio antiguo, una lámpara y arte enmarcado" loading="lazy" />
+          <span class="zoom" data-es="Ver">View</span>
+        </div>
+        <div class="space-body">
+          <span class="tag" data-es="Oficina Privada">Private Office</span>
+          <h3 data-es="Su propia oficina">Your own room</h3>
+          <p data-es="Una oficina exclusiva y con cerradura, amueblada con piezas de época. Ideal para trabajo concentrado, llamadas con clientes o un pequeño despacho que busca una dirección distintiva.">A dedicated, lockable office furnished with period pieces. Ideal for focused work, client calls, or a small practice that wants a distinctive address.</p>
+          <div class="space-meta" data-es='<b>Mensual</b> · exclusiva'><b>Monthly</b> · dedicated</div>
+          <a class="btn btn-primary" href="#inquire" data-preset="Private office" data-es="Consultar">Inquire</a>
+        </div>
+      </div>
+
+      <div class="space-card reveal">
+        <div class="space-media" data-cap="Meeting Room · The Chimes" data-es-cap="Sala de Reuniones · The Chimes">
+          <img src="images/workspace-5.jpg" alt="Meeting room with leather armchairs, a chandelier, and stained glass windows" data-es-alt="Sala de reuniones con sillones de cuero, un candelabro y ventanas con vitrales" loading="lazy" />
+          <span class="zoom" data-es="Ver">View</span>
+        </div>
+        <div class="space-body">
+          <span class="tag" data-es="Sala de Reuniones">Meeting Room</span>
+          <h3 data-es="Reúnase con estilo">Gather in style</h3>
+          <p data-es="Una sala iluminada por un candelabro con asientos para un grupo, perfecta para talleres, presentaciones o una reunión con clientes que deja huella.">A chandelier-lit room with seating for a group, perfect for workshops, presentations, or a client meeting that leaves an impression.</p>
+          <div class="space-meta" data-es='<b>Por hora</b> · miembros y no miembros'><b>Hourly</b> · members &amp; non-members</div>
+          <a class="btn btn-primary" href="#inquire" data-preset="Meeting room" data-es="Consultar">Inquire</a>
+        </div>
+      </div>
+
+      <div class="space-card reveal">
+        <div class="space-media" data-cap="Boardroom · The Chimes" data-es-cap="Sala de Juntas · The Chimes">
+          <img src="images/workspace-6.jpg" alt="Boardroom with a long table, upholstered chairs, and a wall-mounted screen" data-es-alt="Sala de juntas con una mesa larga, sillas tapizadas y una pantalla montada en la pared" loading="lazy" />
+          <span class="zoom" data-es="Ver">View</span>
+        </div>
+        <div class="space-body">
+          <span class="tag" data-es="Sala de Juntas">Boardroom</span>
+          <h3 data-es="La gran mesa">The long table</h3>
+          <p data-es="Asientos para todo su equipo alrededor de una sola mesa, con una pantalla montada para presentaciones. Diseñada para juntas directivas, capacitaciones y sesiones de trabajo.">Seating for your whole team around one table, with a mounted screen for presentations. Built for board meetings, trainings, and working sessions.</p>
+          <div class="space-meta" data-es='<b>Por hora y medio día</b> · pantalla incluida'><b>Hourly &amp; half-day</b> · screen included</div>
+          <a class="btn btn-primary" href="#inquire" data-preset="Boardroom" data-es="Consultar">Inquire</a>
+        </div>
+      </div>
+
+      <div class="space-card novideo reveal">
+        <div class="space-media"><div class="vo-mark" data-es='<span>✦</span>Oficina Virtual'><span>✦</span>Virtual Office</div></div>
+        <div class="space-body">
+          <span class="tag" data-es="Oficina Virtual">Virtual Office</span>
+          <h3 data-es="Una dirección emblemática">A landmark address</h3>
+          <p data-es="Dé a su negocio un domicilio profesional en una dirección histórica de Lake Elsinore, con gestión de correo y acceso a salas de reuniones cuando necesite estar aquí en persona.">Give your business a professional home at a historic Lake Elsinore address, with mail handling and meeting-room access when you need to be here in person.</p>
+          <div class="space-meta" data-es='<b>Mensual</b> · dirección y correo'><b>Monthly</b> · address &amp; mail</div>
+          <a class="btn btn-primary" href="#inquire" data-preset="Virtual office" data-es="Consultar">Inquire</a>
+        </div>
+      </div>
+
+      <div class="space-card novideo reveal">
+        <div class="space-media" style="background:linear-gradient(160deg,var(--brass),#a9803b);"><div class="vo-mark" style="color:#2a2012;" data-es='<span style="color:#2a2012;">?</span>¿Aún no está seguro?'><span style="color:#2a2012;">?</span>Not sure yet</div></div>
+        <div class="space-body">
+          <span class="tag" data-es="Ayúdenme a elegir">Help me choose</span>
+          <h3 data-es="Cuéntenos su semana">Tell us your week</h3>
+          <p data-es="¿No está seguro de si necesita un escritorio, una oficina o solo una sala de vez en cuando? Cuéntenos cómo trabaja y le indicaremos la mejor opción.">Not sure whether you need a desk, an office, or just a room now and then? Tell us how you work and we'll point you to the right fit.</p>
+          <div class="space-meta" data-es='<b>Gratis</b> · sin compromiso'><b>Free</b> · no obligation</div>
+          <a class="btn btn-primary" href="#inquire" data-preset="Help me choose" data-es="Contáctenos">Get in touch</a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURE TRIO (GREEN) ===================== -->
+<section class="section why">
+  <div class="container">
+    <div class="reveal" style="max-width:56ch;">
+      <span class="eyebrow" data-es="Por qué aquí">Why here</span>
+      <h2 data-es="Una oficina con sentido de lugar.">An office with a sense of place.</h2>
+    </div>
+    <div class="trio">
+      <div class="trio-item reveal">
+        <span class="n" data-es="El Entorno">The Setting</span>
+        <h3 data-es="Un edificio que se recuerda">A building people remember</h3>
+        <p data-es="Recibir a un cliente en un monumento restaurado de 1887 comunica algo que una oficina corporativa no puede. La arquitectura hace parte de su presentación por usted.">Meeting a client at a restored 1887 landmark says something a corporate suite can't. The architecture does part of your pitch for you.</p>
+      </div>
+      <div class="trio-item reveal">
+        <span class="n" data-es="La Comunidad">The Community</span>
+        <h3 data-es="Parte del centro">Part of downtown</h3>
+        <p data-es="Está a unos pasos de la calle principal de Lake Elsinore y forma parte de un edificio que alberga eventos, visitas y vecinos, no una oficina aislada.">You're steps from Lake Elsinore's main street and part of a building that hosts events, tours, and neighbors, not an isolated office box.</p>
+      </div>
+      <div class="trio-item reveal">
+        <span class="n" data-es="La Flexibilidad">The Flexibility</span>
+        <h3 data-es="Solo lo que necesita">Only what you need</h3>
+        <p data-es="Reserve una hora, un día o una oficina exclusiva. Amplíe para una reunión grande y reduzca después, sin un contrato de arrendamiento largo que le pese.">Book an hour, a day, or a dedicated office. Scale up for a big meeting and back down after, without a long lease hanging over you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WELCOME / CHECK-IN ===================== -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="welcome-grid reveal">
+      <figure class="welcome-photo">
+        <img src="images/workspace-7.jpg" alt="The check-in desk at The Chimes with its ornate spindlework screen" data-es-alt="La recepción de The Chimes con su ornamentada celosía de madera" loading="lazy" />
+      </figure>
+      <div class="welcome-copy">
+        <span class="eyebrow" data-es="Cuando llegue">When you arrive</span>
+        <h2 data-es="Una cálida bienvenida en la puerta.">A warm welcome at the door.</h2>
+        <p style="color:#4a3f36;margin:1.2rem 0 1.4rem;" data-es="Regístrese en la recepción, bajo la celosía de madera original del edificio, y acomódese en un espacio que no se parece en nada a un vestíbulo corporativo. Hay alguien en el lugar para ayudarle a instalarse, mostrarle todo y responder sus preguntas.">Check in at the front desk beneath the building's original spindlework screen and settle into a space that feels nothing like a corporate lobby. Someone's on site to get you set up, show you around, and answer questions.</p>
+        <a class="btn btn-ghost" href="#inquire" data-preset="Tour the space" data-es="Agende una visita">Arrange a visit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT / INQUIRY ===================== -->
+<section class="section contact" id="inquire">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow" data-es="Contáctenos">Get in touch</span>
+        <h2 data-es="Venga a conocer el espacio.">Come see the space.</h2>
+        <p style="color:#4a3f36;margin-bottom:1.4rem;" data-es="Cuéntenos qué está buscando y le responderemos con disponibilidad, precios y un horario para recorrer el lugar. ¿Prefiere conversarlo? Comuníquese por teléfono o correo electrónico.">Tell us what you're looking for and we'll follow up with availability, pricing, and a time to walk through. Prefer to talk it over? Reach out by phone or email.</p>
+        <div class="info-row"><span class="k" data-es="Contacto">Contact</span><span data-es="Mercedes y Joe · The Chimes">Mercedes &amp; Joe · The Chimes</span></div>
+        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19510000000">(951) 000-0000</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
+        <div class="info-row"><span class="k" data-es="Correo electrónico">Email</span><span><a href="mailto:hello@thechimes.example">hello@thechimes.example</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
+        <div class="info-row"><span class="k" data-es="Visítenos">Visit</span><span><a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave, Lake Elsinore, CA</a></span></div>
+        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span class="placeholder" data-es="Horario de atención sin cita por confirmar">Walk-in hours to be confirmed</span></div>
+      </div>
+
+      <div class="reveal">
+        <form class="inq" id="inqForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="chimes-inquiry" />
+            <input type="hidden" name="page" value="workspace" />
+            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field">
+            <label for="interest" data-es="Me interesa">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option value="Shared workspace" data-es="Espacio de trabajo compartido">Shared workspace</option>
+              <option value="Private office" data-es="Oficina privada">Private office</option>
+              <option value="Meeting room" data-es="Sala de reuniones">Meeting room</option>
+              <option value="Boardroom" data-es="Sala de Juntas">Boardroom</option>
+              <option value="Virtual office" data-es="Oficina Virtual">Virtual office</option>
+              <option value="Tour the space" data-es="Recorrer el espacio">Tour the space</option>
+              <option value="Help me choose" data-es="Ayúdenme a elegir">Help me choose</option>
+              <option value="Something else" data-es="Otra cosa">Something else</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="name" data-es="Nombre completo">Full name</label><input id="name" name="name" type="text" autocomplete="name" /></div>
+            <div class="field"><label for="phone" data-es="Teléfono">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+          </div>
+          <div class="field"><label for="email" data-es="Correo electrónico">Email</label><input id="email" name="email" type="email" autocomplete="email" /></div>
+          <div class="field"><label for="company" data-es="Empresa (opcional)">Company (optional)</label><input id="company" name="company" type="text" /></div>
+          <div class="field"><label for="message" data-es="¿Algo más?">Anything else?</label><textarea id="message" name="message" placeholder="How you'd like to use the space, days you're considering, or questions." data-es-ph="Cómo le gustaría usar el espacio, los días que está considerando o sus preguntas."></textarea></div>
+          <button type="submit" class="btn btn-primary" data-es="Enviar consulta">Send inquiry</button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="check">✓</div>
+          <h3 style="font-size:1.5rem;" data-es="Gracias, hemos recibido su mensaje.">Thank you, we've got it.</h3>
+          <p style="color:#57493d;margin-top:.4rem;" data-es="Nos pondremos en contacto muy pronto con disponibilidad y precios.">We'll be in touch shortly with availability and pricing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-mark">
+        <b>THE CHIMES</b>
+        <p class="tag" data-es="Trabaje, reúnase y celebre en un pedazo de historia.">Work, meet, and gather in a piece of history.</p>
+      </div>
+      <div class="foot-col">
+        <h4 data-es="Trabajo">Work</h4>
+        <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+        <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+        <a href="#inquire" data-es="Solicite una cotización">Get a quote</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-es="Explorar">Explore</h4>
+        <a href="weddings.html" data-es="Bodas">Weddings</a>
+        <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+        <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-es="Visítenos">Visit</h4>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+        <a href="tel:+19510000000">(951) 000-0000</a>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span data-es="© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA">© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span class="foot-legal"><a href="privacy.html" data-es="Política de Privacidad">Privacy Policy</a> · <a href="terms.html" data-es="Términos y Condiciones">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener" data-es="Desarrollado por Suffix Studio">Powered by Suffix Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" data-es-aria="Visor de fotos">
+  <button class="lb-close" id="lbClose" aria-label="Close" data-es-aria="Cerrar">✕</button>
+  <img id="lbImg" alt="" />
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<!-- sticky cta -->
+<div class="sticky-cta" id="stickyCta"><a class="btn btn-brass" href="#inquire" data-preset="Tour the space" data-es="Reserve una Visita">Book a tour</a></div>
+
+<script>
+  /* just this page's own settings. app.js does the rest. */
+  var I18N_META = {
+    title: "Espacios de Trabajo y Oficinas · The Chimes · Histórica Crescent Bath House",
+    desc:  "Espacios de trabajo compartidos, oficinas privadas, salas de reuniones y una dirección comercial virtual dentro de la Crescent Bath House de 1887 en Lake Elsinore. Trabaje en un lugar con historia."
+  };
+</script>
+<script src="app.js"></script>
+</body>
+</html>

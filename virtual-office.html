@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light" />
+<meta name="description" content="A historic 1887 business address in downtown Lake Elsinore. Mail handling, meeting space, and a landmark address for your business, without the lease." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='700' font-size='21' fill='%23F3ECDD' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="business.business" />
+<meta property="og:title" content="Virtual Office" />
+<meta property="og:description" content="A historic 1887 business address in downtown Lake Elsinore. Mail handling, meeting space, and a landmark address for your business, without the lease." />
+<meta property="og:image" content="https://the-chimes.netlify.app/images/og/virtual-office.jpg" />
+<meta property="og:url" content="https://the-chimes.netlify.app/virtual-office.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Virtual Office | Lake Elsinore" />
+<meta name="twitter:description" content="A historic 1887 business address in downtown Lake Elsinore. Mail handling, meeting space, and a landmark address for your business, without the lease." />
+<meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/virtual-office.jpg" />
+<title>Virtual Office · The Chimes · Historic Crescent Bath House</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  "name": "The Chimes",
+  "alternateName": ["Crescent Bath House", "The Crescent House"],
+  "description": "A historic 1887 business address in downtown Lake Elsinore. Mail handling, meeting space, and a landmark address for your business, without the lease.",
+  "url": "https://the-chimes.netlify.app/virtual-office.html",
+  "telephone": "+1-951-000-0000",
+  "address": {"@type":"PostalAddress","streetAddress":"201 W. Graham Avenue","addressLocality":"Lake Elsinore","addressRegion":"CA","postalCode":"92530","addressCountry":"US"},
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Indoor and outdoor event options","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Historic landmark","value":true},
+    {"@type":"LocationFeatureSpecification","name":"On-site parking","value":true}
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="interior.css" />
+<style>
+  /* ---- only this page's own styling ---- */
+  :root{color-scheme: light;
+    --ink:#211A16;--forest:#2F4A3A;--forest-deep:#1E3227;--brass:#C29B4E;--brass-light:#D9BA77;--brass-deep:#9A7B33;
+    --parchment:#F3ECDD;--parchment-2:#ECE1CC;--cream-card:#FBF7EE;--smoke:#8A7B6A;--line:rgba(33,26,22,.14);
+    --accent:var(--forest); --accent-deep:var(--forest-deep);}
+  body{margin:0;background:#F3ECDD;border-top:4px solid var(--forest);color:#211A16;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--forest);display:inline-block;}
+  .section{padding:clamp(4.5rem,9vw,8rem) 0;}
+  .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
+  .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
+  .dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;white-space:nowrap;}
+  .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
+  .hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
+  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;background:#1E3227;}
+  .steps{background:var(--cream-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .quote-band{background:var(--parchment-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .charm img{width:100%;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
+  .final{background:linear-gradient(165deg,var(--forest),var(--forest-deep));color:#F1E6D3;text-align:center;position:relative;overflow:hidden;}
+  footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 0 2.4rem;}
+  .modal-head{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#F4E9D6;padding:1.8rem 2rem 1.6rem;position:relative;}
+  .charm img{cursor:zoom-in;}
+  @media(max-width:1024px){
+    .dropdown-menu a{padding:.72rem 1rem;}
+    .dd-toggle{width:100%;justify-content:space-between;}
+  }
+  @media(max-width:520px){
+    body{font-size:16px;}
+  }
+  @media (prefers-color-scheme: dark){
+    body{background:#F3ECDD !important;}
+    body{color:#211A16 !important;}
+    .dropdown-menu a{color:#4a3f36 !important;}
+    .dd-toggle{color:#4a3f36 !important;}
+    .quote-band{background:#ECE1CC !important;}
+    .final{background:#2F4A3A !important;color:#F1E6D3 !important;}
+    .hero{background:#2F4A3A !important;color:#F1E6D3 !important;}
+    footer{background:#1E3227 !important;}
+  }
+
+/* the honeypot. Invisible to people. Bots fill it in and get dropped. */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+</style>
+</head>
+<body class="theme-forest">
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <div class="has-dropdown">
+        <button class="dd-toggle" id="exploreToggle" aria-expanded="false">Explore <span class="caret">▾</span></button>
+        <div class="dropdown-menu">
+          <span class="dd-label">Events &amp; Rentals</span>
+          <a href="weddings.html">Weddings</a>
+          <a href="social-events.html">Social Events</a>
+          <a href="corporate-events.html">Corporate Events</a>
+          <a href="photo-film.html">Photo &amp; Film</a>
+          <span class="dd-label">Work</span>
+          <a href="workspace.html">Workspace &amp; Offices</a>
+          <a href="virtual-office.html" aria-current="page">Virtual Office</a>
+          <span class="dd-label">Discover</span>
+          <a href="history-tours.html">History &amp; Tours</a>
+          <a href="borsellino-travel.html">Borsellino Travel</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
+      <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
+      <button class="btn btn-primary nav-book" data-modal-open data-interest="virtual">Get in touch</button>
+    </nav>
+    <div class="nav-mobile-controls">
+      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">ES</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">Virtual Office at The Chimes</span>
+        <h1>A landmark address,<br><em>without the lease.</em></h1>
+        <p class="lead">Run your business from a historic 1887 address in the heart of downtown Lake Elsinore. Put The Chimes on your cards, your website, and your state filings, without paying for a room you only need twice a month.</p>
+        <div class="hero-cta">
+          <button class="btn btn-brass" data-modal-open data-interest="virtual">Ask about an address</button>
+          <a href="#included" class="btn btn-ghost">What's included</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <figure class="hero-photo" style="margin:0;">
+          <img data-es-alt="El pórtico de The Chimes en 201 W. Graham Avenue, la dirección que usted adquiere" src="images/virtual-hero.jpg" alt="The front porch of The Chimes at 201 W. Graham Avenue, the address you are buying" />
+          <div class="hero-badge">Est. 1887 ·<br>Business Address</div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Virtual office at a glance">
+  <div class="container facts-row reveal">
+    <span class="fact">Est. 1887</span>
+    <span class="fact">Real street address</span>
+    <span class="fact">Mail handling</span>
+    <span class="fact">Meeting space when you need it</span>
+  </div>
+</section>
+
+<section class="quote-band">
+  <div class="container quote-inner reveal">
+    <p>Your address should say something. This one says a great deal.</p>
+  </div>
+</section>
+
+<section class="section" id="included">
+  <div class="container">
+    <div class="reveal" style="max-width:50ch;">
+      <span class="eyebrow">What's included</span>
+      <h2 style="margin-top:.7rem;">Everything an office gives you, minus the office.</h2>
+      <p style="color:#473c34;max-width:56ch;margin-top:1rem;">A virtual office gives your business a real, physical address and a place to meet, without committing to a room you would leave empty most of the week.</p>
+    </div>
+    <div class="setting">
+      <article class="set-card reveal">
+        <span class="n">The address</span>
+        <h3>A real place, not a PO box</h3>
+        <p>Use 201 W. Graham Avenue on your business cards, your website, your Google listing, and your state filings. It is a street address in a landmark building, and it reads like one.</p>
+      </article>
+      <article class="set-card reveal">
+        <span class="n">Your mail</span>
+        <h3>Handled, not piled up</h3>
+        <p>Mail and packages received on your behalf, held safely until you collect them. <span class="todo">confirm whether you forward mail, scan it, or hold it for pickup only.</span></p>
+      </article>
+      <article class="set-card reveal">
+        <span class="n">A room when you need one</span>
+        <h3>Somewhere to actually meet</h3>
+        <p>Book the boardroom or a desk on the days a real room matters, a client pitch, a signing, a quarterly sit-down. <span class="todo">confirm how many meeting-room hours are included, if any.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="charm section" id="story">
+  <div class="container charm">
+    <div class="reveal">
+      <img src="images/virtual-mail.jpg" loading="lazy" decoding="async" alt="Where the mail is handled" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Since 1887</span>
+      <h2 style="margin-top:.7rem;">An address people already know.</h2>
+      <p>Built in 1887 as the Crescent Bath House and later listed on the National Register of Historic Places, The Chimes is one of Lake Elsinore's original buildings. Locals do not need directions to it. They grew up walking past it.</p>
+      <p style="color:#473c34;">For a business trying to look established in this valley, that is not a small thing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="whofor" style="background:var(--parchment-2);">
+  <div class="container" style="text-align:center;">
+    <div class="reveal" style="max-width:44ch;margin-inline:auto;">
+      <span class="eyebrow" style="justify-content:center;">Who it's for</span>
+      <h2 style="margin-top:.7rem;">Built for the business that isn't ready for a lease.</h2>
+    </div>
+    <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
+      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Consultants, contractors, agents, therapists, freelancers, and new LLCs that need a credible address today and a real office maybe next year. Start with the address. Grow into the building when you are ready.</p>
+      <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
+      <p style="font-size:1.02rem;"><span class="todo">add your monthly virtual office rate, and what a plan actually includes.</span></p>
+      <div style="margin-top:1.4rem;"><button class="btn btn-brass" data-modal-open data-interest="virtual">Ask about an address</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="whyus">
+  <div class="container">
+    <div class="reveal" style="max-width:50ch;">
+      <span class="eyebrow">Why here</span>
+      <h2 style="margin-top:.7rem;">An address with an actual building behind it.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="dot">01</div><div><h3>It's a real place</h3><p>Clients can look it up, drive past it, and walk in. That is a different thing entirely from a mailbox in a strip mall.</p></div></div>
+      <div class="why-item reveal"><div class="dot">02</div><div><h3>Grow into it</h3><p>Start with the address. Add a desk, then a private office, without ever changing your business address or reprinting a thing.</p></div></div>
+      <div class="why-item reveal"><div class="dot">03</div><div><h3>Downtown, and known</h3><p>In the heart of the historic district, walkable to lunch, with parking across the street for the days you come in.</p></div></div>
+      <div class="why-item reveal"><div class="dot">04</div><div><h3>One landlord, one call</h3><p>Everything runs through the same people who run the building. No call centre, no ticket number.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:44ch;margin-inline:auto;">
+      <span class="eyebrow" style="justify-content:center;">Good to know</span>
+      <h2 style="margin-top:.7rem;">Virtual office questions</h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I use this address for my LLC and my state filings?</button><div class="faq-a"><p>That is exactly what most of our virtual office members use it for. It is a real street address in a real building. <span class="todo">confirm whether the address can be used as a registered agent address, and whether that costs extra.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What happens to my mail?</button><div class="faq-a"><p>Mail and packages are received on your behalf and held for you. <span class="todo">confirm whether you forward, scan, or hold mail for pickup, and how often.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I meet clients here?</button><div class="faq-a"><p>Yes. Book the boardroom or a desk for the day. <span class="todo">confirm whether meeting-room hours are included in the monthly plan or booked separately.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What does it cost?</button><div class="faq-a"><p>Virtual office plans are billed monthly. <span class="todo">add your monthly rate and any setup fee.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I upgrade to a real office later?</button><div class="faq-a"><p>Yes, and your address never changes. Move from a virtual plan to a desk or a private suite in the same building. See <a href="workspace.html" style="color:var(--accent);font-weight:600;">Workspace &amp; Offices</a>.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="final section" id="contact-final">
+  <div class="container reveal">
+    <span class="eyebrow">Let's talk</span>
+    <h2>Put a landmark on your business card.</h2>
+    <p>Tell us a little about your business and we'll come back with what a plan here would look like.</p>
+    <button class="btn btn-brass" data-modal-open data-interest="virtual">Ask about an address</button>
+    <p class="phone">CALL · <a href="tel:+19510000000">(951) 000-0000</a> &nbsp;·&nbsp; <a href="mailto:hello@thechimes.example">hello@thechimes.example</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-inner">
+      <div class="foot-mark">
+        <div class="name">THE CHIMES</div>
+        <div class="tag">Preserving the past, building what's next.</div>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Virtual Office</h4>
+          <a href="#included">What's included</a>
+          <a href="#whofor">Who it's for</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h4>The Chimes</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#office">Office Suites</a>
+          <a href="index.html#events">Event Hall</a>
+          <a href="index.html#heritage">Our History</a>
+          <a href="workspace.html">Workspace &amp; Offices</a>
+          <a href="photo-film.html">Photo &amp; Film</a>
+          <a href="borsellino-travel.html">Borsellino Travel</a>
+        </div>
+        <div class="foot-col">
+          <h4>Follow</h4>
+          <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div class="foot-col">
+          <h4>Visit</h4>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+          <a href="tel:+19510000000">(951) 000-0000</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span>Virtual Office · Events · Office Leasing</span>
+      <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BOOKING MODAL ===================== -->
+<div class="modal-overlay" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-head">
+      <span class="eyebrow">The Chimes</span>
+      <h3 id="modalTitle">Check your availability</h3>
+      <p>Tell us about your day and we'll be in touch within one to two business days.</p>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <!--
+        TO GO LIVE: add your Formspree action ("https://formspree.io/f/XXXXXXX") + method="POST" to the form
+        and delete the e.preventDefault() success block in the script, OR add Netlify's data-netlify="true".
+      -->
+      <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="chimes-inquiry" />
+            <input type="hidden" name="page" value="virtual-office" />
+            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <div class="field">
+          <label for="interest">This inquiry is about</label>
+          <select id="interest" name="interest">
+            <option value="virtual">A virtual office address</option>
+            <option value="office">A desk or private office</option>
+            <option value="tour">A tour of the building</option>
+          </select>
+        </div>
+        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field-row">
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" /></div>
+          <div class="field"><label for="guests">Estimated guests</label><input id="guests" name="guests" type="number" min="1" placeholder="Optional" /></div>
+        </div>
+        <div class="field"><label for="message">Tell us about the day</label><textarea id="message" name="message" placeholder="Your vision, must-haves, or any questions."></textarea></div>
+        <button type="submit" class="btn btn-primary">Send inquiry</button>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="check">✓</div>
+        <h4>Thank you, we've got it.</h4>
+        <p>We'll reach out shortly to talk through your date and details.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LIGHTBOX ===================== -->
+
+<!-- ===================== STICKY CTA ===================== -->
+<div class="sticky-cta" id="stickyCta"><button class="btn btn-brass" data-modal-open data-interest="virtual">Get in touch</button></div>
+
+
+
+<!-- The words for this page. app.js supplies the behavior. -->
+<script>
+  var MODAL_LABELS={
+    en:{virtual:'Ask about an address',office:'Ask about office space',tour:'Book a tour'},
+    es:{virtual:'Pregunte por una dirección',office:'Pregunte por una oficina',tour:'Agende un recorrido'}
+  };
+  var MODAL_DEFAULT={en:'Ask about an address',es:'Pregunte por una dirección'};
+
+  var I18N = [
+    [".wordmark .sub", "Histórica Crescent Bath House · Est. 1887"],
+    [".nav-book", "Contáctenos"],
+    ["#navLinks > a[href=\"index.html\"]", "Inicio"],
+    ["#exploreToggle", "Explorar <span class=\"caret\">▾</span>"],
+    [".dropdown-menu span.dd-label:nth-of-type(1)", "Eventos y Alquileres"],
+    [".dropdown-menu span.dd-label:nth-of-type(2)", "Trabajo"],
+    [".dropdown-menu span.dd-label:nth-of-type(3)", "Descubrir"],
+    [".dropdown-menu a[href=\"weddings.html\"]", "Bodas"],
+    [".dropdown-menu a[href=\"social-events.html\"]", "Eventos Sociales"],
+    [".dropdown-menu a[href=\"corporate-events.html\"]", "Eventos Corporativos"],
+    [".dropdown-menu a[href=\"photo-film.html\"]", "Fotografía y Cine"],
+    [".dropdown-menu a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
+    [".dropdown-menu a[href=\"virtual-office.html\"]", "Oficina Virtual"],
+    [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
+    [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
+    [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
+    [".hero-badge", "Desde 1887 ·<br>Dirección comercial"],
+    [".hero .eyebrow", "Oficina virtual en The Chimes"],
+    [".hero h1", "Una dirección histórica,<br><em>sin el contrato de renta.</em>"],
+    [".hero .lead", "Maneje su negocio desde una dirección histórica de 1887 en el centro de Lake Elsinore. Ponga The Chimes en sus tarjetas, en su sitio web y en sus trámites estatales, sin pagar por un cuarto que solo necesita dos veces al mes."],
+    [".hero-cta .btn-brass", "Pregunte por una dirección"],
+    [".hero-cta .btn-ghost", "Qué incluye"],
+    [".facts .fact:nth-child(1)", "Desde 1887"],
+    [".facts .fact:nth-child(2)", "Dirección real"],
+    [".facts .fact:nth-child(3)", "Manejo de correspondencia"],
+    [".facts .fact:nth-child(4)", "Sala de juntas cuando la necesite"],
+    [".quote-inner p", "Su dirección debería decir algo. Esta dice bastante."],
+    ["#included .eyebrow", "Qué incluye"],
+    ["#included h2", "Todo lo que da una oficina, menos la oficina."],
+    ["#included > .container > .reveal > p", "Una oficina virtual le da a su negocio una dirección física real y un lugar para reunirse, sin comprometerse con un cuarto que estaría vacío casi toda la semana."],
+    [".setting .set-card:nth-child(1) .n", "La dirección"],
+    [".setting .set-card:nth-child(1) h3", "Un lugar real, no un apartado postal"],
+    [".setting .set-card:nth-child(1) p", "Use 201 W. Graham Avenue en sus tarjetas, su sitio web, su ficha de Google y sus trámites estatales. Es una dirección real en un edificio histórico, y se lee como tal."],
+    [".setting .set-card:nth-child(2) .n", "Su correspondencia"],
+    [".setting .set-card:nth-child(2) h3", "Atendida, no amontonada"],
+    [".setting .set-card:nth-child(3) .n", "Una sala cuando la necesite"],
+    [".setting .set-card:nth-child(3) h3", "Un lugar de verdad para reunirse"],
+    ["#story .eyebrow", "Desde 1887"],
+    ["#story h2", "Una dirección que la gente ya conoce."],
+    ["#story .reveal:nth-of-type(2) p:nth-of-type(1)", "Construido en 1887 como el Crescent Bath House y luego inscrito en el Registro Nacional de Lugares Históricos, The Chimes es uno de los edificios originales de Lake Elsinore. Los locales no necesitan indicaciones para llegar. Crecieron pasando por enfrente."],
+    ["#story .reveal:nth-of-type(2) p:nth-of-type(2)", "Para un negocio que quiere verse establecido en este valle, eso no es poca cosa."],
+    ["#whofor .eyebrow", "Para quién es"],
+    ["#whofor h2", "Hecha para el negocio que aún no está listo para rentar."],
+    ["#whofor .btn", "Pregunte por una dirección"],
+    ["#whyus .eyebrow", "Por qué aquí"],
+    ["#whyus h2", "Una dirección con un edificio real detrás."],
+    [".why-grid .why-item:nth-child(1) h3", "Es un lugar real"],
+    [".why-grid .why-item:nth-child(1) p", "Los clientes pueden buscarlo, pasar por enfrente y entrar. Eso es algo muy distinto a un buzón en una plaza comercial."],
+    [".why-grid .why-item:nth-child(2) h3", "Crezca dentro de él"],
+    [".why-grid .why-item:nth-child(2) p", "Empiece con la dirección. Agregue un escritorio, luego una oficina privada, sin cambiar nunca su dirección comercial ni reimprimir nada."],
+    [".why-grid .why-item:nth-child(3) h3", "En el centro, y conocido"],
+    [".why-grid .why-item:nth-child(3) p", "En el corazón del distrito histórico, a poca distancia para comer, con estacionamiento enfrente para los días que venga."],
+    [".why-grid .why-item:nth-child(4) h3", "Un solo dueño, una sola llamada"],
+    [".why-grid .why-item:nth-child(4) p", "Todo pasa por las mismas personas que manejan el edificio. Sin centro de llamadas, sin número de ticket."],
+    ["#faq .eyebrow", "Bueno saber"],
+    ["#faq h2", "Preguntas sobre la oficina virtual"],
+    [".faq-wrap .faq-item:nth-child(1) .faq-q", "¿Puedo usar esta dirección para mi LLC y mis trámites estatales?"],
+    [".faq-wrap .faq-item:nth-child(2) .faq-q", "¿Qué pasa con mi correspondencia?"],
+    [".faq-wrap .faq-item:nth-child(3) .faq-q", "¿Puedo recibir clientes aquí?"],
+    [".faq-wrap .faq-item:nth-child(4) .faq-q", "¿Cuánto cuesta?"],
+    [".faq-wrap .faq-item:nth-child(5) .faq-q", "¿Puedo pasar a una oficina real después?"],
+    ["#contact-final .eyebrow", "Hablemos"],
+    ["#contact-final h2", "Ponga un edificio histórico en su tarjeta de presentación."],
+    ["#contact-final p:not(.phone)", "Cuéntenos un poco de su negocio y le diremos cómo se vería un plan aquí."],
+    ["#contact-final .btn-brass", "Pregunte por una dirección"],
+    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19510000000\">(951) 000-0000</a> &nbsp;·&nbsp; <a href=\"mailto:hello@thechimes.example\">hello@thechimes.example</a>"],
+    [".foot-mark .tag", "Preservando el pasado, construyendo el futuro."],
+    [".foot-cols .foot-col:nth-of-type(1) h4", "Oficina Virtual"],
+    [".foot-cols .foot-col:nth-of-type(3) h4", "Síganos"],
+    [".foot-cols a[href=\"#included\"]", "Qué incluye"],
+    [".foot-cols a[href=\"#whofor\"]", "Para quién es"],
+    [".foot-cols a[href=\"#faq\"]", "Preguntas"],
+    [".foot-cols a[href=\"index.html\"]", "Inicio"],
+    [".foot-cols a[href=\"index.html#office\"]", "Suites de oficina"],
+    [".foot-cols a[href=\"index.html#events\"]", "Salón de eventos"],
+    [".foot-cols a[href=\"index.html#heritage\"]", "Historia"],
+    [".foot-cols a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
+    [".foot-cols a[href=\"photo-film.html\"]", "Fotografía y Cine"],
+    [".foot-cols a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
+    [".foot-cols .foot-col:nth-of-type(4) h4", "Visita"],
+    [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
+    [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(2)", "Oficina virtual · Eventos · Arrendamiento de oficinas"],
+    [".modal-head p", "Cuéntenos sobre su negocio y le contactaremos en uno o dos días hábiles."],
+    ["label[for=\"interest\"]", "Esta consulta es sobre"],
+    ["#interest option[value=\"virtual\"]", "Una dirección de oficina virtual"],
+    ["#interest option[value=\"office\"]", "Un escritorio u oficina privada"],
+    ["#interest option[value=\"tour\"]", "Un recorrido por el edificio"],
+    ["label[for=\"name\"]", "Nombre completo"],
+    ["label[for=\"email\"]", "Correo electrónico"],
+    ["label[for=\"phone\"]", "Teléfono"],
+    ["label[for=\"date\"]", "Fecha preferida"],
+    ["label[for=\"guests\"]", "Invitados estimados"],
+    ["label[for=\"message\"]", "Cuéntenos sobre su negocio"],
+    ["#bookForm button[type=\"submit\"]", "Enviar consulta"],
+    ["#formSuccess h4", "Gracias, lo recibimos."],
+    ["#formSuccess p", "Le contactaremos pronto."],
+    ["#stickyCta .btn", "Contáctenos"]
+  ];
+
+  var I18N_ATTR = [
+    ["#story img", "alt", "La veranda iluminada de The Chimes con su letrero original del Crescent Bath House"],
+    ["#guests", "placeholder", "Opcional"],
+    ["#message", "placeholder", "A qué se dedica su negocio y qué necesita."]
+  ];
+</script>
+<script src="app.js"></script>
+</body>
+</html>
