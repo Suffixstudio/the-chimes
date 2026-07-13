@@ -345,12 +345,35 @@
     }
   }
 
-  /* ---------- 7. Background video: hold still if the visitor asked for less motion ---------- */
+  /* ---------- 7. Background video ----------
+     The tag used to say autoplay, which starts the clip the moment the browser has a
+     single frame decoded. It then runs out of buffered data and stalls: you see one
+     frame, a freeze, then it lurches into motion. That is the pause.
+
+     So the tag no longer says autoplay. The still poster holds the frame until the
+     browser reports it can play the whole thing through without stopping, and only
+     then does it start. On a slow line that report never comes, so a timer gives up
+     and starts it anyway rather than leaving a dead frame on the page forever. */
   var heroVideo = $('#heroVideo');
-  if (heroVideo && prefersReducedMotion) {
-    heroVideo.removeAttribute('autoplay');
-    heroVideo.removeAttribute('loop');
-    heroVideo.pause();
+  if (heroVideo) {
+    if (prefersReducedMotion) {
+      heroVideo.removeAttribute('loop');
+      heroVideo.pause();                   /* the visitor asked for less motion */
+    } else {
+      var vStarted = false;
+      var startVideo = function () {
+        if (vStarted) return;
+        vStarted = true;
+        var p = heroVideo.play();
+        if (p && p.catch) p.catch(function () {});   /* browser refused. The poster stays. Fine. */
+      };
+      if (heroVideo.readyState >= 4) {
+        startVideo();                      /* already buffered enough */
+      } else {
+        heroVideo.addEventListener('canplaythrough', startVideo, { once: true });
+        setTimeout(startVideo, 4000);      /* slow line: start anyway rather than sit dead */
+      }
+    }
   }
 
   /* ---------- 8. English / Spanish switch ----------

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://the-chimes.netlify.app/sitemap.xml

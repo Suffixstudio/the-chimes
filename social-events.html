@@ -4,18 +4,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light" />
-<meta name="description" content="Host milestone birthdays, anniversaries, family reunions, quinceañeras, and holiday parties inside the restored 1887 Crescent Bath House in downtown Lake Elsinore." />
+<meta name="description" content="Milestone birthdays, anniversaries, reunions, quinceañeras, and holiday parties inside the restored 1887 Crescent Bath House in Lake Elsinore." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='700' font-size='21' fill='%23F3ECDD' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <meta property="og:type" content="business.business" />
 <meta property="og:title" content="Social Events &amp; Celebrations · The Chimes" />
 <meta property="og:description" content="Milestone birthdays, anniversaries, reunions, quinceañeras, and holiday parties inside a restored 1887 landmark." />
 <meta property="og:image" content="https://the-chimes.netlify.app/images/og/social-events.jpg" />
 <meta property="og:url" content="https://the-chimes.netlify.app/social-events.html" />
+  <link rel="canonical" href="https://the-chimes.netlify.app/social-events.html" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Social Events &amp; Celebrations at The Chimes | Lake Elsinore" />
 <meta name="twitter:description" content="Birthdays, anniversaries, reunions, and quinceañeras inside a historic 1887 landmark in downtown Lake Elsinore." />
 <meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/social-events.jpg" />
-<title>Social Events &amp; Celebrations · The Chimes · Historic Crescent Bath House</title>
+<title>Party &amp; Quinceañera Venue in Lake Elsinore | The Chimes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -25,15 +27,42 @@
   "@context": "https://schema.org",
   "@type": "EventVenue",
   "name": "The Chimes",
-  "alternateName": ["Crescent Bath House", "The Crescent House"],
+  "alternateName": [
+    "Crescent Bath House",
+    "The Crescent House"
+  ],
   "description": "Historic 1887 event venue in downtown Lake Elsinore, California, hosting birthdays, anniversaries, reunions, quinceañeras, and holiday parties.",
   "url": "https://the-chimes.netlify.app/social-events.html",
   "telephone": "+1-951-000-0000",
-  "address": {"@type":"PostalAddress","streetAddress":"201 W. Graham Avenue","addressLocality":"Lake Elsinore","addressRegion":"CA","postalCode":"92530","addressCountry":"US"},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "201 W. Graham Avenue",
+    "addressLocality": "Lake Elsinore",
+    "addressRegion": "CA",
+    "postalCode": "92530",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 33.6686208,
+    "longitude": -117.3291812
+  },
   "amenityFeature": [
-    {"@type":"LocationFeatureSpecification","name":"Indoor and outdoor event options","value":true},
-    {"@type":"LocationFeatureSpecification","name":"Historic landmark","value":true},
-    {"@type":"LocationFeatureSpecification","name":"On-site parking","value":true}
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Indoor and outdoor event options",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Historic landmark",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "On-site parking",
+      "value": true
+    }
   ]
 }
 </script>
@@ -83,6 +112,21 @@
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+/* ---- "you are here" ----
+   The nav is sticky, so this stays on screen however far down you scroll. Same face
+   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
+   your location and not as more of the strapline. */
+.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
+  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
+  line-height:1;white-space:nowrap;}
+.page-here::before{content:"";display:inline-block;width:12px;height:1px;
+  background:var(--brass);vertical-align:middle;margin-right:.5rem;
+  transform:translateY(-1px);}
+@media (max-width:640px){
+  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
+  .page-here{display:none;}
+}
 </style>
 </head>
 <body class="theme-forest">
@@ -91,6 +135,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
+      <span class="page-here" data-es="Eventos Sociales">Social Events</span>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
       <a href="index.html">Home</a>
       <div class="has-dropdown">
@@ -141,14 +186,14 @@
         <figure class="hero-photo" style="margin:0;">
           <video
             id="heroVideo"
-            autoplay
             muted
             loop
             playsinline
             preload="auto"
             poster="images/social-hero-poster.jpg"
-            aria-label="Slow pan across the lantern-lit veranda of The Chimes, the historic 1887 Crescent Bath House in downtown Lake Elsinore">
-            <source src="images/chimes-hero.mp4" type="video/mp4" />
+            aria-label="A slow pan around The Library, the speakeasy lounge at The Chimes, the historic 1887 Crescent Bath House in downtown Lake Elsinore"
+            data-es-aria-label="Una panorámica lenta por The Library, el bar clandestino de The Chimes, la histórica Crescent Bath House de 1887 en el centro de Lake Elsinore">
+            <source src="images/social-hero.mp4" type="video/mp4" />
           </video>
           <div class="hero-badge">Est. 1887 ·<br>Celebrations &amp; Parties</div>
         </figure>
@@ -263,8 +308,8 @@
     <div class="gallery-grid reveal">
       <figure class="g-tile" data-cap="The Library · The Chimes"><img src="images/social-library.jpg" loading="lazy" decoding="async" alt="The Library at The Chimes, a speakeasy bar with velvet sofas, brick walls, and a brass chandelier" data-es-alt="The Library en The Chimes, un bar clandestino con sofás de terciopelo, muros de ladrillo y un candelabro de latón" /></figure>
       <figure class="g-tile" data-cap="The ceremony lawn · The Chimes"><img src="images/garden-lawn.jpg" loading="lazy" decoding="async" alt="The ceremony lawn at The Chimes, ringed by palms and olive trees, with the antique carriage beyond" data-es-alt="El jardín de ceremonias de The Chimes, rodeado de palmeras y olivos, con el carruaje antiguo al fondo" /></figure>
-      <figure class="g-tile"><img src="images/social-celebration.jpg" loading="lazy" decoding="async" style="object-position:center 62%;" alt="A grazing table of charcuterie, fruit, and cheese set up for a celebration at The Chimes" /></figure>
-      <figure class="g-tile"><img src="images/social-graduation.jpg" loading="lazy" decoding="async" style="object-position:center 55%;" alt="Guests gathering around the catering table at a graduation celebration hosted at The Chimes" /></figure>
+      <figure class="g-tile"><img src="images/social-celebration.jpg" loading="lazy" decoding="async" style="object-position:center 62%;" alt="A grazing table of charcuterie, fruit, and cheese set up for a celebration at The Chimes" data-es-alt="Una mesa de bocadillos con charcutería, fruta y queso preparada para una celebración en The Chimes" /></figure>
+      <figure class="g-tile"><img src="images/social-graduation.jpg" loading="lazy" decoding="async" style="object-position:center 55%;" alt="Guests gathering around the catering table at a graduation celebration hosted at The Chimes" data-es-alt="Invitados reunidos alrededor de la mesa de banquete en una celebración de graduación en The Chimes" /></figure>
     </div>
   </div>
 </section>
@@ -351,7 +396,7 @@
         </div>
         <div class="foot-col">
           <h4>Visit</h4>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
           <a href="tel:+19510000000">(951) 000-0000</a>
         </div>
       </div>
@@ -370,14 +415,10 @@
     <div class="modal-head">
       <span class="eyebrow">The Chimes</span>
       <h3 id="modalTitle">Check your availability</h3>
-      <p>Tell us about your day and we'll be in touch within one to two business days.</p>
+      <p>Tell us about your event and we'll be in touch within one to two business days.</p>
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
     </div>
     <div class="modal-body">
-      <!--
-        TO GO LIVE: add your Formspree action ("https://formspree.io/f/XXXXXXX") + method="POST" to the form
-        and delete the e.preventDefault() success block in the script, OR add Netlify's data-netlify="true".
-      -->
       <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="chimes-inquiry" />
             <input type="hidden" name="page" value="social-events" />
@@ -449,13 +490,13 @@
     [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
     [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
     [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
-    [".hero-badge", "Desde 1887 ·<br>Celebraciones y fiestas"],
+    [".hero-badge", "Est. 1887 ·<br>Celebraciones y fiestas"],
     [".hero .eyebrow", "Eventos sociales en The Chimes"],
     [".hero h1", "Los momentos importantes<br><em>merecen un poco de historia.</em>"],
     [".hero .lead", "Cumpleaños importantes, aniversarios, reuniones familiares, quinceañeras y fiestas navideñas encuentran un hogar dentro de la restaurada Crescent Bath House de 1887. Salones victorianos, un jardín en el patio y un siglo de carácter convierten una celebración cualquiera en una de la que sus invitados seguirán hablando."],
     [".hero-cta .btn-brass", "Consulte disponibilidad"],
     [".hero-cta .btn-ghost", "Conozca el espacio"],
-    [".facts .fact:nth-child(1)", "Desde 1887"],
+    [".facts .fact:nth-child(1)", "Est. 1887"],
     [".facts .fact:nth-child(2)", "Opciones interiores y en el patio"],
     [".facts .fact:nth-child(3)", "Montajes para grupos pequeños y grandes"],
     [".facts .fact:nth-child(4)", "Estacionamiento privado enfrente"],
@@ -472,12 +513,12 @@
     [".setting .set-card:nth-child(3) .n", "Fiestas navideñas y de jubilación"],
     [".setting .set-card:nth-child(3) h3", "Un entorno digno de celebrarse"],
     [".setting .set-card:nth-child(3) p", "Cierre el año, o una carrera, con una fiesta a la altura del momento, en un ícono del centro que sus invitados recordarán."],
-    [".charm .eyebrow", "Desde 1887"],
+    [".charm .eyebrow", "Est. 1887"],
     [".charm h2", "Un entorno con un pasado tan rico como la ocasión."],
     [".charm > .reveal:nth-of-type(2) p:nth-of-type(1)", "Construido en 1887 como el Crescent Bath House, un célebre balneario de aguas minerales, y luego inscrito en el Registro Nacional de Lugares Históricos, The Chimes es uno de los edificios originales de Lake Elsinore. Por más de un siglo ha sido un lugar donde la comunidad se reunía a celebrar. Su evento se convierte en el capítulo más reciente de una historia que toda la ciudad conoce."],
     [".charm > .reveal:nth-of-type(2) p:nth-of-type(2)", "Los anfitriones eligen The Chimes porque ofrece algo que un salón rentado nunca podrá: historia genuina, arquitectura única y una sensación de ocasión desde el momento en que los invitados cruzan la puerta."],
     ["#quince h2", "Un momento que merece una gran entrada."],
-    ["#quince p", "Su quinceañera merece más que un salón rentado. Haga su gran entrada por los arcos victorianos originales, baile bajo un techo con un siglo de historia, y dele a su corte un fondo que nadie más en el valle tiene. The Chimes celebra su fiesta exactamente como la imagina: elegante, personal e inolvidable."],
+    ["#quince p", "Su quinceañera merece más que un salón rentado. Haga su gran entrada por los arcos victorianos originales, baile bajo un techo con un siglo de historia, y dele a su corte un fondo que nadie más en el valle tiene. En The Chimes, su fiesta es exactamente como la imagina: elegante, personal e inolvidable."],
     ["#quince .btn", "Planee su celebración"],
     ["#whyus .eyebrow", "Por qué celebrar con nosotros"],
     ["#whyus h2", "Una fiesta que sus invitados no olvidarán."],

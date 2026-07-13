@@ -4,12 +4,20 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Photo &amp; Film · The Chimes · Historic Crescent Bath House</title>
-<meta name="description" content="Rent the 1887 Crescent Bath House in Lake Elsinore for photo shoots, film, and video productions. Victorian verandas, a tiled corridor, courtyards, gardens, and an original water tower." />
+<meta name="description" content="Rent the 1887 Crescent Bath House in Lake Elsinore for photo shoots and film. Victorian verandas, a tiled corridor, courtyards, and a water tower." />
 <meta property="og:title" content="Photo &amp; Film · The Chimes" />
   <meta property="og:image" content="https://the-chimes.netlify.app/images/og/photo-film.jpg" />
 <meta property="og:description" content="A period location for photo shoots, film, and video, inside a restored 1887 landmark." />
 <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://the-chimes.netlify.app/photo-film.html" />
+  <meta property="og:url" content="https://the-chimes.netlify.app/photo-film.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Photo &amp; Film · The Chimes" />
+  <meta name="twitter:description" content="A period location for photo shoots, film, and video, inside a restored 1887 landmark." />
+  <meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/photo-film.jpg" />
+  <meta name="color-scheme" content="light" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23D9BA77' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -211,6 +219,21 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+/* ---- "you are here" ----
+   The nav is sticky, so this stays on screen however far down you scroll. Same face
+   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
+   your location and not as more of the strapline. */
+.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
+  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
+  line-height:1;white-space:nowrap;}
+.page-here::before{content:"";display:inline-block;width:12px;height:1px;
+  background:var(--brass);vertical-align:middle;margin-right:.5rem;
+  transform:translateY(-1px);}
+@media (max-width:640px){
+  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
+  .page-here{display:none;}
+}
 </style>
 </head>
 <body class="theme-forest">
@@ -219,6 +242,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 <header class="nav">
   <div class="nav-inner">
     <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
+      <span class="page-here" data-es="Fotografía y Cine">Photo &amp; Film</span>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
       <a href="index.html" data-es="Inicio">Home</a>
       <div class="has-dropdown">
@@ -230,9 +254,9 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
           <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
           <a href="photo-film.html" aria-current="page" data-es="Fotografía y Cine">Photo &amp; Film</a>
           <span class="dd-label" data-es="Trabajo">Work</span>
-          <a href="workspace.html" data-es="Espacios y oficinas">Workspace &amp; Offices</a>
+          <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
           <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
-          <span class="dd-label" data-es="Descubra">Discover</span>
+          <span class="dd-label" data-es="Descubrir">Discover</span>
           <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
           <a href="borsellino-travel.html" data-es="Borsellino Travel">Borsellino Travel</a>
           <a href="contact.html" data-es="Contáctenos">Contact</a>
@@ -268,7 +292,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
           <img src="images/facade-flags.jpg" alt="The two-story Victorian facade of the Crescent Bath House with white gingerbread trim and flags along the balcony" data-es-alt="La fachada victoriana de dos pisos de la Crescent Bath House con molduras blancas y banderas en el balcón" />
-          <div class="hero-badge" data-es="Desde 1887 ·<br>Foto · Cine">Est. 1887 ·<br>Photo · Film</div>
+          <div class="hero-badge" data-es="Est. 1887 ·<br>Foto · Cine">Est. 1887 ·<br>Photo · Film</div>
         </figure>
       </div>
     </div>
@@ -278,7 +302,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 <!-- ===================== AT A GLANCE ===================== -->
 <section class="facts" aria-label="The location at a glance">
   <div class="container facts-row reveal">
-    <span class="fact" data-es="Desde 1887">Est. 1887</span>
+    <span class="fact" data-es="Est. 1887">Est. 1887</span>
     <span class="fact" data-es="Cinco escenarios distintos">Five distinct looks</span>
     <span class="fact" data-es="Interiores y exteriores">Interior &amp; exterior</span>
     <span class="fact" data-es="Solo con cita">By appointment only</span>
@@ -405,7 +429,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 <section class="section" id="faq">
   <div class="container">
     <div class="faq-head reveal">
-      <span class="eyebrow" data-es="Antes de reservar">Good to know</span>
+      <span class="eyebrow" data-es="Bueno saberlo">Good to know</span>
       <h2 data-es="Preguntas de producción">Shoot questions</h2>
     </div>
     <div class="faq-wrap reveal">
@@ -448,8 +472,8 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
         <div class="info-row"><span class="k" data-es="Contáctenos">Contact</span><span>Mercedes &amp; Joe · The Chimes</span></div>
         <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19510000000">(951) 000-0000</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
         <div class="info-row"><span class="k" data-es="Correo">Email</span><span><a href="mailto:hello@thechimes.example">hello@thechimes.example</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
-        <div class="info-row"><span class="k" data-es="Visite">Visit</span><span><a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave, Lake Elsinore, CA</a></span></div>
-        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span class="placeholder" data-es="Horario de visitas por confirmar">Walk-in hours to be confirmed</span></div>
+        <div class="info-row"><span class="k" data-es="Visite">Visit</span><span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave, Lake Elsinore, CA</a></span></div>
+        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span class="placeholder" data-es="Horario de visitas por confirmar">Visiting hours to be confirmed</span></div>
       </div>
 
       <div class="reveal">
@@ -506,14 +530,19 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
         <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
       </div>
       <div class="foot-col">
-        <h4 data-es="Explore">Explore</h4>
-        <a href="workspace.html" data-es="Espacios y oficinas">Workspace &amp; Offices</a>
+        <h4 data-es="Explorar">Explore</h4>
+        <a href="index.html" data-es="Inicio">Home</a>
+        <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
         <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
         <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
       </div>
       <div class="foot-col">
+        <h4 data-es="Síganos">Follow</h4>
+        <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div class="foot-col">
         <h4 data-es="Visite">Visit</h4>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=201+W+Graham+Ave+Lake+Elsinore+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
         <a href="tel:+19510000000">(951) 000-0000</a>
       </div>
     </div>
