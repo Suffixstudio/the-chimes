@@ -17,23 +17,24 @@
 <meta name="twitter:title" content="Contact | Lake Elsinore" />
 <meta name="twitter:description" content="Call, write, or visit The Chimes at 201 W. Graham Avenue in downtown Lake Elsinore. Tours of the historic 1887 Crescent Bath House by appointment." />
 <meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/contact.jpg" />
-<title>Contact · The Chimes · Historic Crescent Bath House</title>
+<title>Contact · The Chimes · The Crescent House 1887</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EventVenue",
-  "name": "The Chimes",
+  "name": "The Crescent House 1887",
+  "alternateName": ["The Chimes", "The Chimes Events", "Crescent Bath House"],
   "alternateName": [
     "Crescent Bath House",
     "The Crescent House"
   ],
   "description": "Call, write, or visit The Chimes at 201 W. Graham Avenue in downtown Lake Elsinore. Tours of the historic 1887 Crescent Bath House by appointment.",
   "url": "https://the-chimes.netlify.app/contact.html",
-  "telephone": "+1-951-000-0000",
+  "telephone": "+1-951-718-4204",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "201 W. Graham Avenue",
@@ -80,7 +81,6 @@
   .section{padding:clamp(4.5rem,9vw,8rem) 0;}
   .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
   .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
-  .dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;white-space:nowrap;}
   .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
   .hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
   .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:16/9;background:#1E3227;}
@@ -92,7 +92,6 @@
   .modal-head{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#F4E9D6;padding:1.8rem 2rem 1.6rem;position:relative;}
   .charm img{cursor:zoom-in;}
   @media(max-width:1024px){
-    .dropdown-menu a{padding:.72rem 1rem;}
     .dd-toggle{width:100%;justify-content:space-between;}
   }
   @media(max-width:520px){
@@ -101,7 +100,6 @@
   @media (prefers-color-scheme: dark){
     body{background:#F3ECDD !important;}
     body{color:#211A16 !important;}
-    .dropdown-menu a{color:#4a3f36 !important;}
     .dd-toggle{color:#4a3f36 !important;}
     .quote-band{background:#ECE1CC !important;}
     .final{background:#2F4A3A !important;color:#F1E6D3 !important;}
@@ -111,20 +109,7 @@
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-
-/* ---- "you are here" ----
-   The nav is sticky, so this stays on screen however far down you scroll. Same face
-   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
-   your location and not as more of the strapline. */
-.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
-  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
-  line-height:1;white-space:nowrap;}
-.page-here::before{content:"";display:inline-block;width:12px;height:1px;
-  background:var(--brass);vertical-align:middle;margin-right:.5rem;
-  transform:translateY(-1px);}
 @media (max-width:640px){
-  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
-  .page-here{display:none;}
 }
 
 /* ---- the address, in one piece ----
@@ -145,53 +130,69 @@
   font-family:"Hanken Grotesk",sans-serif;font-size:.78rem;font-weight:600;
   letter-spacing:.06em;text-align:center;}
 .map-cue::before{content:"\2192";margin-right:.45rem;}
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 </style>
 </head>
 <body class="theme-forest">
+    <a class="skip-link" href="#main">Skip to content</a>
+    
 
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
-      <span class="page-here" data-es="Contacto">Contact</span>
+    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Contacto">Contact</span></span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <div class="has-dropdown">
-        <button class="dd-toggle" id="exploreToggle" aria-expanded="false">Explore <span class="caret">▾</span></button>
-        <div class="dropdown-menu">
-          <span class="dd-label">Events &amp; Rentals</span>
-          <a href="weddings.html">Weddings</a>
-          <a href="social-events.html">Social Events</a>
-          <a href="corporate-events.html">Corporate Events</a>
-          <a href="photo-film.html">Photo &amp; Film</a>
-          <span class="dd-label">Work</span>
-          <a href="workspace.html">Workspace &amp; Offices</a>
-          <a href="virtual-office.html">Virtual Office</a>
-          <span class="dd-label">Discover</span>
-          <a href="history-tours.html">History &amp; Tours</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
-          <a href="contact.html" aria-current="page">Contact</a>
+        <div class="doors">
+          <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
+          <div class="grp">
+            <a class="door" href="chimes-events.html"><span class="dt" data-es="Eventos">Events</span></a>
+            <div class="sub">
+              <a href="chimes-events.html" data-es="The Chimes Venue">The Chimes Venue</a>
+              <a href="social-events.html#quince" data-es="Quincea&ntilde;eras">Quincea&ntilde;eras</a>
+              <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
+              <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+              <a href="social-events.html#library" data-es="The Library Speakeasy">The Library Speakeasy</a>
+            </div>
+          </div>
+          <div class="grp">
+            <a class="door" href="workspace.html"><span class="dt" data-es="Oficinas">Offices</span></a>
+            <div class="sub">
+              <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+              <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+            </div>
+          </div>
+          <div class="grp grp--more">
+            <button class="door door-more" type="button" aria-expanded="false"><span class="dt" data-es="M&aacute;s">More</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+            <div class="sub">
+              <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+              <a href="photo-film.html" data-es="Foto y Cine">Photo &amp; Film</a>
+              <a href="borsellino-travel.html" data-es="Borsellino Travel Agency">Borsellino Travel Agency</a>
+              <a href="contact.html" data-es="Contacto">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
-      <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
-      <button class="btn btn-primary nav-book" data-modal-open data-interest="general">Get in touch</button>
-    </nav>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">ES</button>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
 </header>
 
-<section class="hero">
+<main id="main">
+    <section class="hero">
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
         <span class="eyebrow">Contact</span>
         <h1>Come and<br><em>see the building.</em></h1>
-        <p class="lead">Call us, send a note, or simply come by. The Chimes sits at the corner of Graham Avenue in downtown Lake Elsinore, and the easiest way to understand the place is to stand inside it.</p>
+        <p class="lead">Call us or email us, and we will set up a time to show you around. The Crescent House sits at the corner of Graham Avenue in downtown Lake Elsinore, and the easiest way to understand the place is to stand inside it. Visits are by appointment, so we know you are coming and can give you our full attention.</p>
         <div class="hero-cta">
           <button class="btn btn-brass" data-modal-open data-interest="general">Send us a note</button>
           <a href="#visit" class="btn btn-ghost">Find us</a>
@@ -199,7 +200,7 @@
       </div>
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
-          <img src="images/landing-hero-exterior.jpg" alt="The Chimes, the historic 1887 Crescent Bath House in downtown Lake Elsinore" data-es-alt="The Chimes, la histórica Crescent Bath House de 1887 en el centro de Lake Elsinore" />
+          <img src="images/landing-hero-exterior.jpg" alt="An aerial view of The Crescent House 1887 with Lake Elsinore and the mountains behind it" data-es-alt="Vista aérea de The Crescent House 1887 con el lago Elsinore y las montañas al fondo"  width="1600" height="1200" />
           <div class="hero-badge">201 W. Graham Ave ·<br>Lake Elsinore, CA</div>
         </figure>
       </div>
@@ -233,17 +234,17 @@
       <article class="set-card reveal">
         <span class="n">By phone</span>
         <h3>Call us</h3>
-        <p>The quickest way to check a date or ask a question. <a href="tel:+19510000000" style="color:var(--accent);font-weight:600;">(951) 000-0000</a></p>
+        <p>The quickest way to check a date or ask a question. <a href="tel:+19517184204" style="color:var(--accent);font-weight:600;">(951) 718-4204</a></p>
       </article>
       <article class="set-card reveal">
         <span class="n">By email</span>
         <h3>Write to us</h3>
-        <p>Send the details and we will come back to you within one to two business days. <a href="mailto:hello@thechimes.example" style="color:var(--accent);font-weight:600;">hello@thechimes.example</a></p>
+        <p>Send the details and we will come back to you within one to two business days. <a href="mailto:info@thecrescenthouse1887.com" style="color:var(--accent);font-weight:600;">info@thecrescenthouse1887.com</a></p>
       </article>
       <article class="set-card reveal">
         <span class="n">In person</span>
         <h3>Come by</h3>
-        <p>Tours of the building are by appointment. Send us a note and we will find a time that works. <span class="todo">confirm your walk-in hours, or whether visits are strictly by appointment.</span></p>
+        <p>Until our grand opening, tours are by appointment only, Friday through Sunday from 9am to 6pm. Send us a note and we will find a time that works.</p>
       </article>
     </div>
   </div>
@@ -256,7 +257,7 @@
          aria-label="Open directions to The Chimes in Google Maps">
         <img src="images/landing-map.jpg" loading="lazy" decoding="async"
              alt="Map showing The Chimes at 201 W. Graham Avenue in downtown Lake Elsinore, near Main Street and the lakefront"
-             data-es-alt="Mapa que muestra The Chimes en 201 W. Graham Avenue, en el centro de Lake Elsinore, cerca de Main Street y del lago" />
+             data-es-alt="Mapa que muestra The Chimes en 201 W. Graham Avenue, en el centro de Lake Elsinore, cerca de Main Street y del lago"  width="1200" height="1141" />
         <span class="map-cue" data-es="Abrir en Google Maps">Open in Google Maps</span>
       </a>
     </div>
@@ -280,7 +281,7 @@
       <h2 style="margin-top:.7rem;">When you can find us here.</h2>
     </div>
     <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
-      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Events and tours run by appointment, and we will always make time for someone who wants to see the building. <span class="todo">add your walk-in hours here, and any days the building is closed.</span></p>
+      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Until our grand opening, the building is open to the public by appointment only. Tours run Friday through Sunday, 9am to 6pm. Members have building access Monday through Friday, 9am to 6pm.</p>
       <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
       <button class="btn btn-brass" data-modal-open data-interest="tour">Book a tour</button>
     </div>
@@ -293,47 +294,53 @@
     <h2>Tell us what you have in mind.</h2>
     <p>An event, an office, a tour, or a question about the building. Send it over and we will get back to you.</p>
     <button class="btn btn-brass" data-modal-open data-interest="general">Send us a note</button>
-    <p class="phone">CALL · <a href="tel:+19510000000">(951) 000-0000</a> &nbsp;·&nbsp; <a href="mailto:hello@thechimes.example">hello@thechimes.example</a></p>
+    <p class="phone">CALL · <a href="tel:+19517184204">(951) 718-4204</a> &nbsp;·&nbsp; <a href="mailto:info@thecrescenthouse1887.com">info@thecrescenthouse1887.com</a></p>
   </div>
-</section>
 
-<footer>
+      <p class="ada-note reveal" data-es="Accesibilidad. The Crescent House es un edificio histórico y el segundo piso no cumple con las normas ADA. Si usted o alguno de sus invitados requiere adaptaciones de accesibilidad, contáctenos antes de su visita o su evento. Le diremos con exactitud qué puede y qué no puede acomodar el edificio, y trabajaremos con usted a partir de ahí.">Accessibility. The Crescent House is a historic building and the second floor is not ADA compliant. If you or any of your guests have accessibility needs, please contact us before your visit or your event. We will tell you exactly what the building can and cannot accommodate, and work with you from there.</p>
+    </section>
+
+</main>
+    <footer>
   <div class="container">
     <div class="foot-inner">
       <div class="foot-mark">
-        <div class="name">THE CHIMES</div>
-        <div class="tag">Preserving the past, building what's next.</div>
+        <div class="name">THE CRESCENT HOUSE 1887</div>
+        <div class="tag">A timeless landmark to celebrate history and create memories.</div>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h4>Contact</h4>
+          <h3 class="foot-h">Contact</h3>
           <a href="#reach">Get in touch</a>
           <a href="#visit">Find us</a>
           <a href="#hours">Hours</a>
         </div>
         <div class="foot-col">
-          <h4>The Chimes</h4>
+          <h3 class="foot-h">The Crescent House 1887</h3>
           <a href="index.html">Home</a>
           <a href="index.html#office">Office Suites</a>
-          <a href="index.html#events">Event Hall</a>
+          <a href="chimes-events.html">The Chimes Events</a>
           <a href="index.html#heritage">Our History</a>
           <a href="workspace.html">Workspace &amp; Offices</a>
           <a href="photo-film.html">Photo &amp; Film</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
+          <a href="borsellino-travel.html">Borsellino Travel Agency</a>
         </div>
         <div class="foot-col">
-          <h4>Follow</h4>
+          <h3 class="foot-h">Follow</h3>
           <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/thecrescenthouse1887" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@thecrescent1887" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.linkedin.com/company/the-crescent-house/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="foot-col">
-          <h4>Visit</h4>
+          <h3 class="foot-h">Visit</h3>
           <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
-          <a href="tel:+19510000000">(951) 000-0000</a>
+          <a href="tel:+19517184204">(951) 718-4204</a>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
       <span>Contact · Events · Office Leasing</span>
       <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
     </div>
@@ -350,8 +357,8 @@
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
     </div>
     <div class="modal-body">
-      <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="chimes-inquiry" />
+      <form id="bookForm" novalidate name="crescent-house-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="crescent-house-inquiry" />
             <input type="hidden" name="page" value="contact" />
             <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="field">
@@ -363,14 +370,14 @@
             <option value="tour">A tour of the building</option>
           </select>
         </div>
-        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field req"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
         <div class="field-row">
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+          <div class="field req"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field req"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" /></div>
-          <div class="field"><label for="guests">Estimated guests</label><input id="guests" name="guests" type="number" min="1" placeholder="Optional" /></div>
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" min="2026-08-02" /></div>
+          <div class="field"><label for="guests">Estimated guests</label><input id="guests" name="guests" type="number" min="1" max="300" placeholder="Up to 300" data-es-placeholder="Hasta 300" /></div>
         </div>
         <div class="field"><label for="message">Tell us what you need</label><textarea id="message" name="message" placeholder="Tell us what you have in mind."></textarea></div>
         <button type="submit" class="btn btn-primary">Send inquiry</button>
@@ -400,26 +407,10 @@
   var MODAL_DEFAULT={en:'Send us a note',es:'Envíenos un mensaje'};
 
   var I18N = [
-    [".wordmark .sub", "Histórica Crescent Bath House · Est. 1887"],
-    [".nav-book", "Contáctenos"],
-    ["#navLinks > a[href=\"index.html\"]", "Inicio"],
-    ["#exploreToggle", "Explorar <span class=\"caret\">▾</span>"],
-    [".dropdown-menu span.dd-label:nth-of-type(1)", "Eventos y Alquileres"],
-    [".dropdown-menu span.dd-label:nth-of-type(2)", "Trabajo"],
-    [".dropdown-menu span.dd-label:nth-of-type(3)", "Descubrir"],
-    [".dropdown-menu a[href=\"weddings.html\"]", "Bodas"],
-    [".dropdown-menu a[href=\"social-events.html\"]", "Eventos Sociales"],
-    [".dropdown-menu a[href=\"corporate-events.html\"]", "Eventos Corporativos"],
-    [".dropdown-menu a[href=\"photo-film.html\"]", "Fotografía y Cine"],
-    [".dropdown-menu a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
-    [".dropdown-menu a[href=\"virtual-office.html\"]", "Oficina Virtual"],
-    [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
-    [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
     [".hero-badge", "201 W. Graham Ave ·<br>Lake Elsinore, CA"],
     [".hero .eyebrow", "Contacto"],
     [".hero h1", "Venga y<br><em>conozca el edificio.</em>"],
-    [".hero .lead", "Llámenos, escríbanos, o simplemente pase por aquí. The Chimes está en la esquina de Graham Avenue, en el centro de Lake Elsinore, y la mejor forma de entender este lugar es estar parado dentro de él."],
+    [".hero .lead", "Llámenos o escríbanos, y coordinamos una hora para mostrarle el lugar. The Crescent House está en la esquina de Graham Avenue, en el centro de Lake Elsinore, y la mejor manera de entenderlo es estar dentro. Las visitas son con cita previa, para saber que viene y poder atenderle como se debe."],
     [".hero-cta .btn-brass", "Envíenos un mensaje"],
     [".hero-cta .btn-ghost", "Encuéntrenos"],
     [".facts .fact:nth-child(1)", "Est. 1887"],
@@ -443,24 +434,24 @@
     ["#contact-final h2", "Cuéntenos qué tiene en mente."],
     ["#contact-final p:not(.phone)", "Un evento, una oficina, un recorrido, o una pregunta sobre el edificio. Envíenoslo y le contactaremos."],
     ["#contact-final .btn-brass", "Envíenos un mensaje"],
-    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19510000000\">(951) 000-0000</a> &nbsp;·&nbsp; <a href=\"mailto:hello@thechimes.example\">hello@thechimes.example</a>"],
-    [".foot-mark .tag", "Preservando el pasado, construyendo el futuro."],
-    [".foot-cols .foot-col:nth-of-type(1) h4", "Contacto"],
-    [".foot-cols .foot-col:nth-of-type(3) h4", "Síganos"],
+    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19517184204\">(951) 718-4204</a> &nbsp;·&nbsp; <a href=\"mailto:info@thecrescenthouse1887.com\">info@thecrescenthouse1887.com</a>"],
+    [".foot-mark .tag", "Un lugar histórico para celebrar la historia y crear recuerdos."],
+    [".foot-cols .foot-col:nth-of-type(1) h3", "Contacto"],
+    [".foot-cols .foot-col:nth-of-type(3) h3", "Síganos"],
     [".foot-cols a[href=\"#reach\"]", "Póngase en contacto"],
     [".foot-cols a[href=\"#visit\"]", "Encuéntrenos"],
     [".foot-cols a[href=\"#hours\"]", "Horario"],
     [".foot-cols a[href=\"index.html\"]", "Inicio"],
     [".foot-cols a[href=\"index.html#office\"]", "Suites de oficina"],
-    [".foot-cols a[href=\"index.html#events\"]", "Salón de eventos"],
+    [".foot-cols a[href=\"chimes-events.html\"]", "Eventos The Chimes"],
     [".foot-cols a[href=\"index.html#heritage\"]", "Historia"],
     [".foot-cols a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
     [".foot-cols a[href=\"photo-film.html\"]", "Fotografía y Cine"],
     [".foot-cols a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".foot-cols .foot-col:nth-of-type(4) h4", "Visita"],
+    [".foot-cols .foot-col:nth-of-type(4) h3", "Visita"],
     [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
     [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
-    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA"],
     [".foot-base span:nth-of-type(2)", "Contacto · Eventos · Arrendamiento de oficinas"],
     [".modal-head p", "Cuéntenos qué necesita y le contactaremos en uno o dos días hábiles."],
     ["label[for=\"interest\"]", "Esta consulta es sobre"],
@@ -477,7 +468,9 @@
     ["#bookForm button[type=\"submit\"]", "Enviar consulta"],
     ["#formSuccess h4", "Gracias, lo recibimos."],
     ["#formSuccess p", "Le contactaremos pronto."],
-    ["#stickyCta .btn", "Contáctenos"]
+    ["#stickyCta .btn", "Contáctenos"],
+    [".setting .set-card:nth-child(3) p", "Hasta nuestra gran apertura, los recorridos son solo con cita, de viernes a domingo de 9am a 6pm. Escríbanos y encontraremos un horario que funcione."],
+    ["#hours > .container > .reveal > p", "Hasta nuestra gran apertura, el edificio abre al público solo con cita. Los recorridos son de viernes a domingo, de 9am a 6pm. Los miembros tienen acceso al edificio de lunes a viernes, de 9am a 6pm."],
   ];
 
   var I18N_ATTR = [

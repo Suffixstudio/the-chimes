@@ -20,20 +20,21 @@
 <title>Corporate Event Venue in Lake Elsinore | The Chimes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EventVenue",
-  "name": "The Chimes",
+  "name": "The Crescent House 1887",
+  "alternateName": ["The Chimes", "The Chimes Events", "Crescent Bath House"],
   "alternateName": [
     "Crescent Bath House",
     "The Crescent House"
   ],
   "description": "Historic 1887 event venue in downtown Lake Elsinore, California, hosting board meetings, conferences, team offsites, client receptions, and company parties.",
   "url": "https://the-chimes.netlify.app/corporate-events.html",
-  "telephone": "+1-951-000-0000",
+  "telephone": "+1-951-718-4204",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "201 W. Graham Avenue",
@@ -80,10 +81,9 @@
   .section{padding:clamp(4.5rem,9vw,8rem) 0;}
   .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
   .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
-  .dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;white-space:nowrap;}
   .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
   .hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
-  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;background:#1E3227;}
+  .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;background:#1E3227;}
   .steps{background:var(--cream-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .quote-band{background:var(--parchment-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .charm img{width:100%;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
@@ -92,7 +92,6 @@
   .modal-head{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#F4E9D6;padding:1.8rem 2rem 1.6rem;position:relative;}
   .charm img{cursor:zoom-in;}
   @media(max-width:1024px){
-    .dropdown-menu a{padding:.72rem 1rem;}
     .dd-toggle{width:100%;justify-content:space-between;}
   }
   @media(max-width:520px){
@@ -101,7 +100,6 @@
   @media (prefers-color-scheme: dark){
     body{background:#F3ECDD !important;}
     body{color:#211A16 !important;}
-    .dropdown-menu a{color:#4a3f36 !important;}
     .dd-toggle{color:#4a3f36 !important;}
     .quote-band{background:#ECE1CC !important;}
     .final{background:#2F4A3A !important;color:#F1E6D3 !important;}
@@ -111,62 +109,69 @@
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-
-/* ---- "you are here" ----
-   The nav is sticky, so this stays on screen however far down you scroll. Same face
-   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
-   your location and not as more of the strapline. */
-.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
-  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
-  line-height:1;white-space:nowrap;}
-.page-here::before{content:"";display:inline-block;width:12px;height:1px;
-  background:var(--brass);vertical-align:middle;margin-right:.5rem;
-  transform:translateY(-1px);}
 @media (max-width:640px){
-  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
-  .page-here{display:none;}
 }
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
+  .room-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.4vw,1.6rem);margin-top:2.2rem;}
+  .room-shots figure{margin:0;}
+  .room-shots img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--brass);padding:8px;background:var(--cream-card);}
+  .room-shots figcaption{font-family:"Cinzel",serif;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-deep);margin-top:.6rem;text-align:center;}
+  @media(max-width:640px){ .room-shots{grid-template-columns:1fr;} }
 </style>
 </head>
 <body class="theme-forest">
+    <a class="skip-link" href="#main">Skip to content</a>
+    
 
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
-      <span class="page-here" data-es="Eventos Corporativos">Corporate Events</span>
+    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Eventos Corporativos">Corporate Events</span></span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <div class="has-dropdown">
-        <button class="dd-toggle" id="exploreToggle" aria-expanded="false">Explore <span class="caret">▾</span></button>
-        <div class="dropdown-menu">
-          <span class="dd-label">Events &amp; Rentals</span>
-          <a href="weddings.html">Weddings</a>
-          <a href="social-events.html">Social Events</a>
-          <a href="corporate-events.html" aria-current="page">Corporate Events</a>
-          <a href="photo-film.html">Photo &amp; Film</a>
-          <span class="dd-label">Work</span>
-          <a href="workspace.html">Workspace &amp; Offices</a>
-          <a href="virtual-office.html">Virtual Office</a>
-          <span class="dd-label">Discover</span>
-          <a href="history-tours.html">History &amp; Tours</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
-          <a href="contact.html">Contact</a>
+        <div class="doors">
+          <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
+          <div class="grp">
+            <a class="door" href="chimes-events.html"><span class="dt" data-es="Eventos">Events</span></a>
+            <div class="sub">
+              <a href="chimes-events.html" data-es="The Chimes Venue">The Chimes Venue</a>
+              <a href="social-events.html#quince" data-es="Quincea&ntilde;eras">Quincea&ntilde;eras</a>
+              <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
+              <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+              <a href="social-events.html#library" data-es="The Library Speakeasy">The Library Speakeasy</a>
+            </div>
+          </div>
+          <div class="grp">
+            <a class="door" href="workspace.html"><span class="dt" data-es="Oficinas">Offices</span></a>
+            <div class="sub">
+              <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+              <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+            </div>
+          </div>
+          <div class="grp grp--more">
+            <button class="door door-more" type="button" aria-expanded="false"><span class="dt" data-es="M&aacute;s">More</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+            <div class="sub">
+              <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+              <a href="photo-film.html" data-es="Foto y Cine">Photo &amp; Film</a>
+              <a href="borsellino-travel.html" data-es="Borsellino Travel Agency">Borsellino Travel Agency</a>
+              <a href="contact.html" data-es="Contacto">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
-      <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
-      <button class="btn btn-primary nav-book" data-modal-open data-interest="meeting">Check availability</button>
-    </nav>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">ES</button>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
@@ -183,7 +188,7 @@
       </div>
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
-          <img data-es-alt="La sala de juntas de The Chimes, con una mesa larga, sillas tapizadas y una pantalla montada" src="images/corporate-hero.jpg" alt="The boardroom at The Chimes, with a long table, upholstered chairs, and a mounted screen" />
+          <img data-es-alt="El Training Center dispuesto en estilo aula, con mesas largas y sillas de cuero bajo un candelabro de cristal" src="images/corporate-hero.jpg" alt="The Training Center set classroom style, with long tables and leather chairs beneath a crystal chandelier"  width="1900" height="1425" />
           <div class="hero-badge">Est. 1887 ·<br>Meetings &amp; Offsites</div>
         </figure>
       </div>
@@ -195,7 +200,7 @@
 <section class="facts" aria-label="The venue at a glance">
   <div class="container facts-row reveal">
     <span class="fact">Est. 1887</span>
-    <span class="fact">Boardroom &amp; full hall</span>
+    <span class="fact">The Elsinore Boardroom &amp; full venue</span>
     <span class="fact">Courtyard for breaks</span>
     <span class="fact">Private parking across the street</span>
   </div>
@@ -204,7 +209,7 @@
 <!-- ===================== QUOTE ===================== -->
 <section class="quote-band">
   <div class="container quote-inner reveal">
-    <p>Some meetings are endured. This one gets remembered.</p>
+    <p>Give them a reason to show up in person.</p>
   </div>
 </section>
 
@@ -240,7 +245,7 @@
 <section class="quote-band section">
   <div class="container charm">
     <div class="reveal">
-      <img data-es-alt="Una sala de The Chimes preparada con filas de sillas de piel para una presentación" src="images/corporate-room.jpg" loading="lazy" decoding="async" alt="A room at The Chimes set with rows of leather chairs for a presentation" />
+      <img data-es-alt="El Training Center desde el fondo de la sala, con la bandera y el pizarrón enmarcado" src="images/corporate-room.jpg" loading="lazy" decoding="async" alt="The Training Center from the back of the room, with the flag and the framed board"  width="1500" height="1125" />
     </div>
     <div class="reveal">
       <span class="eyebrow">Since 1887</span>
@@ -255,33 +260,50 @@
 <section class="section" id="boardroom" style="background:var(--parchment-2);">
   <div class="container" style="text-align:center;">
     <div class="reveal" style="max-width:44ch;margin-inline:auto;">
-      <span class="eyebrow" style="justify-content:center;">The Boardroom</span>
+      <span class="eyebrow" style="justify-content:center;">The Elsinore Boardroom</span>
       <h2 style="margin-top:.7rem;">A room that takes the meeting seriously.</h2>
     </div>
+      <figure class="reveal" style="margin:2.2rem auto 0;max-width:560px;">
+        <img src="images/elsinore-boardroom.jpg" loading="lazy" decoding="async" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--brass);padding:9px;background:var(--cream-card);" alt="The Elsinore Boardroom, a long executive table ringed by high backed chairs beneath a mounted screen" data-es-alt="El Elsinore Boardroom, una larga mesa ejecutiva rodeada de sillas de respaldo alto bajo una pantalla montada"  width="1086" height="1448" />
+      </figure>
     <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
       <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-deep);">By the hour or by the day</div>
       <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
-      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Original woodwork, a long table, and a door that actually closes. Book it by the hour for a client pitch, or by the day for the planning session that needs the room to itself. <span class="todo">add the boardroom's seating capacity, the hourly and day rate, and what screens, sound, and wifi are already in the room.</span></p>
+      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Original woodwork, a long executive table, and a door that actually closes. The Elsinore Boardroom seats 8 to 10, with ultrafast wifi, a projector and screen, and heating and air already in the room. $150 an hour, $350 for a half day of four hours, $750 for a full day of eight.</p>
       <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
-      <button class="btn btn-brass" data-modal-open data-interest="boardroom">Book the boardroom</button>
+      <button class="btn btn-brass" data-modal-open data-interest="boardroom">Book The Elsinore Boardroom</button>
     </div>
   </div>
 </section>
 
-      <section class="quote-band section">
-        <div class="container charm">
-          <div class="reveal">
-            <img src="images/social-veranda.jpg" loading="lazy" decoding="async"
-                 alt="Guests in business attire talking over drinks on the veranda at The Chimes, beneath the original Crescent Bathhouse sign"
-                 data-es-alt="Invitados en traje de negocios conversando con bebidas en la veranda de The Chimes, bajo el letrero original de Crescent Bathhouse" />
-          </div>
-          <div class="reveal">
-            <span class="eyebrow" data-es="La veranda">The veranda</span>
-            <h2 style="margin-top:.7rem;" data-es="La parte del día que la gente recuerda.">The part of the day people remember.</h2>
-            <p data-es="Cuando termina la sesión, el día se traslada afuera. Bebidas bajo los faroles, el letrero original de Crescent Bathhouse en la pared detrás de usted, y la conversación que continúa mucho después de que terminan las diapositivas.">When the session breaks, the day moves outside. Drinks under the lanterns, the original Crescent Bathhouse sign on the wall behind you, and the conversation that keeps going long after the slides are done.</p>
-          </div>
+<!-- ===================== MEETING ROOMS ===================== -->
+<section class="section" id="rooms">
+  <div class="container">
+    <div class="reveal" style="text-align:center;max-width:46ch;margin-inline:auto;">
+      <span class="eyebrow" style="justify-content:center;">Meeting rooms</span>
+      <h2 style="margin-top:.7rem;">Four rooms, every kind of meeting.</h2>
+      <p id="rooms-note" style="color:#473c34;max-width:54ch;margin:1rem auto 0;">Host your next meeting in a landmark: historic charm, and none of the boring hotel conference room feel. Every meeting rental includes ultrafast wifi, heating and air conditioning, a projector and screen, and a flexible table layout. A half day is four hours, and a full day is eight.</p>
+    </div>
+        <div class="reveal room-shots">
+          <figure>
+            <img src="images/training-center-rows.jpg" loading="lazy" decoding="async" alt="The Crescent Training Center set in rows, black leather chairs on a patterned rug beneath a brass chandelier and stained glass" data-es-alt="El Crescent Training Center dispuesto en filas, con sillas de cuero negro sobre una alfombra estampada, bajo un candelabro de latón y vitrales"  width="1119" height="1600" />
+            <figcaption data-es="Dispuesto en filas para una presentación">Set in rows for a presentation</figcaption>
+          </figure>
+          <figure>
+            <img src="images/meeting-room-seating.jpg" loading="lazy" decoding="async" alt="Rows of navy leather chairs on original hardwood, facing the front of the room" data-es-alt="Filas de sillas de cuero azul marino sobre madera original, orientadas al frente de la sala"  width="1400" height="933" />
+            <figcaption data-es="Asientos para un grupo más grande">Seating for a larger group</figcaption>
+          </figure>
         </div>
-      </section>
+    <div class="why-grid" style="margin-top:2.4rem;">
+      <div class="why-item reveal"><div class="dot">01</div><div><h3>The Crescent Training Center</h3><p id="room-1">Our largest indoor room, with comfortable leather chairs, work tables, and a TV projector. Seats 32 classroom style or 50 theater style. $250 an hour, $650 for a half day, $1,200 for a full day. Best for nonprofits, community groups, seminars, and trainings.</p></div></div>
+      <div class="why-item reveal"><div class="dot">02</div><div><h3>The Elsinore Boardroom</h3><p id="room-2">Our most private room, with an executive table and a quiet setting for decisions to get made. Seats 8 to 10. $150 an hour, $350 for a half day, $750 for a full day. Best for executive meetings, interviews, and closings.</p></div></div>
+      <div class="why-item reveal"><div class="dot">03</div><div><h3>The Ferris Suite</h3><p id="room-3">Warm wood, vintage details, and natural light. Professional but full of character. Seats 4 to 6. $75 an hour, $250 for a half day, $600 for a full day. Best for client meetings, workshops, and trainings.</p></div></div>
+      <div class="why-item reveal"><div class="dot">04</div><div><h3>The Machado Suite <span style="font-family:'Hanken Grotesk',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);vertical-align:middle;margin-left:.5rem;" data-es="Pr&oacute;ximamente">Coming soon</span></h3><p id="room-4">Currently under renovation. A versatile work and meeting room surrounded by the history of the house, inspiring and intimate. Seats 12 to 16 when it opens. $150 an hour, $350 for a half day, $750 for a full day. Best for all-day trainings, seminars, and corporate workshops.</p></div></div>
+    </div>
+    <p id="rooms-events" style="color:#473c34;text-align:center;max-width:54ch;margin:2.2rem auto 0;">For corporate events and receptions, the Rose Garden, Fountain Plaza, and The Library book at our standard event rates.</p>
+  </div>
+</section>
+
 
 <!-- ===================== WHY US ===================== -->
 <section class="section" id="whyus">
@@ -292,7 +314,7 @@
     </div>
     <div class="why-grid">
       <div class="why-item reveal"><div class="dot">01</div><div><h3>Not another hotel ballroom</h3><p>Clients and candidates notice where you host them. A restored 1887 landmark makes a point a conference center never could.</p></div></div>
-      <div class="why-item reveal"><div class="dot">02</div><div><h3>Room to work, room to breathe</h3><p>The hall for the main session, the boardroom for the conversation that matters, the courtyard for the coffee break.</p></div></div>
+      <div class="why-item reveal"><div class="dot">02</div><div><h3>Room to work, room to breathe</h3><p>The venue for the main session, The Elsinore Boardroom for the conversation that matters, the courtyard for the coffee break.</p></div></div>
       <div class="why-item reveal"><div class="dot">03</div><div><h3>Half a day or the whole day</h3><p>Book the room for a morning pitch or take the building for a full offsite. The day is yours to shape.</p></div></div>
       <div class="why-item reveal"><div class="dot">04</div><div><h3>Downtown, and easy</h3><p>Walkable to lunch, with a private reserved lot right across the street so nobody spends the first ten minutes circling the block.</p></div></div>
     </div>
@@ -311,7 +333,7 @@
     </div>
     <div class="steps-grid reveal">
       <div class="step"><div class="dot">01</div><h3>Inquire</h3><p>Send us the date, the headcount, and what the day needs to do. We reply within one to two business days.</p></div>
-      <div class="step"><div class="dot">02</div><h3>Tour</h3><p>Walk the hall, the boardroom, and the courtyard, and see the day laid out in person.</p></div>
+      <div class="step"><div class="dot">02</div><h3>Tour</h3><p>Walk the venue, The Elsinore Boardroom, and the courtyard, and see the day laid out in person.</p></div>
       <div class="step"><div class="dot">03</div><h3>Reserve</h3><p>Confirm the room, place the deposit, and the date at The Chimes is yours.</p></div>
     </div>
     <div class="reveal" style="text-align:center;margin-top:2.6rem;">
@@ -325,14 +347,14 @@
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:40ch;margin-inline:auto;">
       <span class="eyebrow" style="justify-content:center;">Good to know</span>
-      <h2 style="margin-top:.7rem;">Corporate questions</h2>
+      <h2 style="margin-top:.7rem;margin-inline:auto;">Corporate questions</h2>
     </div>
     <div class="faq-wrap reveal">
       <div class="faq-item"><button class="faq-q" aria-expanded="false">What kinds of business events can you host?</button><div class="faq-a"><p>Board meetings, training days, conferences, team offsites and retreats, client receptions, product launches, networking mixers, and company holiday parties.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many people can you seat?</button><div class="faq-a"><p>The building works for a small board meeting or a full-company gathering. Share your headcount when you inquire and we'll confirm the right room and layout. <span class="todo">add the exact seated and standing capacity for the hall and for the boardroom.</span></p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there wifi, and can we present?</button><div class="faq-a"><p>Yes. Tell us what the day needs and we'll make sure the room is ready for it. <span class="todo">confirm the wifi, and whether a screen, projector, or sound system is already in the building or needs to be brought in.</span></p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we book by the hour, or only the full day?</button><div class="faq-a"><p>Both are possible depending on the room and the date. <span class="todo">add your hourly, half-day, and full-day rates for the boardroom and for the hall.</span></p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">What about lunch and coffee?</button><div class="faq-a"><p>The space is catering-ready. Ask about our current catering options when you reach out. <span class="todo">confirm whether catering is in-house, a preferred vendor list, or whether the client may bring their own.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many people can you seat?</button><div class="faq-a"><p>The Crescent Training Center seats 32 classroom style or 50 theater style, the Machado Suite will seat 12 to 16 when renovation is complete, the Elsinore Boardroom seats 8 to 10, and the Ferris Suite seats 4 to 6. For larger corporate events, the Rose Garden holds up to 300 and Fountain Plaza up to 150.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there wifi, and can we present?</button><div class="faq-a"><p>Yes. Every meeting rental includes ultrafast wifi, a projector and screen, heating and air conditioning, and a flexible table layout.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we book by the hour, or only the full day?</button><div class="faq-a"><p>Both. Every room books by the hour, the half day of four hours, or the full day of eight. Rates start at $75 an hour for the Ferris Suite, and the full rate card is in the meeting rooms section above.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What about lunch and coffee?</button><div class="faq-a"><p>The space is catering-ready. Catering runs through our preferred vendor list, which we share when you reach out.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there parking for our team and clients?</button><div class="faq-a"><p>Yes. A private reserved lot sits directly across the street, so nobody spends the first ten minutes circling the block. Additional street parking is available throughout the historic downtown district, which is walkable to lunch.</p></div></div>
     </div>
   </div>
@@ -342,12 +364,14 @@
 <section class="final section" id="contact-final">
   <div class="container inner reveal">
     <span class="eyebrow">Let's talk</span>
-    <h2>Book the room at The Chimes.</h2>
+    <h2>Book the room at The Crescent House.</h2>
     <p>Tell us the date and what the day needs to do, and we'll come back to you with availability.</p>
     <button class="btn btn-brass" data-modal-open data-interest="meeting">Check availability</button>
-    <p class="phone">CALL · <a href="tel:+19510000000">(951) 000-0000</a> &nbsp;·&nbsp; <a href="mailto:hello@thechimes.example">hello@thechimes.example</a></p>
+    <p class="phone">CALL · <a href="tel:+19517184204">(951) 718-4204</a> &nbsp;·&nbsp; <a href="mailto:info@thechimesevents.com">info@thechimesevents.com</a></p>
   </div>
-</section>
+
+      <p class="ada-note reveal" data-es="Accesibilidad. The Crescent House es un edificio histórico y el segundo piso no cumple con las normas ADA. Si usted o alguno de sus invitados requiere adaptaciones de accesibilidad, contáctenos antes de su visita o su evento. Le diremos con exactitud qué puede y qué no puede acomodar el edificio, y trabajaremos con usted a partir de ahí.">Accessibility. The Crescent House is a historic building and the second floor is not ADA compliant. If you or any of your guests have accessibility needs, please contact us before your visit or your event. We will tell you exactly what the building can and cannot accommodate, and work with you from there.</p>
+    </section>
 
 </main>
 
@@ -356,39 +380,42 @@
   <div class="container">
     <div class="foot-inner">
       <div class="foot-mark">
-        <div class="name">THE CHIMES</div>
-        <div class="tag">Preserving the past, building what's next.</div>
+        <div class="name">THE CRESCENT HOUSE 1887</div>
+        <div class="tag">A timeless landmark to celebrate history and create memories.</div>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h4>Corporate Events</h4>
+          <h3 class="foot-h">Corporate Events</h3>
           <a href="#meetings">Meetings</a>
-          <a href="#boardroom">The Boardroom</a>
+          <a href="#boardroom">The Elsinore Boardroom</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="foot-col">
-          <h4>The Chimes</h4>
+          <h3 class="foot-h">The Crescent House 1887</h3>
           <a href="index.html">Home</a>
           <a href="index.html#office">Office Suites</a>
-          <a href="index.html#events">Event Hall</a>
+          <a href="chimes-events.html">The Chimes Events</a>
           <a href="index.html#heritage">Our History</a>
           <a href="workspace.html">Workspace &amp; Offices</a>
           <a href="photo-film.html">Photo &amp; Film</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
+          <a href="borsellino-travel.html">Borsellino Travel Agency</a>
         </div>
         <div class="foot-col">
-          <h4>Follow</h4>
+          <h3 class="foot-h">Follow</h3>
           <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/thecrescenthouse1887" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@thecrescent1887" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.linkedin.com/company/the-crescent-house/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="foot-col">
-          <h4>Visit</h4>
+          <h3 class="foot-h">Visit</h3>
           <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
-          <a href="tel:+19510000000">(951) 000-0000</a>
+          <a href="tel:+19517184204">(951) 718-4204</a>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
       <span>Meetings · Events · Office Leasing</span>
       <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
     </div>
@@ -405,28 +432,28 @@
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
     </div>
     <div class="modal-body">
-      <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="chimes-inquiry" />
+      <form id="bookForm" novalidate name="chimes-events-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="chimes-events-inquiry" />
             <input type="hidden" name="page" value="corporate-events" />
             <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="field">
           <label for="interest">This inquiry is about</label>
           <select id="interest" name="interest">
             <option value="meeting">A meeting or conference</option>
-            <option value="boardroom">The boardroom</option>
+            <option value="boardroom">The Elsinore Boardroom</option>
             <option value="offsite">A team offsite or retreat</option>
             <option value="party">A company party or reception</option>
             <option value="tour">A venue tour</option>
           </select>
         </div>
-        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field req"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
         <div class="field-row">
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+          <div class="field req"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field req"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" /></div>
-          <div class="field"><label for="guests">Estimated attendees</label><input id="guests" name="guests" type="number" min="1" placeholder="Optional" /></div>
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" min="2026-08-02" /></div>
+          <div class="field"><label for="guests">Estimated attendees</label><input id="guests" name="guests" type="number" min="1" max="300" placeholder="Up to 300" data-es-placeholder="Hasta 300" /></div>
         </div>
         <div class="field"><label for="message">Tell us about the day</label><textarea id="message" name="message" placeholder="What the day needs to accomplish, how many people, or any questions."></textarea></div>
         <button type="submit" class="btn btn-primary">Send inquiry</button>
@@ -455,28 +482,12 @@
 <!-- The words for this page. app.js supplies the behavior. -->
 <script>
   var MODAL_LABELS={
-    en:{meeting:'Check your availability',boardroom:'Book the boardroom',offsite:'Plan your offsite',party:'Tell us about your party',tour:'Schedule a tour'},
-    es:{meeting:'Consulte disponibilidad',boardroom:'Reserve la sala de juntas',offsite:'Planee su retiro de equipo',party:'Cuéntenos sobre su fiesta',tour:'Agende un recorrido'}
+    en:{meeting:'Check your availability',boardroom:'Book The Elsinore Boardroom',offsite:'Plan your offsite',party:'Tell us about your party',tour:'Schedule a tour'},
+    es:{meeting:'Consulte disponibilidad',boardroom:'Reserve The Elsinore Boardroom',offsite:'Planee su retiro de equipo',party:'Cuéntenos sobre su fiesta',tour:'Agende un recorrido'}
   };
   var MODAL_DEFAULT={en:'Check your availability',es:'Consulte disponibilidad'};
 
   var I18N = [
-    [".wordmark .sub", "Histórica Crescent Bath House · Est. 1887"],
-    [".nav-book", "Consulte disponibilidad"],
-    ["#navLinks > a[href=\"index.html\"]", "Inicio"],
-    ["#exploreToggle", "Explorar <span class=\"caret\">▾</span>"],
-    [".dropdown-menu span.dd-label:nth-of-type(1)", "Eventos y Alquileres"],
-    [".dropdown-menu span.dd-label:nth-of-type(2)", "Trabajo"],
-    [".dropdown-menu span.dd-label:nth-of-type(3)", "Descubrir"],
-    [".dropdown-menu a[href=\"weddings.html\"]", "Bodas"],
-    [".dropdown-menu a[href=\"social-events.html\"]", "Eventos Sociales"],
-    [".dropdown-menu a[href=\"corporate-events.html\"]", "Eventos Corporativos"],
-    [".dropdown-menu a[href=\"photo-film.html\"]", "Fotografía y Cine"],
-    [".dropdown-menu a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
-    [".dropdown-menu a[href=\"virtual-office.html\"]", "Oficina Virtual"],
-    [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
-    [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
     [".hero-badge", "Est. 1887 ·<br>Juntas y retiros"],
     [".hero .eyebrow", "Eventos corporativos en The Chimes"],
     [".hero h1", "Reúnanse en un lugar<br><em>que se recuerde.</em>"],
@@ -487,7 +498,7 @@
     [".facts .fact:nth-child(2)", "Sala de juntas y salón completo"],
     [".facts .fact:nth-child(3)", "Patio para los descansos"],
     [".facts .fact:nth-child(4)", "Estacionamiento privado enfrente"],
-    [".quote-inner p", "Algunas juntas se soportan. Esta se recuerda."],
+    [".quote-inner p", "Deles una razón para asistir en persona."],
     ["#meetings .eyebrow", "Negocios en The Chimes"],
     ["#meetings h2", "Un solo edificio, cualquier tipo de jornada."],
     ["#meetings > .container > .reveal > p", "Juntas directivas, días de capacitación, retiros de equipo, recepciones para clientes y la fiesta de fin de año caben dentro del mismo edificio restaurado de 1887, formal o relajado, exactamente como el día lo necesite."],
@@ -504,10 +515,10 @@
     [".charm h2", "Una primera impresión que sus clientes recordarán."],
     [".charm > .reveal:nth-of-type(2) p:nth-of-type(1)", "Construido en 1887 como el Crescent Bath House, un célebre balneario de aguas minerales, y luego inscrito en el Registro Nacional de Lugares Históricos, The Chimes es uno de los edificios originales de Lake Elsinore. Por más de un siglo ha sido la sala donde esta comunidad se reunía. Su junta se suma a una historia que toda la ciudad conoce."],
     [".charm > .reveal:nth-of-type(2) p:nth-of-type(2)", "Las empresas eligen The Chimes porque un salón de hotel no dice nada de usted. Un edificio histórico restaurado dice bastante."],
-    ["#boardroom .eyebrow", "La sala de juntas"],
+    ["#boardroom .eyebrow", "The Elsinore Boardroom"],
     ["#boardroom h2", "Una sala que se toma la junta en serio."],
-    ["#boardroom p", "Madera original, una mesa larga y una puerta que de verdad cierra. Réntela por hora para una presentación con un cliente, o por día para la sesión de planeación que necesita la sala para sí sola. <span class=\"todo\">agreguen la capacidad de asientos de la sala de juntas, la tarifa por hora y por día, y qué pantallas, sonido y wifi ya están en la sala.</span>"],
-    ["#boardroom .btn", "Reserve la sala de juntas"],
+    ["#boardroom p", "Madera original, una mesa ejecutiva larga y una puerta que de verdad se cierra. La Elsinore Boardroom recibe de 8 a 10 personas, con wifi ultrarrápido, proyector con pantalla, y calefacción y aire acondicionado ya en la sala. $150 por hora, $350 por medio día de cuatro horas, $750 por día completo de ocho."],
+    ["#boardroom .btn", "Reserve The Elsinore Boardroom"],
     ["#whyus .eyebrow", "Por qué las empresas nos eligen"],
     ["#whyus h2", "Un lugar que dice algo de usted."],
     [".why-grid .why-item:nth-child(1) h3", "No es otro salón de hotel"],
@@ -532,42 +543,42 @@
     [".faq-wrap .faq-item:nth-child(1) .faq-q", "¿Qué tipo de eventos de negocios pueden recibir?"],
     [".faq-wrap .faq-item:nth-child(1) .faq-a p", "Juntas directivas, días de capacitación, conferencias, retiros de equipo, recepciones para clientes, lanzamientos de producto, eventos de networking y fiestas navideñas de la empresa."],
     [".faq-wrap .faq-item:nth-child(2) .faq-q", "¿Cuántas personas caben sentadas?"],
-    [".faq-wrap .faq-item:nth-child(2) .faq-a p", "El edificio funciona para una junta directiva pequeña o una reunión de toda la empresa. Comparta su número de asistentes al consultar y confirmaremos la sala y el montaje adecuados. <span class=\"todo\">agreguen la capacidad exacta, sentados y de pie, del salón y de la sala de juntas.</span>"],
+    [".faq-wrap .faq-item:nth-child(2) .faq-a p", "El Crescent Training Center recibe a 32 personas en formato escolar o 50 en formato auditorio, la Machado Suite recibir&aacute; de 12 a 16 cuando termine la renovaci&oacute;n, la Elsinore Boardroom de 8 a 10, y la Ferris Suite de 4 a 6. Para eventos corporativos más grandes, el Rose Garden recibe hasta 300 invitados y Fountain Plaza hasta 150."],
     [".faq-wrap .faq-item:nth-child(3) .faq-q", "¿Hay wifi, y podemos presentar?"],
-    [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí. Cuéntenos qué necesita el día y nos aseguraremos de que la sala esté lista. <span class=\"todo\">confirmen el wifi, y si ya hay pantalla, proyector o sonido en el edificio o hay que traerlos.</span>"],
+    [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí. Cada renta de sala incluye wifi ultrarrápido, proyector con pantalla, calefacción y aire acondicionado, y una distribución flexible de mesas."],
     [".faq-wrap .faq-item:nth-child(4) .faq-q", "¿Se puede rentar por hora, o solo el día completo?"],
-    [".faq-wrap .faq-item:nth-child(4) .faq-a p", "Ambas opciones son posibles según la sala y la fecha. <span class=\"todo\">agreguen sus tarifas por hora, medio día y día completo, para la sala de juntas y para el salón.</span>"],
+    [".faq-wrap .faq-item:nth-child(4) .faq-a p", "Ambas opciones. Cada sala se reserva por hora, por medio día de cuatro horas o por día completo de ocho. Las tarifas comienzan en $75 por hora en la Ferris Suite, y la lista completa de tarifas está en la sección de salas de reuniones."],
     [".faq-wrap .faq-item:nth-child(5) .faq-q", "¿Y la comida y el café?"],
-    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "El espacio está listo para catering. Pregunte por nuestras opciones actuales al contactarnos. <span class=\"todo\">confirmen si el catering es propio, si hay una lista de proveedores preferidos, o si el cliente puede traer el suyo.</span>"],
+    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "El espacio está listo para catering. El catering se maneja a través de nuestra lista de proveedores preferidos, que compartimos cuando usted nos escribe."],
     [".faq-wrap .faq-item:nth-child(6) .faq-q", "¿Hay estacionamiento para nuestro equipo y clientes?"],
     [".faq-wrap .faq-item:nth-child(6) .faq-a p", "Sí. Hay un estacionamiento privado reservado justo enfrente, así nadie pierde diez minutos dando vueltas a la manzana. También hay estacionamiento en la calle por todo el distrito histórico del centro, a poca distancia para comer."],
     ["#contact-final .eyebrow", "Hablemos"],
-    ["#contact-final h2", "Reserve la sala en The Chimes."],
+    ["#contact-final h2", "Reserve la sala en The Crescent House."],
     ["#contact-final p:not(.phone)", "Cuéntenos la fecha y lo que el día necesita lograr, y le contactaremos con la disponibilidad."],
     ["#contact-final .btn-brass", "Consulte disponibilidad"],
-    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19510000000\">(951) 000-0000</a> &nbsp;·&nbsp; <a href=\"mailto:hello@thechimes.example\">hello@thechimes.example</a>"],
-    [".foot-mark .tag", "Preservando el pasado, construyendo el futuro."],
-    [".foot-cols .foot-col:nth-of-type(1) h4", "Eventos Corporativos"],
-    [".foot-cols .foot-col:nth-of-type(3) h4", "Síganos"],
+    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19517184204\">(951) 718-4204</a> &nbsp;·&nbsp; <a href=\"mailto:info@thechimesevents.com\">info@thechimesevents.com</a>"],
+    [".foot-mark .tag", "Un lugar histórico para celebrar la historia y crear recuerdos."],
+    [".foot-cols .foot-col:nth-of-type(1) h3", "Eventos Corporativos"],
+    [".foot-cols .foot-col:nth-of-type(3) h3", "Síganos"],
     [".foot-cols a[href=\"#meetings\"]", "Juntas"],
-    [".foot-cols a[href=\"#boardroom\"]", "La sala de juntas"],
+    [".foot-cols a[href=\"#boardroom\"]", "The Elsinore Boardroom"],
     [".foot-cols a[href=\"#faq\"]", "Preguntas"],
     [".foot-cols a[href=\"index.html\"]", "Inicio"],
     [".foot-cols a[href=\"index.html#office\"]", "Suites de oficina"],
-    [".foot-cols a[href=\"index.html#events\"]", "Salón de eventos"],
+    [".foot-cols a[href=\"chimes-events.html\"]", "Eventos The Chimes"],
     [".foot-cols a[href=\"index.html#heritage\"]", "Historia"],
     [".foot-cols a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
     [".foot-cols a[href=\"photo-film.html\"]", "Fotografía y Cine"],
     [".foot-cols a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".foot-cols .foot-col:nth-of-type(4) h4", "Visita"],
+    [".foot-cols .foot-col:nth-of-type(4) h3", "Visita"],
     [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
     [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
-    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA"],
     [".foot-base span:nth-of-type(2)", "Juntas · Eventos · Arrendamiento de oficinas"],
     [".modal-head p", "Cuéntenos sobre el día y le contactaremos en uno o dos días hábiles."],
     ["label[for=\"interest\"]", "Esta consulta es sobre"],
     ["#interest option[value=\"meeting\"]", "Una junta o conferencia"],
-    ["#interest option[value=\"boardroom\"]", "La sala de juntas"],
+    ["#interest option[value=\"boardroom\"]", "The Elsinore Boardroom"],
     ["#interest option[value=\"offsite\"]", "Un retiro de equipo"],
     ["#interest option[value=\"party\"]", "Una fiesta o recepción de la empresa"],
     ["#interest option[value=\"tour\"]", "Un recorrido por el lugar"],
@@ -580,7 +591,15 @@
     ["#bookForm button[type=\"submit\"]", "Enviar consulta"],
     ["#formSuccess h4", "Gracias, lo recibimos."],
     ["#formSuccess p", "Le contactaremos pronto para hablar de la fecha y los detalles."],
-    ["#stickyCta .btn", "Consulte disponibilidad"]
+    ["#stickyCta .btn", "Consulte disponibilidad"],
+    ["#rooms .eyebrow", "Salas de reuniones"],
+    ["#rooms h2", "Cuatro salas, para cada tipo de reunión."],
+    ["#rooms-note", "Organice su próxima reunión en un edificio histórico: encanto de época, sin la sensación aburrida de una sala de conferencias de hotel. Cada renta de sala incluye wifi ultrarrápido, calefacción y aire acondicionado, proyector con pantalla y una distribución flexible de mesas. Medio día son cuatro horas, y el día completo son ocho."],
+    ["#room-1", "Nuestra sala interior más grande, con cómodas sillas de piel, mesas de trabajo y un proyector de TV. Recibe a 32 personas en formato escolar o 50 en formato auditorio. $250 por hora, $650 por medio día, $1,200 por día completo. Ideal para organizaciones sin fines de lucro, grupos comunitarios, seminarios y capacitaciones."],
+    ["#room-2", "Nuestra sala más privada, con una mesa ejecutiva y un ambiente tranquilo para tomar decisiones. Recibe de 8 a 10 personas. $150 por hora, $350 por medio día, $750 por día completo. Ideal para reuniones ejecutivas, entrevistas y cierres."],
+    ["#room-3", "Madera cálida, detalles antiguos y luz natural. Profesional pero llena de carácter. Recibe de 4 a 6 personas. $75 por hora, $250 por medio día, $600 por día completo. Ideal para reuniones con clientes, talleres y capacitaciones."],
+    ["#room-4", "Una sala versátil de trabajo y reuniones rodeada de la historia de la casa, inspiradora e íntima. Recibe de 12 a 16 personas. $150 por hora, $350 por medio día, $750 por día completo. Ideal para capacitaciones de día completo, seminarios y talleres corporativos."],
+    ["#rooms-events", "Para eventos corporativos y recepciones, el Rose Garden, Fountain Plaza y The Library se reservan con nuestras tarifas estándar de eventos."],
   ];
 
   var I18N_ATTR = [

@@ -20,7 +20,8 @@
         font-size:.78rem;font-style:normal;font-weight:600;color:#6E5410;letter-spacing:.02em;line-height:1.5;}
 .todo::before{content:"NEEDS INFO · ";font-weight:700;letter-spacing:.08em;}
 *{box-sizing:border-box;}
-img{max-width:100%;}
+html,body{overflow-x:clip;}
+img{max-width:100%;height:auto;}
 svg{max-width:100%;}
 video{max-width:100%;}
 html{scroll-behavior:smooth;background:#F3ECDD;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
@@ -34,10 +35,6 @@ a{color:inherit;}
 .btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);}
 :focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
 .dd-toggle:hover{color:var(--accent);}
-.has-dropdown.open .dropdown-menu{opacity:1;visibility:visible;transform:none;}
-.nav-mobile-controls{display:none;align-items:center;gap:.6rem;}
-.nav-call-mobile{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--accent);border-radius:2px;color:var(--accent);text-decoration:none;}
-.lang-toggle:hover{background:var(--accent);color:#F6EFE2;}
 .faq-item{border-bottom:1px solid var(--line);}
 .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:1.5rem 2.4rem 1.5rem 0;font-family:"Cormorant Garamond",serif;font-size:1.45rem;font-weight:600;color:var(--ink);position:relative;line-height:1.2;}
 .faq-item.open .faq-q::after{content:"–";}
@@ -50,11 +47,20 @@ a{color:inherit;}
 .foot-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;}
 .foot-mark .name{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.2em;color:#F1E6D3;font-size:1.1rem;}
 .foot-mark .tag{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.05rem;color:rgba(241,230,211,.6);margin-top:.5rem;}
-.foot-cols{display:flex;gap:3rem;flex-wrap:wrap;}
-.foot-col h4{font-family:"Cinzel",serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-light);margin:0 0 .9rem;}
+.foot-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.2rem 2.6rem;align-items:start;}
+.foot-col h3,.foot-col h4{font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;line-height:1.3;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-light);margin:0 0 .9rem;}
 .foot-col a{display:block;text-decoration:none;color:rgba(241,230,211,.72);font-size:.85rem;margin-bottom:.55rem;transition:color .2s;}
 .foot-col a:hover{color:var(--brass-light);}
-.foot-base{border-top:1px solid rgba(217,186,119,.18);margin-top:2.6rem;padding-top:1.4rem;font-size:.74rem;letter-spacing:.04em;color:rgba(241,230,211,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;}
+.foot-base{border-top:1px solid rgba(217,186,119,.18);margin-top:2.6rem;padding-top:1.4rem;font-size:.74rem;letter-spacing:.04em;color:rgba(241,230,211,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.4rem;}
+/* footer on small screens: two even columns, then one, so nothing sits ragged */
+@media(max-width:900px){
+  .foot-inner{flex-direction:column;gap:2.4rem;}
+  .foot-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1.6rem;}
+}
+@media(max-width:700px){
+  .foot-cols{grid-template-columns:1fr;gap:1.7rem;}
+  .foot-base{flex-direction:column;align-items:flex-start;text-align:left;}
+}
 .modal-overlay.open{opacity:1;visibility:visible;}
 .modal{background:var(--parchment);width:min(540px,100%);max-height:92vh;overflow-y:auto;border:1px solid var(--brass);box-shadow:0 40px 80px -30px rgba(0,0,0,.6);transform:translateY(14px) scale(.99);transition:transform .25s;position:relative;}
 .modal-overlay.open .modal{transform:none;}
@@ -83,10 +89,6 @@ a{color:inherit;}
 .reveal.in{opacity:1;transform:none;}
 
 @media(max-width:1024px){
-  .nav-mobile-controls{display:flex;}
-  .nav-links .lang-toggle{display:none;}
-  .nav-links.open{display:flex;}
-  .has-dropdown.open .dropdown-menu{display:block;}
 }
 
 @media(max-width:520px){
@@ -104,3 +106,435 @@ a{color:inherit;}
   .field select{background:#fff !important;color:#211A16 !important;}
   .field textarea{background:#fff !important;color:#211A16 !important;}
 }
+
+/* ============================================================
+   NAVIGATION. One definition, used by every page. Nothing else
+   anywhere may style the bar. If it needs changing, change it here.
+   ============================================================ */
+header.nav{position:sticky;top:0;z-index:100;background:#F3ECDD;
+  border-bottom:1px solid #C9A45C;box-shadow:0 1px 0 rgba(201,164,92,.35);}
+header.nav .nav-inner{max-width:1240px;margin:0 auto;padding:.42rem clamp(1rem,3vw,2rem);
+  display:flex;align-items:center;justify-content:space-between;gap:clamp(1rem,3vw,2.4rem);}
+
+/* name plate: double gold keyline, THE in gold, name in oxblood Prata */
+header.nav .wordmark{text-decoration:none;flex:0 0 auto;}
+header.nav .wm-frame{display:inline-block;padding:.38rem .85rem;text-align:center;
+  border:1px solid #C9A45C;outline:1px solid #C9A45C;outline-offset:3px;}
+header.nav .wm-the{display:block;font-family:"Cinzel",serif;font-size:.56rem;font-weight:600;
+  letter-spacing:.34em;color:#A9843F;line-height:1;margin-bottom:.16rem;}
+header.nav .wm-name{display:block;font-family:"Prata",Georgia,serif;font-size:clamp(1.05rem,2.3vw,1.5rem);
+  letter-spacing:.03em;color:#5A222C;line-height:1.05;white-space:nowrap;}
+header.nav .wm-est{display:block;font-family:"Cinzel",serif;font-size:.5rem;font-weight:600;
+  letter-spacing:.22em;color:#A9843F;line-height:1;margin-top:.2rem;white-space:nowrap;}
+header.nav .page-here{display:none;}
+
+/* the four doors */
+header.nav .nav-links{display:flex;align-items:center;gap:clamp(1rem,2.6vw,2.1rem);}
+header.nav .nav-links>a,header.nav .nav-links>button{background:none;border:0;cursor:pointer;
+  padding:0;text-decoration:none;font-family:"Prata",Georgia,serif;font-size:.82rem;
+  letter-spacing:.02em;color:#3A2A22;white-space:nowrap;position:relative;transition:color .18s;}
+header.nav .nav-links>a:hover{color:#5A222C;}
+header.nav .nav-links>a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;
+  background:#C9A45C;transform:scaleX(0);transform-origin:left;transition:transform .22s ease;}
+header.nav .nav-links>a:hover::after{transform:scaleX(1);}
+
+/* right-hand controls */
+header.nav .nav-right{display:flex;align-items:center;gap:.8rem;flex:0 0 auto;}
+header.nav .nav-call{display:inline-flex;align-items:center;color:#7E5F2C;transition:color .18s;}
+header.nav .nav-call:hover{color:#5A222C;}
+header.nav .nav-call svg{width:20px;height:20px;}
+header.nav .lang-toggle{display:inline-flex;align-items:center;justify-content:center;
+  font-family:"Cinzel",serif;font-size:.6rem;font-weight:700;letter-spacing:.14em;
+  padding:.5rem .8rem;color:#7E5F2C;background:none;cursor:pointer;
+  border:1px solid #C9A45C;outline:1px solid #C9A45C;outline-offset:2px;border-radius:0;
+  transition:background .2s,color .2s;}
+header.nav .lang-toggle:hover,header.nav .lang-toggle:focus-visible{background:#C9A45C;color:#2B1A14;}
+header.nav .nav-book{display:inline-flex;align-items:center;justify-content:center;
+  font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;padding:.72rem 1.15rem;background:#5A222C;color:#E7C377;
+  border:1px solid #5A222C;border-radius:2px;cursor:pointer;white-space:nowrap;
+  transition:background .2s,color .2s;}
+header.nav .nav-book:hover{background:#43171F;color:#F3D89A;}
+header.nav .menu-btn{display:none;align-items:center;justify-content:center;text-align:center;
+  font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1;
+  padding:.68rem 1rem;min-height:42px;
+  color:#5A222C;background:none;cursor:pointer;
+  border:1px solid #C9A45C;outline:1px solid #C9A45C;outline-offset:3px;border-radius:0;
+  transition:background .2s,color .2s,letter-spacing .2s;}
+header.nav .menu-btn:hover,header.nav .menu-btn:focus-visible{background:#C9A45C;color:#2B1A14;}
+header.nav .nav-mobile-controls{display:none;align-items:center;gap:.8rem;padding-right:3px;}
+header.nav .nav-call-mobile{display:inline-flex;align-items:center;color:#7E5F2C;}
+header.nav .nav-call-mobile svg{width:21px;height:21px;}
+
+/* ---- phone and tablet ---- */
+@media(max-width:1024px){
+  header.nav .nav-inner{gap:.7rem;}
+  header.nav .nav-right{display:none;}
+  header.nav .nav-mobile-controls{display:flex;}
+  header.nav .menu-btn{display:inline-flex;align-items:center;justify-content:center;}
+  header.nav .lang-toggle{padding:.45rem .6rem;font-size:.55rem;letter-spacing:.1em;outline-offset:1px;}
+  header.nav .nav-links{display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;padding:.4rem 0 1rem;
+    background:#F3ECDD;border-bottom:1px solid #C9A45C;
+    box-shadow:0 22px 40px -22px rgba(43,26,20,.45);max-height:calc(100vh - 72px);overflow-y:auto;}
+  header.nav .nav-links.open{display:flex;}
+  header.nav .nav-links>a,header.nav .nav-links>button{
+    font-family:"Playfair Display SC","Prata",Georgia,serif;font-size:.95rem;letter-spacing:.04em;
+    padding:.85rem clamp(1.2rem,5vw,2rem);width:100%;text-align:left;
+    border-bottom:1px solid rgba(201,164,92,.28);}
+  header.nav .nav-links>a::after{display:none;}
+  header.nav .nav-links>a:active{background:rgba(201,164,92,.14);}
+  header.nav .nav-links .nav-call{display:flex;justify-content:center;gap:.5rem;
+    margin:.8rem clamp(1.2rem,5vw,2rem) 0;padding:.8rem 1rem;
+    background:#5A222C;color:#E7C377;border-radius:2px;font-family:"Cinzel",serif;
+    font-size:.68rem;font-weight:700;letter-spacing:.12em;}
+  header.nav .nav-links .nav-call svg{width:17px;height:17px;}
+  header.nav .nav-links .nav-book{margin:.55rem clamp(1.2rem,5vw,2rem) 0;width:auto;}
+  header.nav .nav-links .lang-toggle{display:none;}
+}
+@media(max-width:420px){
+  header.nav .wm-name{font-size:.98rem;}
+  header.nav .menu-btn{padding:.55rem .7rem;}
+}
+
+/* the four doors, and the groups beneath them on a phone */
+header.nav .doors{display:flex;align-items:flex-start;gap:clamp(1.1rem,3vw,2.6rem);}
+header.nav .grp{display:flex;flex-direction:column;}
+header.nav .door{display:block;text-decoration:none;position:relative;padding-bottom:2px;}
+header.nav .door .dt{display:block;font-family:"Prata",Georgia,serif;font-size:.84rem;
+  letter-spacing:.02em;color:#3A2A22;line-height:1.15;white-space:nowrap;transition:color .18s;}
+header.nav .door .dd{display:block;font-family:"Old Standard TT",Georgia,serif;font-style:italic;
+  font-size:.62rem;letter-spacing:.01em;color:#8A7460;line-height:1.2;margin-top:.16rem;white-space:nowrap;}
+header.nav .door::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;
+  background:#C9A45C;transform:scaleX(0);transform-origin:left;transition:transform .22s ease;}
+header.nav .door:hover .dt{color:#5A222C;}
+header.nav .door:hover::after{transform:scaleX(1);}
+/* the dropdown: opens under its door on hover or keyboard focus, and on
+   click for the More button. positioned so it never widens the bar. */
+header.nav .grp{position:relative;}
+header.nav .sub{display:none;position:absolute;top:calc(100% + 10px);left:-.9rem;z-index:120;
+  min-width:210px;flex-direction:column;padding:.5rem 0;
+  background:#F3ECDD;border:1px solid #C9A45C;outline:1px solid #C9A45C;outline-offset:2px;
+  box-shadow:0 18px 34px -18px rgba(43,26,20,.45);}
+header.nav .grp:hover>.sub,
+header.nav .grp:focus-within>.sub,
+header.nav .grp--more.open>.sub{display:flex;}
+header.nav .sub a{display:block;padding:.5rem 1.1rem;white-space:nowrap;
+  font-family:"Prata",Georgia,serif;font-size:.82rem;letter-spacing:.01em;
+  color:#3A2A22;text-decoration:none;transition:background .15s,color .15s;}
+header.nav .sub a:hover{background:rgba(201,164,92,.16);color:#5A222C;}
+/* a hover bridge so the menu does not close in the gap under the label */
+header.nav .grp>.sub::before{content:"";position:absolute;top:-12px;left:0;right:0;height:12px;}
+header.nav .door-more{background:none;border:0;padding:0;cursor:pointer;
+  display:inline-flex;align-items:baseline;gap:.3rem;font:inherit;}
+header.nav .door-more .caret{font-size:.7rem;color:#8A7460;transition:transform .2s;}
+header.nav .grp--more.open .door-more .caret{transform:rotate(180deg);}
+
+@media(max-width:1024px){
+  header.nav .doors{flex-direction:column;align-items:stretch;gap:0;width:100%;}
+  header.nav .grp{border-bottom:1px solid rgba(201,164,92,.28);padding:.9rem clamp(1.2rem,5vw,2rem);}
+  header.nav .door::after{display:none;}
+  header.nav .door .dt{font-family:"Playfair Display SC","Prata",Georgia,serif;
+    font-size:.95rem;letter-spacing:.05em;color:#5A222C;white-space:normal;}
+  header.nav .door .dd{font-size:.66rem;color:#8A7460;white-space:normal;}
+  header.nav .sub{display:flex;position:static;min-width:0;padding:0;margin-top:.5rem;
+    background:none;border:0;outline:0;box-shadow:none;}
+  header.nav .grp>.sub::before{display:none;}
+  header.nav .door-more{width:100%;justify-content:space-between;}
+  header.nav .sub a{font-family:"Playfair Display SC","Prata",Georgia,serif;font-size:.82rem;
+    letter-spacing:.03em;color:#3A2A22;text-decoration:none;padding:.5rem 0 .5rem .9rem;
+    border-left:1px solid rgba(201,164,92,.4);margin-left:.2rem;}
+  header.nav .sub a:active{color:#5A222C;}
+}
+
+/* ============================================================
+   Nav controls. Text only, with a hairline that grows on hover.
+   The booking button is the only filled element in the bar.
+   ============================================================ */
+header.nav .menu-btn,header.nav .lang-toggle{
+  position:relative;background:none;background-image:none;border:0;outline:0;
+  box-shadow:none;border-radius:0;-webkit-backdrop-filter:none;backdrop-filter:none;
+  font-family:"Cinzel",serif;font-weight:600;text-transform:uppercase;
+  letter-spacing:.22em;line-height:1;color:#6E5230;
+  padding:.8rem .25rem .78rem;min-height:44px;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;
+  transition:color .3s cubic-bezier(.22,1,.36,1);}
+header.nav .menu-btn{font-size:.6rem;}
+header.nav .lang-toggle{font-size:.58rem;}
+header.nav .menu-btn::before,header.nav .lang-toggle::before{
+  content:"";position:absolute;left:.25rem;right:.25rem;bottom:.5rem;height:1px;
+  background:#A9843F;transform:scaleX(0);transform-origin:left;
+  transition:transform .4s cubic-bezier(.22,1,.36,1);}
+header.nav .menu-btn::after,header.nav .lang-toggle::after{content:none;}
+header.nav .menu-btn:hover,header.nav .menu-btn:focus-visible,
+header.nav .lang-toggle:hover,header.nav .lang-toggle:focus-visible{color:#2B1A14;}
+header.nav .menu-btn:hover::before,header.nav .menu-btn:focus-visible::before,
+header.nav .lang-toggle:hover::before,header.nav .lang-toggle:focus-visible::before{
+  transform:scaleX(1);}
+
+/* the one filled element */
+header.nav .nav-book{display:inline-flex;align-items:center;justify-content:center;
+  font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;padding:.8rem 1.15rem;background:#5A222C;color:#E7C377;
+  border:0;border-radius:2px;cursor:pointer;white-space:nowrap;
+  transition:background .3s cubic-bezier(.22,1,.36,1);}
+header.nav .nav-book:hover,header.nav .nav-book:focus-visible{background:#43171F;}
+
+header.nav .nav-call,header.nav .nav-call-mobile{
+  display:inline-flex;align-items:center;justify-content:center;color:#7E5F2C;
+  transition:color .3s cubic-bezier(.22,1,.36,1),transform .3s cubic-bezier(.22,1,.36,1),
+             filter .3s cubic-bezier(.22,1,.36,1);}
+header.nav .nav-call:hover,header.nav .nav-call:focus-visible,
+header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
+  color:#A9843F;transform:translateY(-2px);filter:drop-shadow(0 4px 7px rgba(122,94,44,.4));}
+
+
+
+/* list marker, option E "Embossed" as chosen. This is the Unicode fleur de lis
+   character rather than a drawn shape, with a two-sided text shadow that lifts
+   it off the surface: a dark edge below and a faint light edge above.
+   The emboss was picked against the dark oxblood band, so on light backgrounds
+   the shadows are softened to suit. */
+.vo-points span::before,.vo-feats li::before,.feat-list li::before,.tick-list li::before,
+.vo-list li::before,li.feat::before,.spear::before,.ticks li::before,.why-list li::before,
+.plan-list li::before,.bors-services li::before{
+  content:"\269C" !important;
+  display:inline-block;flex:none;
+  width:auto !important;height:auto !important;
+  background:none !important;
+  font-size:1.15rem !important;
+  line-height:inherit !important;
+  color:var(--marker-ink,#8A6420) !important;
+  text-shadow:var(--marker-emboss,0 1px 0 rgba(255,255,255,.65),0 -1px 0 rgba(70,46,10,.30)) !important;
+  border:0 !important;outline:0 !important;box-shadow:none !important;
+  clip-path:none !important;transform:translateY(-0.14em) !important;
+  margin:0 .55rem 0 0 !important;
+  /* flex-start, not center: where a row wraps to two lines the marker must sit
+     on the first line, not float in the middle of the block */
+  align-self:flex-start;position:static;}
+
+
+/* two lists need their own nudge: the travel services grid and the virtual
+   office points band both center their rows differently from the rest. */
+/* the travel services list is a grid whose rows stretch to equal height, and
+   the row centers its text. so the marker must center too, not sit at the top. */
+.bors-services li::before{align-self:center !important;transform:none !important;}
+.vo-points span::before{transform:translateY(-0.30em) !important;}
+
+/* dark bands opt back in to the pale gold and the dark-side emboss, which is
+   how option E was chosen. everything else uses the darker brass above so the
+   ornament is actually visible on parchment. */
+.theme-forest,.final,.contact,.modal,footer,.hero{
+  --marker-ink:#D9BA77;
+  --marker-emboss:0 1px 0 rgba(0,0,0,.45),0 -1px 0 rgba(255,255,255,.18);}
+/* theme-forest sits on <body>, so it would tint every list on the page. only
+   the genuinely dark bands inside it should inherit the pale gold. */
+.theme-forest .section,.theme-forest .container,.theme-forest main,
+.theme-forest .bors-band,.theme-forest .vo-band{
+  --marker-ink:#8A6420;
+  --marker-emboss:0 1px 0 rgba(255,255,255,.65),0 -1px 0 rgba(70,46,10,.30);}
+.theme-forest .final,.theme-forest .contact,.theme-forest footer,
+.theme-forest .hero,.theme-forest .modal{
+  --marker-ink:#D9BA77;
+  --marker-emboss:0 1px 0 rgba(0,0,0,.45),0 -1px 0 rgba(255,255,255,.18);}
+
+/* nothing else may decorate these list rows */
+.vo-points span::after,.vo-feats li::after,.feat-list li::after,
+.tick-list li::after,.vo-list li::after{content:none !important;
+  border:0 !important;background:none !important;}
+.vo-points span,.vo-feats li,.feat-list li,.tick-list li,.vo-list li{
+  border-left:0 !important;border:0 !important;align-items:center !important;}
+
+/* ---- phone and tablet menu: a panel, not the whole page ---- */
+@media(max-width:1024px){
+  header.nav .nav-links{
+    left:auto;right:0;width:min(88vw,400px);
+    border-left:1px solid #C9A45C;border-bottom:1px solid #C9A45C;
+    box-shadow:-18px 22px 44px -24px rgba(43,26,20,.5);
+    padding:.2rem 0 1.2rem;}
+
+  /* group heading: bigger, oxblood, letterspaced, with a rule beneath it */
+  header.nav .grp{padding:1rem clamp(1rem,4vw,1.4rem) .9rem;}
+  header.nav .door{padding-bottom:.55rem;margin-bottom:.55rem;
+    border-bottom:1px solid rgba(201,164,92,.55);}
+  header.nav .door .dt{
+    font-family:"Cinzel",serif;font-weight:700;font-size:.74rem;
+    letter-spacing:.2em;text-transform:uppercase;color:#5A222C;}
+  header.nav .door .dd{
+    font-family:"Old Standard TT",Georgia,serif;font-style:italic;
+    font-size:.66rem;color:#9A8672;margin-top:.22rem;}
+
+  /* the services under it: smaller, quieter, clearly subordinate */
+  header.nav .sub{margin-top:.15rem;border-left:0;}
+  header.nav .sub a{
+    font-family:"Prata",Georgia,serif;font-size:.86rem;letter-spacing:.01em;
+    color:#4A3A30;padding:.52rem 0 .52rem 1rem;border-left:0;margin-left:0;
+    position:relative;}
+  header.nav .sub a::before{content:"";position:absolute;left:0;top:50%;
+    width:6px;height:1px;background:rgba(201,164,92,.8);}
+}
+
+/* ---- the open panel stays put and owns its own scrolling ---- */
+@media(max-width:1024px){
+  header.nav .nav-links{position:fixed;top:var(--navh,66px);bottom:0;right:0;left:auto;
+    width:min(88vw,400px);max-height:none;height:auto;overflow-y:auto;
+    -webkit-overflow-scrolling:touch;overscroll-behavior:contain;}
+  body.no-scroll{overflow:hidden;position:fixed;width:100%;}
+  /* dim the page behind, so the panel reads as sitting over it */
+  header.nav .nav-links.open::after{content:"";position:fixed;inset:var(--navh,66px) min(88vw,400px) 0 0;
+    background:rgba(43,26,20,.28);z-index:-1;pointer-events:none;}
+
+  /* hover and touch highlight, so you always know what you are on */
+  header.nav .sub a,header.nav .door{transition:background .22s ease,color .22s ease,padding-left .22s ease;}
+  header.nav .sub a:hover,header.nav .sub a:focus-visible,header.nav .sub a:active{
+    background:rgba(201,164,92,.18);color:#5A222C;padding-left:1.35rem;}
+  header.nav .sub a:hover::before{width:12px;background:#A9843F;}
+  header.nav .door:hover .dt,header.nav .door:focus-visible .dt{color:#43171F;}
+  header.nav .grp:hover{background:rgba(201,164,92,.07);}
+}
+
+/* hero copy on the dark green bands: raise it well clear of the background */
+.theme-forest .hero .lead,.hero .lead{color:#F7F1E4 !important;
+  font-weight:400;letter-spacing:.004em;line-height:1.68;
+  text-shadow:0 1px 3px rgba(12,24,17,.55);}
+.theme-forest .hero .eyebrow,.hero .eyebrow--light{color:#F0D9A0 !important;}
+.theme-forest .hero{background:#33513F !important;}
+
+/* house ornament used as a section divider, the way the Mission Inn uses its bell */
+.orn{display:block;width:100%;max-width:240px;height:24px;margin:clamp(2.2rem,5vw,3.6rem) auto;
+  background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 24'><g fill='none' stroke='%23C9A45C' stroke-width='1'><path d='M4 12h78' opacity='.35'/><path d='M158 12h78' opacity='.35'/><path d='M92 12h20'/><path d='M128 12h20'/></g><g fill='%23C9A45C'><path d='M120 4a8 8 0 1 0 0 16 6.4 6.4 0 1 1 0-16z'/><circle cx='86' cy='12' r='1.6'/><circle cx='154' cy='12' r='1.6'/></g></svg>") no-repeat center/contain;opacity:.9;}
+.orn--tight{margin:clamp(1.4rem,3vw,2.2rem) auto;}
+.theme-forest .orn{filter:brightness(1.25);}
+
+/* ============================================================
+   Morris wallpaper on the interior hero bands.
+   Pattern at 24%, then a scrim that fades it out under the text
+   so the words sit on near-solid green and stay legible.
+   ============================================================ */
+.theme-forest .hero{position:relative;isolation:isolate;background:#2A4335 !important;}
+.theme-forest .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("images/morris-wallpaper.jpg") repeat;background-size:760px auto;opacity:.24;}
+/* the scrim: strong on the left where the copy lives, clearing to the right */
+.theme-forest .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(35,58,44,.93) 0%,rgba(35,58,44,.86) 26%,
+             rgba(35,58,44,.55) 52%,rgba(35,58,44,.18) 78%,rgba(35,58,44,.05) 100%),
+             linear-gradient(0deg,rgba(16,30,22,.35),transparent 55%);}
+.theme-forest .hero .container,.theme-forest .hero .hero-split{position:relative;z-index:2;}
+
+/* type lifted well clear of the pattern */
+.theme-forest .hero .lead{color:#FBF6EA !important;text-shadow:0 1px 4px rgba(10,20,14,.75) !important;}
+.theme-forest .hero h1,.theme-forest .hero h2{color:#FDF8EC !important;text-shadow:0 2px 9px rgba(10,20,14,.7);}
+.theme-forest .hero .eyebrow{color:#F0D9A0 !important;text-shadow:0 1px 3px rgba(10,20,14,.6);}
+.theme-forest .hero .tour-facts{color:#F0D9A0 !important;text-shadow:0 1px 3px rgba(10,20,14,.6);}
+
+/* ---- Weddings: same Morris wallpaper, black ground instead of green ---- */
+.theme-rose .hero{position:relative;isolation:isolate;background:#171313 !important;}
+.theme-rose .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("images/morris-wallpaper-black.jpg") repeat;background-size:760px auto;opacity:.24;}
+.theme-rose .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(20,16,15,.93) 0%,rgba(20,16,15,.86) 26%,
+             rgba(20,16,15,.55) 52%,rgba(20,16,15,.18) 78%,rgba(20,16,15,.05) 100%),
+             linear-gradient(0deg,rgba(8,6,6,.4),transparent 55%);}
+.theme-rose .hero .container,.theme-rose .hero .hero-split{position:relative;z-index:2;}
+.theme-rose .hero .lead{color:#FBF6EA !important;text-shadow:0 1px 4px rgba(0,0,0,.8) !important;}
+.theme-rose .hero h1,.theme-rose .hero h2{color:#FDF8EC !important;text-shadow:0 2px 9px rgba(0,0,0,.75);}
+.theme-rose .hero .eyebrow{color:#F0D9A0 !important;text-shadow:0 1px 3px rgba(0,0,0,.7);}
+
+/* nav phone bar: a framed block inside the mobile menu panel only. on desktop
+   it is plain text beside the other controls, with no border and no full width. */
+@media(max-width:1024px){
+  header.nav .nav-links .nav-call{align-self:center;width:calc(100% - 2.4rem);
+    margin:.9rem auto .2rem !important;padding:.7rem 1rem !important;
+    border-radius:2px;border:1px solid rgba(231,195,119,.55);}
+}
+header.nav .nav-inner{align-items:center;}
+header.nav .nav-right{align-self:center;}
+
+/* page name inside the name plate, so you always know where you are */
+header.nav .wm-page{display:block;font-family:"Prata",Georgia,serif;
+  font-size:.74rem;letter-spacing:.02em;line-height:1.2;color:#A9843F;
+  margin-top:.22rem;padding-top:.22rem;border-top:1px solid rgba(201,164,92,.45);
+  text-transform:none;}
+@media(max-width:1024px){header.nav .wm-page{font-size:.66rem;margin-top:.16rem;padding-top:.16rem;}}
+@media(max-width:400px){header.nav .wm-page{font-size:.6rem;}}
+
+/* virtual office plan tiers */
+.plan-stack{display:grid;gap:1.15rem;text-align:left;margin-top:.6rem;}
+.plan{background:#FBF6EC;border:0;border-radius:14px;overflow:hidden;padding:0 0 1.35rem;
+  box-shadow:0 18px 40px -28px rgba(26,20,10,.55);}
+.plan--day{background:#F4EEE1;}
+
+.plan--top{background:#FCF8F0;}
+.plan-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.25rem 1rem;
+  background:linear-gradient(165deg,#2A2118,#171208);padding:.92rem 1.2rem;margin:0 0 1.05rem;}
+.plan--day .plan-top{background:linear-gradient(165deg,#B7A78B,#A2926F);}
+.plan--day .plan-top h3{color:#2A2118;}
+.plan--day .plan-price{color:rgba(42,33,24,.78);}
+.plan--mid .plan-top{background:linear-gradient(165deg,#22402D,#152A1D);}
+.plan--top .plan-top{background:linear-gradient(165deg,#4A1C24,#2C0F15);}
+.plan-top h3{margin:0;font-family:"Cinzel",serif;font-size:.92rem;letter-spacing:.11em;
+  text-transform:uppercase;color:#E4CE97;}
+.plan-price{font-family:"Prata",Georgia,serif;font-size:.86rem;color:rgba(228,206,151,.82);}
+.plan p{margin:0 1.2rem;font-size:.96rem;color:#473C34;line-height:1.6;}
+.plan-list{list-style:none;margin:.75rem 1.2rem 0;padding:0;}
+.plan-list li{display:flex;gap:.15rem;align-items:flex-start;margin:.34rem 0;font-size:.93rem;color:#4E443B;line-height:1.55;}
+.plan-note{font-size:.95rem;color:#473C34;margin:1.1rem 0 0;padding-top:.9rem;
+  border-top:1px solid rgba(201,164,92,.35);}
+@media(min-width:760px){.plan-stack{grid-template-columns:1fr 1fr;}
+  .plan--day{grid-column:1/-1;}}
+
+
+/* accessibility notice, required because the upper floor cannot be retrofitted */
+.ada-note{max-width:70ch;margin:2.2rem auto 0;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.85rem;line-height:1.7;color:#6A6058;text-align:center;}
+
+/* Victorian rule under section titles. The heading shrinks to the width of its
+   own text, so the rule ends where the words end rather than running on to the
+   edge of the column. A brass hairline with a small diamond set in a gap. */
+.section h2{position:relative;width:fit-content;max-width:100%;}
+.section h2::after{content:"";display:block;width:100%;height:9px;margin-top:.9rem;
+  background-image:
+    linear-gradient(to right, rgba(169,132,63,.55) 0 calc(50% - 15px),
+                              transparent calc(50% - 15px) calc(50% + 15px),
+                              rgba(169,132,63,.55) calc(50% + 15px) 100%),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 9'><path d='M4.5 0l4.5 4.5L4.5 9 0 4.5z' fill='%23A9843F'/></svg>");
+  background-repeat:no-repeat,no-repeat;
+  background-size:100% 1px, 9px 9px;
+  background-position:left center, center center;}
+/* a shrunk block still needs centering where the wrapper centers its text */
+.section h2[style*="text-align:center"],
+.section .head h2,.section .faq-head h2,.section .gallery-intro h2,
+.section .inner h2,.section .contact-inner h2,
+.steps h2,.final h2,.contact h2,.amenities h2,.quote-band h2{margin-inline:auto;}
+/* on the dark bands the brass needs lifting */
+.theme-forest .section h2::after{filter:brightness(1.35);}
+/* card headings and pull quotes keep their own rhythm, no rule */
+.quote-band h2::after,.pkg h3::after,.space-body h3::after{display:none;}
+
+/* footer call to action: a quiet brass outline, not a browser default button */
+.foot-cta{display:inline-block;margin-top:.5rem;padding:.55rem 1rem;
+  font-family:"Cinzel",serif;font-size:.6rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass-light);background:none;cursor:pointer;
+  border:1px solid rgba(217,186,119,.45);border-radius:2px;
+  transition:background .2s,color .2s,border-color .2s;}
+.foot-cta:hover{background:rgba(217,186,119,.14);color:#F1E6D3;border-color:rgba(217,186,119,.8);}
+
+/* skip to content: invisible until a keyboard user tabs to it, then it is the
+   first thing they reach on the page */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:9999;
+  background:#5A222C;color:#F1E6D3;padding:.75rem 1.25rem;
+  font-family:"Cinzel",serif;font-size:.72rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  border:1px solid #C9A45C;border-radius:0 0 3px 0;}
+.skip-link:focus{left:0;outline:2px solid #C9A45C;outline-offset:2px;}
+
+
+/* ---------- required fields on the inquiry forms ----------
+   The star hangs off the wrapper, never inside the label. Switching the page to
+   Spanish replaces a label's entire contents, so anything placed inside one
+   would silently disappear the moment somebody pressed ESPAÑOL. */
+.field.req > label::after{content:" *";color:#A9843F;font-weight:700;}
+.field input.invalid,.field textarea.invalid,.field select.invalid{
+  border-color:#8C2D2D !important;
+  box-shadow:0 0 0 2px rgba(140,45,45,.15);}
+#formError{margin-top:1rem;color:#8C2D2D;font-weight:600;font-size:.92rem;}

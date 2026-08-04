@@ -20,20 +20,21 @@
 <title>Borsellino Travel | Travel Agency in Lake Elsinore</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EventVenue",
-  "name": "The Chimes",
+  "name": "The Crescent House 1887",
+  "alternateName": ["The Chimes", "The Chimes Events", "Crescent Bath House"],
   "alternateName": [
     "Crescent Bath House",
     "The Crescent House"
   ],
   "description": "A travel agency inside the historic 1887 Crescent Bath House in downtown Lake Elsinore. Vacations, group travel, and business trips planned by a real person.",
   "url": "https://the-chimes.netlify.app/borsellino-travel.html",
-  "telephone": "+1-951-000-0000",
+  "telephone": "+1-951-718-4204",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "201 W. Graham Avenue",
@@ -80,19 +81,17 @@
   .section{padding:clamp(4.5rem,9vw,8rem) 0;}
   .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
   .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
-  .dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;white-space:nowrap;}
   .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
   .hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
   .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:2/3;background:#1E3227;}
   .steps{background:var(--cream-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .quote-band{background:var(--parchment-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .charm img{width:100%;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
+  .charm img{width:100%;max-width:380px;margin-inline:auto;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
   .final{background:linear-gradient(165deg,var(--forest),var(--forest-deep));color:#F1E6D3;text-align:center;position:relative;overflow:hidden;}
   footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 0 2.4rem;}
   .modal-head{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#F4E9D6;padding:1.8rem 2rem 1.6rem;position:relative;}
   .charm img{cursor:zoom-in;}
   @media(max-width:1024px){
-    .dropdown-menu a{padding:.72rem 1rem;}
     .dd-toggle{width:100%;justify-content:space-between;}
   }
   @media(max-width:520px){
@@ -101,7 +100,6 @@
   @media (prefers-color-scheme: dark){
     body{background:#F3ECDD !important;}
     body{color:#211A16 !important;}
-    .dropdown-menu a{color:#4a3f36 !important;}
     .dd-toggle{color:#4a3f36 !important;}
     .quote-band{background:#ECE1CC !important;}
     .final{background:#2F4A3A !important;color:#F1E6D3 !important;}
@@ -120,9 +118,8 @@
   color:var(--accent);margin-top:.35rem;}
 .bors-services{list-style:none;padding:0;margin:1.1rem 0 0;display:grid;
   grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.3rem .9rem;}
-.bors-services li{position:relative;padding-left:1.05rem;font-size:.94rem;color:#473c34;}
-.bors-services li::before{content:"\25C6";position:absolute;left:0;top:.05rem;
-  color:var(--brass);font-size:.6rem;}
+.bors-services li{display:flex;align-items:center;font-size:.94rem;color:#473c34;}
+
 .bors-contact{margin-top:1.15rem;font-weight:600;font-size:.96rem;}
 .bors-contact a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--brass);}
 .bors-contact a:hover{color:var(--brass);}
@@ -159,68 +156,71 @@
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-
-/* ---- "you are here" ----
-   The nav is sticky, so this stays on screen however far down you scroll. Same face
-   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
-   your location and not as more of the strapline. */
-.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
-  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
-  line-height:1;white-space:nowrap;}
-.page-here::before{content:"";display:inline-block;width:12px;height:1px;
-  background:var(--brass);vertical-align:middle;margin-right:.5rem;
-  transform:translateY(-1px);}
 @media (max-width:640px){
-  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
-  .page-here{display:none;}
 }
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 </style>
 </head>
 <body class="theme-forest">
+    <a class="skip-link" href="#main">Skip to content</a>
+    
 
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
-      <span class="page-here" data-es="Borsellino Travel">Borsellino Travel</span>
+    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Borsellino Agencia de Viajes">Borsellino Travel Agency</span></span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <div class="has-dropdown">
-        <button class="dd-toggle" id="exploreToggle" aria-expanded="false">Explore <span class="caret">▾</span></button>
-        <div class="dropdown-menu">
-          <span class="dd-label">Events &amp; Rentals</span>
-          <a href="weddings.html">Weddings</a>
-          <a href="social-events.html">Social Events</a>
-          <a href="corporate-events.html">Corporate Events</a>
-          <a href="photo-film.html">Photo &amp; Film</a>
-          <span class="dd-label">Work</span>
-          <a href="workspace.html">Workspace &amp; Offices</a>
-          <a href="virtual-office.html">Virtual Office</a>
-          <span class="dd-label">Discover</span>
-          <a href="history-tours.html">History &amp; Tours</a>
-          <a href="borsellino-travel.html" aria-current="page">Travel</a>
-          <a href="contact.html">Contact</a>
+        <div class="doors">
+          <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
+          <div class="grp">
+            <a class="door" href="chimes-events.html"><span class="dt" data-es="Eventos">Events</span></a>
+            <div class="sub">
+              <a href="chimes-events.html" data-es="The Chimes Venue">The Chimes Venue</a>
+              <a href="social-events.html#quince" data-es="Quincea&ntilde;eras">Quincea&ntilde;eras</a>
+              <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
+              <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+              <a href="social-events.html#library" data-es="The Library Speakeasy">The Library Speakeasy</a>
+            </div>
+          </div>
+          <div class="grp">
+            <a class="door" href="workspace.html"><span class="dt" data-es="Oficinas">Offices</span></a>
+            <div class="sub">
+              <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+              <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+            </div>
+          </div>
+          <div class="grp grp--more">
+            <button class="door door-more" type="button" aria-expanded="false"><span class="dt" data-es="M&aacute;s">More</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+            <div class="sub">
+              <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+              <a href="photo-film.html" data-es="Foto y Cine">Photo &amp; Film</a>
+              <a href="borsellino-travel.html" data-es="Borsellino Travel Agency">Borsellino Travel Agency</a>
+              <a href="contact.html" data-es="Contacto">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
-      <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
-      <button class="btn btn-primary nav-book" data-modal-open data-interest="travel">Get in touch</button>
-    </nav>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">ES</button>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
 </header>
 
-<section class="hero">
+<main id="main">
+    <section class="hero">
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
-        <span class="eyebrow" data-es="Borsellino Travel en The Chimes">Borsellino Travel at The Chimes</span>
+        <span class="eyebrow" data-es="Borsellino Travel en The Crescent House">Borsellino Travel at The Crescent House</span>
         <h1>Plan the trip<br><em>from a landmark.</em></h1>
-        <p class="lead" data-es="Borsellino Travel Consultants trabaja dentro de la restaurada Crescent Bath House de 1887. Siéntese con alguien que conoce la ruta, en un edificio que lleva más de un siglo enviando gente a lugares memorables.">Borsellino Travel Consultants works inside the restored 1887 Crescent Bath House. Sit down with someone who knows the route, in a building that has been sending people somewhere memorable for over a century.</p>
+        <p class="lead" data-es="Más de treinta años planeando viajes, ahora desde la restaurada Crescent Bath House de 1887. Siéntese con alguien que conoce la ruta, en un edificio que lleva más de un siglo enviando gente a lugares memorables.">Over thirty years of planning travel, now working from inside the restored 1887 Crescent Bath House. Sit down with someone who knows the route, in a building that has been sending people somewhere memorable for over a century.</p>
         <div class="hero-cta">
           <button class="btn btn-brass" data-modal-open data-interest="travel">Plan a trip</button>
           <a href="#services" class="btn btn-ghost">What we do</a>
@@ -229,7 +229,7 @@
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
           <img src="images/travel-office.jpg" data-es-alt="La oficina de Borsellino Travel dentro de The Chimes, con candelabro, vitral y un escritorio de época"
-               alt="The Borsellino Travel office inside The Chimes, with a chandelier, stained glass, and a period writing desk" />
+               alt="The Borsellino Travel office inside The Chimes, with a chandelier, stained glass, and a period writing desk"  width="1024" height="1536" />
           <div class="hero-badge" data-es="Est. 1887 ·<br>Viajes y Planeación">Est. 1887 ·<br>Travel &amp; Planning</div>
         </figure>
       </div>
@@ -240,7 +240,7 @@
 <section class="bors-band">
   <div class="container bors reveal">
     <img class="bors-logo" src="images/borsellino-logo.png" alt="The Borsellino Travel Consultants bird logo"
-         data-es-alt="El logotipo del ave de Borsellino Travel Consultants" width="150" height="160" />
+         data-es-alt="El logotipo del ave de Borsellino Travel Consultants" width="243" height="260" />
     <div class="bors-body">
       <span class="eyebrow" data-es="La agencia">The agency</span>
       <h2 data-es="Borsellino Travel Consultants">Borsellino Travel Consultants</h2>
@@ -273,7 +273,7 @@
 
 <section class="quote-band">
   <div class="container quote-inner reveal">
-    <p>Anyone can book a flight. Fewer people can plan a trip.</p>
+    <p>Come in with an idea. Leave with an itinerary.</p>
   </div>
 </section>
 
@@ -304,43 +304,26 @@
   </div>
 </section>
 
-<section class="wing-band" aria-hidden="true">
-  <img src="images/travel-wing.jpg" loading="lazy" decoding="async" alt="" />
-</section>
-
 <section class="section dest">
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:60ch;margin:0 auto;">
       <span class="eyebrow" data-es="A dónde va la gente">Where people go</span>
-      <h2 style="margin-top:.7rem;" data-es="Una isla, una boda, o dos semanas sin nada agendado.">An island, a wedding, or two weeks with nothing scheduled.</h2>
+      <h2 style="margin-top:.7rem;" data-es="Adónde quiere ir, y cómo quiere llegar.">Where you want to go, and how you want to get there.</h2>
       <p data-es="Vuelos, hoteles e itinerarios, planeados de una sola vez, para que no termine armando el viaje entre pestañas del navegador.">Flights, hotels, and itineraries, planned in one sitting, so you are not assembling a trip across a dozen browser tabs.</p>
-    </div>
-    <div class="dest-grid">
-      <figure class="dest-tile reveal">
-        <img src="images/travel-coast.jpg" loading="lazy" decoding="async"
-             alt="A boat anchored off a white pebble beach with clear turquoise water"
-             data-es-alt="Un barco anclado frente a una playa de piedra blanca con agua turquesa" />
-        <figcaption data-es="Escapadas y viajes en pareja">Getaways and couples' trips</figcaption>
-      </figure>
-      <figure class="dest-tile reveal">
-        <img src="images/travel-passports.jpg" loading="lazy" decoding="async"
-             alt="Two passports held up in a European plaza"
-             data-es-alt="Dos pasaportes sostenidos en una plaza europea" />
-        <figcaption data-es="Viajes en grupo y en familia">Group and family travel</figcaption>
-      </figure>
+        <p class="reveal" style="margin-top:1rem;" data-es="Podemos enviarle a cualquier parte del mundo, pero también le invitamos a quedarse cerca y descubrir la belleza de Lake Elsinore.">We can send you anywhere in the world, but we also invite you to stay close and explore the beautiful area around Lake Elsinore.</p>
     </div>
   </div>
 </section>
 
 <section class="charm section" id="story">
   <div class="container charm">
-    <div class="reveal">
-      <img src="images/travel-corner.jpg" loading="lazy" decoding="async" alt="A corner of the Borsellino Travel office at The Chimes" data-es-alt="Un rincón de la oficina de Borsellino Travel en The Chimes" />
-    </div>
+      <div class="reveal">
+        <img src="images/travel-passports.jpg" loading="lazy" decoding="async" alt="Two United States passports held up in a sunlit European plaza" data-es-alt="Dos pasaportes de Estados Unidos sostenidos en una plaza europea iluminada por el sol"  width="1000" height="1249" />
+      </div>
     <div class="reveal">
       <span class="eyebrow">Since 1887</span>
-      <h2 style="margin-top:.7rem;">A building that has always been about the journey.</h2>
-      <p>The Crescent Bath House was built in 1887 as a mineral-springs resort, a destination people travelled across the state to reach. More than a century later, the building is still in the business of sending people somewhere worth going.</p>
+      <h2 style="margin-top:.7rem;">A building built for people on their way somewhere.</h2>
+      <p>The Crescent Bath House was built in 1887 as a mineral-springs resort, a destination people traveled across the state to reach. More than a century later, the building is still in the business of sending people somewhere worth going.</p>
       <p style="color:#473c34;">Come sit down, look at a map, and talk it through in person. It is a better way to plan a trip than a browser tab.</p>
     </div>
   </div>
@@ -350,12 +333,12 @@
   <div class="container" style="text-align:center;">
     <div class="reveal" style="max-width:44ch;margin-inline:auto;">
       <span class="eyebrow" style="justify-content:center;">Come in</span>
-      <h2 style="margin-top:.7rem;">Find us inside The Chimes.</h2>
+      <h2 style="margin-top:.7rem;">Find us inside The Crescent House.</h2>
     </div>
     <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
       <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-deep);">201 W. Graham Avenue</div>
       <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
-      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Downtown Lake Elsinore, with private parking directly across the street. Walk in, or send a note and we will set a time to sit down properly. <span class="todo">add the travel agency's name, its own phone and email if separate, and its opening hours.</span></p>
+      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Downtown Lake Elsinore, with private parking directly across the street. Walk in, or send a note and we will set a time to sit down properly.</p>
       <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
       <button class="btn btn-brass" data-modal-open data-interest="travel">Plan a trip</button>
     </div>
@@ -369,10 +352,10 @@
       <h2 style="margin-top:.7rem;">Worth the sit-down.</h2>
     </div>
     <div class="why-grid">
-      <div class="why-item reveal"><div class="dot">01</div><div><h3>Someone to call</h3><p>When a flight is cancelled or a hotel loses the booking, you call a person, not a chatbot in another time zone.</p></div></div>
+      <div class="why-item reveal"><div class="dot">01</div><div><h3>Someone to call</h3><p>When a flight is canceled or a hotel loses the booking, you call a person, not a chatbot in another time zone.</p></div></div>
       <div class="why-item reveal"><div class="dot">02</div><div><h3>The whole trip, not just the flight</h3><p>Flights, hotels, transfers, and the parts nobody thinks about until they are standing in an airport with luggage.</p></div></div>
-      <div class="why-item reveal"><div class="dot">03</div><div><h3>Good at groups</h3><p>Ten people, four departure cities, and one budget is exactly the kind of thing that breaks a booking website.</p></div></div>
-      <div class="why-item reveal"><div class="dot">04</div><div><h3>Right here in town</h3><p>Downtown Lake Elsinore, in a building you already know. Park across the street and come in.</p></div></div>
+      <div class="why-item reveal"><div class="dot">03</div><div><h3>Good at groups</h3><p>A booking website cannot coordinate ten travelers leaving from four different cities on one shared budget. We can.</p></div></div>
+      <div class="why-item reveal"><div class="dot">04</div><div><h3>Right here in town</h3><p>Downtown Lake Elsinore, in a building you already know. Call or email to set a time, and there is parking right across the street.</p></div></div>
     </div>
   </div>
 </section>
@@ -388,43 +371,47 @@
   </div>
 </section>
 
-<footer>
+</main>
+    <footer>
   <div class="container">
     <div class="foot-inner">
       <div class="foot-mark">
-        <div class="name">THE CHIMES</div>
-        <div class="tag">Preserving the past, building what's next.</div>
+        <div class="name">THE CRESCENT HOUSE 1887</div>
+        <div class="tag">A timeless landmark to celebrate history and create memories.</div>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h4>Travel</h4>
+          <h3 class="foot-h">Travel</h3>
           <a href="#services">What we do</a>
           <a href="#visit">Come in</a>
           <a href="#whyus">Why an agent</a>
         </div>
         <div class="foot-col">
-          <h4>The Chimes</h4>
+          <h3 class="foot-h">The Crescent House 1887</h3>
           <a href="index.html">Home</a>
           <a href="index.html#office">Office Suites</a>
-          <a href="index.html#events">Event Hall</a>
+          <a href="chimes-events.html">The Chimes Events</a>
           <a href="index.html#heritage">Our History</a>
           <a href="workspace.html">Workspace &amp; Offices</a>
           <a href="photo-film.html">Photo &amp; Film</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
+          <a href="borsellino-travel.html">Borsellino Travel Agency</a>
         </div>
         <div class="foot-col">
-          <h4>Follow</h4>
+          <h3 class="foot-h">Follow</h3>
           <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/thecrescenthouse1887" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@thecrescent1887" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.linkedin.com/company/the-crescent-house/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="foot-col">
-          <h4>Visit</h4>
+          <h3 class="foot-h">Visit</h3>
           <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
-          <a href="tel:+19510000000">(951) 000-0000</a>
+          <a href="tel:+19517184204">(951) 718-4204</a>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
       <span>Travel · Events · Office Leasing</span>
       <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
     </div>
@@ -441,8 +428,8 @@
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
     </div>
     <div class="modal-body">
-      <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="chimes-inquiry" />
+      <form id="bookForm" novalidate name="borsellino-travel-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="borsellino-travel-inquiry" />
             <input type="hidden" name="page" value="borsellino-travel" />
             <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="field">
@@ -453,14 +440,14 @@
             <option value="business">Business travel</option>
           </select>
         </div>
-        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field req"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
         <div class="field-row">
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+          <div class="field req"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field req"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" /></div>
-          <div class="field"><label for="guests">Estimated travelers</label><input id="guests" name="guests" type="number" min="1" placeholder="Optional" /></div>
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" min="2026-08-02" /></div>
+          <div class="field"><label for="guests">Estimated travelers</label><input id="guests" name="guests" type="number" min="1" max="20" placeholder="Up to 20" data-es-placeholder="Hasta 20" /></div>
         </div>
         <div class="field"><label for="message">Tell us about the trip</label><textarea id="message" name="message" placeholder="Where you want to go, when, and how many people."></textarea></div>
         <button type="submit" class="btn btn-primary">Send inquiry</button>
@@ -490,22 +477,6 @@
   var MODAL_DEFAULT={en:'Plan a trip',es:'Planee un viaje'};
 
   var I18N = [
-    [".wordmark .sub", "Histórica Crescent Bath House · Est. 1887"],
-    [".nav-book", "Contáctenos"],
-    ["#navLinks > a[href=\"index.html\"]", "Inicio"],
-    ["#exploreToggle", "Explorar <span class=\"caret\">▾</span>"],
-    [".dropdown-menu span.dd-label:nth-of-type(1)", "Eventos y Alquileres"],
-    [".dropdown-menu span.dd-label:nth-of-type(2)", "Trabajo"],
-    [".dropdown-menu span.dd-label:nth-of-type(3)", "Descubrir"],
-    [".dropdown-menu a[href=\"weddings.html\"]", "Bodas"],
-    [".dropdown-menu a[href=\"social-events.html\"]", "Eventos Sociales"],
-    [".dropdown-menu a[href=\"corporate-events.html\"]", "Eventos Corporativos"],
-    [".dropdown-menu a[href=\"photo-film.html\"]", "Fotografía y Cine"],
-    [".dropdown-menu a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
-    [".dropdown-menu a[href=\"virtual-office.html\"]", "Oficina Virtual"],
-    [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
-    [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
     [".hero h1", "Planee el viaje<br><em>desde un edificio histórico.</em>"],
     [".hero-cta .btn-brass", "Planee un viaje"],
     [".hero-cta .btn-ghost", "Qué hacemos"],
@@ -513,7 +484,7 @@
     [".facts .fact:nth-child(2)", "Centro de Lake Elsinore"],
     [".facts .fact:nth-child(3)", "Hable con una persona real"],
     [".facts .fact:nth-child(4)", "Citas bienvenidas"],
-    [".quote-inner p", "Cualquiera puede reservar un vuelo. Pocos pueden planear un viaje."],
+    [".quote-inner p", "Venga con una idea. Salga con un itinerario."],
     ["#services .eyebrow", "Qué hacemos"],
     ["#services h2", "Viajes planeados por alguien que sí contesta el teléfono."],
     [".setting .set-card:nth-child(1) .n", "Escaparse"],
@@ -526,11 +497,11 @@
     [".setting .set-card:nth-child(3) h3", "Viajes corporativos"],
     [".setting .set-card:nth-child(3) p", "Vuelos, hoteles e itinerarios para un equipo, resueltos de una sola vez, para que nadie de su personal pase la tarde en espera al teléfono."],
     ["#story .eyebrow", "Est. 1887"],
-    ["#story h2", "Un edificio que siempre ha sido sobre el viaje."],
+    ["#story h2", "Un edificio hecho para quienes van de camino a algún lugar."],
     ["#story .reveal:nth-of-type(2) p:nth-of-type(1)", "El Crescent Bath House se construyó en 1887 como un balneario de aguas minerales, un destino al que la gente viajaba desde todo el estado. Más de un siglo después, el edificio sigue en el negocio de enviar gente a lugares que valen la pena."],
     ["#story .reveal:nth-of-type(2) p:nth-of-type(2)", "Venga, siéntese, mire un mapa y hablémoslo en persona. Es una mejor manera de planear un viaje que una pestaña del navegador."],
     ["#visit .eyebrow", "Pase a vernos"],
-    ["#visit h2", "Encuéntrenos dentro de The Chimes."],
+    ["#visit h2", "Encuéntrenos dentro de The Crescent House."],
     ["#visit .btn", "Planee un viaje"],
     ["#whyus .eyebrow", "Por qué un agente"],
     ["#whyus h2", "Vale la pena sentarse a platicar."],
@@ -539,30 +510,30 @@
     [".why-grid .why-item:nth-child(2) h3", "El viaje completo, no solo el vuelo"],
     [".why-grid .why-item:nth-child(2) p", "Vuelos, hoteles, traslados, y todas esas partes en las que nadie piensa hasta que está parado en un aeropuerto con maletas."],
     [".why-grid .why-item:nth-child(3) h3", "Buenos con los grupos"],
-    [".why-grid .why-item:nth-child(3) p", "Diez personas, cuatro ciudades de salida y un solo presupuesto es exactamente el tipo de cosa que rompe a un sitio de reservas."],
+    [".why-grid .why-item:nth-child(3) p", "Un sitio de reservas no puede coordinar a diez viajeros que salen de cuatro ciudades distintas con un solo presupuesto. Nosotros sí."],
     [".why-grid .why-item:nth-child(4) h3", "Aquí mismo en el pueblo"],
     [".why-grid .why-item:nth-child(4) p", "En el centro de Lake Elsinore, en un edificio que ya conoce. Estaciónese enfrente y pase."],
     ["#contact-final .eyebrow", "Hablemos"],
     ["#contact-final h2", "Díganos a dónde quiere ir."],
     ["#contact-final p:not(.phone)", "Mándenos la idea, aunque sea vaga, y le decimos cómo podría verse."],
     ["#contact-final .btn-brass", "Planee un viaje"],
-    [".foot-mark .tag", "Preservando el pasado, construyendo el futuro."],
-    [".foot-cols .foot-col:nth-of-type(1) h4", "Borsellino Travel"],
-    [".foot-cols .foot-col:nth-of-type(3) h4", "Síganos"],
+    [".foot-mark .tag", "Un lugar histórico para celebrar la historia y crear recuerdos."],
+    [".foot-cols .foot-col:nth-of-type(1) h3", "Borsellino Travel"],
+    [".foot-cols .foot-col:nth-of-type(3) h3", "Síganos"],
     [".foot-cols a[href=\"#services\"]", "Qué hacemos"],
     [".foot-cols a[href=\"#visit\"]", "Pase a vernos"],
     [".foot-cols a[href=\"#whyus\"]", "Por qué un agente"],
     [".foot-cols a[href=\"index.html\"]", "Inicio"],
     [".foot-cols a[href=\"index.html#office\"]", "Suites de oficina"],
-    [".foot-cols a[href=\"index.html#events\"]", "Salón de eventos"],
+    [".foot-cols a[href=\"chimes-events.html\"]", "Eventos The Chimes"],
     [".foot-cols a[href=\"index.html#heritage\"]", "Historia"],
     [".foot-cols a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
     [".foot-cols a[href=\"photo-film.html\"]", "Fotografía y Cine"],
     [".foot-cols a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".foot-cols .foot-col:nth-of-type(4) h4", "Visita"],
+    [".foot-cols .foot-col:nth-of-type(4) h3", "Visita"],
     [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
     [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
-    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA"],
     [".foot-base span:nth-of-type(2)", "Viajes · Eventos · Arrendamiento de oficinas"],
     [".modal-head p", "Cuéntenos sobre el viaje y le contactaremos en uno o dos días hábiles."],
     ["label[for=\"interest\"]", "Esta consulta es sobre"],
@@ -578,7 +549,8 @@
     ["#bookForm button[type=\"submit\"]", "Enviar consulta"],
     ["#formSuccess h4", "Gracias, lo recibimos."],
     ["#formSuccess p", "Le contactaremos pronto para hablar de su viaje."],
-    ["#stickyCta .btn", "Contáctenos"]
+    ["#stickyCta .btn", "Contáctenos"],
+    ["#visit p", "En el centro de Lake Elsinore, con estacionamiento privado justo enfrente. Pase directamente, o escríbanos y fijaremos un momento para sentarnos con calma."],
   ];
 
   var I18N_ATTR = [

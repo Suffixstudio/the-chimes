@@ -24,7 +24,7 @@
              <h2 data-es="Bodas">Weddings</h2>
         Companion labels do the same for things that are not visible text:
              data-es-alt          photo description
-             data-es-ph           the grey hint text inside a form field
+             data-es-ph           the gray hint text inside a form field
              data-es-placeholder  same thing, longer spelling
              data-es-aria         the label a screen reader announces
              data-es-aria-label   same thing, longer spelling
@@ -188,6 +188,7 @@
     modal.classList.add('open');
     document.body.classList.add('no-scroll');
     setTimeout(function () { var nm = $('#name'); if (nm) nm.focus(); }, 180);
+    if (window.applyFieldRules) window.applyFieldRules();
   }
 
   function closeModal() {
@@ -217,6 +218,128 @@
     });
   }
 
+  /* The inquiry form is shared across the whole site, so the guest field has to
+     follow what the person actually picked. Asking a tour visitor for a number
+     up to 300, or an office tenant for a guest count, reads as careless and
+     invites the wrong expectation. */
+  var FIELD_RULES = {
+    tour:      { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
+    group:     { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
+    office:    { guests: { label: 'People on your team',  max: 30,  ph: 'How many' }, date: 'Preferred start date' },
+    virtual:   { guests: null,                                                        date: 'Preferred start date' },
+    travel:    { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
+    business:  { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
+    donate:    { guests: null,                                                        date: null },
+    cultural:  { guests: null,                                                        date: null },
+    inkind:    { guests: null,                                                        date: null },
+    event:     { guests: { label: 'Estimated guests',     max: 300, ph: 'Up to 300' }, date: 'Preferred date' },
+    general:   { guests: null,                                                        date: null }
+  };
+  var FIELD_WORDS = {
+    'People in your group': 'Personas en su grupo',
+    'People on your team':  'Personas en su equipo',
+    'Travelers':            'Viajeros',
+    'Estimated guests':     'Invitados estimados',
+    'Preferred date':       'Fecha preferida',
+    'Preferred start date': 'Fecha de inicio preferida',
+    'Departure date':       'Fecha de salida'
+  };
+
+  function ruleFor(value) {
+    var v = String(value || '').toLowerCase();
+    if (FIELD_RULES[v]) return FIELD_RULES[v];
+    if (/tour|scout/.test(v))                 return FIELD_RULES.tour;
+    if (/workspace|desk|office|boardroom|meeting|offsite/.test(v)) return FIELD_RULES.office;
+    if (/virtual/.test(v))                    return FIELD_RULES.virtual;
+    if (/travel|business/.test(v))            return FIELD_RULES.travel;
+    if (/donate|inkind|cultural/.test(v))     return FIELD_RULES.donate;
+    if (/general|something else|help me choose/.test(v)) return FIELD_RULES.general;
+    return FIELD_RULES.event;
+  }
+
+  function applyFieldRules() {
+    var sel = $('#interest'); if (!sel) return;
+    var r = ruleFor(sel.value);
+    var es = document.documentElement.lang === 'es';
+
+    var gi = $('#guests');
+    if (gi) {
+      var gw = gi.closest('.field') || gi.parentNode;
+      var gl = document.querySelector('label[for="guests"]');
+      if (!r.guests) {
+        gw.style.display = 'none';
+        gi.value = '';
+      } else {
+        gw.style.display = '';
+        gi.max = r.guests.max;
+        gi.placeholder = r.guests.ph;
+        if (gl) gl.textContent = es ? (FIELD_WORDS[r.guests.label] || r.guests.label) : r.guests.label;
+        if (gi.value && Number(gi.value) > r.guests.max) gi.value = '';
+      }
+    }
+
+    var di = $('#date');
+    if (di) {
+      var dw = di.closest('.field') || di.parentNode;
+      var dl = document.querySelector('label[for="date"]');
+      if (!r.date) {
+        dw.style.display = 'none';
+        di.value = '';
+      } else {
+        dw.style.display = '';
+        if (dl) dl.textContent = es ? (FIELD_WORDS[r.date] || r.date) : r.date;
+      }
+    }
+  }
+
+  /* the date field must never accept a date in the past. a hardcoded min goes
+     stale the day after it is written, so set it fresh on every page load. */
+  (function dateMin() {
+    var d = $('#date');
+    if (!d) return;
+    var n = new Date();
+    var iso = n.getFullYear() + '-' +
+              String(n.getMonth() + 1).padStart(2, '0') + '-' +
+              String(n.getDate()).padStart(2, '0');
+    d.min = iso;
+  })();
+
+  var interestSel = $('#interest');
+  if (interestSel) {
+    interestSel.addEventListener('change', applyFieldRules);
+    applyFieldRules();
+  }
+  window.applyFieldRules = applyFieldRules;
+
+  /* The More button opens its dropdown on click, and closes on outside click
+     or Escape. Hover handles the other doors, so this is only for More. */
+  $$('.door-more').forEach(function (btn) {
+    var grp = btn.closest('.grp');
+    if (!grp) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var open = grp.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    $$('.grp--more.open').forEach(function (g) {
+      if (!g.contains(e.target)) {
+        g.classList.remove('open');
+        var b = $('.door-more', g);
+        if (b) b.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    $$('.grp--more.open').forEach(function (g) {
+      g.classList.remove('open');
+      var b = $('.door-more', g);
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   /* On the pages that keep the form on the page, every Inquire button
      carries data-preset. Clicking it picks that topic in the dropdown and
      closes the mobile menu. The link itself scrolls down to the form. */
@@ -233,13 +356,92 @@
     });
   });
 
+  /* ---------- required fields, in whichever language is showing ---------- */
+  var VMSG = {
+    en: { name:  'Please enter your name.',
+          email: 'Please enter a valid email address.',
+          phone: 'Please enter a phone number we can reach you on.',
+          many:  'Please fill in the highlighted fields.',
+          fail:  'That did not send. Please call us, or try again in a moment.' },
+    es: { name:  'Por favor escriba su nombre.',
+          email: 'Por favor escriba un correo electrónico válido.',
+          phone: 'Por favor escriba un teléfono donde podamos comunicarnos.',
+          many:  'Por favor complete los campos marcados.',
+          fail:  'No se pudo enviar. Por favor llámenos o inténtelo de nuevo en un momento.' }
+  };
+
+  function inquiryProblem(el) {
+    var v = (el.value || '').trim();
+    if (!v) return el.name;
+    if (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return 'email';
+    if (el.type === 'tel' && v.replace(/\D/g, '').length < 7) return 'phone';
+    return null;
+  }
+
+  function inquiryErrorBox(form) {
+    var warn = form.querySelector('#formError');
+    if (!warn) {
+      warn = document.createElement('p');
+      warn.id = 'formError';
+      warn.setAttribute('role', 'alert');
+      warn.style.cssText = 'margin-top:1rem;color:#8C2D2D;font-weight:600;font-size:.92rem;';
+      form.appendChild(warn);
+    }
+    return warn;
+  }
+
+  function validateInquiry(form, focusFirst) {
+    var msgs = VMSG[window.currentLang === 'es' ? 'es' : 'en'];
+    var bad = [];
+    Array.prototype.forEach.call(form.querySelectorAll('[required]'), function (el) {
+      var problem = inquiryProblem(el);
+      if (problem) { bad.push({ el: el, key: problem }); }
+      el.classList.toggle('invalid', !!problem);
+      el.setAttribute('aria-invalid', problem ? 'true' : 'false');
+      if (!el.dataset.watched) {
+        el.dataset.watched = '1';
+        el.addEventListener('input', function () {
+          if (!inquiryProblem(el)) {
+            el.classList.remove('invalid');
+            el.setAttribute('aria-invalid', 'false');
+          }
+        });
+      }
+    });
+    var warn = inquiryErrorBox(form);
+    if (bad.length) {
+      warn.dataset.kind = 'required';
+      warn.textContent = bad.length > 1 ? msgs.many : (msgs[bad[0].key] || msgs.many);
+      if (focusFirst !== false) {
+        try { bad[0].el.focus({ preventScroll: false }); } catch (e) { bad[0].el.focus(); }
+      }
+      return false;
+    }
+    warn.textContent = '';
+    return true;
+  }
+
+  /* If an error is already showing when somebody presses ESPAÑOL, redraw it in
+     the new language. Without this the page switches but the telling-off does not. */
+  window.__refreshInquiryError = function () {
+    if (!form) return;
+    var warn = form.querySelector('#formError');
+    if (!warn || !warn.textContent.trim()) return;
+    if (warn.dataset.kind === 'send') {
+      warn.textContent = VMSG[window.currentLang === 'es' ? 'es' : 'en'].fail;
+    } else {
+      validateInquiry(form, false);
+    }
+  };
+
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!form.name.value || !form.email.value) {
-        if (form.reportValidity) form.reportValidity();
-        return;
-      }
+      /* Our own checks, not the browser's. The browser writes its validation
+         messages in the phone's language, so a visitor reading the page in
+         Spanish on an English handset would get told off in English. These
+         follow the toggle instead. */
+      if (!validateInquiry(form, true)) return;
 
       /* Actually send it. This used to just hide the form and say thank you, which
          meant every inquiry anyone ever sent was quietly thrown away. It now posts to
@@ -268,7 +470,8 @@
           warn.style.cssText = 'margin-top:1rem;color:#8C2D2D;font-weight:600;font-size:.92rem;';
           form.appendChild(warn);
         }
-        warn.textContent = 'That did not send. Please call us, or try again in a moment.';
+        warn.dataset.kind = 'send';
+        warn.textContent = VMSG[window.currentLang === 'es' ? 'es' : 'en'].fail;
       });
     });
   }
@@ -461,7 +664,7 @@
         b.textContent = own;
       } else {
         var small = b.classList.contains('lang-toggle-m') || b.classList.contains('nav-lang-mobile');
-        b.textContent = es ? (small ? 'EN' : 'English') : (small ? 'ES' : 'Español');
+        b.textContent = es ? 'English' : 'Español';
       }
       b.setAttribute('aria-label', es ? 'Switch to English' : 'Cambiar a español');
     });
@@ -481,9 +684,25 @@
   }
 
   window.currentLang = 'en';
+  var _applyLang = applyLang;
+  applyLang = function (l) {
+    _applyLang(l);
+    if (window.__refreshInquiryError) window.__refreshInquiryError();
+  };
   $$(LANG_BTNS).forEach(function (b) {
     b.addEventListener('click', function () {
       applyLang(window.currentLang === 'es' ? 'en' : 'es');
     });
   });
+})();
+
+/* keep the menu panel pinned directly under the bar at any size */
+(function(){
+  function setNavH(){
+    var n=document.querySelector('header.nav');
+    if(n) document.documentElement.style.setProperty('--navh', n.offsetHeight+'px');
+  }
+  setNavH();
+  window.addEventListener('resize', setNavH);
+  window.addEventListener('orientationchange', setNavH);
 })();

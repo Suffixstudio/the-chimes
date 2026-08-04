@@ -4,23 +4,23 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Offices &amp; Coworking in Lake Elsinore | The Chimes</title>
-<meta name="description" content="Shared workspace, private offices, meeting rooms, and a virtual business address inside the 1887 Crescent Bath House in Lake Elsinore." />
+<meta name="description" content="Shared workspace, meeting rooms, The Elsinore Boardroom, and a virtual business address inside the 1887 Crescent Bath House in Lake Elsinore." />
 <meta property="og:title" content="Workspace &amp; Offices · The Chimes" />
   <meta property="og:image" content="https://the-chimes.netlify.app/images/og/workspace.jpg" />
-<meta property="og:description" content="Coworking desks, private offices, meeting rooms, and virtual offices in a restored 1887 landmark." />
+<meta property="og:description" content="Coworking desks, meeting rooms, The Elsinore Boardroom, and virtual offices in a restored 1887 landmark." />
 <meta property="og:type" content="website" />
   <link rel="canonical" href="https://the-chimes.netlify.app/workspace.html" />
   <meta property="og:url" content="https://the-chimes.netlify.app/workspace.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Workspace &amp; Offices · The Chimes" />
-  <meta name="twitter:description" content="Coworking desks, private offices, meeting rooms, and virtual offices in a restored 1887 landmark." />
+  <meta name="twitter:description" content="Coworking desks, meeting rooms, The Elsinore Boardroom, and virtual offices in a restored 1887 landmark." />
   <meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/workspace.jpg" />
   <meta name="color-scheme" content="light" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23D9BA77' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <link rel="stylesheet" href="interior.css" />
 <style>
@@ -42,31 +42,23 @@ p{margin:0;}
 a{color:inherit;}
 .eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--brass-deep);display:inline-flex;}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--forest);display:inline-block;}
-.btn{font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:.92rem;padding:.95rem 1.7rem;text-decoration:none;border:1px solid transparent;cursor:pointer;}
-.btn-primary{background:var(--forest);color:#F6EFE2;}
-.btn-primary:hover{background:var(--forest-deep);}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink);}
-.btn-ghost:hover{background:var(--ink);color:#F4E9D6;}
-.btn-brass{background:var(--brass);color:#231a10;}
-.btn-brass:hover{background:var(--brass-light);}
-header.nav{background:rgba(243,236,221,.92);}
-.wordmark{color:var(--ink);}
-.nav-links>a{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+.btn{position:relative;display:inline-block;font-family:"Cinzel",serif;font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.5;text-align:center;padding:1.02rem 1.9rem;border-radius:2px;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;border:1px solid transparent;cursor:pointer;overflow:hidden;max-width:100%;}
+.btn::after{content:"";position:absolute;inset:4px;border:1px solid rgba(43,36,30,.28);pointer-events:none;}
+.btn:focus-visible{outline:2px solid #8F7132;outline-offset:3px;}
+.btn-primary{background:linear-gradient(172deg,color-mix(in srgb,var(--forest),#fff 14%) 0%,var(--forest) 55%,color-mix(in srgb,var(--forest),#000 22%) 100%);color:#F6EFE2;border-color:color-mix(in srgb,var(--forest),#000 38%);box-shadow:0 1px 0 rgba(255,244,224,.22) inset,0 14px 28px -14px rgba(20,30,24,.55);}
+.btn-primary::after{border-color:rgba(246,239,226,.3);}
+.btn-primary:hover{background:linear-gradient(172deg,color-mix(in srgb,var(--forest-deep),#fff 10%) 0%,var(--forest-deep) 55%,color-mix(in srgb,var(--forest-deep),#000 16%) 100%);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:currentColor;}
+.btn-ghost::after{border-color:currentColor;opacity:.35;}
+.btn-ghost:hover{background:var(--ink);color:#F4E9D6;transform:translateY(-2px);}
+.btn-brass{background:linear-gradient(172deg,#D9B671 0%,#C09A52 52%,#A9843F 100%);color:#231A10;border-color:#8F7132;box-shadow:0 1px 0 rgba(255,246,224,.55) inset,0 14px 28px -14px rgba(60,44,20,.55);text-shadow:0 1px 0 rgba(255,246,224,.35);}
+.btn-brass::after{border-color:rgba(60,44,20,.35);}
+.btn-brass::before{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,transparent,rgba(255,251,240,.55),transparent);transform:skewX(-18deg);transition:left .55s ease;}
+.btn-brass:hover{background:linear-gradient(172deg,#E3C382 0%,#CBA65E 52%,#B08A45 100%);transform:translateY(-2px);}
+.btn-brass:hover::before{left:125%;}
 .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
-.nav-links>a:hover{color:var(--forest);}
 .dd-toggle:hover{color:var(--forest);}
 .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
-.dropdown-menu{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(6px);background:var(--cream-card);border:1px solid var(--line);box-shadow:0 20px 50px -20px rgba(33,26,22,.4);padding:1rem 1.1rem;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;}
-.has-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
-.has-dropdown.open .dropdown-menu{transform:translateX(-50%) translateY(0);}
-.dropdown-menu::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px;}
-.dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;}
-.dropdown-menu a:hover{background:var(--parchment-2);color:var(--forest);}
-.dropdown-menu a[aria-current="page"]{color:var(--forest);}
-.nav-call{text-decoration:none;font-size:.84rem;font-weight:600;color:var(--forest);}
-.nav-book{font-size:.85rem;padding:.6rem 1.2rem;}
-.nav-call-mobile{width:40px;height:40px;border:1px solid var(--forest);color:var(--forest);}
-.menu-btn{background:none;padding:.5rem .8rem;}
 .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
 .hero::after{position:absolute;}
 .hero .eyebrow{color:var(--brass-light);}
@@ -127,9 +119,9 @@ header.nav{background:rgba(243,236,221,.92);}
 .trio-item .n{font-family:"Cinzel",serif;font-size:.7rem;letter-spacing:.18em;color:var(--brass);text-transform:uppercase;}
 .trio-item h3{font-size:1.55rem;margin:.5rem 0 .6rem;}
 .trio-item p{font-size:.94rem;color:#4a3f36;}
-.welcome-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;}
+.welcome-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,4vw,3.5rem);align-items:center;}
 .welcome-photo{margin:0;border:8px solid var(--cream-card);box-shadow:0 24px 50px -28px rgba(33,26,22,.45);}
-.welcome-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;}
+.welcome-photo img{display:block;width:100%;height:auto;aspect-ratio:auto;}
 .contact{background:var(--cream-card);}
 .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;}
 .contact-info .eyebrow{margin-bottom:1.2rem;}
@@ -166,7 +158,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;padding-bottom:2.4rem;border-bottom:1px solid rgba(241,230,211,.14);}
 .foot-mark b{font-family:"Cinzel",serif;font-weight:700;font-size:1.25rem;letter-spacing:.14em;color:#F1E6D3;display:block;}
 .foot-mark .tag{color:rgba(241,230,211,.7);margin-top:.7rem;max-width:28ch;}
-.foot-col h4{font-size:.66rem;letter-spacing:.2em;}
+.foot-col h3{font-size:.66rem;letter-spacing:.2em;}
 .foot-col a{color:rgba(241,230,211,.72);font-size:.9rem;margin-bottom:.5rem;}
 .foot-col a:hover{color:var(--brass-light);}
 .foot-base{padding-top:1.6rem;font-size:.78rem;color:rgba(241,230,211,.5);}
@@ -184,16 +176,8 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 .nav-lang-mobile{background:none;border:1px solid var(--forest);border-radius:2px;min-width:40px;height:40px;padding:0 .55rem;font-family:inherit;font-size:.78rem;font-weight:700;color:var(--forest);cursor:pointer;letter-spacing:.03em;}
 .nav-lang-mobile:active{background:var(--forest);color:#F1E6D3;}
 @media (max-width:1024px){
-  .nav-links{position:absolute;top:100%;left:0;right:0;background:var(--parchment);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:.5rem 0;display:none;box-shadow:0 20px 40px -20px rgba(33,26,22,.35);}
-  .nav-links.open{display:flex;}
-  .nav-links>a{width:100%;padding:.75rem clamp(1.2rem,4vw,3rem);}
-  .has-dropdown{width:100%;padding:.75rem clamp(1.2rem,4vw,3rem);}
-  .has-dropdown .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:none;background:transparent;padding:.2rem 0 .6rem 1rem;min-width:0;}
-  .has-dropdown .dropdown-menu::before{display:none;}
   .dd-toggle{width:100%;justify-content:space-between;}
-  .nav-mobile-controls{display:flex;}
   .nav-lang{display:none;}
-  .menu-btn{display:block;}
   .hero-grid{grid-template-columns:1fr;}
   .contact-grid{grid-template-columns:minmax(0,1fr);}
   .welcome-grid{grid-template-columns:1fr;}
@@ -210,20 +194,18 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 @media (max-width:520px){
   .field-row{grid-template-columns:1fr;}
   body{font-size:16px;}
-  .wordmark .sub{font-size:.46rem;}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
   .reveal{opacity:1 !important;transform:none !important;transition:none;}
   .chip{opacity:1 !important;transform:none !important;transition:none;}
-  .btn{transition:none;}
+  .btn{transition:none;}.btn-brass::before{display:none;}
   .space-card{transition:none;}
   .space-media img{transition:none;}
 }
 @media (prefers-color-scheme: dark){
   html{background:#F3ECDD !important;}
   body{background:#F3ECDD !important;}
-  header.nav{background:#F3ECDD !important;}
   body{color:#211A16 !important;}
   .amenities{background:#FBF7EE !important;}
   .contact{background:#FBF7EE !important;}
@@ -236,77 +218,119 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-
-/* ---- "you are here" ----
-   The nav is sticky, so this stays on screen however far down you scroll. Same face
-   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
-   your location and not as more of the strapline. */
-.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
-  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
-  line-height:1;white-space:nowrap;}
-.page-here::before{content:"";display:inline-block;width:12px;height:1px;
-  background:var(--brass);vertical-align:middle;margin-right:.5rem;
-  transform:translateY(-1px);}
 @media (max-width:640px){
-  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
-  .page-here{display:none;}
 }
+@media (min-width:1025px){
+}
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+.doors{display:flex;align-items:flex-start;gap:1.85rem;}
+.grp{display:block;}
+a.door{display:block;text-decoration:none;text-align:center;white-space:nowrap;}
+a.door .dt{display:block;font-family:"Prata",serif;font-size:.85rem;letter-spacing:.15em;
+  text-transform:uppercase;line-height:1;color:#241C17;transition:color .2s ease;}
+a.door .dd{display:block;font-family:"Old Standard TT",serif;font-style:italic;font-size:.7rem;
+  color:#8A7B5F;margin-top:.44rem;line-height:1.25;}
+a.door:hover .dt{color:#7A2333;}
+a.door[aria-current] .dt{color:#7A2333;}
+.sub{display:none;}
+
+@media(max-width:1024px){
+  .doors{display:block;}
+  .grp{border-bottom:1px solid rgba(20,17,15,.08);}
+  a.door{text-align:left;white-space:normal;padding:.72rem .95rem .1rem;}
+  a.door .dt{font-size:.92rem;letter-spacing:.12em;}
+  a.door .dd{font-size:.8rem;margin-top:.16rem;}
+  .sub{display:block;padding:.35rem 0 .6rem;}
+  .sub a{display:block;text-decoration:none;color:#3D3428;font-family:"Playfair Display SC",serif;
+    font-weight:400;font-size:.92rem;letter-spacing:.05em;padding:.42rem .95rem .42rem 1.6rem;}
+  .sub a[aria-current]{color:#7A2333;}
+}
+@media(min-width:1025px){ }
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
+  /* the "not sure yet" prompt is not a room, so it runs full width as a short
+     band instead of a tall card, and the gold panel is trimmed right down. */
+  .space-card.helper{grid-column:1 / -1;flex-direction:row;align-items:stretch;}
+  .space-card.helper .space-media{aspect-ratio:auto;flex:0 0 32%;min-height:120px;display:flex;align-items:center;justify-content:center;}
+  .space-card.helper .space-body{flex:1;display:flex;flex-direction:column;justify-content:center;padding:1.4rem clamp(1.1rem,2.4vw,1.8rem);}
+  .space-card.helper .vo-mark span{font-size:2.1rem;margin-bottom:.05rem;}
+  .space-card.helper:hover{transform:none;box-shadow:none;}
+  @media(max-width:640px){
+    .space-card.helper{flex-direction:column;}
+    .space-card.helper .space-media{flex:0 0 auto;min-height:88px;}
+  }
 </style>
 </head>
 <body class="theme-forest">
+    <a class="skip-link" href="#main">Skip to content</a>
+    
 
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub" data-es="Histórica Crescent Bath House · Est. 1887">Historic Crescent Bath House · Est. 1887</span></a>
-      <span class="page-here" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</span>
-    <nav class="nav-links" id="navLinks" aria-label="Primary" data-es-aria="Principal">
-      <a href="index.html" data-es="Inicio">Home</a>
-      <div class="has-dropdown">
-        <button class="dd-toggle" id="exploreToggle" aria-expanded="false" data-es='Explorar <span class="caret">▾</span>'>Explore <span class="caret">▾</span></button>
-        <div class="dropdown-menu">
-          <span class="dd-label" data-es="Eventos y Alquileres">Events &amp; Rentals</span>
-          <a href="weddings.html" data-es="Bodas">Weddings</a>
-          <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
-          <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
-          <a href="photo-film.html" data-es="Fotografía y Cine">Photo &amp; Film</a>
-          <span class="dd-label" data-es="Trabajo">Work</span>
-          <a href="workspace.html" aria-current="page" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
-          <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
-          <span class="dd-label" data-es="Descubrir">Discover</span>
-          <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
-          <a href="borsellino-travel.html" data-es="Borsellino Travel">Borsellino Travel</a>
-          <a href="contact.html" data-es="Contacto">Contact</a>
+    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Espacios de Trabajo">Workspace &amp; Offices</span></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <div class="doors">
+          <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
+          <div class="grp">
+            <a class="door" href="chimes-events.html"><span class="dt" data-es="Eventos">Events</span></a>
+            <div class="sub">
+              <a href="chimes-events.html" data-es="The Chimes Venue">The Chimes Venue</a>
+              <a href="social-events.html#quince" data-es="Quincea&ntilde;eras">Quincea&ntilde;eras</a>
+              <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
+              <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+              <a href="social-events.html#library" data-es="The Library Speakeasy">The Library Speakeasy</a>
+            </div>
+          </div>
+          <div class="grp">
+            <a class="door" href="workspace.html"><span class="dt" data-es="Oficinas">Offices</span></a>
+            <div class="sub">
+              <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+              <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+            </div>
+          </div>
+          <div class="grp grp--more">
+            <button class="door door-more" type="button" aria-expanded="false"><span class="dt" data-es="M&aacute;s">More</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+            <div class="sub">
+              <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+              <a href="photo-film.html" data-es="Foto y Cine">Photo &amp; Film</a>
+              <a href="borsellino-travel.html" data-es="Borsellino Travel Agency">Borsellino Travel Agency</a>
+              <a href="contact.html" data-es="Contacto">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <button class="nav-lang js-lang" type="button" data-label-es="Español" data-label-en="English" aria-label="Cambiar a español">Español</button>
-      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes" data-es-aria="Llamar a The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
-      <a class="btn btn-primary nav-book" href="#inquire" data-preset="Tour the space" data-es="Reserve una Visita">Book a Tour</a>
-    </nav>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      </nav>
     <div class="nav-mobile-controls">
-      <button class="nav-lang-mobile js-lang" type="button" data-label-es="ES" data-label-en="EN" aria-label="Cambiar a español">ES</button>
-      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes" data-es-aria="Llamar a The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
+<main id="main">
+    <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
         <span class="eyebrow" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</span>
         <h1 data-es='Trabaje en un lugar<br><em>con historia.</em>'>Work somewhere<br><em>with a story.</em></h1>
-        <p class="lead" data-es="Espacios de trabajo compartidos, oficinas privadas, salas de reuniones y una dirección comercial virtual, todo dentro de la restaurada Crescent Bath House de 1887. Cambie el anodino parque de oficinas por madera tallada, ventanales altos y una dirección emblemática en el corazón de Lake Elsinore.">Shared workspace, private offices, meeting rooms, and a virtual business address, all inside the restored 1887 Crescent Bath House. Trade the beige office park for carved wood, tall windows, and a landmark address in the heart of Lake Elsinore.</p>
+        <p class="lead" data-es="Espacios de trabajo compartidos, oficinas privadas, salas de reuniones y una dirección comercial virtual, todo dentro de la restaurada Crescent Bath House de 1887. Cambie el anodino parque de oficinas por madera tallada, ventanales altos y una dirección emblemática en el corazón de Lake Elsinore.">Shared workspace, meeting rooms, The Elsinore Boardroom, and a virtual business address, all inside the restored 1887 Crescent Bath House. Trade the beige office park for carved wood, tall windows, and a landmark address in the heart of Lake Elsinore.</p>
         <div class="hero-cta">
           <a class="btn btn-brass" href="#spaces" data-es="Explore los espacios">Explore the spaces</a>
-          <a class="btn btn-ghost" href="#inquire" data-preset="Tour the space" data-es="Reserve una Visita">Book a tour</a>
+          <button class="btn btn-ghost" data-modal-open data-interest="tour the space" data-es="Reserve una Visita">Book a tour</button>
         </div>
       </div>
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
-          <img src="images/workspace-1.jpg" alt="The historic stained-glass front entrance of The Chimes at 201 W. Graham Ave" data-es-alt="La histórica entrada principal con vitrales de The Chimes en 201 W. Graham Ave" />
+          <img src="images/workspace-1.jpg" alt="The historic stained-glass front entrance of The Chimes at 201 W. Graham Ave" data-es-alt="La histórica entrada principal con vitrales de The Chimes en 201 W. Graham Ave"  width="1086" height="814" />
           <div class="hero-badge" data-es='Amueblado ·<br>Histórico · Flexible'>Furnished ·<br>Historic · Flexible</div>
         </figure>
       </div>
@@ -323,7 +347,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
       <p style="color:#4a3f36;margin-top:1rem;" data-es="Todo lo que espera de un espacio de trabajo moderno, dentro de un edificio que ningún otro en el valle puede igualar.">Everything you'd expect from a modern workspace, set inside a building nothing else in the valley can match.</p>
     </div>
     <div class="turnkey-grid reveal">
-      <figure class="turnkey-photo"><img data-es-alt="El salón de The Chimes con un piano de cola, un candelabro de cristal y muebles victorianos de terciopelo" src="images/workspace-2.jpg" alt="The Chimes lounge with a grand piano, crystal chandelier, and Victorian velvet furniture" loading="lazy" /></figure>
+      <figure class="turnkey-photo"><img data-es-alt="Una sala de trabajo privada, con un escritorio bajo el tragaluz, un escritorio de tapa inclinada y paredes originales de tablilla" src="images/private-work-room.jpg" alt="A private work room, with a writing desk beneath the skylight, a slant top desk, and original beadboard walls" loading="lazy"  width="1100" height="1375" /></figure>
       <div class="chips" id="chips">
       <span class="chip" data-es='<span class="dot"></span>Totalmente amueblado'><span class="dot"></span>Fully furnished</span>
       <span class="chip" data-es='<span class="dot"></span>Wifi de alta velocidad'><span class="dot"></span>High-speed Wi-Fi</span>
@@ -349,7 +373,7 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
       <div class="reveal">
         <span class="eyebrow" data-es="Los Espacios">The Spaces</span>
         <h2 data-es="Espacio para trabajar, reunirse y crecer.">Room to work, meet, and grow.</h2>
-        <p class="lead" style="max-width:56ch;margin-top:1.2rem;" data-es="Desde un escritorio por día hasta una oficina privada o una sala de juntas completa, elija el espacio que se ajuste a su día. Toque cualquier sala para verla de cerca.">From a drop-in desk to a private office or a full boardroom, choose the setting that fits the day. Tap any room to see it up close.</p>
+        <p class="lead" style="max-width:56ch;margin-top:1.2rem;" data-es="Desde un escritorio por día hasta una oficina privada o una sala de juntas completa, elija el espacio que se ajuste a su día. Toque cualquier sala para verla de cerca.">From a drop-in desk to a meeting room or The Elsinore Boardroom, choose the setting that fits the day. Tap any room to see it up close.</p>
       </div>
     </div>
   </div>
@@ -358,80 +382,68 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
     <div class="spaces-grid">
 
       <div class="space-card reveal">
-        <div class="space-media" data-cap="Shared Workspace · The Chimes" data-es-cap="Espacio de Trabajo Compartido · The Chimes">
-          <img src="images/workspace-3.jpg" alt="Shared workspace with bookcases, a work table, and leather chairs" data-es-alt="Espacio de trabajo compartido con libreros, una mesa de trabajo y sillas de cuero" loading="lazy" />
+        <div class="space-media" data-cap="The parlor · The Crescent House" data-es-cap="El salón · The Crescent House">
+          <img src="images/workspace-3.jpg" alt="The parlor, with its original patterned tile floor, green drapes, and Victorian seating" data-es-alt="El salón hacia las cortinas verdes y el pizarrón original" loading="lazy"  width="1500" height="1125" />
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
           <span class="tag" data-es="Espacio de Trabajo Compartido">Shared Workspace</span>
-          <h3 data-es="Escritorios de coworking">Coworking desks</h3>
-          <p data-es="Venga por el día o conviértalo en su lugar habitual. Salas cómodas con paneles de madera y la tranquilidad de un edificio histórico, en lugar del murmullo de una oficina abierta.">Drop in for the day or make it your regular spot. Comfortable, wood-panelled rooms with the quiet of a historic building instead of an open-plan hum.</p>
+          <h3 data-es="El salón">The parlor</h3>
+          <p data-es="El salón abierto al frente del edificio, con su piso de mosaico original y mobiliario victoriano. Los miembros lo usan para trabajar, reunirse con alguien o tomar una llamada fuera del escritorio.">The open room at the front of the building, with its original tile floor and Victorian seating. Members use it as a place to work, meet someone, or take a call away from a desk.</p>
           <div class="space-meta" data-es='<b>Por hora y membresía</b> · flexible'><b>Hourly &amp; membership</b> · flexible</div>
-          <a class="btn btn-primary" href="#inquire" data-preset="Shared workspace" data-es="Consultar">Inquire</a>
+          <button class="btn btn-primary" data-modal-open data-interest="shared workspace" data-es="Consultar">Inquire</button>
         </div>
       </div>
 
-      <div class="space-card reveal">
-        <div class="space-media" data-cap="Private Office · The Chimes" data-es-cap="Oficina Privada · The Chimes">
-          <img src="images/workspace-4.jpg" alt="Private office with an antique writing desk, lamp, and framed art" data-es-alt="Oficina privada con un escritorio antiguo, una lámpara y arte enmarcado" loading="lazy" />
-          <span class="zoom" data-es="Ver">View</span>
-        </div>
-        <div class="space-body">
-          <span class="tag" data-es="Oficina Privada">Private Office</span>
-          <h3 data-es="Su propia oficina">Your own room</h3>
-          <p data-es="Una oficina exclusiva y con cerradura, amueblada con piezas de época. Ideal para trabajo concentrado, llamadas con clientes o un pequeño despacho que busca una dirección distintiva.">A dedicated, lockable office furnished with period pieces. Ideal for focused work, client calls, or a small practice that wants a distinctive address.</p>
-          <div class="space-meta" data-es='<b>Mensual</b> · exclusiva'><b>Monthly</b> · dedicated</div>
-          <a class="btn btn-primary" href="#inquire" data-preset="Private office" data-es="Consultar">Inquire</a>
-        </div>
-      </div>
+      
 
       <div class="space-card reveal">
-        <div class="space-media" data-cap="Meeting Room · The Chimes" data-es-cap="Sala de Reuniones · The Chimes">
-          <img src="images/workspace-5.jpg" alt="Meeting room with leather armchairs, a chandelier, and stained glass windows" data-es-alt="Sala de reuniones con sillones de cuero, un candelabro y ventanas con vitrales" loading="lazy" />
+        <div class="space-media" data-cap="The Ferris Suite · The Crescent House" data-es-cap="Sala de Reuniones · The Chimes">
+          <img src="images/ferris-suite.jpg" alt="The Ferris Suite, four blue leather chairs around a drop-leaf table between two mahogany bookcases, lit by a skylight" data-es-alt="The Ferris Suite, cuatro sillas de cuero azul alrededor de una mesa plegable entre dos libreros de caoba, con luz de tragaluz" loading="lazy"  width="1086" height="1448" />
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
           <span class="tag" data-es="Sala de Reuniones">Meeting Room</span>
-          <h3 data-es="Reúnase con estilo">Gather in style</h3>
-          <p data-es="Una sala iluminada por un candelabro con asientos para un grupo, perfecta para talleres, presentaciones o una reunión con clientes que deja huella.">A chandelier-lit room with seating for a group, perfect for workshops, presentations, or a client meeting that leaves an impression.</p>
+          <h3 data-es="The Ferris Suite">The Ferris Suite</h3>
+          <p data-es="Espacio para cuatro a seis personas alrededor de una mesa, entre libreros originales de caoba y bajo un tragaluz. Ideal para una reunión con clientes, una entrevista o una sesión de trabajo que necesita puerta.">Seats four to six around one table, between original mahogany bookcases and under a skylight. Right for a client meeting, an interview, or a working session that needs a door.</p>
           <div class="space-meta" data-es='<b>Por hora</b> · miembros y no miembros'><b>Hourly</b> · members &amp; non-members</div>
-          <a class="btn btn-primary" href="#inquire" data-preset="Meeting room" data-es="Consultar">Inquire</a>
+          <button class="btn btn-primary" data-modal-open data-interest="meeting room" data-es="Consultar">Inquire</button>
         </div>
       </div>
 
       <div class="space-card reveal">
-        <div class="space-media" data-cap="Boardroom · The Chimes" data-es-cap="Sala de Juntas · The Chimes">
-          <img src="images/workspace-6.jpg" alt="Boardroom with a long table, upholstered chairs, and a wall-mounted screen" data-es-alt="Sala de juntas con una mesa larga, sillas tapizadas y una pantalla montada en la pared" loading="lazy" />
+        <div class="space-media" data-cap="The Elsinore Boardroom · The Crescent House" data-es-cap="The Elsinore Boardroom · The Crescent House">
+          <img src="images/elsinore-boardroom.jpg" alt="The Elsinore Boardroom, a long executive table ringed by high backed chairs beneath a mounted screen" data-es-alt="El Elsinore Boardroom, una larga mesa ejecutiva rodeada de sillas de respaldo alto bajo una pantalla montada" loading="lazy"  width="1086" height="1448" />
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
-          <span class="tag" data-es="Sala de Juntas">Boardroom</span>
+          <span class="tag" data-es="The Elsinore Boardroom">The Elsinore Boardroom</span>
           <h3 data-es="La gran mesa">The long table</h3>
           <p data-es="Asientos para todo su equipo alrededor de una sola mesa, con una pantalla montada para presentaciones. Diseñada para juntas directivas, capacitaciones y sesiones de trabajo.">Seating for your whole team around one table, with a mounted screen for presentations. Built for board meetings, trainings, and working sessions.</p>
           <div class="space-meta" data-es='<b>Por hora y medio día</b> · pantalla incluida'><b>Hourly &amp; half-day</b> · screen included</div>
-          <a class="btn btn-primary" href="#inquire" data-preset="Boardroom" data-es="Consultar">Inquire</a>
+          <button class="btn btn-primary" data-modal-open data-interest="boardroom" data-es="Consultar">Inquire</button>
         </div>
       </div>
 
       <div class="space-card novideo reveal">
-        <div class="space-media"><div class="vo-mark" data-es='<span>✦</span>Oficina Virtual'><span>✦</span>Virtual Office</div></div>
+        <div class="space-media" data-cap="The mail boxes · The Crescent House" data-es-cap="Los buzones · The Crescent House"><img src="images/virtual-mail.jpg" alt="The original antique post office boxes, still numbered, where mail for virtual office members is handled" data-es-alt="Los buzones postales originales de época, aún numerados, donde se gestiona el correo de los miembros de oficina virtual" loading="lazy"  width="900" height="1200" /><span class="zoom" data-es="Ver">View</span></div>
         <div class="space-body">
           <span class="tag" data-es="Oficina Virtual">Virtual Office</span>
           <h3 data-es="Una dirección emblemática">A landmark address</h3>
           <p data-es="Dé a su negocio un domicilio profesional en una dirección histórica de Lake Elsinore, con gestión de correo y acceso a salas de reuniones cuando necesite estar aquí en persona.">Give your business a professional home at a historic Lake Elsinore address, with mail handling and meeting-room access when you need to be here in person.</p>
           <div class="space-meta" data-es='<b>Mensual</b> · dirección y correo'><b>Monthly</b> · address &amp; mail</div>
-          <a class="btn btn-primary" href="#inquire" data-preset="Virtual office" data-es="Consultar">Inquire</a>
+          <button class="btn btn-primary" data-modal-open data-interest="virtual office" data-es="Consultar">Inquire</button>
         </div>
       </div>
 
-      <div class="space-card novideo reveal">
+      <div class="space-card novideo helper reveal">
         <div class="space-media" style="background:linear-gradient(160deg,var(--brass),#a9803b);"><div class="vo-mark" style="color:#2a2012;" data-es='<span style="color:#2a2012;">?</span>¿Aún no está seguro?'><span style="color:#2a2012;">?</span>Not sure yet</div></div>
         <div class="space-body">
           <span class="tag" data-es="Ayúdenme a elegir">Help me choose</span>
           <h3 data-es="Cuéntenos su semana">Tell us your week</h3>
           <p data-es="¿No está seguro de si necesita un escritorio, una oficina o solo una sala de vez en cuando? Cuéntenos cómo trabaja y le indicaremos la mejor opción.">Not sure whether you need a desk, an office, or just a room now and then? Tell us how you work and we'll point you to the right fit.</p>
           <div class="space-meta" data-es='<b>Gratis</b> · sin compromiso'><b>Free</b> · no obligation</div>
-          <a class="btn btn-primary" href="#inquire" data-preset="Help me choose" data-es="Contáctenos">Get in touch</a>
+          <button class="btn btn-primary" data-modal-open data-interest="help me choose" data-es="Contáctenos">Get in touch</button>
         </div>
       </div>
 
@@ -472,13 +484,13 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
   <div class="container">
     <div class="welcome-grid reveal">
       <figure class="welcome-photo">
-        <img src="images/workspace-7.jpg" alt="The check-in desk at The Chimes with its ornate spindlework screen" data-es-alt="La recepción de The Chimes con su ornamentada celosía de madera" loading="lazy" />
+        <img src="images/heritage-lobby-screen.jpg" alt="The welcome area inside, beneath the original 1887 lobby screen of white spindle and ball fretwork" data-es-alt="La zona de recepción interior, bajo la mampara original de 1887 con celosía blanca de balaustres y esferas" loading="lazy"  width="1500" height="656" />
       </figure>
       <div class="welcome-copy">
         <span class="eyebrow" data-es="Cuando llegue">When you arrive</span>
         <h2 data-es="Una cálida bienvenida en la puerta.">A warm welcome at the door.</h2>
         <p style="color:#4a3f36;margin:1.2rem 0 1.4rem;" data-es="Regístrese en la recepción, bajo la celosía de madera original del edificio, y acomódese en un espacio que no se parece en nada a un vestíbulo corporativo. Hay alguien en el lugar para ayudarle a instalarse, mostrarle todo y responder sus preguntas.">Check in at the front desk beneath the building's original spindlework screen and settle into a space that feels nothing like a corporate lobby. Someone's on site to get you set up, show you around, and answer questions.</p>
-        <a class="btn btn-ghost" href="#inquire" data-preset="Tour the space" data-es="Agende una visita">Arrange a visit</a>
+        <button class="btn btn-ghost" data-modal-open data-interest="tour the space" data-es="Agende una visita">Arrange a visit</button>
       </div>
     </div>
   </div>
@@ -492,40 +504,16 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
         <span class="eyebrow" data-es="Contáctenos">Get in touch</span>
         <h2 data-es="Venga a conocer el espacio.">Come see the space.</h2>
         <p style="color:#4a3f36;margin-bottom:1.4rem;" data-es="Cuéntenos qué está buscando y le responderemos con disponibilidad, precios y un horario para recorrer el lugar. ¿Prefiere conversarlo? Comuníquese por teléfono o correo electrónico.">Tell us what you're looking for and we'll follow up with availability, pricing, and a time to walk through. Prefer to talk it over? Reach out by phone or email.</p>
-        <div class="info-row"><span class="k" data-es="Contacto">Contact</span><span data-es="Mercedes y Joe · The Chimes">Mercedes &amp; Joe · The Chimes</span></div>
-        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19510000000">(951) 000-0000</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
-        <div class="info-row"><span class="k" data-es="Correo electrónico">Email</span><span><a href="mailto:hello@thechimes.example">hello@thechimes.example</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
+        <div class="info-row"><span class="k" data-es="Contacto">Contact</span><span data-es="Mercedes y Joe · The Chimes">Mercedes &amp; Joe · The Crescent House</span></div>
+        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19517184204">(951) 718-4204</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
+        <div class="info-row"><span class="k" data-es="Correo electrónico">Email</span><span><a href="mailto:info@thecrescenthouse1887.com">info@thecrescenthouse1887.com</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
         <div class="info-row"><span class="k" data-es="Visítenos">Visit</span><span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave, Lake Elsinore, CA</a></span></div>
-        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span class="placeholder" data-es="Horario de atención sin cita por confirmar">Walk-in hours to be confirmed</span></div>
+        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span data-es="Lunes a viernes, 8am a 6pm">Monday to Friday, 8am to 6pm</span></div>
+            <button class="btn btn-brass" data-modal-open data-interest="shared workspace" data-es="Preguntar por el espacio" style="margin-top:1.6rem;">Ask about the space</button>
       </div>
 
       <div class="reveal">
-        <form class="inq" id="inqForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="chimes-inquiry" />
-            <input type="hidden" name="page" value="workspace" />
-            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
-          <div class="field">
-            <label for="interest" data-es="Me interesa">I'm interested in</label>
-            <select id="interest" name="interest">
-              <option value="Shared workspace" data-es="Espacio de trabajo compartido">Shared workspace</option>
-              <option value="Private office" data-es="Oficina privada">Private office</option>
-              <option value="Meeting room" data-es="Sala de reuniones">Meeting room</option>
-              <option value="Boardroom" data-es="Sala de Juntas">Boardroom</option>
-              <option value="Virtual office" data-es="Oficina Virtual">Virtual office</option>
-              <option value="Tour the space" data-es="Recorrer el espacio">Tour the space</option>
-              <option value="Help me choose" data-es="Ayúdenme a elegir">Help me choose</option>
-              <option value="Something else" data-es="Otra cosa">Something else</option>
-            </select>
-          </div>
-          <div class="field-row">
-            <div class="field"><label for="name" data-es="Nombre completo">Full name</label><input id="name" name="name" type="text" autocomplete="name" /></div>
-            <div class="field"><label for="phone" data-es="Teléfono">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
-          </div>
-          <div class="field"><label for="email" data-es="Correo electrónico">Email</label><input id="email" name="email" type="email" autocomplete="email" /></div>
-          <div class="field"><label for="company" data-es="Empresa (opcional)">Company (optional)</label><input id="company" name="company" type="text" /></div>
-          <div class="field"><label for="message" data-es="¿Algo más?">Anything else?</label><textarea id="message" name="message" placeholder="How you'd like to use the space, days you're considering, or questions." data-es-ph="Cómo le gustaría usar el espacio, los días que está considerando o sus preguntas."></textarea></div>
-          <button type="submit" class="btn btn-primary" data-es="Enviar consulta">Send inquiry</button>
-        </form>
+        
         <div class="form-success" id="formSuccess">
           <div class="check">✓</div>
           <h3 style="font-size:1.5rem;" data-es="Gracias, hemos recibido su mensaje.">Thank you, we've got it.</h3>
@@ -534,41 +522,87 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
       </div>
     </div>
   </div>
-</section>
+
+      <p class="ada-note reveal" data-es="Accesibilidad. The Crescent House es un edificio histórico y el segundo piso no cumple con las normas ADA. Si usted o alguno de sus invitados requiere adaptaciones de accesibilidad, contáctenos antes de su visita o su evento. Le diremos con exactitud qué puede y qué no puede acomodar el edificio, y trabajaremos con usted a partir de ahí.">Accessibility. The Crescent House is a historic building and the second floor is not ADA compliant. If you or any of your guests have accessibility needs, please contact us before your visit or your event. We will tell you exactly what the building can and cannot accommodate, and work with you from there.</p>
+    </section>
 
 <!-- ===================== FOOTER ===================== -->
-<footer>
+<!-- ===================== BOOKING MODAL ===================== -->
+<div class="modal-overlay" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-head">
+      <span class="eyebrow">Workspace &amp; Offices</span>
+      <h3 id="modalTitle">Tell us what you need</h3>
+      <p>Tell us how you work and we'll follow up with availability, pricing, and a time to walk through.</p>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <form class="inq" id="inqForm" novalidate name="crescent-house-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="crescent-house-inquiry" />
+            <input type="hidden" name="page" value="workspace" />
+            <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="field">
+            <label for="interest" data-es="Me interesa">I'm interested in</label>
+            <select id="interest" name="interest">
+              <option value="Shared workspace" data-es="Espacio de trabajo compartido">Shared workspace</option>
+                            <option value="Meeting room" data-es="Sala de reuniones">Meeting room</option>
+              <option value="Boardroom" data-es="Sala de Juntas">The Elsinore Boardroom</option>
+              <option value="Virtual office" data-es="Oficina Virtual">Virtual office</option>
+              <option value="Tour the space" data-es="Recorrer el espacio">Tour the space</option>
+              <option value="Help me choose" data-es="Ayúdenme a elegir">Help me choose</option>
+              <option value="Something else" data-es="Otra cosa">Something else</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field req"><label for="name" data-es="Nombre completo">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+            <div class="field req"><label for="phone" data-es="Teléfono">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
+          </div>
+          <div class="field req"><label for="email" data-es="Correo electrónico">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field"><label for="company" data-es="Empresa (opcional)">Company (optional)</label><input id="company" name="company" type="text" /></div>
+          <div class="field"><label for="message" data-es="¿Algo más?">Anything else?</label><textarea id="message" name="message" placeholder="How you'd like to use the space, days you're considering, or questions." data-es-ph="Cómo le gustaría usar el espacio, los días que está considerando o sus preguntas."></textarea></div>
+          <button type="submit" class="btn btn-primary" data-es="Enviar consulta">Send inquiry</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+</main>
+    <footer>
   <div class="container">
-    <div class="foot-top">
-      <div class="foot-mark">
-        <b>THE CHIMES</b>
-        <p class="tag" data-es="Trabaje, reúnase y celebre en un pedazo de historia.">Work, meet, and gather in a piece of history.</p>
+    <div class="foot-inner">
+        <div class="foot-mark">
+        <b>THE CRESCENT HOUSE 1887</b>
+        <p class="tag" data-es="Un lugar histórico para celebrar la historia y crear recuerdos.">A timeless landmark to celebrate history and create memories.</p>
       </div>
-      <div class="foot-col">
+        <div class="foot-cols">
+          <div class="foot-col">
         <h4 data-es="Trabajo">Work</h4>
         <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
         <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
-        <a href="#inquire" data-es="Solicite una cotización">Get a quote</a>
+        <button class="foot-cta" data-modal-open data-interest="general" data-es="Solicite una cotización">Get a quote</button>
       </div>
-      <div class="foot-col">
+          <div class="foot-col">
         <h4 data-es="Explorar">Explore</h4>
         <a href="index.html" data-es="Inicio">Home</a>
         <a href="weddings.html" data-es="Bodas">Weddings</a>
         <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
         <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
       </div>
-      <div class="foot-col">
+          <div class="foot-col">
         <h4 data-es="Síganos">Follow</h4>
         <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/thecrescenthouse1887" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@thecrescent1887" target="_blank" rel="noopener">TikTok</a>
       </div>
-      <div class="foot-col">
+          <div class="foot-col">
         <h4 data-es="Visítenos">Visit</h4>
         <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
-        <a href="tel:+19510000000">(951) 000-0000</a>
+        <a href="tel:+19517184204">(951) 718-4204</a>
       </div>
-    </div>
-    <div class="foot-base">
-      <span data-es="© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA">© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+        </div>
+      </div>
+      <div class="foot-base">
+      <span data-es="© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA">© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
       <span class="foot-legal"><a href="privacy.html" data-es="Política de Privacidad">Privacy Policy</a> · <a href="terms.html" data-es="Términos y Condiciones">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener" data-es="Desarrollado por Suffix Studio">Powered by Suffix Studio</a></span>
     </div>
   </div>
@@ -582,12 +616,17 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 </div>
 
 <!-- sticky cta -->
-<div class="sticky-cta" id="stickyCta"><a class="btn btn-brass" href="#inquire" data-preset="Tour the space" data-es="Reserve una Visita">Book a tour</a></div>
+<div class="sticky-cta" id="stickyCta"><button class="btn btn-brass" data-modal-open data-interest="tour the space" data-es="Reserve una Visita">Book a tour</button></div>
 
 <script>
   /* just this page's own settings. app.js does the rest. */
+  var MODAL_LABELS={
+  en:{'shared workspace':'Ask about a desk','meeting room':'Book a meeting room','boardroom':'Book The Elsinore Boardroom','virtual office':'Ask about an address','tour':'Book a tour'},
+  es:{}
+};
+var MODAL_DEFAULT={en:'Tell us what you need',es:'Cuéntenos qué necesita'};
   var I18N_META = {
-    title: "Espacios de Trabajo y Oficinas · The Chimes · Histórica Crescent Bath House",
+    title: "Espacios de Trabajo y Oficinas · The Chimes · The Crescent House 1887",
     desc:  "Espacios de trabajo compartidos, oficinas privadas, salas de reuniones y una dirección comercial virtual dentro de la Crescent Bath House de 1887 en Lake Elsinore. Trabaje en un lugar con historia."
   };
 </script>

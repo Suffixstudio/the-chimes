@@ -20,20 +20,21 @@
 <title>Party &amp; Quinceañera Venue in Lake Elsinore | The Chimes</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "EventVenue",
-  "name": "The Chimes",
+  "name": "The Crescent House 1887",
+  "alternateName": ["The Chimes", "The Chimes Events", "Crescent Bath House"],
   "alternateName": [
     "Crescent Bath House",
     "The Crescent House"
   ],
   "description": "Historic 1887 event venue in downtown Lake Elsinore, California, hosting birthdays, anniversaries, reunions, quinceañeras, and holiday parties.",
   "url": "https://the-chimes.netlify.app/social-events.html",
-  "telephone": "+1-951-000-0000",
+  "telephone": "+1-951-718-4204",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "201 W. Graham Avenue",
@@ -80,20 +81,36 @@
   .section{padding:clamp(4.5rem,9vw,8rem) 0;}
   .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
   .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
-  .dropdown-menu a{display:block;padding:.42rem .5rem;font-size:.9rem;color:var(--ink);text-decoration:none;border-radius:3px;white-space:nowrap;}
   .hero{position:relative;background:linear-gradient(165deg,var(--forest) 0%,var(--forest-deep) 100%);color:#F1E6D3;overflow:hidden;}
   .hero .btn-ghost:hover{background:#F4E9D6;color:var(--forest-deep);}
   .hero-photo img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;background:#1E3227;}
   .hero-photo video{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;background:#1E3227;}
   .steps{background:var(--cream-card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .quote-band{background:var(--parchment-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .charm img{width:100%;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
+  .charm img{width:100%;max-width:400px;margin-inline:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 42%;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);}
+  .lib-photo{margin:0;}
+  .lib-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--brass);padding:10px;background:#2b1a20;filter:sepia(.06) contrast(1.02);cursor:zoom-in;}
   .final{background:linear-gradient(165deg,var(--forest),var(--forest-deep));color:#F1E6D3;text-align:center;position:relative;overflow:hidden;}
   footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 0 2.4rem;}
   .modal-head{background:linear-gradient(160deg,var(--forest),var(--forest-deep));color:#F4E9D6;padding:1.8rem 2rem 1.6rem;position:relative;}
   .charm img{cursor:zoom-in;}
+  .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.2rem);margin-top:3rem;}
+  .pkg{border:1px solid var(--line);background:var(--cream-card);padding:clamp(1.8rem,2.5vw,2.4rem);display:flex;flex-direction:column;}
+  .pkg .tier{font-family:"Cinzel",serif;font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-deep);}
+  .pkg h3{font-size:1.7rem;margin:.6rem 0 .3rem;}
+  .pkg .price{font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-style:italic;color:var(--smoke);margin-bottom:1.2rem;}
+  .pkg ul{list-style:none;padding:0;margin:0 0 1.6rem;flex:1;}
+  .pkg li{padding:.5rem 0;border-top:1px solid var(--line);font-size:.9rem;color:#3a302a;display:flex;gap:.6rem;align-items:flex-start;}
+  @media(max-width:1080px){
+    .pkg-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(max-width:700px){
+    .pkg-grid{grid-template-columns:1fr;}
+  }
+  @media(max-width:560px){
+    .g-tile.wide{aspect-ratio:4/3;}
+  }
   @media(max-width:1024px){
-    .dropdown-menu a{padding:.72rem 1rem;}
     .dd-toggle{width:100%;justify-content:space-between;}
   }
   @media(max-width:520px){
@@ -102,9 +119,9 @@
   @media (prefers-color-scheme: dark){
     body{background:#F3ECDD !important;}
     body{color:#211A16 !important;}
-    .dropdown-menu a{color:#4a3f36 !important;}
     .dd-toggle{color:#4a3f36 !important;}
     .quote-band{background:#ECE1CC !important;}
+    .pkg{background:#FBF7EE !important;}
     .final{background:#2F4A3A !important;color:#F1E6D3 !important;}
     .hero{background:#2F4A3A !important;color:#F1E6D3 !important;}
     footer{background:#1E3227 !important;}
@@ -112,62 +129,64 @@
 
 /* the honeypot. Invisible to people. Bots fill it in and get dropped. */
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-
-/* ---- "you are here" ----
-   The nav is sticky, so this stays on screen however far down you scroll. Same face
-   and tracking as the tagline above it, so it sits naturally. Brass, so it reads as
-   your location and not as more of the strapline. */
-.page-here{display:block;margin-top:.34rem;font-family:"Cinzel",serif;font-weight:600;
-  font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);
-  line-height:1;white-space:nowrap;}
-.page-here::before{content:"";display:inline-block;width:12px;height:1px;
-  background:var(--brass);vertical-align:middle;margin-right:.5rem;
-  transform:translateY(-1px);}
 @media (max-width:640px){
-  /* the nav is tight on a phone. A third line would crowd the logo, so it goes. */
-  .page-here{display:none;}
 }
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 </style>
 </head>
 <body class="theme-forest">
+    <a class="skip-link" href="#main">Skip to content</a>
+    
 
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark"><b>THE CHIMES</b><span class="sub">Historic Crescent Bath House · Est. 1887</span></a>
-      <span class="page-here" data-es="Eventos Sociales">Social Events</span>
+    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Eventos Sociales">Social Events</span></span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <div class="has-dropdown">
-        <button class="dd-toggle" id="exploreToggle" aria-expanded="false">Explore <span class="caret">▾</span></button>
-        <div class="dropdown-menu">
-          <span class="dd-label">Events &amp; Rentals</span>
-          <a href="weddings.html">Weddings</a>
-          <a href="social-events.html" aria-current="page">Social Events</a>
-          <a href="corporate-events.html">Corporate Events</a>
-          <a href="photo-film.html">Photo &amp; Film</a>
-          <span class="dd-label">Work</span>
-          <a href="workspace.html">Workspace &amp; Offices</a>
-          <a href="virtual-office.html">Virtual Office</a>
-          <span class="dd-label">Discover</span>
-          <a href="history-tours.html">History &amp; Tours</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
-          <a href="contact.html">Contact</a>
+        <div class="doors">
+          <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
+          <div class="grp">
+            <a class="door" href="chimes-events.html"><span class="dt" data-es="Eventos">Events</span></a>
+            <div class="sub">
+              <a href="chimes-events.html" data-es="The Chimes Venue">The Chimes Venue</a>
+              <a href="social-events.html#quince" data-es="Quincea&ntilde;eras">Quincea&ntilde;eras</a>
+              <a href="social-events.html" data-es="Eventos Sociales">Social Events</a>
+              <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
+              <a href="social-events.html#library" data-es="The Library Speakeasy">The Library Speakeasy</a>
+            </div>
+          </div>
+          <div class="grp">
+            <a class="door" href="workspace.html"><span class="dt" data-es="Oficinas">Offices</span></a>
+            <div class="sub">
+              <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
+              <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
+            </div>
+          </div>
+          <div class="grp grp--more">
+            <button class="door door-more" type="button" aria-expanded="false"><span class="dt" data-es="M&aacute;s">More</span><span class="caret" aria-hidden="true">&#9662;</span></button>
+            <div class="sub">
+              <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
+              <a href="photo-film.html" data-es="Foto y Cine">Photo &amp; Film</a>
+              <a href="borsellino-travel.html" data-es="Borsellino Travel Agency">Borsellino Travel Agency</a>
+              <a href="contact.html" data-es="Contacto">Contact</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <a class="nav-call" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 000-0000</a>
-      <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
-      <button class="btn btn-primary nav-book" data-modal-open data-interest="social">Check availability</button>
-    </nav>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19510000000" aria-label="Call The Chimes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">ES</button>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
@@ -190,10 +209,9 @@
             loop
             playsinline
             preload="auto"
-            poster="images/social-hero-poster.jpg"
-            aria-label="A slow pan around The Library, the speakeasy lounge at The Chimes, the historic 1887 Crescent Bath House in downtown Lake Elsinore"
-            data-es-aria-label="Una panorámica lenta por The Library, el bar clandestino de The Chimes, la histórica Crescent Bath House de 1887 en el centro de Lake Elsinore">
-            <source src="images/social-hero.mp4" type="video/mp4" />
+            poster="images/social-hero-flags.jpg"
+            aria-label="Slow pan across the lantern-lit veranda of The Chimes, the historic 1887 Crescent Bath House in downtown Lake Elsinore">
+            <source src="images/chimes-hero.mp4" type="video/mp4" />
           </video>
           <div class="hero-badge">Est. 1887 ·<br>Celebrations &amp; Parties</div>
         </figure>
@@ -224,14 +242,14 @@
   <div class="container">
     <div class="reveal" style="max-width:50ch;">
       <span class="eyebrow">Celebrations</span>
-      <h2 style="margin-top:.7rem;">One venue, every kind of gathering.</h2>
+      <h2 style="margin-top:.7rem;">One venue for every gathering.</h2>
       <p style="color:#473c34;max-width:56ch;margin-top:1rem;">Milestone birthdays, anniversaries, family reunions, retirement parties, and holiday gatherings all find a home inside the same restored 1887 landmark, dressed up or kept simple, exactly how you want it.</p>
     </div>
     <div class="setting">
       <article class="set-card reveal">
         <span class="n">Milestone Birthdays</span>
-        <h3>Turning a big number into a big night</h3>
-        <p>From a 40th to a 90th, mark the occasion inside a grand hall with a century of character built in, no extra decorating required.</p>
+        <h3>A birthday that feels like an event</h3>
+        <p>From a 40th to a 90th, mark the occasion in the Rose Garden or the Fountain Plaza, with a century of character built in and no extra decorating required.</p>
       </article>
       <article class="set-card reveal">
         <span class="n">Anniversaries &amp; Reunions</span>
@@ -251,18 +269,71 @@
 <section class="quote-band section">
   <div class="container charm">
     <div class="reveal">
-      <img src="images/social-fiestas.jpg" loading="lazy" decoding="async" alt="Mexican flags hanging the full height of the Victorian veranda at The Chimes, above the brick courtyard and stone fountain" data-es-alt="Banderas mexicanas colgadas a lo largo de la veranda victoriana de The Chimes, sobre el patio de ladrillo y la fuente de piedra" />
+      <img src="images/social-fiestas.jpg" loading="lazy" decoding="async" alt="Mexican flags hanging the full height of the Victorian veranda at The Chimes, above the brick courtyard and stone fountain" data-es-alt="Banderas mexicanas colgadas a lo largo de la veranda victoriana de The Chimes, sobre el patio de ladrillo y la fuente de piedra"  width="1086" height="1448" />
     </div>
     <div class="reveal">
       <span class="eyebrow">Since 1887</span>
       <h2 style="margin-top:.7rem;">A backdrop with a past as rich as the occasion.</h2>
       <p>Built in 1887 as the Crescent Bath House, a celebrated mineral-springs health resort, and later listed on the National Register of Historic Places, The Chimes is one of Lake Elsinore's original buildings. For more than a century it has been a place where the community gathered to celebrate. Your event becomes the newest chapter in a story the whole city knows.</p>
-      <p style="color:#473c34;">Hosts choose The Chimes because it offers something a rented hall never can: genuine history, one-of-a-kind architecture, and a sense of occasion the moment guests walk through the doors.</p>
+      <p style="color:#473c34;">Hosts choose The Chimes because it offers something a rented venue never can: genuine history, one-of-a-kind architecture, and a sense of occasion the moment guests walk through the doors.</p>
     </div>
   </div>
 </section>
 
 <!-- ===================== PACKAGES ===================== -->
+<section class="section" id="packages">
+  <div class="container">
+    <div class="reveal" style="max-width:50ch;">
+      <span class="eyebrow" data-es="Paquetes">Packages</span>
+      <h2 style="margin-top:.7rem;" data-es="Tres maneras de celebrar aquí.">Three ways to celebrate here.</h2>
+      <p style="color:#473c34;max-width:56ch;margin-top:1rem;" data-es="Cada celebración se cotiza según su fecha, el número de invitados y los espacios que utilice. Cuéntenos qué está planeando y le daremos un precio.">Every celebration is quoted to your date, your guest count, and the spaces you use. Tell us what you are planning and we will put a number to it.</p>
+    </div>
+    <div class="pkg-grid">
+      <article class="pkg reveal">
+        <span class="tier" data-es="Cumpleaños">Birthdays</span>
+        <h3 data-es="Los años que vale la pena celebrar">The years worth marking</h3>
+        <div class="price" data-es="Precio a consultar">Pricing on request</div>
+        <ul class="ticks">
+          <li data-es="Cumpleaños importantes y cenas privadas">Milestone birthdays and private dinners</li>
+          <li data-es="Opciones interiores y en el patio">Indoor and courtyard options</li>
+          <li data-es="The Library Speakeasy para el cóctel">The Library Speakeasy for cocktails</li>
+          <li data-es="Su banquetero de nuestra lista de proveedores preferidos">Your caterer from our preferred vendor list</li>
+          <li data-es="Estacionamiento privado al cruzar la calle">Private parking across the street</li>
+        </ul>
+        <button class="btn btn-ghost" data-modal-open data-interest="social" data-es="Consultar">Inquire</button>
+      </article>
+      <article class="pkg reveal">
+        <span class="tier" data-es="Showers">Showers</span>
+        <h3 data-es="Baby shower y despedida">Baby and bridal</h3>
+        <div class="price" data-es="Precio a consultar">Pricing on request</div>
+        <ul class="ticks">
+          <li data-es="Baby showers y despedidas de soltera">Baby showers and bridal showers</li>
+          <li data-es="The Parlor para un grupo pequeño">The Parlor for a smaller group</li>
+          <li data-es="El Rose Garden para una fiesta al aire libre">The Rose Garden for a garden party</li>
+          <li data-es="Su banquetero de nuestra lista de proveedores preferidos">Your caterer from our preferred vendor list</li>
+          <li data-es="Estacionamiento privado al cruzar la calle">Private parking across the street</li>
+        </ul>
+        <button class="btn btn-ghost" data-modal-open data-interest="shower" data-es="Consultar">Inquire</button>
+      </article>
+      <article class="pkg reveal">
+        <span class="tier" data-es="Quinceañeras">Quinceañeras</span>
+        <h3 data-es="Quince años">Quince años</h3>
+        <div class="price" data-es="Precio a consultar">Pricing on request</div>
+        <ul class="ticks">
+          <li data-es="Ceremonia y recepción en el lugar">Ceremony and reception on site</li>
+          <li data-es="El Rose Garden para la gran entrada">The Rose Garden for the grand entrance</li>
+          <li data-es="Fountain Plaza para la cena al aire libre">Fountain Plaza for dinner under the open sky</li>
+          <li data-es="Su banquetero de nuestra lista de proveedores preferidos">Your caterer from our preferred vendor list</li>
+          <li data-es="Estacionamiento privado al cruzar la calle">Private parking across the street</li>
+        </ul>
+        <button class="btn btn-ghost" data-modal-open data-interest="quince" data-es="Consultar">Inquire</button>
+      </article>
+    </div>
+    <p class="reveal" style="color:#6A6058;font-size:.88rem;max-width:70ch;margin-top:1.6rem;" data-es="Los paquetes cubren los espacios de evento reservados para su celebración, no el resto del edificio. Los precios se cotizan por evento y varían según la fecha, el número de invitados y lo que incluya.">Packages cover the event spaces set aside for your celebration, not the rest of the building. Prices are quoted per event and vary by date, guest count, and what you include.</p>
+  </div>
+</section>
+
+<!-- ===================== QUINCEANERAS ===================== -->
 <section class="section" id="quince" style="background:var(--parchment-2);">
   <div class="container" style="text-align:center;">
     <div class="reveal" style="max-width:44ch;margin-inline:auto;">
@@ -272,7 +343,7 @@
     <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
       <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-deep);">Quince Años</div>
       <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
-      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Your quinceañera deserves more than a rented hall. Make your grand entrance through original Victorian archways, dance beneath a century-old roof, and give your court a backdrop no one else in the valley has. The Chimes hosts your celebration exactly the way you picture it: elegant, personal, and unforgettable.</p>
+      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Your quinceañera deserves more than a rented venue. Make your grand entrance through original Victorian archways, dance beneath a century-old roof, and give your court a backdrop no one else in the valley has. The Chimes hosts your celebration exactly the way you picture it: elegant, personal, and unforgettable.</p>
       <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
       <button class="btn btn-brass" data-modal-open data-interest="quince">Plan your celebration</button>
     </div>
@@ -290,7 +361,7 @@
       <div class="why-item reveal"><div class="dot">01</div><div><h3>A photographer's dream</h3><p>Original arches and Victorian detail make every candid shot look intentional, no rented backdrop required.</p></div></div>
       <div class="why-item reveal"><div class="dot">02</div><div><h3>Flexible, not cookie cutter</h3><p>Dress the space up for a formal anniversary or keep it relaxed for a birthday, the room adapts to your event, not the other way around.</p></div></div>
       <div class="why-item reveal"><div class="dot">03</div><div><h3>Truly one of a kind</h3><p>There is only one 1887 Crescent Bath House in Lake Elsinore. Your celebration will not look like anyone else's.</p></div></div>
-      <div class="why-item reveal"><div class="dot">04</div><div><h3>In the heart of downtown</h3><p>Walkable to dining and the lakefront, with a private reserved parking lot right across the street for your guests.</p></div></div>
+      <div class="why-item reveal"><div class="dot">04</div><div><h3>In the heart of downtown</h3><p>Walkable to dining, with a private reserved parking lot right across the street for your guests.</p></div></div>
     </div>
   </div>
 </section>
@@ -306,10 +377,10 @@
     <!-- To add a photo: copy a <figure class="g-tile"> block, point src at your file,
          and write both alt (English) and data-es-alt (Spanish). -->
     <div class="gallery-grid reveal">
-      <figure class="g-tile" data-cap="The Library · The Chimes"><img src="images/social-library.jpg" loading="lazy" decoding="async" alt="The Library at The Chimes, a speakeasy bar with velvet sofas, brick walls, and a brass chandelier" data-es-alt="The Library en The Chimes, un bar clandestino con sofás de terciopelo, muros de ladrillo y un candelabro de latón" /></figure>
-      <figure class="g-tile" data-cap="The ceremony lawn · The Chimes"><img src="images/garden-lawn.jpg" loading="lazy" decoding="async" alt="The ceremony lawn at The Chimes, ringed by palms and olive trees, with the antique carriage beyond" data-es-alt="El jardín de ceremonias de The Chimes, rodeado de palmeras y olivos, con el carruaje antiguo al fondo" /></figure>
-      <figure class="g-tile"><img src="images/social-celebration.jpg" loading="lazy" decoding="async" style="object-position:center 62%;" alt="A grazing table of charcuterie, fruit, and cheese set up for a celebration at The Chimes" data-es-alt="Una mesa de bocadillos con charcutería, fruta y queso preparada para una celebración en The Chimes" /></figure>
-      <figure class="g-tile"><img src="images/social-graduation.jpg" loading="lazy" decoding="async" style="object-position:center 55%;" alt="Guests gathering around the catering table at a graduation celebration hosted at The Chimes" data-es-alt="Invitados reunidos alrededor de la mesa de banquete en una celebración de graduación en The Chimes" /></figure>
+      <figure class="g-tile" data-cap="The Library Speakeasy · The Chimes" data-es-cap="The Library Speakeasy · The Chimes"><img src="images/social-bar.jpg" loading="lazy" decoding="async" alt="The bar inside The Library Speakeasy, with wooden stools and the gold chandelier overhead" data-es-alt="La barra dentro de The Library Speakeasy, con banquetas de madera y el candelabro dorado en lo alto"  width="1200" height="1600" /></figure>
+      <figure class="g-tile" data-cap="The grounds from above · The Chimes" data-es-cap="Los terrenos desde arriba · The Chimes"><img src="images/social-grounds-aerial.jpg" loading="lazy" decoding="async" alt="The grounds seen from above, showing the brick courtyard, the lawn, and the palms along the street" data-es-alt="Los terrenos vistos desde arriba, mostrando el patio de ladrillo, el césped y las palmeras junto a la calle"  width="1300" height="1499" /></figure>
+      <figure class="g-tile wide" data-cap="The grand piano · The Chimes" data-es-cap="El piano de cola · The Chimes"><img src="images/main-parlor.jpg" loading="lazy" decoding="async" style="object-position:58% center;" alt="The grand piano beneath a crystal chandelier, with red velvet armchairs on the patterned tile floor" data-es-alt="El piano de cola bajo un candelabro de cristal, con sillones de terciopelo rojo sobre el piso de mosaico"  width="1500" height="1125" /></figure>
+      <figure class="g-tile wide" data-cap="The courtyard · The Chimes" data-es-cap="El patio · The Chimes"><img src="images/social-courtyard-aerial.jpg" loading="lazy" decoding="async" style="object-position:52% center;" alt="The brick courtyard from above, set with bistro tables and chairs beside the flowering trees" data-es-alt="El patio de ladrillo visto desde arriba, con mesas y sillas bistró junto a los árboles en flor"  width="1500" height="1125" /></figure>
     </div>
   </div>
 </section>
@@ -324,7 +395,7 @@
     </div>
     <div class="steps-grid reveal">
       <div class="step"><div class="dot">01</div><h3>Inquire</h3><p>Send us your date, guest count, and the kind of celebration you're planning. We reply within one to two business days.</p></div>
-      <div class="step"><div class="dot">02</div><h3>Tour</h3><p>Walk the grand hall, courtyard, and event spaces, and picture your celebration in person.</p></div>
+      <div class="step"><div class="dot">02</div><h3>Tour</h3><p>Walk the Rose Garden, the courtyard, and the event spaces, and picture your celebration in person.</p></div>
       <div class="step"><div class="dot">03</div><h3>Reserve</h3><p>Choose your package, place your deposit, and your date at The Chimes is officially yours.</p></div>
     </div>
     <div class="reveal" style="text-align:center;margin-top:2.6rem;">
@@ -334,19 +405,46 @@
 </section>
 
 <!-- ===================== FAQ ===================== -->
+<!-- ===================== THE LIBRARY ===================== -->
+<section class="section" id="library" style="background:var(--parchment-2);">
+  <div class="container" style="text-align:center;">
+    <div class="reveal" style="max-width:46ch;margin-inline:auto;">
+      <span class="eyebrow" style="justify-content:center;">The Library Speakeasy</span>
+      <h2 style="margin-top:.7rem;">Velvet, brass, and a bar of your own.</h2>
+      <p id="lib-desc" style="color:#473c34;max-width:52ch;margin:1rem auto 0;">The Library is our intimate 1900s-inspired speakeasy at The Crescent House. Velvet seating, a single gold chandelier, and a bar of its own make it a room built for good conversation, strong cocktails, and your closest friends. Perfect for rehearsal dinners, birthdays, engagement parties, and private cocktail hours.</p>
+    </div>
+    <figure class="lib-photo reveal" style="margin:2.4rem auto 0;max-width:640px;">
+      <img src="images/library-speakeasy.jpg" loading="lazy" decoding="async" style="object-position:center 88%;" alt="The Library Speakeasy, looking past the velvet seating toward the bar beneath the gold chandelier" data-es-alt="The Library Speakeasy, mirando desde los asientos de terciopelo hacia la barra bajo el candelabro dorado"  width="1500" height="1125" />
+    </figure>
+    <div class="reveal" style="max-width:640px;margin:2.4rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2rem,4.5vw,3rem);">
+      <div id="lib-glance" style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-deep);">At a glance</div>
+      <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
+      <ul id="lib-list" style="list-style:none;padding:0;margin:0;text-align:center;font-size:1.02rem;color:#473c34;display:grid;gap:.55rem;">
+        <li>Up to 30 guests, seven days a week</li>
+        <li>Private three-hour buyouts</li>
+        <li>From $750 on weekdays and $1,200 on weekends</li>
+        <li>Wedding add-on: $500 when booked with The Chimes Events</li>
+        <li>Extra hour: $250</li>
+        <li>Our bar policy applies</li>
+      </ul>
+      <div style="margin-top:1.5rem;"><button class="btn btn-brass" data-modal-open data-interest="social">Ask about The Library</button></div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="faq">
   <div class="container">
     <div class="reveal" style="text-align:center;max-width:40ch;margin-inline:auto;">
       <span class="eyebrow" style="justify-content:center;">Good to know</span>
-      <h2 style="margin-top:.7rem;">Social event questions</h2>
+      <h2 style="margin-top:.7rem;margin-inline:auto;">Social event questions</h2>
     </div>
     <div class="faq-wrap reveal">
       <div class="faq-item"><button class="faq-q" aria-expanded="false">What kinds of events can you host?</button><div class="faq-a"><p>Milestone birthdays, anniversaries, family reunions, quinceañeras, retirement parties, holiday gatherings, and more. If it's worth celebrating, The Chimes can likely host it.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many guests can you accommodate?</button><div class="faq-a"><p>The venue works for both intimate gatherings and larger celebrations. Share your guest count when you inquire and we'll confirm the right layout. <span class="todo">add your exact seated and standing capacities.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many guests can you accommodate?</button><div class="faq-a"><p>The Rose Garden holds up to 300 guests, Fountain Plaza up to 150 standing and 100 seated, and The Library up to 30 standing and 10 seated. The Parlor Room holds up to 30 standing and does not do seated dining, only seating on the furniture in the room. Share your guest count when you inquire and we will confirm the right space and setup.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you host quinceañeras?</button><div class="faq-a"><p>Yes, and it's one of our favorite celebrations to host. See the quinceañera section above, or mention it directly when you inquire.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we bring our own caterer and decorations?</button><div class="faq-a"><p>The space is catering-ready and flexible. Ask about our current vendor and catering options when you reach out. <span class="todo">confirm your vendor and alcohol policy here.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we bring our own caterer and decorations?</button><div class="faq-a"><p>Yes, the space is flexible. Catering runs through our preferred vendor list, which we share when you inquire, and decorations are welcome within the care a historic building asks for. For the bar, you may bring your own licensed bar vendor with a valid ABC permit, liability insurance, and certified bartenders presented in advance.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there parking for our guests?</button><div class="faq-a"><p>Yes. A private reserved parking lot sits directly across the street from the venue, so your guests can park just steps from the entrance. Additional street parking is available throughout the historic downtown district, which is also walkable to dining.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do we reserve our date?</button><div class="faq-a"><p>Start by sending us your preferred date through the inquiry form. We'll confirm availability and walk you through the next steps and deposit. <span class="todo">add your booking and deposit terms.</span></p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How do we reserve our date?</button><div class="faq-a"><p>Our Grand Opening Special holds your date with just a 25% retainer. The balance splits into two easy payments, with the final payment due 30 days before your event, and we include one free date change up to 90 days out. The retainer is non-refundable, and the final payment is non-refundable within 30 days of the event.</p></div></div>
     </div>
   </div>
 </section>
@@ -355,12 +453,14 @@
 <section class="final section" id="contact-final">
   <div class="container inner reveal">
     <span class="eyebrow">Let's talk</span>
-    <h2>Plan your celebration at The Chimes.</h2>
+    <h2>Plan your celebration at The Crescent House.</h2>
     <p>Tell us what you're celebrating, and we'll be in touch to start planning a day your guests won't forget.</p>
     <button class="btn btn-brass" data-modal-open data-interest="social">Check availability</button>
-    <p class="phone">CALL · <a href="tel:+19510000000">(951) 000-0000</a> &nbsp;·&nbsp; <a href="mailto:hello@thechimes.example">hello@thechimes.example</a></p>
+    <p class="phone">CALL · <a href="tel:+19517184204">(951) 718-4204</a> &nbsp;·&nbsp; <a href="mailto:info@thechimesevents.com">info@thechimesevents.com</a></p>
   </div>
-</section>
+
+      <p class="ada-note reveal" data-es="Accesibilidad. The Crescent House es un edificio histórico y el segundo piso no cumple con las normas ADA. Si usted o alguno de sus invitados requiere adaptaciones de accesibilidad, contáctenos antes de su visita o su evento. Le diremos con exactitud qué puede y qué no puede acomodar el edificio, y trabajaremos con usted a partir de ahí.">Accessibility. The Crescent House is a historic building and the second floor is not ADA compliant. If you or any of your guests have accessibility needs, please contact us before your visit or your event. We will tell you exactly what the building can and cannot accommodate, and work with you from there.</p>
+    </section>
 
 </main>
 
@@ -369,40 +469,43 @@
   <div class="container">
     <div class="foot-inner">
       <div class="foot-mark">
-        <div class="name">THE CHIMES</div>
-        <div class="tag">Preserving the past, building what's next.</div>
+        <div class="name">THE CRESCENT HOUSE 1887</div>
+        <div class="tag">A timeless landmark to celebrate history and create memories.</div>
       </div>
       <div class="foot-cols">
         <div class="foot-col">
-          <h4>Social Events</h4>
+          <h3 class="foot-h">Social Events</h3>
           <a href="#celebrations">Celebrations</a>
           <a href="#quince">Quinceañeras</a>
           <a href="#gallery">Gallery</a>
           <a href="#faq">FAQ</a>
         </div>
         <div class="foot-col">
-          <h4>The Chimes</h4>
+          <h3 class="foot-h">The Crescent House 1887</h3>
           <a href="index.html">Home</a>
           <a href="index.html#office">Office Suites</a>
-          <a href="index.html#events">Event Hall</a>
+          <a href="chimes-events.html">The Chimes Events</a>
           <a href="index.html#heritage">Our History</a>
           <a href="workspace.html">Workspace &amp; Offices</a>
           <a href="photo-film.html">Photo &amp; Film</a>
-          <a href="borsellino-travel.html">Borsellino Travel</a>
+          <a href="borsellino-travel.html">Borsellino Travel Agency</a>
         </div>
         <div class="foot-col">
-          <h4>Follow</h4>
+          <h3 class="foot-h">Follow</h3>
           <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
+              <a href="https://www.instagram.com/thecrescenthouse1887" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@thecrescent1887" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.linkedin.com/company/the-crescent-house/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="foot-col">
-          <h4>Visit</h4>
+          <h3 class="foot-h">Visit</h3>
           <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
-          <a href="tel:+19510000000">(951) 000-0000</a>
+          <a href="tel:+19517184204">(951) 718-4204</a>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</span>
+      <span>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
       <span>Celebrations · Events · Office Leasing</span>
       <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
     </div>
@@ -419,8 +522,8 @@
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
     </div>
     <div class="modal-body">
-      <form id="bookForm" novalidate name="chimes-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="chimes-inquiry" />
+      <form id="bookForm" novalidate name="chimes-events-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="chimes-events-inquiry" />
             <input type="hidden" name="page" value="social-events" />
             <p class="hp" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <div class="field">
@@ -428,18 +531,19 @@
           <select id="interest" name="interest">
             <option value="social">A birthday, anniversary, or reunion</option>
             <option value="quince">A quinceañera</option>
+            <option value="shower">A baby or bridal shower</option>
             <option value="event">Another event</option>
             <option value="tour">A venue tour</option>
           </select>
         </div>
-        <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
+        <div class="field req"><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required /></div>
         <div class="field-row">
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
-          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" /></div>
+          <div class="field req"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required /></div>
+          <div class="field req"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required /></div>
         </div>
         <div class="field-row">
-          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" /></div>
-          <div class="field"><label for="guests">Estimated guests</label><input id="guests" name="guests" type="number" min="1" placeholder="Optional" /></div>
+          <div class="field"><label for="date">Preferred date</label><input id="date" name="date" type="date" min="2026-08-02" /></div>
+          <div class="field"><label for="guests">Estimated guests</label><input id="guests" name="guests" type="number" min="1" max="300" placeholder="Up to 300" data-es-placeholder="Hasta 300" /></div>
         </div>
         <div class="field"><label for="message">Tell us about your event</label><textarea id="message" name="message" placeholder="Your vision, must-haves, or any questions."></textarea></div>
         <button type="submit" class="btn btn-primary">Send inquiry</button>
@@ -468,28 +572,12 @@
 <!-- The words for this page. app.js supplies the behavior. -->
 <script>
   var MODAL_LABELS={
-    en:{social:'Check your availability',quince:'Plan your celebration',event:'Tell us about your event',tour:'Schedule a tour'},
-    es:{social:'Consulte disponibilidad',quince:'Planee su celebración',event:'Cuéntenos sobre su evento',tour:'Agende un recorrido'}
+    en:{social:'Check your availability',quince:'Plan your celebration',shower:'Plan your shower',event:'Tell us about your event',tour:'Schedule a tour'},
+    es:{social:'Consulte disponibilidad',quince:'Planee su celebración',shower:'Planee su celebración',event:'Cuéntenos sobre su evento',tour:'Agende un recorrido'}
   };
   var MODAL_DEFAULT={en:'Check your availability',es:'Consulte disponibilidad'};
 
   var I18N = [
-    [".wordmark .sub", "Histórica Crescent Bath House · Est. 1887"],
-    [".nav-book", "Consulte disponibilidad"],
-    ["#navLinks > a[href=\"index.html\"]", "Inicio"],
-    ["#exploreToggle", "Explorar <span class=\"caret\">▾</span>"],
-    [".dropdown-menu span.dd-label:nth-of-type(1)", "Eventos y Alquileres"],
-    [".dropdown-menu span.dd-label:nth-of-type(2)", "Trabajo"],
-    [".dropdown-menu span.dd-label:nth-of-type(3)", "Descubrir"],
-    [".dropdown-menu a[href=\"weddings.html\"]", "Bodas"],
-    [".dropdown-menu a[href=\"social-events.html\"]", "Eventos Sociales"],
-    [".dropdown-menu a[href=\"corporate-events.html\"]", "Eventos Corporativos"],
-    [".dropdown-menu a[href=\"photo-film.html\"]", "Fotografía y Cine"],
-    [".dropdown-menu a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
-    [".dropdown-menu a[href=\"virtual-office.html\"]", "Oficina Virtual"],
-    [".dropdown-menu a[href=\"history-tours.html\"]", "Historia y Recorridos"],
-    [".dropdown-menu a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".dropdown-menu a[href=\"contact.html\"]", "Contacto"],
     [".hero-badge", "Est. 1887 ·<br>Celebraciones y fiestas"],
     [".hero .eyebrow", "Eventos sociales en The Chimes"],
     [".hero h1", "Los momentos importantes<br><em>merecen un poco de historia.</em>"],
@@ -502,11 +590,11 @@
     [".facts .fact:nth-child(4)", "Estacionamiento privado enfrente"],
     [".quote-inner p", "Cien años de celebraciones. Todavía hay lugar en la historia para la suya."],
     ["#celebrations .eyebrow", "Celebraciones"],
-    ["#celebrations h2", "Un solo lugar, cualquier tipo de reunión."],
+    ["#celebrations h2", "Un solo lugar para cada celebración."],
     ["#celebrations > .container > .reveal > p", "Cumpleaños importantes, aniversarios, reuniones familiares, fiestas de jubilación y celebraciones navideñas encuentran un hogar dentro del mismo edificio restaurado de 1887, arreglado con elegancia o sencillo, exactamente como usted lo quiera."],
     [".setting .set-card:nth-child(1) .n", "Cumpleaños importantes"],
-    [".setting .set-card:nth-child(1) h3", "Convierta un cumpleaños importante en una gran noche"],
-    [".setting .set-card:nth-child(1) p", "Desde un cumpleaños de 40 hasta uno de 90, celebre la ocasión dentro de un gran salón con un siglo de carácter integrado, casi sin necesidad de decoración extra."],
+    [".setting .set-card:nth-child(1) h3", "Un cumpleaños a la altura de la ocasión"],
+    [".setting .set-card:nth-child(1) p", "Desde un cumpleaños de 40 hasta uno de 90, celebre la ocasión dentro de el Rose Garden con un siglo de carácter integrado, casi sin necesidad de decoración extra."],
     [".setting .set-card:nth-child(2) .n", "Aniversarios y reuniones"],
     [".setting .set-card:nth-child(2) h3", "Reúna de nuevo a todos"],
     [".setting .set-card:nth-child(2) p", "Reúna a familia y viejos amigos en un lugar que se siente como una ocasión especial desde que entran, con espacio para convivir adentro y afuera."],
@@ -529,49 +617,50 @@
     [".why-grid .why-item:nth-child(3) h3", "Verdaderamente único"],
     [".why-grid .why-item:nth-child(3) p", "Solo existe un Crescent Bath House de 1887 en Lake Elsinore. Su celebración no se parecerá a ninguna otra."],
     [".why-grid .why-item:nth-child(4) h3", "En el corazón del centro"],
-    [".why-grid .why-item:nth-child(4) p", "A poca distancia de restaurantes y el lago, con un estacionamiento privado reservado justo enfrente para sus invitados."],
+    [".why-grid .why-item:nth-child(4) p", "A poca distancia de restaurantes, con un estacionamiento privado reservado justo enfrente para sus invitados."],
     ["#gallery h2", "Imagine su celebración aquí."],
     ["#gallery p", "Toque cualquier foto para verla de cerca. Se agregan más fotos reales conforme se celebran eventos aquí."],
     ["#faq h2", "Preguntas sobre eventos sociales"],
     [".faq-wrap .faq-item:nth-child(1) .faq-q", "¿Qué tipo de eventos pueden recibir?"],
     [".faq-wrap .faq-item:nth-child(1) .faq-a p", "Cumpleaños importantes, aniversarios, reuniones familiares, quinceañeras, fiestas de jubilación, celebraciones navideñas y más. Si vale la pena celebrarlo, The Chimes probablemente puede recibirlo."],
     [".faq-wrap .faq-item:nth-child(2) .faq-q", "¿Cuántos invitados pueden recibir?"],
-    [".faq-wrap .faq-item:nth-child(2) .faq-a p", "El lugar funciona tanto para reuniones íntimas como para celebraciones más grandes. Comparta su número de invitados al consultar y confirmaremos el montaje adecuado. <span class=\"todo\">agreguen sus capacidades exactas, sentados y de pie.</span>"],
+    [".faq-wrap .faq-item:nth-child(2) .faq-a p", "El Rose Garden recibe hasta 300 invitados, Fountain Plaza hasta 150 de pie y 100 sentadas, y The Library hasta 30 de pie y 10 sentadas. La Parlor Room recibe hasta 30 de pie y no ofrece cena sentada, solo los asientos del mobiliario de la sala. Indíquenos su número de invitados al escribirnos y confirmaremos el espacio y la distribución adecuados."],
     [".faq-wrap .faq-item:nth-child(3) .faq-q", "¿Reciben quinceañeras?"],
     [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí, y es una de las celebraciones que más nos gusta recibir. Consulte la sección de quinceañeras arriba, o menciónelo directamente al consultar."],
     [".faq-wrap .faq-item:nth-child(4) .faq-q", "¿Podemos traer nuestro propio catering y decoración?"],
-    [".faq-wrap .faq-item:nth-child(4) .faq-a p", "El espacio está listo para catering y es flexible. Pregunte por nuestras opciones actuales de proveedores y catering al contactarnos. <span class=\"todo\">confirmen aquí su política de proveedores y alcohol.</span>"],
+    [".faq-wrap .faq-item:nth-child(4) .faq-a p", "Sí, el espacio es flexible. El catering se maneja a través de nuestra lista de proveedores preferidos, que compartimos cuando usted nos escribe, y la decoración es bienvenida dentro del cuidado que pide un edificio histórico. Para el bar, puede traer a su propio proveedor de bar con licencia, presentando por adelantado un permiso ABC vigente, seguro de responsabilidad civil y cantineros certificados."],
     [".faq-wrap .faq-item:nth-child(5) .faq-q", "¿Hay estacionamiento para nuestros invitados?"],
     [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Hay un estacionamiento privado reservado justo enfrente del lugar, al cruzar la calle, para que sus invitados se estacionen a pasos de la entrada. También hay estacionamiento en la calle por todo el distrito histórico del centro."],
     [".faq-wrap .faq-item:nth-child(6) .faq-q", "¿Cómo reservamos nuestra fecha?"],
-    [".faq-wrap .faq-item:nth-child(6) .faq-a p", "Empiece enviándonos su fecha preferida por el formulario de consulta. Confirmaremos la disponibilidad y le guiaremos por los siguientes pasos y el depósito. <span class=\"todo\">agreguen sus términos de reserva y depósito.</span>"],
+    [".faq-wrap .faq-item:nth-child(6) .faq-a p", "Nuestra promoción de gran apertura aparta su fecha con solo un anticipo del 25%. El saldo se divide en dos pagos sencillos, con el pago final 30 días antes de su evento, e incluimos un cambio de fecha gratuito hasta 90 días antes. El anticipo no es reembolsable, y el pago final no es reembolsable dentro de los 30 días previos al evento."],
     ["#contact-final .eyebrow", "Hablemos"],
     ["#contact-final h2", "Planee su celebración en The Chimes."],
     ["#contact-final p:not(.phone)", "Cuéntenos qué está celebrando y nos pondremos en contacto para empezar a planear un día que sus invitados no olvidarán."],
     ["#contact-final .btn-brass", "Consulte disponibilidad"],
-    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19510000000\">(951) 000-0000</a> &nbsp;·&nbsp; <a href=\"mailto:hello@thechimes.example\">hello@thechimes.example</a>"],
-    [".foot-mark .tag", "Preservando el pasado, construyendo el futuro."],
-    [".foot-cols .foot-col:nth-of-type(1) h4", "Eventos Sociales"],
-    [".foot-cols .foot-col:nth-of-type(3) h4", "Síganos"],
+    ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19517184204\">(951) 718-4204</a> &nbsp;·&nbsp; <a href=\"mailto:info@thechimesevents.com\">info@thechimesevents.com</a>"],
+    [".foot-mark .tag", "Un lugar histórico para celebrar la historia y crear recuerdos."],
+    [".foot-cols .foot-col:nth-of-type(1) h3", "Eventos Sociales"],
+    [".foot-cols .foot-col:nth-of-type(3) h3", "Síganos"],
     [".foot-cols a[href=\"#celebrations\"]", "Celebraciones"],
     [".foot-cols a[href=\"#quince\"]", "Quinceañeras"],
     [".foot-cols a[href=\"#faq\"]", "Preguntas"],
     [".foot-cols a[href=\"index.html\"]", "Inicio"],
     [".foot-cols a[href=\"index.html#office\"]", "Suites de oficina"],
-    [".foot-cols a[href=\"index.html#events\"]", "Salón de eventos"],
+    [".foot-cols a[href=\"chimes-events.html\"]", "Eventos The Chimes"],
     [".foot-cols a[href=\"index.html#heritage\"]", "Historia"],
     [".foot-cols a[href=\"workspace.html\"]", "Espacios de Trabajo y Oficinas"],
     [".foot-cols a[href=\"photo-film.html\"]", "Fotografía y Cine"],
     [".foot-cols a[href=\"borsellino-travel.html\"]", "Borsellino Travel"],
-    [".foot-cols .foot-col:nth-of-type(4) h4", "Visita"],
+    [".foot-cols .foot-col:nth-of-type(4) h3", "Visita"],
     [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
     [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
-    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Histórica Crescent Bath House, Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA"],
     [".foot-base span:nth-of-type(2)", "Celebraciones · Eventos · Arrendamiento de oficinas"],
     [".modal-head p", "Cuéntenos sobre su evento y le contactaremos en uno o dos días hábiles."],
     ["label[for=\"interest\"]", "Esta consulta es sobre"],
     ["#interest option[value=\"social\"]", "Un cumpleaños, aniversario o reunión"],
     ["#interest option[value=\"quince\"]", "Una quinceañera"],
+    ["#interest option[value=\"shower\"]", "Un baby shower o despedida de soltera"],
     ["#interest option[value=\"event\"]", "Otro evento"],
     ["#interest option[value=\"tour\"]", "Un recorrido por el lugar"],
     ["label[for=\"name\"]", "Nombre completo"],
@@ -589,10 +678,20 @@
     [".steps-grid .step:nth-child(1) h3", "Consultar"],
     [".steps-grid .step:nth-child(1) p", "Envíenos su fecha, número de invitados y el tipo de celebración que planea. Respondemos en uno o dos días hábiles."],
     [".steps-grid .step:nth-child(2) h3", "Recorra"],
-    [".steps-grid .step:nth-child(2) p", "Camine por el gran salón, el patio y los espacios de eventos, e imagine su celebración en persona."],
+    [".steps-grid .step:nth-child(2) p", "Camine por el Rose Garden, el patio y los espacios de eventos, e imagine su celebración en persona."],
     [".steps-grid .step:nth-child(3) h3", "Reserve"],
     [".steps-grid .step:nth-child(3) p", "Elija su paquete, deje su depósito, y su fecha en The Chimes es oficialmente suya."],
-    ["#planning .btn", "Empiece a planear"]
+    ["#planning .btn", "Empiece a planear"],
+    ["#library h2", "Terciopelo, latón y una barra para su grupo."],
+    ["#lib-desc", "The Library es nuestro íntimo speakeasy de inspiración 1900 en The Crescent House. Los asientos de terciopelo, un solo candelabro dorado y su propia barra lo convierten en un salón hecho para la buena conversación, los cócteles bien preparados y sus amigos más cercanos. Perfecto para cenas de ensayo, cumpleaños, fiestas de compromiso y horas de cóctel privadas."],
+    ["#lib-glance", "De un vistazo"],
+    ["#lib-list li:nth-child(1)", "Hasta 30 invitados, los siete días de la semana"],
+    ["#lib-list li:nth-child(2)", "Reservas privadas de tres horas"],
+    ["#lib-list li:nth-child(3)", "Desde $750 entre semana y $1,200 los fines de semana"],
+    ["#lib-list li:nth-child(4)", "Complemento de boda: $500 al reservar con The Chimes Events"],
+    ["#lib-list li:nth-child(5)", "Hora adicional: $250"],
+    ["#lib-list li:nth-child(6)", "Aplica nuestra política de bar"],
+    ["#library .btn", "Pregunte por The Library"],
   ];
 
   var I18N_ATTR = [
