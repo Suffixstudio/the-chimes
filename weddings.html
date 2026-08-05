@@ -25,6 +25,62 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can we have both the ceremony and reception here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Chimes is set up to host your ceremony, cocktail hour, and reception all on site, so nobody drives between venues in the middle of your day. Ceremonies are usually held in the Rose Garden, cocktail hour in The Library Speakeasy, and dinner and dancing in the Fountain Plaza under the open sky, with indoor and covered options so the day works rain or shine. The Chimes VIP Room upstairs is where the wedding party gets ready. Every package includes five hours of event time, plus an hour beforehand to set up and an hour afterwards to clear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many guests can you accommodate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Rose Garden holds up to 300 guests, Fountain Plaza up to 150 standing and 100 seated, and The Library up to 30 standing and 10 seated. The Parlor Room holds up to 30 standing and does not do seated dining, only seating on the furniture in the room. Share your guest count when you inquire and we will confirm the right space and setup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a space to get ready?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Chimes VIP Room upstairs is reserved for the wedding party on the morning of, with antique furnishings, a chandelier, and stained glass, so the getting-ready photographs are worth keeping. It is included in the Grand and Extravaganza packages, and the Extravaganza adds an extra hour beforehand purely for photographs. One thing worth raising early: the second floor is not ADA compliant, so if anyone in your party has accessibility needs, tell us when you inquire and we will talk through what the building can and cannot accommodate before you book."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we bring our own caterer and vendors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Catering runs through our preferred vendor list, which we share when you inquire, so you are choosing from people who already know the building and how it works. For the bar, you may bring your own licensed bar vendor. Every bar vendor must present a valid ABC permit, liability insurance, and certified bartenders in advance, and cocktail service happens in The Library Speakeasy. Because the building is historic, some outside rentals may need to bring their own power source, so tell us what you are planning to bring and we will flag anything that needs arranging."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there parking for our guests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A private reserved lot sits directly across the street from the venue, so your guests park just steps from the entrance rather than circling the block in formalwear. Additional street parking is available throughout the historic downtown district, and The Chimes Carriage Plaza, a second private lot across the street, is coming soon. The location is walkable to hotels and dining, which matters if guests are traveling in or staying the night. Tell us your expected guest count when you inquire and we will tell you honestly whether parking will be comfortable for that number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do we reserve our date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our Grand Opening Special holds your date with just a 25% retainer. The balance splits into two easy payments, with the final payment due 30 days before your wedding, and we include one free date change up to 90 days out. The retainer is non-refundable, and the final payment is non-refundable within 30 days of the event."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "EventVenue",
   "name": "The Crescent House 1887",
   "alternateName": ["The Chimes", "The Chimes Events", "Crescent Bath House"],
@@ -78,7 +134,7 @@
     --accent:var(--rose); --accent-deep:var(--rose-deep);}
   body{margin:0;background:#FAF7F2;border-top:4px solid var(--plum);color:#26262A;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
   .eyebrow::before{content:"";width:26px;height:1px;background:var(--plum);display:inline-block;}
-  .section{padding:clamp(4.5rem,9vw,8rem) 0;}
+  .section{padding:clamp(4rem,6vw,6rem) 0;}
   .dd-toggle{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;}
   .dd-toggle{display:inline-flex;align-items:center;gap:.35rem;}
   .hero{position:relative;background:linear-gradient(165deg,var(--plum) 0%,var(--plum-deep) 100%);color:#F1E6D3;overflow:hidden;}
@@ -119,7 +175,7 @@
   .pkg--oxblood .price,.pkg--char .price{color:rgba(241,230,211,.75);}
   .pkg--gold .price{color:rgba(36,27,8,.72);}
   .pkg ul{list-style:none;padding:0;margin:0 0 1.6rem;flex:1;}
-  .pkg li{padding:.5rem 0;border-top:1px solid var(--line);font-size:.9rem;color:#3a302a;display:flex;gap:.6rem;align-items:flex-start;}
+  .pkg li{padding:.5rem 0;border-top:1px solid var(--line);font-size:.9rem;color:#3a302a;display:flex;gap:0;align-items:flex-start;}
   .pkg--oxblood li,.pkg--char li{border-top-color:rgba(217,186,119,.22);color:rgba(241,230,211,.82);}
   .pkg--gold li{border-top-color:rgba(36,27,8,.20);color:rgba(36,27,8,.86);}
   .pkg ul{list-style:none;}
@@ -279,7 +335,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <!-- ===================== THE SETTING ===================== -->
 <section class="section" id="setting">
   <div class="container">
-    <div class="reveal" style="max-width:50ch;">
+    <div class="reveal sec-center" style="max-width:50ch;">
       <span class="eyebrow">The Setting</span>
       <h2 style="margin-top:.7rem;">One landmark, every part of your day.</h2>
       <p style="color:#4E4E54;max-width:56ch;margin-top:1rem;">Ceremony in the Rose Garden, cocktails in The Library Speakeasy, dinner in the Fountain Plaza, and getting ready in The Chimes VIP Room. Four spaces on one property, so your guests never leave.</p>
@@ -328,7 +384,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <!-- ===================== PACKAGES ===================== -->
 <section class="section" id="packages">
   <div class="container">
-    <div class="reveal" style="max-width:50ch;">
+    <div class="reveal sec-center" style="max-width:50ch;">
       <span class="eyebrow">Packages</span>
       <h2 style="margin-top:.7rem;">Celebrations from 10 to 300 guests.</h2>
       <p style="color:#4E4E54;max-width:56ch;margin-top:1rem;">The perfect historic venue in Lake Elsinore for any size celebration. Every package includes five hours of event time, plus an hour beforehand to set up and an hour afterward to clear, and each one can be tailored to your guest count, timeline, and vision.</p>
@@ -397,7 +453,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <!-- ===================== WHY US ===================== -->
 <section class="section" id="whyus">
   <div class="container">
-    <div class="reveal" style="max-width:46ch;">
+    <div class="reveal sec-center" style="max-width:46ch;">
       <span class="eyebrow">Why couples choose us</span>
       <h2 style="margin-top:.7rem;">A day your guests won't forget.</h2>
     </div>
@@ -459,11 +515,11 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       <h2 style="margin-top:.7rem;margin-inline:auto;">Wedding questions</h2>
     </div>
     <div class="faq-wrap reveal">
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we have both the ceremony and reception here?</button><div class="faq-a"><p>Yes. The Chimes is set up to host your ceremony, cocktail hour, and reception all on site, with indoor and covered options so your day works rain or shine.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we have both the ceremony and reception here?</button><div class="faq-a"><p>Yes. The Chimes is set up to host your ceremony, cocktail hour, and reception all on site, so nobody drives between venues in the middle of your day. Ceremonies are usually held in the Rose Garden, cocktail hour in The Library Speakeasy, and dinner and dancing in the Fountain Plaza under the open sky, with indoor and covered options so the day works rain or shine. The Chimes VIP Room upstairs is where the wedding party gets ready. Every package includes five hours of event time, plus an hour beforehand to set up and an hour afterwards to clear.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">How many guests can you accommodate?</button><div class="faq-a"><p>The Rose Garden holds up to 300 guests, Fountain Plaza up to 150 standing and 100 seated, and The Library up to 30 standing and 10 seated. The Parlor Room holds up to 30 standing and does not do seated dining, only seating on the furniture in the room. Share your guest count when you inquire and we will confirm the right space and setup.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there a space to get ready?</button><div class="faq-a"><p>Yes. The Chimes VIP Room upstairs, with its antique furnishings, chandelier, and stained glass, is reserved for the wedding party to get ready on the morning of.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we bring our own caterer and vendors?</button><div class="faq-a"><p>Catering runs through our preferred vendor list, which we share when you inquire. For the bar, you may bring your own licensed bar vendor: every bar vendor must present a valid ABC permit, liability insurance, and certified bartenders in advance. Because the building is historic, some outside rentals may need to bring their own power source.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there parking for our guests?</button><div class="faq-a"><p>Yes. A private reserved parking lot sits directly across the street from the venue, so your guests can park just steps from the entrance. Additional street parking is available throughout the historic downtown district, which is also walkable to hotels and dining.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there a space to get ready?</button><div class="faq-a"><p>Yes. The Chimes VIP Room upstairs is reserved for the wedding party on the morning of, with antique furnishings, a chandelier, and stained glass, so the getting-ready photographs are worth keeping. It is included in the Grand and Extravaganza packages, and the Extravaganza adds an extra hour beforehand purely for photographs. One thing worth raising early: the second floor is not ADA compliant, so if anyone in your party has accessibility needs, tell us when you inquire and we will talk through what the building can and cannot accommodate before you book.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we bring our own caterer and vendors?</button><div class="faq-a"><p>Catering runs through our preferred vendor list, which we share when you inquire, so you are choosing from people who already know the building and how it works. For the bar, you may bring your own licensed bar vendor. Every bar vendor must present a valid ABC permit, liability insurance, and certified bartenders in advance, and cocktail service happens in The Library Speakeasy. Because the building is historic, some outside rentals may need to bring their own power source, so tell us what you are planning to bring and we will flag anything that needs arranging.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there parking for our guests?</button><div class="faq-a"><p>Yes. A private reserved lot sits directly across the street from the venue, so your guests park just steps from the entrance rather than circling the block in formalwear. Additional street parking is available throughout the historic downtown district, and The Chimes Carriage Plaza, a second private lot across the street, is coming soon. The location is walkable to hotels and dining, which matters if guests are traveling in or staying the night. Tell us your expected guest count when you inquire and we will tell you honestly whether parking will be comfortable for that number.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">How do we reserve our date?</button><div class="faq-a"><p>Our Grand Opening Special holds your date with just a 25% retainer. The balance splits into two easy payments, with the final payment due 30 days before your wedding, and we include one free date change up to 90 days out. The retainer is non-refundable, and the final payment is non-refundable within 30 days of the event.</p></div></div>
     </div>
   </div>
@@ -677,15 +733,15 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     ["#faq .eyebrow", "Bueno saberlo"],
     ["#faq h2", "Preguntas sobre bodas"],
     [".faq-wrap .faq-item:nth-child(1) .faq-q", "¿Podemos tener la ceremonia y la recepción aquí?"],
-    [".faq-wrap .faq-item:nth-child(1) .faq-a p", "Sí. The Chimes está preparado para recibir su ceremonia, cóctel y recepción, todo en el mismo lugar, con opciones interiores y cubiertas para que su día funcione con sol o lluvia."],
+    [".faq-wrap .faq-item:nth-child(1) .faq-a p", "Sí. The Chimes está preparado para recibir su ceremonia, su cóctel y su recepción en el mismo lugar, para que nadie tenga que trasladarse a media celebración. Las ceremonias suelen realizarse en el Rose Garden, el cóctel en The Library Speakeasy, y la cena y el baile en Fountain Plaza al aire libre, con opciones interiores y cubiertas para que el día funcione llueva o truene. The Chimes VIP Room en el piso de arriba es donde se arregla el cortejo nupcial. Cada paquete incluye cinco horas de evento, más una hora antes para el montaje y una hora después para desmontar."],
     [".faq-wrap .faq-item:nth-child(2) .faq-q", "¿Cuántos invitados pueden recibir?"],
     [".faq-wrap .faq-item:nth-child(2) .faq-a p", "De pie, el Rose Garden recibe hasta 300 invitados, Fountain Plaza hasta 100, y la Parlor Room y The Library hasta 30 cada una. Los montajes con asientos reciben menos, así que indíquenos su número de invitados al escribirnos y confirmaremos el espacio y la distribución adecuados."],
     [".faq-wrap .faq-item:nth-child(3) .faq-q", "¿Hay un espacio para arreglarse?"],
-    [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí. La Chimes VIP Room en el piso de arriba, con sus muebles antiguos, su candelabro y sus vitrales, se reserva para que el cortejo nupcial se prepare la mañana del evento."],
+    [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí. The Chimes VIP Room en el piso de arriba se reserva para el cortejo nupcial la mañana del evento, con muebles antiguos, un candelabro y vitrales, para que las fotos de los preparativos valgan la pena. Está incluida en los paquetes Grand y Extravaganza, y el Extravaganza añade una hora extra antes solo para fotografías. Algo que conviene mencionar desde el principio: el segundo piso no cumple con ADA, así que si alguien de su grupo tiene necesidades de accesibilidad, díganoslo al consultar y hablaremos de lo que el edificio puede y no puede acomodar antes de reservar."],
     [".faq-wrap .faq-item:nth-child(4) .faq-q", "¿Podemos traer nuestro propio catering y proveedores?"],
-    [".faq-wrap .faq-item:nth-child(4) .faq-a p", "El catering se maneja a través de nuestra lista de proveedores preferidos, que compartimos cuando usted nos escribe. Para el bar, puede traer a su propio proveedor de bar con licencia: todo proveedor de bar debe presentar por adelantado un permiso ABC vigente, seguro de responsabilidad civil y cantineros certificados. Como el edificio es histórico, algunos equipos rentados externos podrían necesitar traer su propia fuente de energía."],
+    [".faq-wrap .faq-item:nth-child(4) .faq-a p", "El banquete se contrata a través de nuestra lista de proveedores preferidos, que compartimos al consultar, de modo que usted elige entre personas que ya conocen el edificio y cómo funciona. Para la barra, puede traer su propio proveedor con licencia. Todo proveedor de barra debe presentar por adelantado un permiso ABC vigente, seguro de responsabilidad civil y cantineros certificados, y el servicio de cócteles se realiza en The Library Speakeasy. Como el edificio es histórico, algunos alquileres externos pueden necesitar su propia fuente de energía, así que cuéntenos qué piensa traer y le señalaremos lo que haya que coordinar."],
     [".faq-wrap .faq-item:nth-child(5) .faq-q", "¿Hay estacionamiento para nuestros invitados?"],
-    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Hay un estacionamiento privado reservado justo enfrente del lugar, al cruzar la calle, para que sus invitados se estacionen a pasos de la entrada. También hay estacionamiento en la calle por todo el distrito histórico del centro, a poca distancia de hoteles y restaurantes."],
+    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Un estacionamiento privado reservado se encuentra justo enfrente del recinto, así que sus invitados se estacionan a unos pasos de la entrada en lugar de dar vueltas a la manzana de gala. Hay estacionamiento adicional en la calle por todo el centro histórico, y The Chimes Carriage Plaza, un segundo lote privado al cruzar la calle, estará disponible pronto. La ubicación es caminable a hoteles y restaurantes, lo cual importa si sus invitados viajan de fuera o se quedan a dormir. Díganos cuántos invitados espera y le diremos con franqueza si el estacionamiento será cómodo para ese número."],
     [".faq-wrap .faq-item:nth-child(6) .faq-q", "¿Cómo reservamos nuestra fecha?"],
     [".faq-wrap .faq-item:nth-child(6) .faq-a p", "Nuestra promoción de gran apertura aparta su fecha con solo un anticipo del 25%. El saldo se divide en dos pagos sencillos, con el pago final 30 días antes de su boda, e incluimos un cambio de fecha gratuito hasta 90 días antes. El anticipo no es reembolsable, y el pago final no es reembolsable dentro de los 30 días previos al evento."],
     ["#contact-final .eyebrow", "Hablemos"],

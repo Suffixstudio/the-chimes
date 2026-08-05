@@ -31,7 +31,7 @@ img{max-width:100%;}
 html{background:#F3ECDD;}
 body{margin:0;background:#F3ECDD;border-top:4px solid var(--forest);color:#211A16;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
-.section{padding:clamp(4rem,8vw,7rem) 0;}
+.section{padding:clamp(4rem,6vw,6rem) 0;}
 h1{color:var(--ink);}
 h2{color:var(--ink);}
 h3{margin:0;color:var(--ink);}
@@ -123,7 +123,9 @@ a{color:inherit;}
 .welcome-photo{margin:0;border:8px solid var(--cream-card);box-shadow:0 24px 50px -28px rgba(33,26,22,.45);}
 .welcome-photo img{display:block;width:100%;height:auto;aspect-ratio:auto;}
 .contact{background:var(--cream-card);}
-.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(2rem,4vw,3.5rem);
+  align-items:start;justify-items:center;text-align:center;max-width:62ch;margin-inline:auto;}
+.contact-grid .info-row{width:100%;}
 .contact-info .eyebrow{margin-bottom:1.2rem;}
 .contact-info h2{margin-bottom:1.2rem;}
 .info-row{display:flex;gap:.8rem;padding:.9rem 0;border-top:1px solid var(--line);font-size:.95rem;}
@@ -382,13 +384,13 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     <div class="spaces-grid">
 
       <div class="space-card reveal">
-        <div class="space-media" data-cap="The parlor · The Crescent House" data-es-cap="El salón · The Crescent House">
-          <img src="images/workspace-3.jpg" alt="The parlor, with its original patterned tile floor, green drapes, and Victorian seating" data-es-alt="El salón hacia las cortinas verdes y el pizarrón original" loading="lazy"  width="1500" height="1125" />
+        <div class="space-media" data-cap="The Parlor Room · The Crescent House" data-es-cap="The Parlor Room · The Crescent House">
+          <img src="images/workspace-3.jpg" alt="The Parlor Room, with its original patterned tile floor, green drapes, and Victorian seating" data-es-alt="The Parlor Room, hacia las cortinas verdes y el pizarrón original" loading="lazy"  width="1500" height="1125" />
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
           <span class="tag" data-es="Espacio de Trabajo Compartido">Shared Workspace</span>
-          <h3 data-es="El salón">The parlor</h3>
+          <h3 data-es="The Parlor Room">The Parlor Room</h3>
           <p data-es="El salón abierto al frente del edificio, con su piso de mosaico original y mobiliario victoriano. Los miembros lo usan para trabajar, reunirse con alguien o tomar una llamada fuera del escritorio.">The open room at the front of the building, with its original tile floor and Victorian seating. Members use it as a place to work, meet someone, or take a call away from a desk.</p>
           <div class="space-meta" data-es='<b>Por hora y membresía</b> · flexible'><b>Hourly &amp; membership</b> · flexible</div>
           <button class="btn btn-primary" data-modal-open data-interest="shared workspace" data-es="Consultar">Inquire</button>
@@ -455,7 +457,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <!-- ===================== FEATURE TRIO (GREEN) ===================== -->
 <section class="section why">
   <div class="container">
-    <div class="reveal" style="max-width:56ch;">
+    <div class="reveal sec-center" style="max-width:56ch;">
       <span class="eyebrow" data-es="Por qué aquí">Why here</span>
       <h2 data-es="Una oficina con sentido de lugar.">An office with a sense of place.</h2>
     </div>
@@ -505,8 +507,8 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
         <h2 data-es="Venga a conocer el espacio.">Come see the space.</h2>
         <p style="color:#4a3f36;margin-bottom:1.4rem;" data-es="Cuéntenos qué está buscando y le responderemos con disponibilidad, precios y un horario para recorrer el lugar. ¿Prefiere conversarlo? Comuníquese por teléfono o correo electrónico.">Tell us what you're looking for and we'll follow up with availability, pricing, and a time to walk through. Prefer to talk it over? Reach out by phone or email.</p>
         <div class="info-row"><span class="k" data-es="Contacto">Contact</span><span data-es="Mercedes y Joe · The Chimes">Mercedes &amp; Joe · The Crescent House</span></div>
-        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19517184204">(951) 718-4204</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
-        <div class="info-row"><span class="k" data-es="Correo electrónico">Email</span><span><a href="mailto:info@thecrescenthouse1887.com">info@thecrescenthouse1887.com</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
+        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19517184204">(951) 718-4204</a></span></div>
+        <div class="info-row"><span class="k" data-es="Correo electrónico">Email</span><span><a href="mailto:info@thecrescenthouse1887.com">info@thecrescenthouse1887.com</a></span></div>
         <div class="info-row"><span class="k" data-es="Visítenos">Visit</span><span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave, Lake Elsinore, CA</a></span></div>
         <div class="info-row"><span class="k" data-es="Horario">Hours</span><span data-es="Lunes a viernes, 8am a 6pm">Monday to Friday, 8am to 6pm</span></div>
             <button class="btn btn-brass" data-modal-open data-interest="shared workspace" data-es="Preguntar por el espacio" style="margin-top:1.6rem;">Ask about the space</button>
@@ -579,7 +581,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
         <h4 data-es="Trabajo">Work</h4>
         <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
         <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
-        <button class="foot-cta" data-modal-open data-interest="general" data-es="Solicite una cotización">Get a quote</button>
+        <button class="foot-cta" data-modal-open data-interest="Something else" data-es="Solicite una cotización">Get a quote</button>
       </div>
           <div class="foot-col">
         <h4 data-es="Explorar">Explore</h4>

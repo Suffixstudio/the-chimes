@@ -1,3 +1,11 @@
 # the travel page is now the Borsellino Travel page
 /travel      /borsellino-travel.html   301
 /travel.html /borsellino-travel.html   301
+
+# belt and braces: if any working file ever lands in the site folder again,
+# these return a 404 rather than serving it to the public.
+/*.md        /404.html   404
+/*.py        /404.html   404
+/*.docx      /404.html   404
+/*.xlsx      /404.html   404
+/*.json      /404.html   404

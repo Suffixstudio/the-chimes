@@ -20,7 +20,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{color-scheme:light;--ink:#211A16;--forest:#2F4A3A;--forest-deep:#1E3227;--brass:#9A7B33;--brass-light:#C29B4E;--parchment:#F3ECDD;--cream:#FBF7EE;--smoke:#6B5D4E;--line:rgba(33,26,22,.14);}
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -48,21 +48,23 @@
   footer a{color:var(--forest);}
   .legal-row{margin-top:.5rem;}
   @media (max-width:480px){.card{padding:1.6rem 1.2rem;}}
-
-    .lang-toggle{background:none;border:1px solid var(--forest);color:var(--forest);
-      font-family:"Hanken Grotesk",sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.02em;
-      padding:.4rem .75rem;border-radius:2px;cursor:pointer;white-space:nowrap;
-      transition:background .2s,color .2s;}
-    .lang-toggle:hover{background:var(--forest);color:#F6EFE2;}
     .topbar-right{display:flex;align-items:center;gap:.9rem;}
     .governing{margin-top:1.6rem;padding-top:1rem;border-top:1px solid var(--line);
       font-size:.86rem;color:var(--smoke);}
+@media (max-width:520px){}
+
+@media(min-width:1025px){}
+@media(max-width:1024px){}
+section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <main id="main">
+    
   <div class="wrap">
     <div class="topbar">
-      <a class="brand" href="index.html"><b>THE CHIMES</b><span class="sub" data-es="Histórica Crescent Bath House · Est. 1887">Historic Crescent Bath House · Est. 1887</span></a>
+      <a class="brand" href="index.html"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="T&eacute;rminos">Terms</span></span></a>
       <div class="topbar-right">
         <a class="backhome" href="index.html" data-es="&larr; Volver al sitio">&larr; Back to site</a>
         <button class="lang-toggle" type="button" aria-label="Cambiar a español">Español</button>
@@ -72,9 +74,9 @@
 
       <span class="eyebrow" data-es="The Chimes at Crescent House">The Chimes at Crescent House</span>
       <h1 data-es="Términos y Condiciones">Terms &amp; Conditions</h1>
-      <p class="updated" data-es="Última actualización:">Last updated: <span class="ph">[date to be set at launch]</span></p>
+      <p class="updated" data-es="Última actualización: 31 de julio de 2026">Last updated: July 31, 2026</p>
       <div class="draft" data-es="<b>Borrador para revisión.</b> Esta página es una plantilla inicial preparada por Suffix Studio, no es asesoría legal. Por favor, hágala revisar por un abogado calificado antes de publicarla. Los elementos resaltados son marcadores pendientes de confirmación por parte de los propietarios."><b>Draft for review.</b> This page is a starting template prepared by Suffix Studio, not legal advice. Please have it reviewed by a qualified attorney before publishing. Highlighted items are placeholders awaiting confirmation from the owners.</div>
-      <p data-es="Lea con atención estos Términos de Uso (los “Términos”) antes de usar este sitio web (el “Servicio”), operado por el nombre legal del negocio para The Chimes at Crescent House. Al acceder o usar el Servicio, usted acepta quedar obligado por estos Términos. Si no está de acuerdo con alguna parte, por favor no use el Servicio.">Please read these Terms of Use ("Terms") carefully before using this website (the "Service"), operated by <span class="ph">[legal business name]</span> for The Chimes at Crescent House ("us," "we," or "our"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part, please do not use the Service.</p>
+      <p data-es="Lea con atención estos Términos de Uso (los “Términos”) antes de usar este sitio web (el “Servicio”), operado por The Crescent House 1887 LLC y The Chimes Events LLC para The Chimes at Crescent House. Al acceder o usar el Servicio, usted acepta quedar obligado por estos Términos. Si no está de acuerdo con alguna parte, por favor no use el Servicio.">Please read these Terms of Use ("Terms") carefully before using this website (the "Service"), operated by The Crescent House 1887 LLC and The Chimes Events LLC for The Chimes at Crescent House ("us," "we," or "our"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part, please do not use the Service.</p>
 
       <h2 data-es="Uso del sitio">Use of the site</h2>
       <p data-es="Este sitio web ofrece información sobre The Chimes y le permite enviar consultas sobre recorridos, eventos, bodas, espacios de trabajo, oficinas virtuales, uso para fotografía y cine, y donativos. Enviar una consulta inicia una conversación; no es una reservación confirmada. Las reservaciones, los precios y la disponibilidad los confirmamos nosotros directamente, y cualquier reservación puede estar sujeta a un contrato de renta, un depósito o reglas de la casa por separado.">This website provides information about The Chimes and lets you send inquiries about tours, events, weddings, workspace, virtual offices, photo and film use, and donations. Submitting an inquiry starts a conversation; it is not a confirmed booking. Reservations, pricing, and availability are confirmed by us directly, and any booking may be subject to a separate rental agreement, deposit, or house rules.</p>
@@ -83,13 +85,13 @@
       <p data-es="Al enviar un formulario, usted autoriza que lo contactemos al teléfono o correo electrónico que nos proporcione, con el fin de responder. Por favor proporcione información correcta para que podamos comunicarnos con usted.">When you submit a form, you consent to us contacting you at the phone number or email you provide in order to respond. Please provide accurate information so we can reach you.</p>
 
       <h2 data-es="Pagos y depósitos">Payments and deposits</h2>
-      <p data-es="Cuando se ofrezcan, los pagos y depósitos pueden hacerse en línea o en persona. Los términos específicos, incluyendo depósitos, cancelaciones y reembolsos, se le entregarán junto con su reservación o contrato de renta. Los términos detallados de pago, depósito y cancelación quedan por confirmar por los propietarios.">Where offered, payments and deposits may be made online or in person. Specific terms, including deposits, cancellations, and refunds, will be provided with your reservation or rental agreement. <span class="ph">[Detailed payment, deposit, and cancellation terms to be confirmed by the owners.]</span></p>
+      <p data-es="Cuando se ofrezcan, los pagos y depósitos pueden hacerse en línea o en persona. Los términos específicos, incluyendo depósitos, cancelaciones y reembolsos, se le entregarán junto con su reservación o contrato de renta. Al momento del lanzamiento, las reservaciones de eventos se apartan con un anticipo del 25%, el saldo se divide en dos pagos con el pago final 30 días antes del evento, se incluye un cambio de fecha gratuito hasta 90 días antes del evento, el anticipo no es reembolsable, y el pago final no es reembolsable dentro de los 30 días previos al evento.">Where offered, payments and deposits may be made online or in person. Specific terms, including deposits, cancellations, and refunds, will be provided with your reservation or rental agreement. As of launch, event bookings are held with a 25% retainer, the balance is split into two payments with the final payment due 30 days before the event, one free date change is included up to 90 days before the event, the retainer is non-refundable, and the final payment is non-refundable within 30 days of the event.</p>
 
       <h2 data-es="Propiedad intelectual">Intellectual property</h2>
       <p data-es="El sitio y su contenido original, incluyendo el nombre, el logotipo, las fotografías y los textos, son propiedad de The Chimes at Crescent House y están protegidos por las leyes de derechos de autor y de marcas. No puede reproducirlos sin nuestro permiso por escrito.">The Service and its original content, features, and functionality, including the name, logo, photography, and text, are and will remain the property of The Chimes at Crescent House and its licensors, and are protected by applicable law. You may not reuse them without permission.</p>
 
       <h2 data-es="Donativos">Donations</h2>
-      <p data-es="Los donativos para apoyar la preservación del edificio se procesan a través de un tercero. Los términos del donativo, incluyendo si es deducible de impuestos, se explican en el momento de donar y son independientes de la operación de renta del lugar.">Any donations made to support the preservation of the building are handled through <span class="ph">[nonprofit name / donation processor, to be confirmed]</span>. Donation terms, including tax-deductibility, are described where you give and are separate from the venue's rental operations.</p>
+      <p data-es="Los donativos para apoyar la preservación del edificio se procesan a través de The Crescent Bathhouse Foundation. Los términos del donativo, incluyendo si es deducible de impuestos, se explican en el momento de donar y son independientes de la operación de renta del lugar.">Any donations made to support the preservation of the building are handled through The Crescent Bathhouse Foundation. Donation terms, including tax-deductibility, are described where you give and are separate from the venue's rental operations.</p>
 
       <h2 data-es="Enlaces a otros sitios">Links to other sites</h2>
       <p data-es="Este sitio puede contener enlaces a sitios web o servicios de terceros que no son de nuestra propiedad ni están bajo nuestro control. No tenemos control ni asumimos responsabilidad alguna por el contenido o las prácticas de esos sitios. Le recomendamos revisar los términos y las políticas de privacidad de cualquier sitio que visite.">Our Service may contain links to third-party websites or services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content or practices of any third-party sites. We encourage you to review the terms and privacy policies of any site you visit.</p>
@@ -107,19 +109,20 @@
       <p data-es="Podemos actualizar estos Términos en cualquier momento. Cuando lo hagamos, publicaremos la versión revisada en esta página con una nueva fecha de última actualización. El uso continuo del sitio después de publicados los cambios significa que usted acepta los Términos revisados.">We may update these Terms at any time. When we do, we will post the revised version on this page with a new "last updated" date. Continued use of the Service after changes are posted means you accept the revised Terms.</p>
 
       <h2 data-es="Contacto">Contact</h2>
-      <p data-es="¿Preguntas sobre estos Términos? Comuníquese con The Chimes at Crescent House por correo electrónico o teléfono.">Questions about these Terms? Contact The Chimes at Crescent House at <span class="ph">[email]</span> or <span class="ph">[phone]</span>.</p>
+      <p data-es="¿Preguntas sobre estos Términos? Comuníquese con The Chimes at Crescent House por correo electrónico o teléfono.">Questions about these Terms? Contact The Chimes at Crescent House at <a href="mailto:privacy@thecrescenthouse1887.com">privacy@thecrescenthouse1887.com</a> or <a href="tel:+19517184204">(951) 718-4204</a>.</p>
 
       <p class="governing" data-es="Esta página también está disponible en inglés. Si las dos versiones difieren en algo, la versión en inglés es la que aplica.">This page is also available in Spanish. If the two versions differ in any way, the English version is the one that applies.</p>
       <a class="backlink" href="index.html" data-es="&larr; Volver a The Chimes">&larr; Back to The Chimes</a>
     </div>
   </div>
-  <footer>
-    <div>© 2026 The Chimes · Historic Crescent Bath House, Est. 1887 · Lake Elsinore, CA</div>
+  </main>
+    <footer>
+    <div>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</div>
     <div class="legal-row"><a href="privacy.html" data-es="Política de Privacidad">Privacy Policy</a> · <a href="terms.html" data-es="Términos y Condiciones">Terms &amp; Conditions</a></div>
     <div class="legal-row">Site by <a href="https://suffixstudio.com" target="_blank" rel="noopener" data-es="Desarrollado por Suffix Studio">Powered by Suffix Studio</a></div>
   </footer>
 <script>
-  var I18N_META = { title: "Términos y Condiciones · The Chimes · Histórica Crescent Bath House" };
+  var I18N_META = { title: "Términos y Condiciones · The Chimes · The Crescent House 1887" };
 </script>
 <script src="app.js"></script>
 </body>

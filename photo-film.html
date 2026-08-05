@@ -31,7 +31,7 @@ img{max-width:100%;}
 html{background:#F3ECDD;}
 body{margin:0;background:#F3ECDD;border-top:4px solid var(--forest);color:#211A16;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(1.2rem,4vw,3rem);}
-.section{padding:clamp(4rem,8vw,7rem) 0;}
+.section{padding:clamp(4rem,6vw,6rem) 0;}
 h1{color:var(--ink);}
 h2{color:var(--ink);}
 h3{margin:0;color:var(--ink);}
@@ -123,7 +123,9 @@ a{color:inherit;}
 .faq-a p{margin:0;}
 .faq-a em{color:var(--brass-deep);font-style:italic;}
 .contact{background:var(--cream-card);}
-.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,4vw,3.5rem);align-items:start;}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(2rem,4vw,3.5rem);
+  align-items:start;justify-items:center;text-align:center;max-width:62ch;margin-inline:auto;}
+.contact-grid .info-row{width:100%;}
 .contact-info{background:var(--parchment);border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:clamp(1.6rem,3vw,2.4rem);}
 .contact-info .eyebrow{margin-bottom:1.2rem;}
 .contact-info h2{margin-bottom:1.2rem;}
@@ -238,6 +240,62 @@ a.door[aria-current] .dt{color:#7A2333;}
 @media(max-width:1024px){}
 section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I check availability online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Dates are confirmed directly rather than through a booking calendar, because most shoots need a short conversation first about which spaces you want and how long you need them. Send an inquiry or call and we will come back to you with open dates, usually within one to two business days. It helps to include your shoot date or window, your crew size, and which parts of the building you have in mind, since availability depends on what else is booked in the venue that day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it cost to shoot here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rates depend on three things: how many hours you need, how large your crew is, and which spaces you use. A two-hour portrait session in the Rose Garden is priced differently from a full production day moving between The Library Speakeasy, the Fountain Plaza, and the upstairs rooms. Send us your project details, including your date, your hours, your crew size, and the look you are after, and we will send you a quote written against that rather than a standard rate card. There is no charge for asking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we scout before we book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and we recommend it. Book a tour and walk the locations with the owners before your shoot date so you know exactly what you are working with. Tours run about thirty minutes, by appointment, for groups of up to ten. Because restoration is ongoing, the route changes from time to time, which is worth seeing in person rather than guessing from photographs. Bring your director of photography or anyone making lighting decisions if you can, since the light in each room changes considerably through the day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about equipment, crew, and power?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send us your crew size, your equipment list, and your power needs when you inquire, and we will confirm access and load-in for your shoot. The building is an 1887 landmark, so a few things are worth raising early: some spaces have limited outlets and larger productions occasionally bring their own power, load-in runs through the main entrance on Graham Avenue, and the second floor is not ADA compliant. The private lot across the street handles crew parking. Tell us what you are planning and we will walk the practical details with you before you commit to a date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do we need insurance or permits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most historic locations ask for proof of general liability insurance naming the venue, and larger productions filming in a downtown district sometimes need a city permit as well. Requirements vary with the size of your crew, whether you are closing any part of the street, and what you are bringing on site. Tell us the scope of your shoot when you inquire and we will confirm exactly what paperwork you need, and what the City of Lake Elsinore asks for, before your date is held."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do payments and deposits work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A retainer holds your date and the balance is due before the shoot. Payments can be made online or in person, and the exact schedule, along with the cancellation and rescheduling terms, comes with your rental agreement so everything is in writing before you commit. Rates depend on your hours, your crew size, and which spaces you use, so the agreement is written against your specific booking rather than a standard rate card. Ask when you inquire and we will send the terms alongside your quote."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body class="theme-forest">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -402,12 +460,12 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       </article>
         <article class="space-card reveal">
           <div class="space-media" data-cap="The Parlor Room">
-            <img data-es-alt="El Salón Parlor, con su piano de cola antiguo, piso de mosaico original y candelabro de cristal" src="images/parlor-piano.jpg" alt="The Parlor Room, with its antique grand piano, original patterned tile, and crystal chandelier" loading="lazy"  width="1200" height="1600" />
+            <img data-es-alt="The Parlor Room, con su piano de cola antiguo, piso de mosaico original y candelabro de cristal" src="images/parlor-piano.jpg" alt="The Parlor Room, with its antique grand piano, original patterned tile, and crystal chandelier" loading="lazy"  width="1200" height="1600" />
             <span class="zoom" data-es="Ampliar">Zoom</span>
           </div>
           <div class="space-body">
             <span class="tag" data-es="Interior">Interior</span>
-            <h3 data-es="El Salón Parlor">The Parlor Room</h3>
+            <h3 data-es="The Parlor Room">The Parlor Room</h3>
             <p data-es="Paneles blancos, piso de mosaico original y un piano de cola antiguo bajo un candelabro de cristal. Mucha luz natural y nada moderno en el encuadre.">White panelling, original patterned tile, and an antique grand piano under a crystal chandelier. Plenty of daylight and nothing modern in frame.</p>
             <div class="space-meta"><b data-es="Interior">Interior</b> <span data-es="· Luz natural · Piso de mosaico original">&middot; Natural light &middot; Original tile floor</span></div>
           </div>
@@ -450,7 +508,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
         </article>
     </div>
         <div class="reveal" style="text-align:center;margin-top:2.6rem;">
-          <button class="btn btn-brass" data-modal-open data-interest="general" data-es="Consultar sobre una sesi&oacute;n">Inquire about a shoot</button>
+          <button class="btn btn-brass" data-modal-open data-interest="Something else" data-es="Consultar sobre una sesi&oacute;n">Inquire about a shoot</button>
         </div>
     <div class="reveal" style="text-align:center;margin-top:2.8rem;">
       <button class="btn btn-primary" data-modal-open data-interest="location scout or tour" data-es="Camine los escenarios en persona">Walk the locations in person</button>
@@ -512,27 +570,27 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     <div class="faq-wrap reveal">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" data-es="¿Puedo ver la disponibilidad en línea?">Can I check availability online?</button>
-        <div class="faq-a"><p data-es="Todavía no. Las fechas se confirman directamente. Envíe una consulta o llame, y le responderemos con las fechas abiertas.">Not yet. Dates are confirmed directly. Send an inquiry or call, and we'll come back to you with open dates.</p></div>
+        <div class="faq-a"><p data-es="Todavía no. Las fechas se confirman directamente y no mediante un calendario en línea, porque la mayoría de las sesiones requieren primero una breve conversación sobre qué espacios quiere y cuánto tiempo los necesita. Envíe una consulta o llame y le responderemos con las fechas disponibles, normalmente en uno o dos días hábiles. Ayuda incluir su fecha o rango de fechas, el tamaño de su equipo y qué partes del edificio tiene en mente, ya que la disponibilidad depende de qué más esté reservado ese día.">Not yet. Dates are confirmed directly rather than through a booking calendar, because most shoots need a short conversation first about which spaces you want and how long you need them. Send an inquiry or call and we will come back to you with open dates, usually within one to two business days. It helps to include your shoot date or window, your crew size, and which parts of the building you have in mind, since availability depends on what else is booked in the venue that day.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" data-es="¿Cuánto cuesta grabar o fotografiar aquí?">What does it cost to shoot here?</button>
-        <div class="faq-a"><p data-es="Las tarifas dependen de las horas, el tamaño del equipo y los espacios que use. Escríbanos con los detalles de su proyecto y le enviaremos una cotización.">Rates depend on your hours, your crew size, and which spaces you use. Send us your project details and we will send you a quote.</p></div>
+        <div class="faq-a"><p data-es="Las tarifas dependen de tres cosas: cuántas horas necesita, qué tan grande es su equipo y qué espacios utiliza. Una sesión de retratos de dos horas en el Rose Garden se cotiza distinto que un día completo de producción entre The Library Speakeasy, Fountain Plaza y las salas del piso de arriba. Envíenos los detalles de su proyecto, incluyendo fecha, horas, tamaño del equipo y el estilo que busca, y le enviaremos una cotización hecha a su medida y no una tarifa estándar. Preguntar no tiene costo.">Rates depend on three things: how many hours you need, how large your crew is, and which spaces you use. A two-hour portrait session in the Rose Garden is priced differently from a full production day moving between The Library Speakeasy, the Fountain Plaza, and the upstairs rooms. Send us your project details, including your date, your hours, your crew size, and the look you are after, and we will send you a quote written against that rather than a standard rate card. There is no charge for asking.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" data-es="¿Podemos recorrer las locaciones antes de reservar?">Can we scout before we book?</button>
-        <div class="faq-a"><p data-es="Sí. Agende una visita y camine los escenarios con los propietarios antes de la fecha de su sesión.">Yes. Book a tour and walk the locations with the owners before your shoot date.</p></div>
+        <div class="faq-a"><p data-es="Sí, y lo recomendamos. Reserve un recorrido y camine por los espacios con los dueños antes de la fecha de su sesión para saber exactamente con qué cuenta. Los recorridos duran unos treinta minutos, con cita previa, para grupos de hasta diez personas. Como la restauración sigue en marcha, la ruta cambia de vez en cuando, algo que conviene ver en persona en lugar de suponerlo por fotografías. Traiga a su director de fotografía o a quien tome las decisiones de iluminación, ya que la luz de cada sala cambia bastante a lo largo del día.">Yes, and we recommend it. Book a tour and walk the locations with the owners before your shoot date so you know exactly what you are working with. Tours run about thirty minutes, by appointment, for groups of up to ten. Because restoration is ongoing, the route changes from time to time, which is worth seeing in person rather than guessing from photographs. Bring your director of photography or anyone making lighting decisions if you can, since the light in each room changes considerably through the day.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" data-es="¿Qué pasa con el equipo, el personal y la electricidad?">What about equipment, crew, and power?</button>
-        <div class="faq-a"><p data-es="Díganos qué trae y cuántas personas vienen, y coordinaremos el acceso y la descarga. <em>(Dueños: confirmen los límites de personal, el acceso eléctrico y las reglas de descarga.)</em>">Tell us what you're bringing and how many people are coming, and we'll arrange access and load-in. <em>(Owners: confirm crew limits, power access, and load-in rules.)</em></p></div>
+        <div class="faq-a"><p data-es="Envíenos el tamaño de su equipo, la lista de equipo técnico y sus necesidades de energía al consultar, y le confirmaremos el acceso y la carga para su sesión. El edificio es un inmueble histórico de 1887, así que conviene mencionar algunas cosas desde el principio: algunos espacios tienen tomas de corriente limitadas y las producciones grandes a veces traen su propia fuente de energía, la carga se hace por la entrada principal en Graham Avenue, y el segundo piso no cumple con ADA. El estacionamiento privado al cruzar la calle recibe al equipo.">Send us your crew size, your equipment list, and your power needs when you inquire, and we will confirm access and load-in for your shoot. The building is an 1887 landmark, so a few things are worth raising early: some spaces have limited outlets and larger productions occasionally bring their own power, load-in runs through the main entrance on Graham Avenue, and the second floor is not ADA compliant. The private lot across the street handles crew parking. Tell us what you are planning and we will walk the practical details with you before you commit to a date.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" data-es="¿Necesitamos seguro o permisos?">Do we need insurance or permits?</button>
-        <div class="faq-a"><p data-es="La mayoría de los lugares históricos piden un comprobante de seguro, y algunas producciones necesitan permiso de la ciudad. <em>(Dueños: confirmen sus requisitos de seguro y permisos.)</em>">Most historic locations ask for proof of insurance, and some productions need a city permit. <em>(Owners: confirm your insurance and permit requirements.)</em></p></div>
+        <div class="faq-a"><p data-es="La mayoría de los lugares históricos piden comprobante de seguro de responsabilidad civil que nombre al recinto, y las producciones grandes que filman en el centro a veces también necesitan un permiso de la ciudad. Los requisitos varían según el tamaño del equipo, si se cierra alguna parte de la calle y qué se trae al lugar. Cuéntenos el alcance de su sesión al consultar y le confirmaremos exactamente qué documentos necesita, y qué pide la Ciudad de Lake Elsinore, antes de apartar su fecha.">Most historic locations ask for proof of general liability insurance naming the venue, and larger productions filming in a downtown district sometimes need a city permit as well. Requirements vary with the size of your crew, whether you are closing any part of the street, and what you are bringing on site. Tell us the scope of your shoot when you inquire and we will confirm exactly what paperwork you need, and what the City of Lake Elsinore asks for, before your date is held.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false" data-es="¿Cómo se hacen los pagos y los depósitos?">How do payments and deposits work?</button>
-        <div class="faq-a"><p data-es="Los pagos y depósitos pueden hacerse en línea o en persona. Los términos exactos llegan con su contrato de renta. <em>(Dueños: confirmen el depósito y la política de cancelación.)</em>">Payments and deposits can be made online or in person. The exact terms come with your rental agreement. <em>(Owners: confirm the deposit and cancellation policy.)</em></p></div>
+        <div class="faq-a"><p data-es="Un anticipo aparta su fecha y el saldo se paga antes de la sesión. Los pagos se pueden hacer en línea o en persona, y el calendario exacto, junto con los términos de cancelación y cambio de fecha, viene en su contrato de renta para que todo quede por escrito antes de comprometerse. Las tarifas dependen de sus horas, el tamaño de su equipo y los espacios que utilice, así que el contrato se redacta según su reserva y no con una tarifa estándar.">A retainer holds your date and the balance is due before the shoot. Payments can be made online or in person, and the exact schedule, along with the cancellation and rescheduling terms, comes with your rental agreement so everything is in writing before you commit. Rates depend on your hours, your crew size, and which spaces you use, so the agreement is written against your specific booking rather than a standard rate card. Ask when you inquire and we will send the terms alongside your quote.</p></div>
       </div>
     </div>
   </div>
@@ -547,10 +605,10 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
         <h2 data-es="Cuéntenos de su sesión.">Tell us about your shoot.</h2>
         <p style="color:#4a3f36;margin-bottom:1.4rem;" data-es="Comparta su fecha, su equipo y los escenarios que quiere usar, y le responderemos con disponibilidad y tarifas. ¿Prefiere hablarlo? Llámenos o escríbanos.">Share your date, your crew, and the locations you want to use, and we'll follow up with availability and rates. Rather talk it through? Call or email us.</p>
         <div class="info-row"><span class="k" data-es="Contáctenos">Contact</span><span>Mercedes &amp; Joe · The Crescent House</span></div>
-        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19517184204">(951) 718-4204</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
-        <div class="info-row"><span class="k" data-es="Correo">Email</span><span><a href="mailto:info@thecrescenthouse1887.com">info@thecrescenthouse1887.com</a> <span class="placeholder" data-es="· por confirmar">· to be confirmed</span></span></div>
+        <div class="info-row"><span class="k" data-es="Teléfono">Phone</span><span><a href="tel:+19517184204">(951) 718-4204</a></span></div>
+        <div class="info-row"><span class="k" data-es="Correo">Email</span><span><a href="mailto:info@thecrescenthouse1887.com">info@thecrescenthouse1887.com</a></span></div>
         <div class="info-row"><span class="k" data-es="Visite">Visit</span><span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave, Lake Elsinore, CA</a></span></div>
-        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span class="placeholder" data-es="Horario de visitas por confirmar">Visiting hours to be confirmed</span></div>
+        <div class="info-row"><span class="k" data-es="Horario">Hours</span><span data-es="Se coordina al consultar">Arranged when you inquire</span></div>
             <button class="btn btn-brass" data-modal-open data-interest="photo shoot" data-es="Consultar sobre una sesión" style="margin-top:1.6rem;">Inquire about a shoot</button>
       </div>
 

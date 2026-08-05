@@ -133,6 +133,42 @@
     });
   }
 
+  /* ---------- Events and Offices are a link and a dropdown at once ----------
+     On a laptop, clicking the word navigated straight to a page before you
+     could reach the items underneath, which is why picking Social Events felt
+     like it reloaded the venue page. A click now just opens the menu, the way
+     More already behaves. Nothing becomes unreachable: the first item under
+     each parent goes exactly where the parent used to. On a phone the menu
+     panel already lists every item, so the link is left alone there. */
+  var navGroups = $$('header.nav .grp');
+  function closeNavGroups(except) {
+    navGroups.forEach(function (g) {
+      if (g === except) return;
+      g.classList.remove('open');
+      var d = g.querySelector('a.door');
+      if (d) d.setAttribute('aria-expanded', 'false');
+    });
+  }
+  navGroups.forEach(function (grp) {
+    var door = grp.querySelector('a.door');
+    var sub  = grp.querySelector('.sub');
+    if (!door || !sub) return;
+    door.setAttribute('aria-haspopup', 'true');
+    door.setAttribute('aria-expanded', 'false');
+    door.addEventListener('click', function (e) {
+      /* only on the desktop dropdown, where the submenu floats above the page */
+      if (getComputedStyle(sub).position !== 'absolute') return;
+      e.preventDefault();
+      var opening = !grp.classList.contains('open');
+      closeNavGroups(grp);
+      grp.classList.toggle('open', opening);
+      door.setAttribute('aria-expanded', opening ? 'true' : 'false');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('header.nav .grp')) closeNavGroups(null);
+  });
+
   /* ---------- 3. FAQ: opening one answer closes the others ---------- */
   $$('.faq-item').forEach(function (item) {
     var q = $('.faq-q', item);
@@ -177,8 +213,17 @@
     if (!modal) return;
     lastFocus = document.activeElement;
     closeMenu();                                  /* never leave the menu open behind it */
-    if (topic && interest && interest.querySelector('[value="' + topic + '"]')) {
-      interest.value = topic;                     /* preselect what they clicked */
+    /* Match the option without caring about capitals. Some pages give their
+       options plain-English values like "Shared workspace" while the buttons
+       pass "shared workspace", and an exact match quietly preselected nothing,
+       so every room button on Coworking and Photo & Film opened a blank form. */
+    if (topic && interest) {
+      var wanted = String(topic).toLowerCase();
+      var hit = null;
+      Array.prototype.forEach.call(interest.options, function (o) {
+        if (!hit && String(o.value).toLowerCase() === wanted) hit = o.value;
+      });
+      if (hit !== null) interest.value = hit;     /* preselect what they clicked */
     }
     window.currentTopic = topic;
     var title = $('#modalTitle');
@@ -360,12 +405,14 @@
   var VMSG = {
     en: { name:  'Please enter your name.',
           email: 'Please enter a valid email address.',
-          phone: 'Please enter a phone number we can reach you on.',
+          phone: 'Please enter a phone number, digits only, 10 to 15 of them.',
+          guests: 'Please enter a guest count between {min} and {max}.',
           many:  'Please fill in the highlighted fields.',
           fail:  'That did not send. Please call us, or try again in a moment.' },
     es: { name:  'Por favor escriba su nombre.',
           email: 'Por favor escriba un correo electrónico válido.',
-          phone: 'Por favor escriba un teléfono donde podamos comunicarnos.',
+          phone: 'Por favor escriba un teléfono, solo números, de 10 a 15 dígitos.',
+          guests: 'Por favor escriba un número de invitados entre {min} y {max}.',
           many:  'Por favor complete los campos marcados.',
           fail:  'No se pudo enviar. Por favor llámenos o inténtelo de nuevo en un momento.' }
   };
@@ -374,8 +421,57 @@
     var v = (el.value || '').trim();
     if (!v) return el.name;
     if (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return 'email';
-    if (el.type === 'tel' && v.replace(/\D/g, '').length < 7) return 'phone';
+    if (el.type === 'tel') {
+      var digits = v.replace(/\D/g, '');
+      if (digits.length < 10 || digits.length > 15) return 'phone';
+    }
+    if (el.type === 'number') {
+      var n = Number(v);
+      var lo = el.min === '' ? -Infinity : Number(el.min);
+      var hi = el.max === '' ?  Infinity : Number(el.max);
+      if (!isFinite(n) || n !== Math.floor(n) || n < lo || n > hi) return el.name;
+    }
     return null;
+  }
+
+  /* Stop letters being typed into the phone box at all, rather than only
+     complaining after they press send. Digits, spaces, brackets, dashes and a
+     leading plus survive, so international numbers still format normally. */
+  function guardPhoneField(form) {
+    Array.prototype.forEach.call(form.querySelectorAll('input[type="tel"]'), function (el) {
+      if (el.dataset.phoneGuarded) return;
+      el.dataset.phoneGuarded = '1';
+      el.setAttribute('inputmode', 'tel');
+      el.setAttribute('maxlength', '20');
+      el.addEventListener('input', function () {
+        var cleaned = el.value.replace(/[^\d\s()+.\-]/g, '');
+        if (cleaned !== el.value) el.value = cleaned;
+      });
+    });
+  }
+
+  /* The guest box only obeyed its own limit when you used the little arrows.
+     Typing a number straight in went past it, so anyone could ask for 5000
+     guests in an 1887 building. Strip anything that is not a digit, then pull
+     the number back inside the limit when they leave the field. */
+  function guardGuestField(form) {
+    Array.prototype.forEach.call(form.querySelectorAll('input[type="number"]'), function (el) {
+      if (el.dataset.numGuarded) return;
+      el.dataset.numGuarded = '1';
+      el.setAttribute('inputmode', 'numeric');
+      el.addEventListener('input', function () {
+        var cleaned = el.value.replace(/[^\d]/g, '');
+        if (cleaned !== el.value) el.value = cleaned;
+      });
+      el.addEventListener('blur', function () {
+        if (el.value === '') return;
+        var n = parseInt(el.value, 10);
+        if (isNaN(n)) { el.value = ''; return; }
+        if (el.max !== '' && n > Number(el.max)) n = Number(el.max);
+        if (el.min !== '' && n < Number(el.min)) n = Number(el.min);
+        el.value = String(n);
+      });
+    });
   }
 
   function inquiryErrorBox(form) {
@@ -393,7 +489,12 @@
   function validateInquiry(form, focusFirst) {
     var msgs = VMSG[window.currentLang === 'es' ? 'es' : 'en'];
     var bad = [];
-    Array.prototype.forEach.call(form.querySelectorAll('[required]'), function (el) {
+    var checkable = form.querySelectorAll('[required], input[type="number"]');
+    Array.prototype.forEach.call(checkable, function (el) {
+      if (!el.hasAttribute('required') && !(el.value || '').trim()) {
+        el.classList.remove('invalid');
+        return;
+      }
       var problem = inquiryProblem(el);
       if (problem) { bad.push({ el: el, key: problem }); }
       el.classList.toggle('invalid', !!problem);
@@ -411,7 +512,9 @@
     var warn = inquiryErrorBox(form);
     if (bad.length) {
       warn.dataset.kind = 'required';
-      warn.textContent = bad.length > 1 ? msgs.many : (msgs[bad[0].key] || msgs.many);
+      var text = bad.length > 1 ? msgs.many : (msgs[bad[0].key] || msgs.many);
+      text = text.replace('{min}', bad[0].el.min || '1').replace('{max}', bad[0].el.max || '');
+      warn.textContent = text;
       if (focusFirst !== false) {
         try { bad[0].el.focus({ preventScroll: false }); } catch (e) { bad[0].el.focus(); }
       }
@@ -435,6 +538,8 @@
   };
 
   if (form) {
+    guardPhoneField(form);
+    guardGuestField(form);
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       /* Our own checks, not the browser's. The browser writes its validation

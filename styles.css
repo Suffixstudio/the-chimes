@@ -219,6 +219,7 @@ header.nav .sub{display:none;position:absolute;top:calc(100% + 10px);left:-.9rem
   box-shadow:0 18px 34px -18px rgba(43,26,20,.45);}
 header.nav .grp:hover>.sub,
 header.nav .grp:focus-within>.sub,
+header.nav .grp.open>.sub,
 header.nav .grp--more.open>.sub{display:flex;}
 header.nav .sub a{display:block;padding:.5rem 1.1rem;white-space:nowrap;
   font-family:"Prata",Georgia,serif;font-size:.82rem;letter-spacing:.01em;
@@ -309,7 +310,7 @@ header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
   text-shadow:var(--marker-emboss,0 1px 0 rgba(255,255,255,.65),0 -1px 0 rgba(70,46,10,.30)) !important;
   border:0 !important;outline:0 !important;box-shadow:none !important;
   clip-path:none !important;transform:translateY(-0.14em) !important;
-  margin:0 .55rem 0 0 !important;
+  margin:0 .7rem 0 0 !important;
   /* flex-start, not center: where a row wraps to two lines the marker must sit
      on the first line, not float in the middle of the block */
   align-self:flex-start;position:static;}
@@ -402,7 +403,7 @@ header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
 .theme-forest .hero{background:#33513F !important;}
 
 /* house ornament used as a section divider, the way the Mission Inn uses its bell */
-.orn{display:block;width:100%;max-width:240px;height:24px;margin:clamp(2.2rem,5vw,3.6rem) auto;
+.orn{display:block;width:100%;max-width:240px;height:24px;margin:clamp(1rem,2vw,1.8rem) auto;
   background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 24'><g fill='none' stroke='%23C9A45C' stroke-width='1'><path d='M4 12h78' opacity='.35'/><path d='M158 12h78' opacity='.35'/><path d='M92 12h20'/><path d='M128 12h20'/></g><g fill='%23C9A45C'><path d='M120 4a8 8 0 1 0 0 16 6.4 6.4 0 1 1 0-16z'/><circle cx='86' cy='12' r='1.6'/><circle cx='154' cy='12' r='1.6'/></g></svg>") no-repeat center/contain;opacity:.9;}
 .orn--tight{margin:clamp(1.4rem,3vw,2.2rem) auto;}
 .theme-forest .orn{filter:brightness(1.25);}
@@ -478,11 +479,12 @@ header.nav .wm-page{display:block;font-family:"Prata",Georgia,serif;
 .plan-price{font-family:"Prata",Georgia,serif;font-size:.86rem;color:rgba(228,206,151,.82);}
 .plan p{margin:0 1.2rem;font-size:.96rem;color:#473C34;line-height:1.6;}
 .plan-list{list-style:none;margin:.75rem 1.2rem 0;padding:0;}
-.plan-list li{display:flex;gap:.15rem;align-items:flex-start;margin:.34rem 0;font-size:.93rem;color:#4E443B;line-height:1.55;}
+.plan-list li{display:flex;gap:0;align-items:flex-start;margin:.34rem 0;font-size:.93rem;color:#4E443B;line-height:1.55;}
 .plan-note{font-size:.95rem;color:#473C34;margin:1.1rem 0 0;padding-top:.9rem;
   border-top:1px solid rgba(201,164,92,.35);}
-@media(min-width:760px){.plan-stack{grid-template-columns:1fr 1fr;}
-  .plan--day{grid-column:1/-1;}}
+/* All four plans run full width and stack, the way Day Pass already did.
+   Two columns made the monthly plans read as boxes beside each other while
+   Day Pass sat across the top, which looked like two different components. */
 
 
 /* accessibility notice, required because the upper floor cannot be retrofitted */
@@ -538,3 +540,14 @@ header.nav .wm-page{display:block;font-family:"Prata",Georgia,serif;
   border-color:#8C2D2D !important;
   box-shadow:0 0 0 2px rgba(140,45,45,.15);}
 #formError{margin-top:1rem;color:#8C2D2D;font-weight:600;font-size:.92rem;}
+
+
+/* ---------- headings with nothing beside them ----------
+   These sections have no photo or second column, so the heading was pinned to
+   the left with 600px of empty page next to it, which read like a missing
+   image. Centring the block makes the emptiness look deliberate. Sections that
+   genuinely do have something alongside are left alone. */
+.sec-center{text-align:center;margin-inline:auto;}
+.sec-center > h2{margin-inline:auto;}
+.sec-center > p{margin-left:auto;margin-right:auto;}
+.sec-center .eyebrow{justify-content:center;}
