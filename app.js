@@ -201,6 +201,17 @@
   var interest = $('#interest');
   var lastFocus = null;
 
+  /* On Workspace and Photo & Film the form sits inside the pop-up but the
+     thank you panel was left further up the page, outside it. Sending
+     therefore hid the form and revealed a message behind the overlay, so
+     the pop-up just went blank. Move the panel in beside the form. */
+  if (form && success) {
+    var shell = form.closest('.modal-overlay');
+    if (shell && !success.closest('.modal-overlay')) {
+      form.parentNode.insertBefore(success, form.nextSibling);
+    }
+  }
+
   var LABELS  = window.MODAL_LABELS  || { en: {}, es: {} };
   var DEFAULT = window.MODAL_DEFAULT || { en: '', es: '' };
 
@@ -224,6 +235,20 @@
         if (!hit && String(o.value).toLowerCase() === wanted) hit = o.value;
       });
       if (hit !== null) interest.value = hit;     /* preselect what they clicked */
+    }
+    /* A send leaves the button disabled and reading "Sending...". Nothing
+       used to put it back, so opening the form a second time on the same
+       page gave you a button you could not press. The label is read off the
+       button at send time and stored on it, so it comes back in whichever
+       language was showing. */
+    if (form) {
+      var sb = form.querySelector('[type="submit"], button:not([type="button"])');
+      if (sb) {
+        sb.disabled = false;
+        if (sb.dataset.label) sb.textContent = sb.dataset.label;
+      }
+      var oldWarn = form.querySelector('#formError');
+      if (oldWarn) oldWarn.textContent = '';
     }
     window.currentTopic = topic;
     var title = $('#modalTitle');
@@ -554,7 +579,12 @@
          fails, it says so, rather than lying to the person. */
       var btn = form.querySelector('[type="submit"], button:not([type="button"])');
       var label = btn ? btn.textContent : '';
-      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+      if (btn) {
+        btn.dataset.label = label;              /* so it can be put back */
+        btn.disabled = true;
+        btn.textContent = (window.currentLang === 'es') ? 'Enviando...'
+                                                        : 'Sending...';
+      }
 
       fetch('/', {
         method: 'POST',
@@ -564,6 +594,7 @@
       .then(function (res) {
         if (!res.ok) throw new Error(res.status);
         form.style.display = 'none';
+        form.reset();                    /* so the next inquiry starts blank */
         if (success) success.classList.add('show');
       })
       .catch(function () {

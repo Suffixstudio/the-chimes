@@ -95,6 +95,10 @@
 @media(min-width:1025px){}
 @media(max-width:1024px){}
 section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
+
+/* 5 Aug. A long address is one unbreakable word to a browser unless you say
+   otherwise, and this page loads no shared stylesheet to say it in. */
+a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
 </style>
 </head>
 <body>

@@ -56,7 +56,63 @@
 @media(min-width:1025px){}
 @media(max-width:1024px){}
 section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
+
+/* 5 Aug. A long address is one unbreakable word to a browser unless you say
+   otherwise, and this page loads no shared stylesheet to say it in. */
+a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://the-chimes.netlify.app/privacy.html#webpage",
+  "url": "https://the-chimes.netlify.app/privacy.html",
+  "name": "Privacy Policy · The Chimes · The Crescent House 1887",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://thecrescenthouse1887.com/#website",
+    "name": "The Crescent House 1887",
+    "url": "https://the-chimes.netlify.app",
+    "publisher": {
+      "@id": "https://thecrescenthouse1887.com/#organization"
+    }
+  },
+  "about": {
+    "@id": "https://thecrescenthouse1887.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://thecrescenthouse1887.com/#organization"
+  },
+  "inLanguage": [
+    "en-US",
+    "es"
+  ],
+  "description": "Privacy policy for The Chimes at Crescent House. What information we collect, how it is used, and your rights under California law.",
+  "breadcrumb": {
+    "@id": "https://the-chimes.netlify.app/privacy.html#breadcrumb"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://the-chimes.netlify.app/privacy.html#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://the-chimes.netlify.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy Policy"
+    }
+  ]
+}
+</script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>

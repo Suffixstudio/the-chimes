@@ -162,3 +162,16 @@ a.door[aria-current] .dt{color:#7A2333;}
   .sub a[aria-current]{color:#7A2333;}
 }
 @media(min-width:1025px){ }
+
+
+/* ---- 5 Aug. Nothing may make the page wider than the phone -------------
+   A grid item defaults to min-width:auto, which means it will not shrink
+   below its longest unbreakable line. One long email address was enough to
+   push the contact card 60px wider than the screen, and a page wider than
+   the screen can be dragged sideways while you are trying to scroll. Three
+   rules: let the item shrink, let the rows wrap, let long strings break. */
+.contact-grid > *{min-width:0;}
+.contact-grid .info-row{flex-wrap:wrap;}
+.contact-grid .info-row .k{min-width:0;flex:0 0 100px;}
+.contact-grid .info-row > span,
+.contact-grid .info-row a{min-width:0;overflow-wrap:anywhere;}

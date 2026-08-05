@@ -551,3 +551,26 @@ header.nav .wm-page{display:block;font-family:"Prata",Georgia,serif;
 .sec-center > h2{margin-inline:auto;}
 .sec-center > p{margin-left:auto;margin-right:auto;}
 .sec-center .eyebrow{justify-content:center;}
+
+
+/* ---- 5 Aug. Two more ways the page could be dragged sideways ----------
+   privacy@thecrescenthouse1887.com is one unbreakable word 331px wide. On a
+   320px phone it pushed the page 51px wider than the screen. A long address
+   is one unbreakable word to a browser unless you say otherwise. */
+a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
+
+/* Steven remembers the page being locked sideways and the lock going missing.
+   Checking the history: it never was a lock. Every version up to 13 July had
+   nothing wider than the screen, and the 4 August form split introduced a
+   contact card 53px too wide. The width fix above restores that. This line is
+   the belt: it stops the sideways rubber band that lets a diagonal swipe drag
+   the page off center. It does not touch pinch zoom. */
+html{overscroll-behavior-x:none;}
+
+/* Below 360px the logo, the phone, Espanol and Menu together were 6px wider
+   than the header. Only bites on the very narrowest phones, so nothing that
+   a common handset renders today is touched. */
+@media (max-width:360px){
+  header.nav .nav-inner{padding-left:.6rem;padding-right:.6rem;gap:.4rem;}
+  header.nav .nav-mobile-controls{gap:.45rem;padding-right:0;}
+}
