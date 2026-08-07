@@ -696,9 +696,19 @@
   var heroVideo = $('#heroVideo');
   if (heroVideo) {
     if (prefersReducedMotion) {
+      /* The visitor asked for less motion, and the stylesheet already
+         hides the video and shows the still instead. Leaving the address
+         in data-src means the file is never requested at all, so they are
+         no longer downloading three megabytes of video to look at a
+         photograph. */
       heroVideo.removeAttribute('loop');
-      heroVideo.pause();                   /* the visitor asked for less motion */
+      heroVideo.pause();
     } else {
+      /* The <source> carries the address in data-src, not src, so the
+         browser has nothing to fetch while the page is still loading. Fill
+         it in once everything else has arrived. Until then the poster is on
+         screen, and the poster is the video's own first frame, so there is
+         nothing to see happen. */
       var vStarted = false;
       var startVideo = function () {
         if (vStarted) return;
@@ -706,11 +716,28 @@
         var p = heroVideo.play();
         if (p && p.catch) p.catch(function () {});   /* browser refused. The poster stays. Fine. */
       };
-      if (heroVideo.readyState >= 4) {
-        startVideo();                      /* already buffered enough */
+      var beginLoading = function () {
+        var s = heroVideo.querySelector('source[data-src]');
+        if (s) {
+          s.src = s.getAttribute('data-src');
+          s.removeAttribute('data-src');
+          heroVideo.load();
+        }
+        if (heroVideo.readyState >= 3) {
+          startVideo();                    /* already buffered enough */
+        } else {
+          heroVideo.addEventListener('canplay', startVideo, { once: true });
+          setTimeout(startVideo, 4000);    /* slow line: start anyway rather
+                                              than sit dead */
+        }
+      };
+      /* wait for the page to finish, then one frame more */
+      if (document.readyState === 'complete') {
+        setTimeout(beginLoading, 200);
       } else {
-        heroVideo.addEventListener('canplaythrough', startVideo, { once: true });
-        setTimeout(startVideo, 4000);      /* slow line: start anyway rather than sit dead */
+        window.addEventListener('load', function () {
+          setTimeout(beginLoading, 200);
+        }, { once: true });
       }
     }
   }
@@ -802,7 +829,12 @@
         var small = b.classList.contains('lang-toggle-m') || b.classList.contains('nav-lang-mobile');
         b.textContent = es ? 'English' : 'Español';
       }
-      b.setAttribute('aria-label', es ? 'Switch to English' : 'Cambiar a español');
+      /* WCAG 2.5.3, Label in Name. The name has to start with the word
+         printed on the button, or somebody saying "click English" out loud
+         gets nothing. The rest of the name is in the language the reader is
+         reading right now. */
+      b.setAttribute('aria-label', es ? 'English, cambiar esta página a inglés'
+                                      : 'Español, switch this page to Spanish');
     });
 
     /* if the inquiry form is open, retitle it in the new language */

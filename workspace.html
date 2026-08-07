@@ -40,7 +40,7 @@ h2{font-size:clamp(1.9rem,4vw,3rem);}
 h3{font-size:1.4rem;}
 p{margin:0;}
 a{color:inherit;}
-.eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--brass-deep);display:inline-flex;}
+.eyebrow{font-size:.75rem;letter-spacing:.3em;color:var(--brass-ink);display:inline-flex;}
 .eyebrow::before{content:"";width:26px;height:1px;background:var(--forest);display:inline-block;}
 .btn{position:relative;display:inline-block;font-family:"Cinzel",serif;font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;line-height:1.5;text-align:center;padding:1.02rem 1.9rem;border-radius:2px;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;border:1px solid transparent;cursor:pointer;overflow:hidden;max-width:100%;}
 .btn::after{content:"";position:absolute;inset:4px;border:1px solid rgba(43,36,30,.28);pointer-events:none;}
@@ -93,10 +93,10 @@ a{color:inherit;}
 .space-media .zoom{position:absolute;top:10px;right:10px;background:rgba(30,50,39,.82);color:#F1E6D3;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .6rem;border-radius:2px;opacity:0;transition:opacity .25s;}
 .space-media:hover .zoom{opacity:1;}
 .space-body{padding:1.5rem 1.6rem 1.7rem;display:flex;flex-direction:column;flex:1;}
-.space-body .tag{font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-deep);}
+.space-body .tag{font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass-ink);}
 .space-body h3{font-size:1.6rem;margin:.5rem 0 .5rem;}
 .space-body p{font-size:.94rem;color:#4a3f36;margin-bottom:1.1rem;}
-.space-meta{font-size:.82rem;color:var(--smoke);margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem;}
+.space-meta{font-size:.82rem;color:var(--smoke-ink);margin-bottom:1.1rem;display:flex;align-items:center;gap:.5rem;}
 .space-meta b{color:var(--forest);font-weight:600;}
 .space-body .btn{align-self:flex-start;margin-top:auto;font-size:.85rem;padding:.7rem 1.3rem;}
 .space-card.novideo .space-media{background:linear-gradient(160deg,var(--forest),var(--forest-deep));display:flex;align-items:center;justify-content:center;cursor:default;}
@@ -130,7 +130,7 @@ a{color:inherit;}
 .contact-info h2{margin-bottom:1.2rem;}
 .info-row{display:flex;gap:.8rem;padding:.9rem 0;border-top:1px solid var(--line);font-size:.95rem;}
 .info-row:first-of-type{border-top:none;}
-.info-row .k{font-family:"Cinzel",serif;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-deep);min-width:100px;padding-top:.2rem;}
+.info-row .k{font-family:"Cinzel",serif;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-ink);min-width:100px;padding-top:.2rem;}
 .info-row a{color:var(--forest);font-weight:600;text-decoration:none;}
 .placeholder{color:var(--smoke);font-style:italic;}
 .contact-info{background:var(--parchment);border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:clamp(1.6rem,3vw,2.4rem);}
@@ -160,10 +160,10 @@ footer{background:var(--forest-deep);color:rgba(241,230,211,.72);padding:3.2rem 
 .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;padding-bottom:2.4rem;border-bottom:1px solid rgba(241,230,211,.14);}
 .foot-mark b{font-family:"Cinzel",serif;font-weight:700;font-size:1.25rem;letter-spacing:.14em;color:#F1E6D3;display:block;}
 .foot-mark .tag{color:rgba(241,230,211,.7);margin-top:.7rem;max-width:28ch;}
-.foot-col h3{font-size:.66rem;letter-spacing:.2em;}
+.foot-col h3{font-size:.62rem;letter-spacing:.22em;}
 .foot-col a{color:rgba(241,230,211,.72);font-size:.9rem;margin-bottom:.5rem;}
 .foot-col a:hover{color:var(--brass-light);}
-.foot-base{padding-top:1.6rem;font-size:.78rem;color:rgba(241,230,211,.5);}
+.foot-base{padding-top:1.6rem;font-size:.78rem;color:rgba(241,230,211,.56);}
 .foot-legal a{color:var(--brass-light);text-decoration:none;}
 .foot-legal a:hover{text-decoration:underline;}
 .lightbox{background:rgba(20,14,10,.9);transition:opacity .25s;}
@@ -985,7 +985,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Espacios de Trabajo">Workspace &amp; Offices</span></span></a>
+    <a href="index.html" class="wordmark"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Espacios de Trabajo">Workspace &amp; Offices</span></span><span class="a11y-only">, home</span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
         <div class="doors">
           <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
@@ -1016,12 +1016,12 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
             </div>
           </div>
         </div>
-        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
-        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887 at (951) 718-4204" data-es-aria="Llame a The Crescent House 1887 al (951) 718-4204"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Espa&ntilde;ol, switch this page to Spanish">Espa&ntilde;ol</button>
       </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887 at (951) 718-4204" data-es-aria="Llame a The Crescent House 1887 al (951) 718-4204"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Espa&ntilde;ol, switch this page to Spanish">Espa&ntilde;ol</button>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
@@ -1043,7 +1043,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       </div>
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
-          <img src="images/workspace-1.jpg" alt="The historic stained-glass front entrance of The Chimes at 201 W. Graham Ave" data-es-alt="La histórica entrada principal con vitrales de The Chimes en 201 W. Graham Ave"  width="1086" height="814" />
+          <picture><source type="image/webp" srcset="images/workspace-1.webp" fetchpriority="high"><img fetchpriority="high" src="images/workspace-1.jpg" alt="The historic stained-glass front entrance of The Chimes at 201 W. Graham Ave" data-es-alt="La histórica entrada principal con vitrales de The Chimes en 201 W. Graham Ave"  width="1086" height="814" /></picture>
           <div class="hero-badge" data-es='Amueblado ·<br>Histórico · Flexible'>Furnished ·<br>Historic · Flexible</div>
         </figure>
       </div>
@@ -1060,7 +1060,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       <p style="color:#4a3f36;margin-top:1rem;" data-es="Todo lo que espera de un espacio de trabajo moderno, dentro de un edificio que ningún otro en el valle puede igualar.">Everything you'd expect from a modern workspace, set inside a building nothing else in the valley can match.</p>
     </div>
     <div class="turnkey-grid reveal">
-      <figure class="turnkey-photo"><img data-es-alt="Una sala de trabajo privada, con un escritorio bajo el tragaluz, un escritorio de tapa inclinada y paredes originales de tablilla" src="images/private-work-room.jpg" alt="A private work room, with a writing desk beneath the skylight, a slant top desk, and original beadboard walls" loading="lazy"  width="1100" height="1375" /></figure>
+      <figure class="turnkey-photo"><picture><source type="image/webp" srcset="images/private-work-room.webp"><img data-es-alt="Una sala de trabajo privada, con un escritorio bajo el tragaluz, un escritorio de tapa inclinada y paredes originales de tablilla" src="images/private-work-room.jpg" alt="A private work room, with a writing desk beneath the skylight, a slant top desk, and original beadboard walls" loading="lazy"  width="1100" height="1375" /></picture></figure>
       <div class="chips" id="chips">
       <span class="chip" data-es='<span class="dot"></span>Totalmente amueblado'><span class="dot"></span>Fully furnished</span>
       <span class="chip" data-es='<span class="dot"></span>Wifi de alta velocidad'><span class="dot"></span>High-speed Wi-Fi</span>
@@ -1096,7 +1096,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 
       <div class="space-card reveal">
         <div class="space-media" data-cap="The Parlor Room · The Crescent House" data-es-cap="The Parlor Room · The Crescent House">
-          <img src="images/workspace-3.jpg" alt="The Parlor Room, with its original patterned tile floor, green drapes, and Victorian seating" data-es-alt="The Parlor Room, hacia las cortinas verdes y el pizarrón original" loading="lazy"  width="1500" height="1125" />
+          <picture><source type="image/webp" srcset="images/workspace-3.webp"><img src="images/workspace-3.jpg" alt="The Parlor Room, with its original patterned tile floor, green drapes, and Victorian seating" data-es-alt="The Parlor Room, hacia las cortinas verdes y el pizarrón original" loading="lazy"  width="1072" height="804" /></picture>
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
@@ -1112,7 +1112,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 
       <div class="space-card reveal">
         <div class="space-media" data-cap="The Ferris Suite · The Crescent House" data-es-cap="Sala de Reuniones · The Chimes">
-          <img src="images/ferris-suite.jpg" alt="The Ferris Suite, four blue leather chairs around a drop-leaf table between two mahogany bookcases, lit by a skylight" data-es-alt="The Ferris Suite, cuatro sillas de cuero azul alrededor de una mesa plegable entre dos libreros de caoba, con luz de tragaluz" loading="lazy"  width="1086" height="1448" />
+          <picture><source type="image/webp" srcset="images/ferris-suite.webp"><img src="images/ferris-suite.jpg" alt="The Ferris Suite, four blue leather chairs around a drop-leaf table between two mahogany bookcases, lit by a skylight" data-es-alt="The Ferris Suite, cuatro sillas de cuero azul alrededor de una mesa plegable entre dos libreros de caoba, con luz de tragaluz" loading="lazy"  width="1086" height="1448" /></picture>
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
@@ -1126,7 +1126,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 
       <div class="space-card reveal">
         <div class="space-media" data-cap="The Elsinore Boardroom · The Crescent House" data-es-cap="The Elsinore Boardroom · The Crescent House">
-          <img src="images/elsinore-boardroom.jpg" alt="The Elsinore Boardroom, a long executive table ringed by high backed chairs beneath a mounted TV" data-es-alt="El Elsinore Boardroom, una larga mesa ejecutiva rodeada de sillas de respaldo alto bajo una pantalla montada" loading="lazy"  width="1086" height="1448" />
+          <picture><source type="image/webp" srcset="images/elsinore-boardroom.webp"><img src="images/elsinore-boardroom.jpg" alt="The Elsinore Boardroom, a long executive table ringed by high backed chairs beneath a mounted TV" data-es-alt="El Elsinore Boardroom, una larga mesa ejecutiva rodeada de sillas de respaldo alto bajo una pantalla montada" loading="lazy"  width="1086" height="1448" /></picture>
           <span class="zoom" data-es="Ver">View</span>
         </div>
         <div class="space-body">
@@ -1139,7 +1139,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       </div>
 
       <div class="space-card novideo reveal">
-        <div class="space-media" data-cap="The mail boxes · The Crescent House" data-es-cap="Los buzones · The Crescent House"><img src="images/virtual-mail.jpg" alt="The original antique post office boxes, still numbered, where mail for virtual office members is handled" data-es-alt="Los buzones postales originales de época, aún numerados, donde se gestiona el correo de los miembros de oficina virtual" loading="lazy"  width="900" height="1200" /><span class="zoom" data-es="Ver">View</span></div>
+        <div class="space-media" data-cap="The mail boxes · The Crescent House" data-es-cap="Los buzones · The Crescent House"><picture><source type="image/webp" srcset="images/virtual-mail.webp"><img src="images/virtual-mail.jpg" alt="The original antique post office boxes, still numbered, where mail for virtual office members is handled" data-es-alt="Los buzones postales originales de época, aún numerados, donde se gestiona el correo de los miembros de oficina virtual" loading="lazy"  width="900" height="1200" /></picture><span class="zoom" data-es="Ver">View</span></div>
         <div class="space-body">
           <span class="tag" data-es="Oficina Virtual">Virtual Office</span>
           <h3 data-es="Una dirección emblemática">A landmark address</h3>
@@ -1197,7 +1197,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
   <div class="container">
     <div class="welcome-grid reveal">
       <figure class="welcome-photo">
-        <img src="images/heritage-lobby-screen.jpg" alt="The welcome area inside, beneath the original 1887 lobby screen of white spindle and ball fretwork" data-es-alt="La zona de recepción interior, bajo la mampara original de 1887 con celosía blanca de balaustres y esferas" loading="lazy"  width="1500" height="656" />
+        <picture><source type="image/webp" srcset="images/heritage-lobby-screen.webp"><img src="images/heritage-lobby-screen.jpg" alt="The welcome area inside, beneath the original 1887 lobby screen of white spindle and ball fretwork" data-es-alt="La zona de recepción interior, bajo la mampara original de 1887 con celosía blanca de balaustres y esferas" loading="lazy"  width="1500" height="656" /></picture>
       </figure>
       <div class="welcome-copy">
         <span class="eyebrow" data-es="Cuando llegue">When you arrive</span>
@@ -1289,26 +1289,26 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       </div>
         <div class="foot-cols">
           <div class="foot-col">
-        <h4 data-es="Trabajo">Work</h4>
+        <h3 data-es="Trabajo">Work</h3>
         <a href="workspace.html" data-es="Espacios de Trabajo y Oficinas">Workspace &amp; Offices</a>
         <a href="virtual-office.html" data-es="Oficina Virtual">Virtual Office</a>
         <button class="foot-cta" data-modal-open data-interest="Something else" data-es="Solicite una cotización">Get a quote</button>
       </div>
           <div class="foot-col">
-        <h4 data-es="Explorar">Explore</h4>
+        <h3 data-es="Explorar">Explore</h3>
         <a href="index.html" data-es="Inicio">Home</a>
         <a href="weddings.html" data-es="Bodas">Weddings</a>
         <a href="corporate-events.html" data-es="Eventos Corporativos">Corporate Events</a>
         <a href="history-tours.html" data-es="Historia y Recorridos">History &amp; Tours</a>
       </div>
           <div class="foot-col">
-        <h4 data-es="Síganos">Follow</h4>
+        <h3 data-es="Síganos">Follow</h3>
         <a href="https://www.facebook.com/thecrescent1887" target="_blank" rel="noopener">Facebook</a>
               <a href="https://www.instagram.com/thecrescenthouse1887" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.tiktok.com/@thecrescent1887" target="_blank" rel="noopener">TikTok</a>
       </div>
           <div class="foot-col">
-        <h4 data-es="Visítenos">Visit</h4>
+        <h3 data-es="Visítenos">Visit</h3>
         <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
         <a href="tel:+19517184204">(951) 718-4204</a>
       </div>

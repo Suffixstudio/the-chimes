@@ -1,3 +1,15 @@
+:root{
+  /* 6 Aug. Gold and grey, for words.
+     The gold below is not a new brand colour. --brass and the rest are
+     untouched and still draw every border, dot and button on the site.
+     These two exist only for text, because the original gold on cream is
+     2.25:1 where the standard asks 4.5:1, and small gold type on a cream
+     page is genuinely hard to read. Both values clear 4.5:1 against the
+     darkest of the nine light backgrounds in use, so they are safe
+     wherever they are used. */
+  --brass-ink:#7A5F2A;
+  --smoke-ink:#6D6154;
+}
 /* ============================================================
    THE CHIMES  ·  shared stylesheet   ·   Suffix Studio
 
@@ -51,7 +63,7 @@ a{color:inherit;}
 .foot-col h3,.foot-col h4{font-family:"Cinzel",serif;font-size:.62rem;font-weight:700;line-height:1.3;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-light);margin:0 0 .9rem;}
 .foot-col a{display:block;text-decoration:none;color:rgba(241,230,211,.72);font-size:.85rem;margin-bottom:.55rem;transition:color .2s;}
 .foot-col a:hover{color:var(--brass-light);}
-.foot-base{border-top:1px solid rgba(217,186,119,.18);margin-top:2.6rem;padding-top:1.4rem;font-size:.74rem;letter-spacing:.04em;color:rgba(241,230,211,.45);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.4rem;}
+.foot-base{border-top:1px solid rgba(217,186,119,.18);margin-top:2.6rem;padding-top:1.4rem;font-size:.74rem;letter-spacing:.04em;color:rgba(241,230,211,.56);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem 1.4rem;}
 /* footer on small screens: two even columns, then one, so nothing sits ragged */
 @media(max-width:900px){
   .foot-inner{flex-direction:column;gap:2.4rem;}
@@ -121,11 +133,11 @@ header.nav .wordmark{text-decoration:none;flex:0 0 auto;}
 header.nav .wm-frame{display:inline-block;padding:.38rem .85rem;text-align:center;
   border:1px solid #C9A45C;outline:1px solid #C9A45C;outline-offset:3px;}
 header.nav .wm-the{display:block;font-family:"Cinzel",serif;font-size:.56rem;font-weight:600;
-  letter-spacing:.34em;color:#A9843F;line-height:1;margin-bottom:.16rem;}
+  letter-spacing:.34em;color:var(--brass-ink);line-height:1;margin-bottom:.16rem;}
 header.nav .wm-name{display:block;font-family:"Prata",Georgia,serif;font-size:clamp(1.05rem,2.3vw,1.5rem);
   letter-spacing:.03em;color:#5A222C;line-height:1.05;white-space:nowrap;}
 header.nav .wm-est{display:block;font-family:"Cinzel",serif;font-size:.5rem;font-weight:600;
-  letter-spacing:.22em;color:#A9843F;line-height:1;margin-top:.2rem;white-space:nowrap;}
+  letter-spacing:.22em;color:var(--brass-ink);line-height:1;margin-top:.2rem;white-space:nowrap;}
 header.nav .page-here{display:none;}
 
 /* the four doors */
@@ -454,7 +466,7 @@ header.nav .nav-right{align-self:center;}
 
 /* page name inside the name plate, so you always know where you are */
 header.nav .wm-page{display:block;font-family:"Prata",Georgia,serif;
-  font-size:.74rem;letter-spacing:.02em;line-height:1.2;color:#A9843F;
+  font-size:.74rem;letter-spacing:.02em;line-height:1.2;color:var(--brass-ink);
   margin-top:.22rem;padding-top:.22rem;border-top:1px solid rgba(201,164,92,.45);
   text-transform:none;}
 @media(max-width:1024px){header.nav .wm-page{font-size:.66rem;margin-top:.16rem;padding-top:.16rem;}}
@@ -574,3 +586,15 @@ html{overscroll-behavior-x:none;}
   header.nav .nav-inner{padding-left:.6rem;padding-right:.6rem;gap:.4rem;}
   header.nav .nav-mobile-controls{gap:.45rem;padding-right:0;}
 }
+
+
+/* ---- 6 Aug. Heard but not seen ----------------------------------------
+   WCAG 2.5.3 says a control's name has to contain the words printed on it,
+   so that somebody driving the page by voice can say what they can see.
+   The wordmark needed the word "home" in its name without it appearing in
+   the logo. This is the standard way to say something to a screen reader
+   only. Not display:none and not visibility:hidden, because both of those
+   hide it from the screen reader too. */
+.a11y-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;
+  border:0;}

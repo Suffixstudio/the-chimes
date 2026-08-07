@@ -44,7 +44,7 @@
     --accent:var(--oxblood); --accent-deep:var(--oxblood-deep);}
   body{margin:0;background:#F3ECDD;border-top:4px solid var(--oxblood);color:#211A16;font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
   main{background:#F3ECDD;}
-  .eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);display:inline-flex;align-items:center;gap:.7rem;}
+  .eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-ink);display:inline-flex;align-items:center;gap:.7rem;}
   .eyebrow::before{content:"";width:26px;height:1px;background:var(--oxblood);display:inline-block;}
   h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;margin:0;color:var(--ink);}
   h1{font-size:clamp(2.9rem,7vw,5.2rem);letter-spacing:-.5px;}
@@ -101,7 +101,7 @@
   .path-card .card-btn:hover{gap:.85rem;}
   .amenities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1rem,2.5vw,2rem);margin-top:3rem;}
   .am-card{border-top:2px solid var(--brass);padding-top:1.3rem;}
-  .am-card .n{font-family:"Cinzel",serif;font-size:.95rem;letter-spacing:.1em;color:var(--brass);}
+  .am-card .n{font-family:"Cinzel",serif;font-size:.95rem;letter-spacing:.1em;color:var(--brass-ink);}
   .am-card h3{font-size:1.18rem;margin:.7rem 0 .5rem;}
   .am-card p{font-size:.9rem;color:#4a3f36;margin:0;}
   .faq-wrap{max-width:820px;margin:3rem auto 0;}
@@ -279,7 +279,7 @@ h3{font-size:clamp(1.5rem,2.4vw,1.95rem);line-height:1.08;font-weight:460;}
 /* ---------- eyebrow (label) ---------- */
 .eyebrow{
   font-family:"Cinzel",serif;font-weight:600;font-size:.66rem;
-  letter-spacing:.34em;text-transform:uppercase;color:var(--brass2);
+  letter-spacing:.34em;text-transform:uppercase;color:var(--brass-ink);
   display:inline-flex;align-items:center;gap:.75rem;
 }
 .eyebrow::before{content:"";width:30px;height:1px;background:var(--brass2);display:inline-block;opacity:.85;}
@@ -380,7 +380,7 @@ section.spaces{background:var(--bone);padding:clamp(1rem,3vw,2rem) 0 0;}
 .split--media-left .split-body{grid-column:2;}
 .split--media-right .split-media{grid-column:2;}
 .split--media-right .split-body{grid-column:1;order:-1;}
-.split-body .tag{font-family:"Cinzel",serif;font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass2);}
+.split-body .tag{font-family:"Cinzel",serif;font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-ink);}
 .split-body h3{margin:.85rem 0 1.1rem;}
 .split-body p{color:var(--ink-soft);font-size:1.02rem;line-height:1.7;margin:0 0 1.5rem;max-width:46ch;}
 .split-body .ticks{list-style:none;padding:0;margin:0 0 2rem;display:grid;gap:.7rem;max-width:46ch;}
@@ -447,7 +447,7 @@ section.why{background:var(--bone-2);padding:clamp(4rem,6vw,6rem) 0;}
 .why-intro h2{max-width:20ch;}
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2.4rem;max-width:1180px;}
 .why-grid .am-card{border:none;border-top:1px solid var(--brass2);padding:1.4rem 0 0;background:none;}
-.am-card .n{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.5rem;color:var(--brass2);display:block;line-height:1;margin-bottom:.9rem;}
+.am-card .n{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:1.5rem;color:var(--brass-ink);display:block;line-height:1;margin-bottom:.9rem;}
 .why-grid .am-card h3{font-size:1.28rem;margin:0 0 .6rem;}
 .why-grid .am-card p{font-size:.94rem;color:var(--ink-soft);line-height:1.6;margin:0;}
 @media (max-width:820px){.why-grid{grid-template-columns:1fr 1fr;gap:1.8rem;}}
@@ -482,7 +482,7 @@ section.visit{background:var(--bone-2);padding:clamp(4rem,6vw,6rem) 0;}
 .loc-text .addr a{font-family:"Fraunces",Georgia,serif;font-size:1.3rem;color:var(--ink2);text-decoration:none;line-height:1.35;border-bottom:1px solid transparent;}
 .loc-text .addr a:hover{border-bottom-color:var(--brass2);}
 .loc-text .loc-desc{color:var(--ink-soft);line-height:1.65;margin:0 0 1.3rem;max-width:46ch;}
-.loc-text .loc-appt{font-family:"Cinzel",serif;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass2);margin:0 0 1.6rem;}
+.loc-text .loc-appt{font-family:"Cinzel",serif;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-ink);margin:0 0 1.6rem;}
 .loc-cta{display:flex;gap:.8rem;flex-wrap:wrap;}
 @media (max-width:820px){.visit-layout{grid-template-columns:1fr;}}
 
@@ -509,7 +509,7 @@ footer{background:var(--wine);color:rgba(244,233,213,.72);border-top:1px solid r
 .foot-col h3{color:var(--brass-hi);}
 footer a{color:#D8CBB4;transition:color .2s;}
 footer a:hover{color:var(--brass-hi);}
-.foot-base{color:#B5A88F;border-top:1px solid rgba(181,143,73,.22);}
+.foot-base{color:#C6BCA8;border-top:1px solid rgba(181,143,73,.22);}
 
 /* ============================================================
    LIGHTBOX
@@ -1418,7 +1418,7 @@ a.door[aria-current] .dt{color:#7A2333;}
       "name": "Is there parking?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. A few on-site spaces are kept for VIP arrivals, with The Chimes Carriage Plaza, a private reserved lot across the street, coming soon, and additional parking nearby in the downtown district."
+        "text": "Yes. A few on-site spaces are kept for VIP arrivals, and there is additional parking throughout the historic downtown district, most of it a short walk from the front door. A private reserved lot directly across the street is being built now and will open soon, which will put guest parking within a few steps of the entrance. Until then, plan on the downtown district, and tell us when you book if anyone in your party has trouble walking so we can talk through the closest options."
       }
     },
     {
@@ -1455,7 +1455,7 @@ a.door[aria-current] .dt{color:#7A2333;}
     
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span></span></a>
+    <a href="index.html" class="wordmark"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span></span><span class="a11y-only">, home</span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
         <div class="doors">
           <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
@@ -1486,12 +1486,12 @@ a.door[aria-current] .dt{color:#7A2333;}
             </div>
           </div>
         </div>
-        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
-        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887 at (951) 718-4204" data-es-aria="Llame a The Crescent House 1887 al (951) 718-4204"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Espa&ntilde;ol, switch this page to Spanish">Espa&ntilde;ol</button>
       </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887 at (951) 718-4204" data-es-aria="Llame a The Crescent House 1887 al (951) 718-4204"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Espa&ntilde;ol, switch this page to Spanish">Espa&ntilde;ol</button>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
@@ -1514,11 +1514,11 @@ a.door[aria-current] .dt{color:#7A2333;}
 <section class="hero" id="hero">
     <div class="hero-bg" aria-hidden="true">
     <video class="hero-img" id="heroVideo" autoplay muted loop playsinline
-             preload="auto" poster="images/home-hero-facade.jpg"
+             preload="none" poster="images/home-hero-facade.jpg"
              aria-label="A slow pass across the front of The Crescent House 1887, the restored Crescent Bath House in downtown Lake Elsinore">
-        <source src="images/home-hero-video.mp4" type="video/mp4" />
+        <source data-src="images/home-hero-video.mp4" type="video/mp4" />
       </video>
-      <img class="hero-img hero-fallback" src="images/home-hero-facade.jpg" alt="The Crescent House 1887 seen from the street, its double verandas hung with international flags" data-es-alt="The Crescent House 1887 vista desde la calle, con sus dobles galer&iacute;as adornadas con banderas internacionales" width="1600" height="1395" />
+      <img fetchpriority="high" class="hero-img hero-fallback" src="images/home-hero-facade.jpg" alt="The Crescent House 1887 seen from the street, its double verandas hung with international flags" data-es-alt="The Crescent House 1887 vista desde la calle, con sus dobles galer&iacute;as adornadas con banderas internacionales" width="1600" height="1395" />
   </div>
   <div class="hero-scrim" aria-hidden="true"></div>
   <div class="hero-inner container reveal">
@@ -1553,7 +1553,7 @@ a.door[aria-current] .dt{color:#7A2333;}
   </div>
 
   <article class="split split--media-left reveal" id="office">
-    <div class="split-media"><img src="images/home-office-suite.jpg" loading="lazy" decoding="async" alt="A restored upstairs meeting room at The Chimes with a long wood table and period furnishings" data-es-alt="Una sala de reuniones restaurada en la planta alta de The Chimes, con una larga mesa de madera y mobiliario de época"  width="900" height="1124" /></div>
+    <div class="split-media"><picture><source type="image/webp" srcset="images/home-office-suite.webp"><img src="images/home-office-suite.jpg" loading="lazy" decoding="async" alt="A restored upstairs meeting room at The Chimes with a long wood table and period furnishings" data-es-alt="Una sala de reuniones restaurada en la planta alta de The Chimes, con una larga mesa de madera y mobiliario de época"  width="900" height="1124" /></picture></div>
     <div class="split-body">
       <span class="tag">Work &middot; Office Suites</span>
       <h3>An address with character</h3>
@@ -1594,7 +1594,7 @@ a.door[aria-current] .dt{color:#7A2333;}
             <li data-es="Interiores y exteriores en una sola direcci&oacute;n">Interiors and exteriors at one address</li>
             <li data-es="Visitas de reconocimiento antes de reservar">Location scouts before you book</li>
             <li data-es="Tarifas por medio d&iacute;a y d&iacute;a completo">Half-day and full-day rates</li>
-            <li data-es="Estacionamiento privado al otro lado de la calle">Private parking across the street</li>
+            <li data-es="Estacionamiento en el centro, y el privado próximamente">Downtown parking, private lot coming soon</li>
           </ul>
           <a class="card-btn" href="photo-film.html" data-es="Ver las locaciones &rarr;">See the locations &rarr;</a>
         </div>
@@ -1625,7 +1625,7 @@ a.door[aria-current] .dt{color:#7A2333;}
 <!-- ==================== HERITAGE (feature) ==================== -->
 <section class="heritage" id="heritage">
   <div class="heritage-media reveal">
-    <img src="images/heritage-lobby-screen.jpg" loading="lazy" decoding="async" alt="The original 1887 lobby screen at The Chimes, a white spindle-and-ball fretwork partition with sunburst wheels" data-es-alt="La pantalla original del vestíbulo de 1887 en The Chimes, una mampara de celosía blanca de husillos y bolas con ruedas de sol"  width="1500" height="656" />
+    <picture><source type="image/webp" srcset="images/heritage-lobby-screen.webp"><img src="images/heritage-lobby-screen.jpg" loading="lazy" decoding="async" alt="The original 1887 lobby screen at The Chimes, a white spindle-and-ball fretwork partition with sunburst wheels" data-es-alt="La pantalla original del vestíbulo de 1887 en The Chimes, una mampara de celosía blanca de husillos y bolas con ruedas de sol"  width="1500" height="656" /></picture>
     <figcaption class="heritage-cap" data-es="La pantalla del vestíbulo &middot; original de 1887">The lobby screen &middot; original 1887 spindlework</figcaption>
   </div>
   <div class="heritage-card reveal">
@@ -1642,12 +1642,12 @@ a.door[aria-current] .dt{color:#7A2333;}
     <h2 data-es="Cada detalle cuenta una historia.">Every detail tells a story.</h2>
   </div>
   <div class="container gallery-grid reveal">
-    <figure class="g-tile"><img src="images/gallery-entrance.jpg" loading="lazy" decoding="async" alt="The charcoal double-door entry of The Chimes, framed by a checkered stained-glass transom and a historic register plaque" data-es-alt="La entrada de dobles puertas color carbón de The Chimes, enmarcada por un montante de vitral a cuadros y una placa del registro histórico"  width="760" height="1013" /><figcaption class="g-cap" data-es="Entrada y vitral">Entrance &amp; stained glass</figcaption></figure>
-    <figure class="g-tile"><img src="images/gallery-staircase.jpg" loading="lazy" decoding="async" alt="The grand interior staircase of The Chimes, with a carved white balustrade, patterned runner, and crystal chandelier" data-es-alt="La gran escalera interior de The Chimes, con balaustrada blanca tallada, alfombra de corredor estampada y candelabro de cristal"  width="760" height="1013" /><figcaption class="g-cap" data-es="La escalera principal">The grand staircase</figcaption></figure>
-    <figure class="g-tile"><img src="images/gallery-tile-hall.jpg" loading="lazy" decoding="async" alt="A long interior hallway at The Chimes paved in patterned encaustic tile, lined with white doors and framed pictures" data-es-alt="Un largo pasillo interior en The Chimes pavimentado con mosaico encáustico estampado, flanqueado por puertas blancas y cuadros enmarcados"  width="760" height="1013" /><figcaption class="g-cap" data-es="Pasillo de mosaico">Encaustic tile hall</figcaption></figure>
-    <figure class="g-tile"><img src="images/gallery-mineral-bath.jpg" loading="lazy" decoding="async" alt="The original sunken tile mineral bath at The Chimes, lit from a skylight above, from its days as the Crescent Bath House" data-es-alt="El baño mineral original de azulejo hundido en The Chimes, iluminado por un tragaluz, de sus días como Crescent Bath House"  width="1100" height="1467" /><figcaption class="g-cap" data-es="El baño mineral original">The original mineral bath</figcaption></figure>
-    <figure class="g-tile"><img src="images/gallery-chimes-sign.jpg" loading="lazy" decoding="async" alt="A weathered painted sign reading The Chimes, kept from the building's earlier years" data-es-alt="Un letrero pintado y desgastado que dice The Chimes, conservado de los primeros años del edificio"  width="1100" height="1793" /><figcaption class="g-cap" data-es="Un nombre conservado con los años">A name kept through the years</figcaption></figure>
-    <figure class="g-tile"><img src="images/gallery-verandas.jpg" loading="lazy" decoding="async" alt="The two-story white verandas of The Chimes flying international flags above Graham Avenue" data-es-alt="Las verandas blancas de dos pisos de The Chimes ondeando banderas internacionales sobre Graham Avenue"  width="760" height="1013" /><figcaption class="g-cap" data-es="Verandas sobre Graham Avenue">Verandas above Graham Avenue</figcaption></figure>
+    <figure class="g-tile"><picture><source type="image/webp" srcset="images/gallery-entrance.webp"><img src="images/gallery-entrance.jpg" loading="lazy" decoding="async" alt="The charcoal double-door entry of The Chimes, framed by a checkered stained-glass transom and a historic register plaque" data-es-alt="La entrada de dobles puertas color carbón de The Chimes, enmarcada por un montante de vitral a cuadros y una placa del registro histórico"  width="760" height="1013" /></picture><figcaption class="g-cap" data-es="Entrada y vitral">Entrance &amp; stained glass</figcaption></figure>
+    <figure class="g-tile"><picture><source type="image/webp" srcset="images/gallery-staircase.webp"><img src="images/gallery-staircase.jpg" loading="lazy" decoding="async" alt="The grand interior staircase of The Chimes, with a carved white balustrade, patterned runner, and crystal chandelier" data-es-alt="La gran escalera interior de The Chimes, con balaustrada blanca tallada, alfombra de corredor estampada y candelabro de cristal"  width="760" height="1013" /></picture><figcaption class="g-cap" data-es="La escalera principal">The grand staircase</figcaption></figure>
+    <figure class="g-tile"><picture><source type="image/webp" srcset="images/gallery-tile-hall.webp"><img src="images/gallery-tile-hall.jpg" loading="lazy" decoding="async" alt="A long interior hallway at The Chimes paved in patterned encaustic tile, lined with white doors and framed pictures" data-es-alt="Un largo pasillo interior en The Chimes pavimentado con mosaico encáustico estampado, flanqueado por puertas blancas y cuadros enmarcados"  width="760" height="1013" /></picture><figcaption class="g-cap" data-es="Pasillo de mosaico">Encaustic tile hall</figcaption></figure>
+    <figure class="g-tile"><picture><source type="image/webp" srcset="images/gallery-mineral-bath.webp"><img src="images/gallery-mineral-bath.jpg" loading="lazy" decoding="async" alt="The original sunken tile mineral bath at The Chimes, lit from a skylight above, from its days as the Crescent Bath House" data-es-alt="El baño mineral original de azulejo hundido en The Chimes, iluminado por un tragaluz, de sus días como Crescent Bath House"  width="748" height="998" /></picture><figcaption class="g-cap" data-es="El baño mineral original">The original mineral bath</figcaption></figure>
+    <figure class="g-tile"><picture><source type="image/webp" srcset="images/gallery-chimes-sign.webp"><img src="images/gallery-chimes-sign.jpg" loading="lazy" decoding="async" alt="A weathered painted sign reading The Chimes, kept from the building's earlier years" data-es-alt="Un letrero pintado y desgastado que dice The Chimes, conservado de los primeros años del edificio"  width="748" height="1219" /></picture><figcaption class="g-cap" data-es="Un nombre conservado con los años">A name kept through the years</figcaption></figure>
+    <figure class="g-tile"><picture><source type="image/webp" srcset="images/gallery-verandas.webp"><img src="images/gallery-verandas.jpg" loading="lazy" decoding="async" alt="The two-story white verandas of The Chimes flying international flags above Graham Avenue" data-es-alt="Las verandas blancas de dos pisos de The Chimes ondeando banderas internacionales sobre Graham Avenue"  width="760" height="1013" /></picture><figcaption class="g-cap" data-es="Verandas sobre Graham Avenue">Verandas above Graham Avenue</figcaption></figure>
   </div>
 </section>
 
@@ -1691,7 +1691,7 @@ a.door[aria-current] .dt{color:#7A2333;}
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Is there parking?</button>
-        <div class="faq-a"><p>Yes. A few on-site spaces are kept for VIP arrivals, with The Chimes Carriage Plaza, a private reserved lot across the street, coming soon, and additional parking nearby in the downtown district.</p></div>
+        <div class="faq-a"><p>Yes. A few on-site spaces are kept for VIP arrivals, and there is additional parking throughout the historic downtown district, most of it a short walk from the front door. A private reserved lot directly across the street is being built now and will open soon, which will put guest parking within a few steps of the entrance. Until then, plan on the downtown district, and tell us when you book if anyone in your party has trouble walking so we can talk through the closest options.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What was the original Crescent Bath House?</button>
@@ -1713,7 +1713,7 @@ a.door[aria-current] .dt{color:#7A2333;}
 <section class="visit" id="visit">
   <div class="container visit-layout reveal">
     <div class="map-frame">
-      <img src="images/visit-map.jpg" loading="lazy" decoding="async" alt="Map showing The Chimes at 201 W. Graham Avenue in downtown Lake Elsinore, near Main Street and the lakefront" data-es-alt="Mapa que muestra The Chimes en 201 W. Graham Avenue, en el centro de Lake Elsinore, cerca de Main Street y del lago"  width="900" height="855" />
+      <picture><source type="image/webp" srcset="images/visit-map.webp"><img src="images/visit-map.jpg" loading="lazy" decoding="async" alt="Map showing The Chimes at 201 W. Graham Avenue in downtown Lake Elsinore, near Main Street and the lakefront" data-es-alt="Mapa que muestra The Chimes en 201 W. Graham Avenue, en el centro de Lake Elsinore, cerca de Main Street y del lago"  width="900" height="855" /></picture>
     </div>
     <div class="loc-text">
       <span class="eyebrow">Visit</span>
@@ -1922,7 +1922,7 @@ a.door[aria-current] .dt{color:#7A2333;}
     [".faq-wrap .faq-item:nth-child(4) .faq-q", "¿Puedo traer mi propio catering y proveedores?"],
     [".faq-wrap .faq-item:nth-child(4) .faq-a p", "El catering se maneja a través de nuestra lista de proveedores preferidos, que compartimos cuando usted nos escribe, así que elige entre personas que ya conocen el edificio y cómo funciona. Para el bar, puede traer su propio proveedor con licencia, y todo proveedor de bar debe presentar por adelantado un permiso ABC vigente, seguro de responsabilidad civil y cantineros certificados. El servicio de cócteles se realiza en The Library Speakeasy. Como el edificio es histórico, algunas rentas externas pueden necesitar su propia fuente de energía, así que díganos qué planea traer y le señalaremos lo que haya que gestionar."],
     [".faq-wrap .faq-item:nth-child(5) .faq-q", "¿Hay estacionamiento?"],
-    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Hay algunos lugares en el sitio apartados para llegadas VIP, con The Chimes Carriage Plaza, un lote privado reservado al otro lado de la calle, próximamente, y estacionamiento adicional cerca en el centro."],
+    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Hay algunos lugares en el sitio apartados para llegadas VIP, y hay estacionamiento adicional por todo el centro histórico, casi todo a poca distancia de la puerta principal. Un estacionamiento privado reservado, justo enfrente, está en construcción y abrirá próximamente, lo que dejará el estacionamiento de invitados a unos pasos de la entrada. Mientras tanto, cuente con el centro, y avísenos al reservar si alguien de su grupo tiene dificultad para caminar, para conversar sobre las opciones más cercanas."],
     [".faq-wrap .faq-item:nth-child(6) .faq-q", "¿Qué fue el Crescent Bath House original?"],
     [".faq-wrap .faq-item:nth-child(6) .faq-a p", "Fue uno de los célebres balnearios de aguas minerales del sur de California. Construido en 1887 sobre un manantial caliente natural, el balneario atraía a visitantes de todo el país que venían a sumergirse en sus aguas sulfurosas de 132 grados y en sus baños minerales, considerados durante mucho tiempo un remedio para la artritis, el reumatismo y otros males. Lake Elsinore era un destino en aquellos años y el edificio estaba en el centro de todo. Ese mismo edificio histórico es hoy The Chimes, y el recorrido histórico muestra las partes que están abiertas mientras avanza la restauración."],
     [".faq-wrap .faq-item:nth-child(7) .faq-q", "¿De verdad es un edificio histórico?"],
