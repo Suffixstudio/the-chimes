@@ -483,7 +483,7 @@ header.nav .wm-page{display:block;font-family:"Prata",Georgia,serif;
   background:linear-gradient(165deg,#2A2118,#171208);padding:.92rem 1.2rem;margin:0 0 1.05rem;}
 .plan--day .plan-top{background:linear-gradient(165deg,#B7A78B,#A2926F);}
 .plan--day .plan-top h3{color:#2A2118;}
-.plan--day .plan-price{color:rgba(42,33,24,.78);}
+.plan--day .plan-price{color:#2A2118;}
 .plan--mid .plan-top{background:linear-gradient(165deg,#22402D,#152A1D);}
 .plan--top .plan-top{background:linear-gradient(165deg,#4A1C24,#2C0F15);}
 .plan-top h3{margin:0;font-family:"Cinzel",serif;font-size:.92rem;letter-spacing:.11em;
@@ -598,3 +598,124 @@ html{overscroll-behavior-x:none;}
 .a11y-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
   overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;
   border:0;}
+
+
+/* ==========================================================
+   TOUCH  ·  added 8 August
+   ========================================================== */
+
+/* No hover on a touch screen. See fix_touch.py for why the first tap
+   was being eaten. !important is needed only here: four pages declare
+   their own .btn-primary:hover in an inline style block that loads
+   after this file, and it is scoped to the transform, nothing else. */
+@media (hover: none) {
+  .btn:hover, .btn-primary:hover, .btn-ghost:hover, .btn-brass:hover,
+  .card-btn:hover, .path-card:hover, .space-card:hover, .evt-card:hover,
+  .pkg:hover, .g-tile:hover img, .space-card:hover .space-media img,
+  header.nav .nav-call:hover, header.nav .nav-call-mobile:hover {
+    transform: none !important;
+  }
+  /* Nothing worth hiding behind a hover that is never going to happen.
+     Both selectors are deliberately one step longer than the rules they
+     are overriding. A media query adds no specificity, and the rules that
+     hide these live in each page's own inline block, which loads after
+     this file, so an equal-specificity override would quietly lose. The
+     first version of this did lose, and the caption test caught it. */
+  .g-tile .g-cap { opacity: 1; transform: none; }
+  .space-card .space-media .zoom { opacity: 1; }
+}
+
+/* The press. A brass ring around the edge, not a colour across the
+   label, so the words stay readable while it is held down. */
+.btn:active, .card-btn:active, .faq-q:active,
+header.nav .menu-btn:active, header.nav .lang-toggle:active,
+.modal-close:active, .g-tile:active, .space-media:active {
+  box-shadow: 0 0 0 3px rgba(194,155,78,.6), 0 2px 7px -2px rgba(33,26,22,.55);
+  transition-duration: 0s;
+}
+.btn:active, .card-btn:active { transform: translateY(1px); }
+
+/* Safari draws this the instant a finger lands, before any transition
+   can run, so it is the fastest confirmation available. */
+a, button, .btn, .card-btn, .g-tile, .space-media, .faq-q,
+[data-modal-open], summary, label {
+  -webkit-tap-highlight-color: rgba(194,155,78,.32);
+}
+
+/* The date field. It gave itself a width from its own contents and a
+   grid child will not shrink below that unless told it may, so the box
+   grew out of line with the others the moment a date went in. And it
+   centres its value while every other field reads from the left. */
+.field-row > * { min-width: 0; }
+.field input[type="date"] { min-width: 0; width: 100%; }
+.field input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.25em;
+  margin: 0;
+}
+.field input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-inline-start: auto;
+  opacity: .55;
+}
+
+
+/* ==========================================================
+   PHONE MENU TYPE  ·  option A, 8 August
+   ==========================================================
+   Headings 11.8 -> 13.8px, links 13.8 -> 16px, and the row a finger has
+   to hit goes 39 -> 45px, clearing the 44 point minimum for the first
+   time. Appended at the end of this file on purpose: the rules being
+   raised are earlier in the same sheet at the same specificity, so
+   ordering does the work and no !important is needed. */
+@media (max-width: 1024px) {
+  header.nav .door .dt { font-size: .86rem; }
+  header.nav .sub a {
+    font-size: 1rem;
+    padding-top: .58rem;
+    padding-bottom: .58rem;
+  }
+}
+
+
+/* ==========================================================
+   PHONE MENU SPACING  ·  8 August
+   ==========================================================
+   See fix_menu_gap.py. Three things: the empty space under Weddings,
+   which is the only heading with no links beneath it; tighter section
+   spacing so more of the menu is visible before you scroll; and a
+   real tap target on the phone icon in the header. */
+@media (max-width: 1024px) {
+
+  /* a heading with nothing under it is a menu item, not a section */
+  header.nav .grp:not(:has(.sub)) {
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+  }
+  header.nav .grp:not(:has(.sub)) .door {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  /* space between the groups, not inside the rows a finger has to hit */
+  header.nav .grp { padding-top: .55rem; padding-bottom: .45rem; }
+  header.nav .grp .door { padding-bottom: .28rem; margin-bottom: .28rem; }
+  header.nav .sub { margin-top: .04rem; }
+  header.nav .nav-links { padding-bottom: .45rem; }
+  header.nav .nav-links .nav-call {
+    margin-top: .45rem !important;
+    padding-top: .62rem !important;
+    padding-bottom: .62rem !important;
+  }
+
+  /* The handset in the header is the one route to the phone number that
+     needs no menu and no scrolling, and it was a 21 point target. Padded
+     to 44 with a negative margin so the header does not move: the icon
+     stays exactly where it is and only the area that answers a thumb
+     grows around it. */
+  header.nav .nav-call-mobile {
+    padding: 12px;
+    margin: -12px;
+    border-radius: 50%;
+  }
+}

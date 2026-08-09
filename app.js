@@ -220,7 +220,7 @@
     return (LABELS[lang] && LABELS[lang][topic]) || DEFAULT[lang];
   }
 
-  function openModal(topic) {
+  function openModal(topic, pack) {
     if (!modal) return;
     lastFocus = document.activeElement;
     closeMenu();                                  /* never leave the menu open behind it */
@@ -250,6 +250,15 @@
       var oldWarn = form.querySelector('#formError');
       if (oldWarn) oldWarn.textContent = '';
     }
+    var pkg = $('#package');
+    if (pkg) {
+      pkg.value = '';
+      if (pack) {
+        Array.prototype.forEach.call(pkg.options, function (o) {
+          if (o.value === pack) pkg.value = pack;
+        });
+      }
+    }
     window.currentTopic = topic;
     var title = $('#modalTitle');
     if (title) title.textContent = modalTitleFor(topic);
@@ -270,7 +279,9 @@
 
   if (modal) {
     $$('[data-modal-open]').forEach(function (b) {
-      b.addEventListener('click', function () { openModal(b.getAttribute('data-interest')); });
+      b.addEventListener('click', function () {
+        openModal(b.getAttribute('data-interest'), b.getAttribute('data-package'));
+      });
     });
     var mClose = $('#modalClose');
     if (mClose) mClose.addEventListener('click', closeModal);
@@ -296,6 +307,7 @@
     tour:      { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
     group:     { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
     office:    { guests: { label: 'People on your team',  max: 30,  ph: 'How many' }, date: 'Preferred start date' },
+    training:  { guests: { label: 'People in your group', max: 50,  ph: 'Up to 50' }, date: 'Preferred date' },
     virtual:   { guests: null,                                                        date: 'Preferred start date' },
     travel:    { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
     business:  { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
@@ -318,6 +330,11 @@
   function ruleFor(value) {
     var v = String(value || '').toLowerCase();
     if (FIELD_RULES[v]) return FIELD_RULES[v];
+    /* The Training Center has to be tested before the office
+       rule below. That rule caps the head count at 30, and this
+       room seats 32 classroom style and 50 theater style, so a
+       real number would have been silently wiped. */
+    if (/training/.test(v))                   return FIELD_RULES.training;
     if (/tour|scout/.test(v))                 return FIELD_RULES.tour;
     if (/workspace|desk|office|boardroom|meeting|offsite/.test(v)) return FIELD_RULES.office;
     if (/virtual/.test(v))                    return FIELD_RULES.virtual;

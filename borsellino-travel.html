@@ -77,7 +77,7 @@
 .bors-contact{margin-top:1.15rem;font-weight:600;font-size:.96rem;}
 .bors-contact a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--brass);}
 .bors-contact a:hover{color:var(--brass);}
-.bors-contact .sep{color:var(--smoke);margin:0 .5rem;}
+.bors-contact .sep{color:var(--smoke-ink);margin:0 .5rem;}
 
 /* California requires the seller of travel registration number to be displayed
    clearly and conspicuously on advertising that sells travel, so this is a real
@@ -152,7 +152,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     "latitude": 33.6686208,
     "longitude": -117.3291812
   },
-  "hasMap": "https://www.google.com/maps/dir/?api=1&destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530",
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=The%20Chimes%2C%20201%20W%20Graham%20Ave%2C%20Lake%20Elsinore%2C%20CA%2092530",
   "sameAs": [
     "https://www.facebook.com/thecrescent1887",
     "https://www.instagram.com/thecrescenthouse1887",
@@ -311,67 +311,25 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "@type": "EventVenue",
       "@id": "https://thecrescenthouse1887.com/#room-rose-garden",
       "name": "Rose Garden",
-      "description": "The outdoor garden, used for ceremonies and for the largest receptions.",
-      "maximumAttendeeCapacity": 300,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 300
-        }
-      ]
+      "description": "The outdoor garden, used for ceremonies and for the largest receptions."
     },
     {
       "@type": "EventVenue",
       "@id": "https://thecrescenthouse1887.com/#room-fountain-plaza",
       "name": "Fountain Plaza",
-      "description": "The open air courtyard, used for dinner and dancing.",
-      "maximumAttendeeCapacity": 150,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 150
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Seated capacity",
-          "value": 100
-        }
-      ]
+      "description": "The open air courtyard, used for dinner and dancing."
     },
     {
       "@type": "EventVenue",
       "@id": "https://thecrescenthouse1887.com/#room-the-library-speakeasy",
       "name": "The Library Speakeasy",
-      "description": "The bar and cocktail room. All cocktail service happens here.",
-      "maximumAttendeeCapacity": 30,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 30
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Seated capacity",
-          "value": 10
-        }
-      ]
+      "description": "The bar and cocktail room. All cocktail service happens here."
     },
     {
       "@type": "Room",
       "@id": "https://thecrescenthouse1887.com/#room-the-parlor-room",
       "name": "The Parlor Room",
-      "description": "A Victorian parlor for smaller gatherings. Standing only, with seating on the furniture in the room. No seated dining.",
-      "maximumAttendeeCapacity": 30,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 30
-        }
-      ]
+      "description": "A Victorian parlor for smaller gatherings. Standing only, with seating on the furniture in the room. No seated dining."
     },
     {
       "@type": "MeetingRoom",
@@ -438,7 +396,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "@type": "Room",
       "@id": "https://thecrescenthouse1887.com/#room-the-chimes-vip-room",
       "name": "The Chimes VIP Room",
-      "description": "The room upstairs where the wedding party or the guest of honor gets ready. On the second floor, which is not ADA compliant."
+      "description": "The room upstairs where the wedding party or the guest of honor gets ready. On the second floor, reached by stairs, as there is no elevator."
     }
   ],
   "hasOfferCatalog": {
@@ -955,8 +913,8 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       </div>
       <div class="reveal">
         <figure class="hero-photo" style="margin:0;">
-          <picture><source type="image/webp" srcset="images/travel-office.webp" fetchpriority="high"><img fetchpriority="high" src="images/travel-office.jpg" data-es-alt="La oficina de Borsellino Travel dentro de The Chimes, con candelabro, vitral y un escritorio de época"
-               alt="The Borsellino Travel office inside The Chimes, with a chandelier, stained glass, and a period writing desk"  width="1024" height="1536" /></picture>
+          <picture><source type="image/webp" srcset="images/travel-office.webp" fetchpriority="high"><img fetchpriority="high" src="images/travel-office.jpg" data-es-alt="La oficina de Borsellino Travel dentro de The Crescent House, con candelabro, vitral y un escritorio de época"
+               alt="The Borsellino Travel office inside The Crescent House, with a chandelier, stained glass, and a period writing desk"  width="1024" height="1536" /></picture>
           <div class="hero-badge" data-es="Est. 1887 ·<br>Viajes y Planeación">Est. 1887 ·<br>Travel &amp; Planning</div>
         </figure>
       </div>
@@ -1009,7 +967,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     <div class="reveal sec-center" style="max-width:50ch;">
       <span class="eyebrow">What we do</span>
       <h2 style="margin-top:.7rem;">Trips planned by someone who answers the phone.</h2>
-      <p style="color:#473c34;max-width:56ch;margin-top:1rem;">Booking sites are fine until something goes wrong at midnight in a foreign airport. Sit down with a real agent, and you get a plan, and someone to call.</p>
+      <p style="color:#473c34;max-width:56ch;margin-top:1rem;" data-es="Las páginas de reservas funcionan bien hasta que algo sale mal a medianoche en un aeropuerto extranjero. Siéntese con un agente de verdad y obtendrá un plan, y a alguien a quien llamar.">Booking sites are fine until something goes wrong at midnight in a foreign airport. Sit down with a real agent, and you get a plan, and someone to call.</p>
     </div>
     <div class="setting">
       <article class="set-card reveal">
@@ -1065,7 +1023,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
       <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-ink);">201 W. Graham Avenue</div>
       <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
-      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Downtown Lake Elsinore, with a private reserved lot directly across the street coming soon. Walk in, or send a note and we will set a time to sit down properly.</p>
+      <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Downtown Lake Elsinore, with a private reserved lot directly across the street coming soon. Email us and we will set a time to sit down properly.</p>
       <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
       <button class="btn btn-brass" data-modal-open data-interest="travel">Plan a trip</button>
     </div>
@@ -1132,13 +1090,13 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
         </div>
         <div class="foot-col">
           <h3 class="foot-h">Visit</h3>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Chimes%2C%20201%20W%20Graham%20Ave%2C%20Lake%20Elsinore%2C%20CA%2092530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
           <a href="tel:+19517184204">(951) 718-4204</a>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
+      <span>© 2026 The Crescent House 1887 · Lake Elsinore, CA</span>
       <span>Travel · Events · Office Leasing</span>
       <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
     </div>
@@ -1149,7 +1107,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <div class="modal-overlay" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal">
     <div class="modal-head">
-      <span class="eyebrow">The Chimes</span>
+      <span class="eyebrow">The Crescent House</span>
       <h3 id="modalTitle">Plan a trip</h3>
       <p>Tell us about your trip and we'll be in touch within one to two business days.</p>
       <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
@@ -1239,10 +1197,10 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     [".why-grid .why-item:nth-child(3) h3", "Buenos con los grupos"],
     [".why-grid .why-item:nth-child(3) p", "Un sitio de reservas no puede coordinar a diez viajeros que salen de cuatro ciudades distintas con un solo presupuesto. Nosotros sí."],
     [".why-grid .why-item:nth-child(4) h3", "Aquí mismo en el pueblo"],
-    [".why-grid .why-item:nth-child(4) p", "En el centro de Lake Elsinore, en un edificio que ya conoce. Estaciónese enfrente y pase."],
+    [".why-grid .why-item:nth-child(4) p", "En el centro de Lake Elsinore, en un edificio que ya conoce. Llame o escríbanos para acordar una hora. Hay estacionamiento por todo el centro, y un estacionamiento privado al otro lado de la calle abrirá próximamente."],
     ["#contact-final .eyebrow", "Hablemos"],
     ["#contact-final h2", "Díganos a dónde quiere ir."],
-    ["#contact-final p:not(.phone)", "Mándenos la idea, aunque sea vaga, y le decimos cómo podría verse."],
+    ["#contact-final p:not(.phone):not(.ada-note):not(.cst)", "Mándenos la idea, aunque sea vaga, y le decimos cómo podría verse."],
     ["#contact-final .btn-brass", "Planee un viaje"],
     [".foot-mark .tag", "Un lugar histórico para celebrar la historia y crear recuerdos."],
     [".foot-cols .foot-col:nth-of-type(1) h3", "Borsellino Travel"],
@@ -1260,7 +1218,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     [".foot-cols .foot-col:nth-of-type(4) h3", "Visita"],
     [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
     [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
-    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Crescent House 1887 · Lake Elsinore, CA"],
     [".foot-base span:nth-of-type(2)", "Viajes · Eventos · Arrendamiento de oficinas"],
     [".modal-head p", "Cuéntenos sobre el viaje y le contactaremos en uno o dos días hábiles."],
     ["label[for=\"interest\"]", "Esta consulta es sobre"],
@@ -1277,7 +1235,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     ["#formSuccess h4", "Gracias, lo recibimos."],
     ["#formSuccess p", "Le contactaremos pronto para hablar de su viaje."],
     ["#stickyCta .btn", "Contáctenos"],
-    ["#visit p", "En el centro de Lake Elsinore, con un estacionamiento privado reservado justo enfrente próximamente. Pase directamente, o escríbanos y fijaremos un momento para sentarnos con calma."],
+    ["#visit p", "En el centro de Lake Elsinore, con un estacionamiento privado reservado justo enfrente próximamente. Escríbanos y fijaremos un momento para sentarnos con calma."],
   ];
 
   var I18N_ATTR = [
