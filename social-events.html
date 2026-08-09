@@ -50,9 +50,9 @@
   .charm img{cursor:zoom-in;}
   .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.2rem);margin-top:3rem;}
   .pkg{border:1px solid var(--line);background:var(--cream-card);padding:clamp(1.8rem,2.5vw,2.4rem);display:flex;flex-direction:column;}
-  .pkg .tier{font-family:"Cinzel",serif;font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-deep);}
+  .pkg .tier{font-family:"Cinzel",serif;font-size:.72rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-ink);}
   .pkg h3{font-size:1.7rem;margin:.6rem 0 .3rem;}
-  .pkg .price{font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-style:italic;color:var(--smoke);margin-bottom:1.2rem;}
+  .pkg .price{font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-style:italic;color:var(--brass-ink);margin-bottom:1.2rem;}
   .pkg ul{list-style:none;padding:0;margin:0 0 1.6rem;flex:1;}
   .pkg li{padding:.5rem 0;border-top:1px solid var(--line);font-size:.9rem;color:#3a302a;display:flex;gap:0;align-items:flex-start;}
   @media(max-width:1080px){
@@ -125,7 +125,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     "latitude": 33.6686208,
     "longitude": -117.3291812
   },
-  "hasMap": "https://www.google.com/maps/dir/?api=1&destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530",
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=The%20Chimes%2C%20201%20W%20Graham%20Ave%2C%20Lake%20Elsinore%2C%20CA%2092530",
   "sameAs": [
     "https://www.facebook.com/thecrescent1887",
     "https://www.instagram.com/thecrescenthouse1887",
@@ -284,67 +284,25 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "@type": "EventVenue",
       "@id": "https://thecrescenthouse1887.com/#room-rose-garden",
       "name": "Rose Garden",
-      "description": "The outdoor garden, used for ceremonies and for the largest receptions.",
-      "maximumAttendeeCapacity": 300,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 300
-        }
-      ]
+      "description": "The outdoor garden, used for ceremonies and for the largest receptions."
     },
     {
       "@type": "EventVenue",
       "@id": "https://thecrescenthouse1887.com/#room-fountain-plaza",
       "name": "Fountain Plaza",
-      "description": "The open air courtyard, used for dinner and dancing.",
-      "maximumAttendeeCapacity": 150,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 150
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Seated capacity",
-          "value": 100
-        }
-      ]
+      "description": "The open air courtyard, used for dinner and dancing."
     },
     {
       "@type": "EventVenue",
       "@id": "https://thecrescenthouse1887.com/#room-the-library-speakeasy",
       "name": "The Library Speakeasy",
-      "description": "The bar and cocktail room. All cocktail service happens here.",
-      "maximumAttendeeCapacity": 30,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 30
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Seated capacity",
-          "value": 10
-        }
-      ]
+      "description": "The bar and cocktail room. All cocktail service happens here."
     },
     {
       "@type": "Room",
       "@id": "https://thecrescenthouse1887.com/#room-the-parlor-room",
       "name": "The Parlor Room",
-      "description": "A Victorian parlor for smaller gatherings. Standing only, with seating on the furniture in the room. No seated dining.",
-      "maximumAttendeeCapacity": 30,
-      "additionalProperty": [
-        {
-          "@type": "PropertyValue",
-          "name": "Standing capacity",
-          "value": 30
-        }
-      ]
+      "description": "A Victorian parlor for smaller gatherings. Standing only, with seating on the furniture in the room. No seated dining."
     },
     {
       "@type": "MeetingRoom",
@@ -411,7 +369,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "@type": "Room",
       "@id": "https://thecrescenthouse1887.com/#room-the-chimes-vip-room",
       "name": "The Chimes VIP Room",
-      "description": "The room upstairs where the wedding party or the guest of honor gets ready. On the second floor, which is not ADA compliant."
+      "description": "The room upstairs where the wedding party or the guest of honor gets ready. On the second floor, reached by stairs, as there is no elevator."
     }
   ],
   "hasOfferCatalog": {
@@ -822,7 +780,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "name": "How many guests can you accommodate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Rose Garden holds up to 300 guests, Fountain Plaza up to 150 standing and 100 seated, and The Library up to 30 standing and 10 seated. The Parlor Room holds up to 30 standing and does not do seated dining, only seating on the furniture in the room. Those numbers move with your layout, because a seated dinner with a dance floor needs more room than a standing party. Share your guest count when you inquire, along with whether you want everyone seated, and we will confirm the right space and setup."
+        "text": "We book celebrations of up to about 300 guests across the property, with the Rose Garden, the Fountain Plaza courtyard, The Library Speakeasy, and the Victorian parlors all in use through the evening. What each space takes depends on your layout, because a seated dinner with a dance floor needs more room than a standing party. Share your guest count when you inquire, along with whether you want everyone seated, and we will confirm the space, the setup, and the final count for your date."
       }
     },
     {
@@ -830,7 +788,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "name": "Do you host quinceañeras?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, and it is one of our favorite celebrations to host. The Rose Garden works for the ceremony and the formal photographs, Fountain Plaza handles dinner and dancing, and The Chimes VIP Room upstairs is where the guest of honor and her court get ready before the entrance. One thing to raise early: the second floor is not ADA compliant, so if anyone in the family has accessibility needs, tell us when you inquire. See the quinceañera section above for what a full evening here looks like, or mention it directly when you send your date."
+        "text": "Yes, and it is one of our favorite celebrations to host. The Rose Garden works for the ceremony and the formal photographs, Fountain Plaza handles dinner and dancing, and The Chimes VIP Room upstairs is where the guest of honor and her court get ready before the entrance. One thing to raise early: there is no elevator, so the second floor is stairs only. If anyone in the family needs step-free access, tell us when you inquire. See the quinceañera section above for what a full evening here looks like, or mention it directly when you send your date."
       }
     },
     {
@@ -846,7 +804,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "name": "Is there parking for our guests?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. A private reserved parking lot sits directly across the street from the venue, so your guests can park just steps from the entrance. Additional street parking is available throughout the historic downtown district, which is also walkable to dining."
+        "text": "Yes. There is parking throughout the historic downtown district, most of it a short walk from the entrance, and the same streets are walkable to dining before or after your event. A private reserved lot directly across the street is being built now and will open soon, which will bring guest parking to within a few steps of the door. Until it opens, plan on the downtown district. Tell us your expected guest count when you inquire and we will be straight with you about what to expect on the day."
       }
     },
     {
@@ -855,6 +813,14 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Our Grand Opening Special holds your date with just a 25% deposit. The balance splits into two payments, with the final payment due 30 days before your event, and we include one free date change up to 90 days out. The deposit is non-refundable, and the final payment is non-refundable within 30 days of the event. The order is simple: send your date and guest count through the form, walk the building on a tour, then choose your setup and place the deposit. We reply within one to two business days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any venue policies we should know about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A few, and they are easier to plan around if you know them early. Music and other loud noise end at 10 PM. Smoking is permitted only in designated outdoor areas, never inside the building. Service animals are welcome throughout the property; pets and emotional support animals are not. Event insurance is required, and we will tell you the coverage to arrange and who to name on it when you book, in good time before your date. Security for your event is set out in your rental agreement, where the full policies live."
       }
     }
   ],
@@ -869,7 +835,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <!-- ===================== NAV ===================== -->
 <header class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="wordmark" aria-label="The Crescent House 1887, home"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Eventos Sociales">Social Events</span></span></a>
+    <a href="index.html" class="wordmark"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Eventos Sociales">Social Events</span></span><span class="a11y-only">, home</span></a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
         <div class="doors">
           <div class="grp"><a class="door" href="weddings.html"><span class="dt" data-es="Bodas">Weddings</span></a></div>
@@ -900,12 +866,12 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
             </div>
           </div>
         </div>
-        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
-        <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+        <a class="nav-call" href="tel:+19517184204" aria-label="Call The Crescent House 1887 at (951) 718-4204" data-es-aria="Llame a The Crescent House 1887 al (951) 718-4204"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(951) 718-4204</a>
+        <button class="lang-toggle" type="button" aria-label="Espa&ntilde;ol, switch this page to Spanish">Espa&ntilde;ol</button>
       </nav>
     <div class="nav-mobile-controls">
-      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Cambiar idioma">Espa&ntilde;ol</button>
+      <a class="nav-call-mobile" href="tel:+19517184204" aria-label="Call The Crescent House 1887 at (951) 718-4204" data-es-aria="Llame a The Crescent House 1887 al (951) 718-4204"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      <button class="lang-toggle lang-toggle-m" type="button" aria-label="Espa&ntilde;ol, switch this page to Spanish">Espa&ntilde;ol</button>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" data-es="Menú">Menu</button>
     </div>
   </div>
@@ -933,10 +899,10 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
             muted
             loop
             playsinline
-            preload="auto"
+            preload="none"
             poster="images/social-hero-flags.jpg"
-            aria-label="Slow pan across the lantern-lit veranda of The Chimes, the historic 1887 Crescent Bath House in downtown Lake Elsinore">
-            <source src="images/chimes-hero.mp4" type="video/mp4" />
+            aria-label="Slow pan across the lantern-lit veranda of The Crescent House, the historic 1887 Crescent Bath House in downtown Lake Elsinore">
+            <source data-src="images/chimes-hero.mp4" type="video/mp4" />
           </video>
           <div class="hero-badge">Est. 1887 ·<br>Celebrations &amp; Parties</div>
         </figure>
@@ -951,7 +917,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     <span class="fact">Est. 1887</span>
     <span class="fact">Indoor &amp; courtyard options</span>
     <span class="fact">Layouts for small and large groups</span>
-    <span class="fact">Private parking across the street</span>
+    <span class="fact">Private lot coming soon</span>
   </div>
 </section>
 
@@ -994,12 +960,12 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <section class="quote-band section">
   <div class="container charm">
     <div class="reveal">
-      <img src="images/social-fiestas.jpg" loading="lazy" decoding="async" alt="Mexican flags hanging the full height of the Victorian veranda at The Chimes, above the brick courtyard and stone fountain" data-es-alt="Banderas mexicanas colgadas a lo largo de la veranda victoriana de The Chimes, sobre el patio de ladrillo y la fuente de piedra"  width="1086" height="1448" />
+      <picture><source type="image/webp" srcset="images/social-fiestas.webp" fetchpriority="high"><img fetchpriority="high" src="images/social-fiestas.jpg" decoding="async" alt="Mexican flags hanging the full height of the Victorian veranda at The Crescent House, above the brick courtyard and stone fountain" data-es-alt="Banderas mexicanas colgadas a lo largo de la veranda victoriana de The Crescent House, sobre el patio de ladrillo y la fuente de piedra"  width="800" height="1067" /></picture>
     </div>
     <div class="reveal">
       <span class="eyebrow">Since 1887</span>
       <h2 style="margin-top:.7rem;">A backdrop with a past as rich as the occasion.</h2>
-      <p>Built in 1887 as the Crescent Bath House, a celebrated mineral-springs health resort, and later listed on the National Register of Historic Places, The Chimes is one of Lake Elsinore's original buildings. For more than a century it has been a place where the community gathered to celebrate. Your event becomes the newest chapter in a story the whole city knows.</p>
+      <p>Built in 1887 as the Crescent Bath House, a celebrated mineral-springs health resort, and later listed on the National Register of Historic Places, The Crescent House is one of Lake Elsinore's original buildings. For more than a century it has been a place where the community gathered to celebrate. Your event becomes the newest chapter in a story the whole city knows.</p>
       <p style="color:#473c34;">Hosts choose The Chimes because it offers something a rented venue never can: genuine history, one-of-a-kind architecture, and a sense of occasion the moment guests walk through the doors.</p>
     </div>
   </div>
@@ -1023,7 +989,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
           <li data-es="Opciones interiores y en el patio">Indoor and courtyard options</li>
           <li data-es="The Library Speakeasy para el cóctel">The Library Speakeasy for cocktails</li>
           <li data-es="Su banquetero de nuestra lista de proveedores preferidos">Your caterer from our preferred vendor list</li>
-          <li data-es="Estacionamiento privado al cruzar la calle">Private parking across the street</li>
+          <li data-es="Estacionamiento en el centro, y el privado próximamente">Downtown parking, private lot coming soon</li>
         </ul>
         <button class="btn btn-ghost" data-modal-open data-interest="social" data-es="Consultar">Inquire</button>
       </article>
@@ -1036,7 +1002,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
           <li data-es="The Parlor Room para un grupo pequeño">The Parlor Room for a smaller group</li>
           <li data-es="El Rose Garden para una fiesta al aire libre">The Rose Garden for a garden party</li>
           <li data-es="Su banquetero de nuestra lista de proveedores preferidos">Your caterer from our preferred vendor list</li>
-          <li data-es="Estacionamiento privado al cruzar la calle">Private parking across the street</li>
+          <li data-es="Estacionamiento en el centro, y el privado próximamente">Downtown parking, private lot coming soon</li>
         </ul>
         <button class="btn btn-ghost" data-modal-open data-interest="shower" data-es="Consultar">Inquire</button>
       </article>
@@ -1049,7 +1015,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
           <li data-es="El Rose Garden para la gran entrada">The Rose Garden for the grand entrance</li>
           <li data-es="Fountain Plaza para la cena al aire libre">Fountain Plaza for dinner under the open sky</li>
           <li data-es="Su banquetero de nuestra lista de proveedores preferidos">Your caterer from our preferred vendor list</li>
-          <li data-es="Estacionamiento privado al cruzar la calle">Private parking across the street</li>
+          <li data-es="Estacionamiento en el centro, y el privado próximamente">Downtown parking, private lot coming soon</li>
         </ul>
         <button class="btn btn-ghost" data-modal-open data-interest="quince" data-es="Consultar">Inquire</button>
       </article>
@@ -1066,7 +1032,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       <h2 style="margin-top:.7rem;">A milestone worth a grand entrance.</h2>
     </div>
     <div class="reveal" style="max-width:640px;margin:2.6rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2.2rem,5vw,3.4rem);">
-      <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-deep);">Quince Años</div>
+      <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-ink);">Quince Años</div>
       <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
       <p style="font-size:1.08rem;max-width:48ch;margin-inline:auto;">Your quinceañera deserves more than a rented venue. Make your grand entrance through original Victorian archways, dance beneath a century-old roof, and give your court a backdrop no one else in the valley has. The Chimes hosts your celebration exactly the way you picture it: elegant, personal, and unforgettable.</p>
       <div style="width:44px;height:1px;background:var(--brass);margin:1.6rem auto;"></div>
@@ -1086,7 +1052,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       <div class="why-item reveal"><div class="dot">01</div><div><h3>A photographer's dream</h3><p>Original arches and Victorian detail make every candid shot look intentional, no rented backdrop required.</p></div></div>
       <div class="why-item reveal"><div class="dot">02</div><div><h3>Flexible, not cookie cutter</h3><p>Dress the space up for a formal anniversary or keep it relaxed for a birthday, the room adapts to your event, not the other way around.</p></div></div>
       <div class="why-item reveal"><div class="dot">03</div><div><h3>Truly one of a kind</h3><p>There is only one 1887 Crescent Bath House in Lake Elsinore. Your celebration will not look like anyone else's.</p></div></div>
-      <div class="why-item reveal"><div class="dot">04</div><div><h3>In the heart of downtown</h3><p>Walkable to dining, with a private reserved parking lot right across the street for your guests.</p></div></div>
+      <div class="why-item reveal"><div class="dot">04</div><div><h3>In the heart of downtown</h3><p>Walkable to dining, with downtown parking for your guests and a private reserved lot across the street coming soon.</p></div></div>
     </div>
   </div>
 </section>
@@ -1102,10 +1068,10 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     <!-- To add a photo: copy a <figure class="g-tile"> block, point src at your file,
          and write both alt (English) and data-es-alt (Spanish). -->
     <div class="gallery-grid reveal">
-      <figure class="g-tile" data-cap="The Library Speakeasy · The Chimes" data-es-cap="The Library Speakeasy · The Chimes"><img src="images/social-bar.jpg" loading="lazy" decoding="async" alt="The bar inside The Library Speakeasy, with wooden stools and the gold chandelier overhead" data-es-alt="La barra dentro de The Library Speakeasy, con banquetas de madera y el candelabro dorado en lo alto"  width="1200" height="1600" /></figure>
-      <figure class="g-tile" data-cap="The grounds from above · The Chimes" data-es-cap="Los terrenos desde arriba · The Chimes"><img src="images/social-grounds-aerial.jpg" loading="lazy" decoding="async" alt="The grounds seen from above, showing the brick courtyard, the lawn, and the palms along the street" data-es-alt="Los terrenos vistos desde arriba, mostrando el patio de ladrillo, el césped y las palmeras junto a la calle"  width="1300" height="1499" /></figure>
-      <figure class="g-tile wide" data-cap="The grand piano · The Chimes" data-es-cap="El piano de cola · The Chimes"><img src="images/main-parlor.jpg" loading="lazy" decoding="async" style="object-position:58% center;" alt="The grand piano beneath a crystal chandelier, with red velvet armchairs on the patterned tile floor" data-es-alt="El piano de cola bajo un candelabro de cristal, con sillones de terciopelo rojo sobre el piso de mosaico"  width="1500" height="1125" /></figure>
-      <figure class="g-tile wide" data-cap="The courtyard · The Chimes" data-es-cap="El patio · The Chimes"><img src="images/social-courtyard-aerial.jpg" loading="lazy" decoding="async" style="object-position:52% center;" alt="The brick courtyard from above, set with bistro tables and chairs beside the flowering trees" data-es-alt="El patio de ladrillo visto desde arriba, con mesas y sillas bistró junto a los árboles en flor"  width="1500" height="1125" /></figure>
+      <figure class="g-tile" data-cap="The Library Speakeasy · The Chimes" data-es-cap="The Library Speakeasy · The Chimes"><picture><source type="image/webp" srcset="images/social-bar.webp"><img src="images/social-bar.jpg" loading="lazy" decoding="async" alt="The bar inside The Library Speakeasy, with wooden stools and the gold chandelier overhead" data-es-alt="La barra dentro de The Library Speakeasy, con banquetas de madera y el candelabro dorado en lo alto"  width="714" height="952" /></picture></figure>
+      <figure class="g-tile" data-cap="The grounds from above · The Chimes" data-es-cap="Los terrenos desde arriba · The Chimes"><picture><source type="image/webp" srcset="images/social-grounds-aerial.webp"><img src="images/social-grounds-aerial.jpg" loading="lazy" decoding="async" alt="The grounds seen from above, showing the brick courtyard, the lawn, and the palms along the street" data-es-alt="Los terrenos vistos desde arriba, mostrando el patio de ladrillo, el césped y las palmeras junto a la calle"  width="714" height="823" /></picture></figure>
+      <figure class="g-tile wide" data-cap="The grand piano · The Chimes" data-es-cap="El piano de cola · The Chimes"><picture><source type="image/webp" srcset="images/main-parlor.webp"><img src="images/main-parlor.jpg" loading="lazy" decoding="async" style="object-position:58% center;" alt="The grand piano beneath a crystal chandelier, with red velvet armchairs on the patterned tile floor" data-es-alt="El piano de cola bajo un candelabro de cristal, con sillones de terciopelo rojo sobre el piso de mosaico"  width="714" height="536" /></picture></figure>
+      <figure class="g-tile wide" data-cap="The courtyard · The Chimes" data-es-cap="El patio · The Chimes"><picture><source type="image/webp" srcset="images/social-courtyard-aerial.webp"><img src="images/social-courtyard-aerial.jpg" loading="lazy" decoding="async" style="object-position:52% center;" alt="The brick courtyard from above, set with bistro tables and chairs beside the flowering trees" data-es-alt="El patio de ladrillo visto desde arriba, con mesas y sillas bistró junto a los árboles en flor"  width="714" height="536" /></picture></figure>
     </div>
   </div>
 </section>
@@ -1139,13 +1105,13 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       <p id="lib-desc" style="color:#473c34;max-width:52ch;margin:1rem auto 0;">The Library is our intimate 1900s-inspired speakeasy at The Crescent House. Velvet seating, a single gold chandelier, and a bar of its own make it a room built for good conversation, strong cocktails, and your closest friends. Perfect for rehearsal dinners, birthdays, engagement parties, and private cocktail hours.</p>
     </div>
     <figure class="lib-photo reveal" style="margin:2.4rem auto 0;max-width:640px;">
-      <img src="images/library-speakeasy.jpg" loading="lazy" decoding="async" style="object-position:center 88%;" alt="The Library Speakeasy, looking past the velvet seating toward the bar beneath the gold chandelier" data-es-alt="The Library Speakeasy, mirando desde los asientos de terciopelo hacia la barra bajo el candelabro dorado"  width="1500" height="1125" />
+      <picture><source type="image/webp" srcset="images/library-speakeasy.webp"><img src="images/library-speakeasy.jpg" loading="lazy" decoding="async" style="object-position:center 88%;" alt="The Library Speakeasy, looking past the velvet seating toward the bar beneath the gold chandelier" data-es-alt="The Library Speakeasy, mirando desde los asientos de terciopelo hacia la barra bajo el candelabro dorado"  width="1500" height="1125" /></picture>
     </figure>
     <div class="reveal" style="max-width:640px;margin:2.4rem auto 0;background:var(--cream-card);border:1px solid var(--brass);box-shadow:0 30px 60px -30px rgba(33,26,22,.35);padding:clamp(2rem,4.5vw,3rem);">
-      <div id="lib-glance" style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-deep);">At a glance</div>
+      <div id="lib-glance" style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--brass-ink);">At a glance</div>
       <div style="width:44px;height:1px;background:var(--brass);margin:1rem auto;"></div>
       <ul id="lib-list" style="list-style:none;padding:0;margin:0;text-align:center;font-size:1.02rem;color:#473c34;display:grid;gap:.55rem;">
-        <li>Up to 30 guests, seven days a week</li>
+        <li>Available seven days a week</li>
         <li>Private three-hour buyouts</li>
         <li>From $750 on weekdays and $1,200 on weekends</li>
         <li>Wedding add-on: $500 when booked with The Chimes Events</li>
@@ -1165,11 +1131,12 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     </div>
     <div class="faq-wrap reveal">
       <div class="faq-item"><button class="faq-q" aria-expanded="false">What kinds of events can you host?</button><div class="faq-a"><p>Milestone birthdays, anniversaries, family reunions, quinceañeras, retirement parties, baby and bridal showers, and holiday gatherings. If it is worth celebrating, The Chimes can likely host it. The building carries a mix of indoor rooms and outdoor spaces, so a small dinner in The Parlor Room and a three hundred guest party in the Rose Garden both work here. Tell us the occasion, your date, and roughly how many people you expect when you inquire, and we will suggest the space that fits and what setup it needs.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many guests can you accommodate?</button><div class="faq-a"><p>The Rose Garden holds up to 300 guests, Fountain Plaza up to 150 standing and 100 seated, and The Library up to 30 standing and 10 seated. The Parlor Room holds up to 30 standing and does not do seated dining, only seating on the furniture in the room. Those numbers move with your layout, because a seated dinner with a dance floor needs more room than a standing party. Share your guest count when you inquire, along with whether you want everyone seated, and we will confirm the right space and setup.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you host quinceañeras?</button><div class="faq-a"><p>Yes, and it is one of our favorite celebrations to host. The Rose Garden works for the ceremony and the formal photographs, Fountain Plaza handles dinner and dancing, and The Chimes VIP Room upstairs is where the guest of honor and her court get ready before the entrance. One thing to raise early: the second floor is not ADA compliant, so if anyone in the family has accessibility needs, tell us when you inquire. See the quinceañera section above for what a full evening here looks like, or mention it directly when you send your date.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many guests can you accommodate?</button><div class="faq-a"><p>We book celebrations of up to about 300 guests across the property, with the Rose Garden, the Fountain Plaza courtyard, The Library Speakeasy, and the Victorian parlors all in use through the evening. What each space takes depends on your layout, because a seated dinner with a dance floor needs more room than a standing party. Share your guest count when you inquire, along with whether you want everyone seated, and we will confirm the space, the setup, and the final count for your date.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you host quinceañeras?</button><div class="faq-a"><p>Yes, and it is one of our favorite celebrations to host. The Rose Garden works for the ceremony and the formal photographs, Fountain Plaza handles dinner and dancing, and The Chimes VIP Room upstairs is where the guest of honor and her court get ready before the entrance. One thing to raise early: there is no elevator, so the second floor is stairs only. If anyone in the family needs step-free access, tell us when you inquire. See the quinceañera section above for what a full evening here looks like, or mention it directly when you send your date.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">Can we bring our own caterer and decorations?</button><div class="faq-a"><p>Yes, the space is flexible. Catering runs through our preferred vendor list, which we share when you inquire, and decorations are welcome within the care a historic building asks for. For the bar, you may bring your own licensed bar vendor with a valid ABC permit, liability insurance, and certified bartenders presented in advance, and cocktail service happens in The Library Speakeasy. Send us your decoration plan and vendor list when you book, and we will confirm what works against the original surfaces before you buy anything.</p></div></div>
-      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there parking for our guests?</button><div class="faq-a"><p>Yes. A private reserved parking lot sits directly across the street from the venue, so your guests can park just steps from the entrance. Additional street parking is available throughout the historic downtown district, which is also walkable to dining.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is there parking for our guests?</button><div class="faq-a"><p>Yes. There is parking throughout the historic downtown district, most of it a short walk from the entrance, and the same streets are walkable to dining before or after your event. A private reserved lot directly across the street is being built now and will open soon, which will bring guest parking to within a few steps of the door. Until it opens, plan on the downtown district. Tell us your expected guest count when you inquire and we will be straight with you about what to expect on the day.</p></div></div>
       <div class="faq-item"><button class="faq-q" aria-expanded="false">How do we reserve our date?</button><div class="faq-a"><p>Our Grand Opening Special holds your date with just a 25% deposit. The balance splits into two payments, with the final payment due 30 days before your event, and we include one free date change up to 90 days out. The deposit is non-refundable, and the final payment is non-refundable within 30 days of the event. The order is simple: send your date and guest count through the form, walk the building on a tour, then choose your setup and place the deposit. We reply within one to two business days.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Are there any venue policies we should know about?</button><div class="faq-a"><p>A few, and they are easier to plan around if you know them early. Music and other loud noise end at 10 PM. Smoking is permitted only in designated outdoor areas, never inside the building. Service animals are welcome throughout the property; pets and emotional support animals are not. Event insurance is required, and we will tell you the coverage to arrange and who to name on it when you book, in good time before your date. Security for your event is set out in your rental agreement, where the full policies live.</p></div></div>
     </div>
   </div>
 </section>
@@ -1178,13 +1145,13 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 <section class="final section" id="contact-final">
   <div class="container inner reveal">
     <span class="eyebrow">Let's talk</span>
-    <h2>Plan your celebration at The Crescent House.</h2>
+    <h2>Plan your celebration at The Chimes.</h2>
     <p>Tell us what you're celebrating, and we'll be in touch to start planning a day your guests won't forget.</p>
     <button class="btn btn-brass" data-modal-open data-interest="social">Check availability</button>
     <p class="phone">CALL · <a href="tel:+19517184204">(951) 718-4204</a> &nbsp;·&nbsp; <a href="mailto:info@thechimesevents.com">info@thechimesevents.com</a></p>
   </div>
 
-      <p class="ada-note reveal" data-es="Accesibilidad. The Crescent House es un edificio histórico y el segundo piso no cumple con las normas ADA. Si usted o alguno de sus invitados requiere adaptaciones de accesibilidad, contáctenos antes de su visita o su evento. Le diremos con exactitud qué puede y qué no puede acomodar el edificio, y trabajaremos con usted a partir de ahí.">Accessibility. The Crescent House is a historic building and the second floor is not ADA compliant. If you or any of your guests have accessibility needs, please contact us before your visit or your event. We will tell you exactly what the building can and cannot accommodate, and work with you from there.</p>
+      <p class="ada-note reveal" data-es="Accesibilidad. The Crescent House se construyó en 1887 y el edificio lo refleja. La entrada de Graham Avenue tiene escalones. Hay un acceso sin escalones por la parte de atrás, desde el estacionamiento en el lugar. No hay elevador, así que al segundo piso se sube por escalera. Si usted o alguien de su grupo necesita acceso sin escalones, avísenos al reservar y lo dejaremos listo antes de su llegada, no el mismo día.">Accessibility. The Crescent House was built in 1887 and the building reflects that. The Graham Avenue entrance has steps. There is a step-free way in at the rear, from the parking on site. There is no elevator, so the second floor is reached by stairs. If you or anyone in your group needs step-free access, tell us when you book and we will have it arranged before you arrive rather than on the day.</p>
     </section>
 
 </main>
@@ -1224,13 +1191,13 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
         </div>
         <div class="foot-col">
           <h3 class="foot-h">Visit</h3>
-          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Chimes,+201+W+Graham+Ave,+Lake+Elsinore,+CA+92530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Chimes%2C%20201%20W%20Graham%20Ave%2C%20Lake%20Elsinore%2C%20CA%2092530" target="_blank" rel="noopener">201 W. Graham Ave<br>Lake Elsinore, CA</a>
           <a href="tel:+19517184204">(951) 718-4204</a>
         </div>
       </div>
     </div>
     <div class="foot-base">
-      <span>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
+      <span>© 2026 The Crescent House 1887 · Lake Elsinore, CA</span>
       <span>Celebrations · Events · Office Leasing</span>
       <span class="foot-legal"><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms &amp; Conditions</a> · <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></span>
     </div>
@@ -1313,14 +1280,14 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     [".facts .fact:nth-child(1)", "Est. 1887"],
     [".facts .fact:nth-child(2)", "Opciones interiores y en el patio"],
     [".facts .fact:nth-child(3)", "Montajes para grupos pequeños y grandes"],
-    [".facts .fact:nth-child(4)", "Estacionamiento privado enfrente"],
+    [".facts .fact:nth-child(4)", "Estacionamiento privado próximamente"],
     [".quote-inner p", "Cien años de celebraciones. Todavía hay lugar en la historia para la suya."],
     ["#celebrations .eyebrow", "Celebraciones"],
     ["#celebrations h2", "Un solo lugar para cada celebración."],
     ["#celebrations > .container > .reveal > p", "Cumpleaños importantes, aniversarios, reuniones familiares, fiestas de jubilación y celebraciones navideñas encuentran un hogar dentro del mismo edificio restaurado de 1887, arreglado con elegancia o sencillo, exactamente como usted lo quiera."],
     [".setting .set-card:nth-child(1) .n", "Cumpleaños importantes"],
     [".setting .set-card:nth-child(1) h3", "Un cumpleaños a la altura de la ocasión"],
-    [".setting .set-card:nth-child(1) p", "Desde un cumpleaños de 40 hasta uno de 90, celebre la ocasión dentro de el Rose Garden con un siglo de carácter integrado, casi sin necesidad de decoración extra."],
+    [".setting .set-card:nth-child(1) p", "Desde un cumpleaños de 40 hasta uno de 90, celebre la ocasión en el Rose Garden o en Fountain Plaza, con un siglo de carácter integrado y sin necesidad de decoración adicional."],
     [".setting .set-card:nth-child(2) .n", "Aniversarios y reuniones"],
     [".setting .set-card:nth-child(2) h3", "Reúna de nuevo a todos"],
     [".setting .set-card:nth-child(2) p", "Reúna a familia y viejos amigos en un lugar que se siente como una ocasión especial desde que entran, con espacio para convivir adentro y afuera."],
@@ -1329,7 +1296,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     [".setting .set-card:nth-child(3) p", "Cierre el año, o una carrera, con una fiesta a la altura del momento, en un ícono del centro que sus invitados recordarán."],
     [".charm .eyebrow", "Est. 1887"],
     [".charm h2", "Un entorno con un pasado tan rico como la ocasión."],
-    [".charm > .reveal:nth-of-type(2) p:nth-of-type(1)", "Construido en 1887 como el Crescent Bath House, un célebre balneario de aguas minerales, y luego inscrito en el Registro Nacional de Lugares Históricos, The Chimes es uno de los edificios originales de Lake Elsinore. Por más de un siglo ha sido un lugar donde la comunidad se reunía a celebrar. Su evento se convierte en el capítulo más reciente de una historia que toda la ciudad conoce."],
+    [".charm > .reveal:nth-of-type(2) p:nth-of-type(1)", "Construido en 1887 como el Crescent Bath House, un célebre balneario de aguas minerales, y luego inscrito en el Registro Nacional de Lugares Históricos, The Crescent House es uno de los edificios originales de Lake Elsinore. Por más de un siglo ha sido un lugar donde la comunidad se reunía a celebrar. Su evento se convierte en el capítulo más reciente de una historia que toda la ciudad conoce."],
     [".charm > .reveal:nth-of-type(2) p:nth-of-type(2)", "Los anfitriones eligen The Chimes porque ofrece algo que un salón rentado nunca podrá: historia genuina, arquitectura única y una sensación de ocasión desde el momento en que los invitados cruzan la puerta."],
     ["#quince h2", "Un momento que merece una gran entrada."],
     ["#quince p", "Su quinceañera merece más que un salón rentado. Haga su gran entrada por los arcos victorianos originales, baile bajo un techo con un siglo de historia, y dele a su corte un fondo que nadie más en el valle tiene. En The Chimes, su fiesta es exactamente como la imagina: elegante, personal e inolvidable."],
@@ -1343,25 +1310,27 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     [".why-grid .why-item:nth-child(3) h3", "Verdaderamente único"],
     [".why-grid .why-item:nth-child(3) p", "Solo existe un Crescent Bath House de 1887 en Lake Elsinore. Su celebración no se parecerá a ninguna otra."],
     [".why-grid .why-item:nth-child(4) h3", "En el corazón del centro"],
-    [".why-grid .why-item:nth-child(4) p", "A poca distancia de restaurantes, con un estacionamiento privado reservado justo enfrente para sus invitados."],
+    [".why-grid .why-item:nth-child(4) p", "A poca distancia de restaurantes, con estacionamiento en el centro para sus invitados y un estacionamiento privado reservado enfrente próximamente."],
     ["#gallery h2", "Imagine su celebración aquí."],
     ["#gallery p", "Toque cualquier foto para verla de cerca. Se agregan más fotos reales conforme se celebran eventos aquí."],
     ["#faq h2", "Preguntas sobre eventos sociales"],
     [".faq-wrap .faq-item:nth-child(1) .faq-q", "¿Qué tipo de eventos pueden recibir?"],
     [".faq-wrap .faq-item:nth-child(1) .faq-a p", "Cumpleaños importantes, aniversarios, reuniones familiares, quinceañeras, fiestas de jubilación, baby showers y despedidas de soltera, y celebraciones navideñas. Si vale la pena celebrarlo, The Chimes probablemente puede recibirlo. El edificio combina salones interiores y espacios al aire libre, así que una cena pequeña en la Parlor Room y una fiesta de trescientos invitados en el Rose Garden funcionan igual de bien aquí. Cuéntenos la ocasión, su fecha y cuántas personas espera al escribirnos, y le sugeriremos el espacio que le queda y el montaje que necesita."],
     [".faq-wrap .faq-item:nth-child(2) .faq-q", "¿Cuántos invitados pueden recibir?"],
-    [".faq-wrap .faq-item:nth-child(2) .faq-a p", "El Rose Garden recibe hasta 300 invitados, Fountain Plaza hasta 150 de pie y 100 sentadas, y The Library hasta 30 de pie y 10 sentadas. La Parlor Room recibe hasta 30 de pie y no ofrece cena sentada, solo asientos en los muebles del salón. Esos números cambian según su montaje, porque una cena sentada con pista de baile necesita más espacio que una fiesta de pie. Indíquenos su número de invitados al escribirnos, y si quiere a todos sentados, y le confirmaremos el espacio y el montaje adecuados."],
+    [".faq-wrap .faq-item:nth-child(2) .faq-a p", "Reservamos celebraciones de hasta unos 300 invitados en toda la propiedad, con el Rose Garden, el patio de Fountain Plaza, The Library Speakeasy y los salones victorianos en uso a lo largo de la noche. Lo que admite cada espacio depende de su montaje, porque una cena sentada con pista de baile necesita más espacio que una fiesta de pie. Indíquenos su número de invitados al escribirnos, y si quiere a todos sentados, y le confirmaremos el espacio, el montaje y el número final para su fecha."],
     [".faq-wrap .faq-item:nth-child(3) .faq-q", "¿Reciben quinceañeras?"],
-    [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí, y es una de las celebraciones que más nos gusta recibir. El Rose Garden funciona para la ceremonia y las fotografías formales, Fountain Plaza para la cena y el baile, y La Chimes VIP Room en el piso de arriba es donde la quinceañera y su corte se arreglan antes de la entrada. Algo que conviene mencionar desde el principio: el segundo piso no cumple con las normas ADA, así que si alguien de la familia tiene necesidades de accesibilidad, díganoslo al escribirnos. Consulte la sección de quinceañeras arriba, o menciónelo al enviarnos su fecha."],
+    [".faq-wrap .faq-item:nth-child(3) .faq-a p", "Sí, y es una de las celebraciones que más nos gusta recibir. El Rose Garden funciona para la ceremonia y las fotografías formales, Fountain Plaza para la cena y el baile, y The Chimes VIP Room en el piso de arriba es donde la quinceañera y su corte se arreglan antes de la entrada. Algo que conviene mencionar desde el principio: no hay elevador, así que al segundo piso se sube por escalera. Si alguien de la familia necesita acceso sin escalones, díganoslo al escribirnos. Consulte la sección de quinceañeras arriba, o menciónelo al enviarnos su fecha."],
     [".faq-wrap .faq-item:nth-child(4) .faq-q", "¿Podemos traer nuestro propio catering y decoración?"],
     [".faq-wrap .faq-item:nth-child(4) .faq-a p", "Sí, el espacio es flexible. El catering se maneja a través de nuestra lista de proveedores preferidos, que compartimos cuando usted nos escribe, y la decoración es bienvenida dentro del cuidado que pide un edificio histórico. Para el bar, puede traer su propio proveedor con licencia, presentando por adelantado un permiso ABC vigente, seguro de responsabilidad civil y cantineros certificados, y el servicio de cócteles se realiza en The Library Speakeasy. Envíenos su plan de decoración y su lista de proveedores al reservar, y le confirmaremos qué funciona sobre las superficies originales antes de que compre nada."],
     [".faq-wrap .faq-item:nth-child(5) .faq-q", "¿Hay estacionamiento para nuestros invitados?"],
-    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Hay un estacionamiento privado reservado justo enfrente del lugar, al cruzar la calle, para que sus invitados se estacionen a pasos de la entrada. También hay estacionamiento en la calle por todo el distrito histórico del centro."],
+    [".faq-wrap .faq-item:nth-child(5) .faq-a p", "Sí. Hay estacionamiento por todo el centro histórico, casi todo a poca distancia de la entrada, y esas mismas calles quedan a pasos de los restaurantes antes o después de su evento. Un estacionamiento privado reservado, justo enfrente, está en construcción y abrirá próximamente, lo que dejará el estacionamiento de invitados a unos pasos de la puerta. Mientras tanto, cuente con el centro. Díganos cuántos invitados espera al consultar y le hablaremos con franqueza sobre qué esperar ese día."],
     [".faq-wrap .faq-item:nth-child(6) .faq-q", "¿Cómo reservamos nuestra fecha?"],
     [".faq-wrap .faq-item:nth-child(6) .faq-a p", "Nuestra promoción de gran apertura aparta su fecha con solo un anticipo del 25%. El saldo se divide en dos pagos, con el pago final 30 días antes de su evento, e incluimos un cambio de fecha gratis hasta 90 días antes. El anticipo no es reembolsable, y el pago final no es reembolsable dentro de los 30 días previos al evento. El orden es sencillo: envíe su fecha y número de invitados por el formulario, recorra el edificio en una visita, y luego elija su montaje y entregue el anticipo. Respondemos en uno o dos días hábiles."],
+    [".faq-wrap .faq-item:nth-child(7) .faq-q", "¿Hay políticas del lugar que debamos conocer?"],
+    [".faq-wrap .faq-item:nth-child(7) .faq-a p", "Algunas, y son más fáciles de planear si las conoce con tiempo. La música y cualquier ruido fuerte terminan a las 10 PM. Se permite fumar únicamente en las áreas exteriores designadas, nunca dentro del edificio. Los animales de servicio son bienvenidos en toda la propiedad; las mascotas y los animales de apoyo emocional no. Se requiere un seguro para el evento, y le indicaremos la cobertura que debe contratar y a quién nombrar en la póliza cuando reserve, con tiempo antes de su fecha. La seguridad para su evento se establece en su contrato de renta, donde están las políticas completas."],
     ["#contact-final .eyebrow", "Hablemos"],
     ["#contact-final h2", "Planee su celebración en The Chimes."],
-    ["#contact-final p:not(.phone)", "Cuéntenos qué está celebrando y nos pondremos en contacto para empezar a planear un día que sus invitados no olvidarán."],
+    ["#contact-final p:not(.phone):not(.ada-note)", "Cuéntenos qué está celebrando y nos pondremos en contacto para empezar a planear un día que sus invitados no olvidarán."],
     ["#contact-final .btn-brass", "Consulte disponibilidad"],
     ["#contact-final .phone", "LLAMAR · <a href=\"tel:+19517184204\">(951) 718-4204</a> &nbsp;·&nbsp; <a href=\"mailto:info@thechimesevents.com\">info@thechimesevents.com</a>"],
     [".foot-mark .tag", "Un lugar histórico para celebrar la historia y crear recuerdos."],
@@ -1380,7 +1349,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     [".foot-cols .foot-col:nth-of-type(4) h3", "Visita"],
     [".foot-legal a[href=\"privacy.html\"]", "Política de Privacidad"],
     [".foot-legal a[href=\"terms.html\"]", "Términos y Condiciones"],
-    [".foot-base span:nth-of-type(1)", "© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA"],
+    [".foot-base span:nth-of-type(1)", "© 2026 The Crescent House 1887 · Lake Elsinore, CA"],
     [".foot-base span:nth-of-type(2)", "Celebraciones · Eventos · Arrendamiento de oficinas"],
     [".modal-head p", "Cuéntenos sobre su evento y le contactaremos en uno o dos días hábiles."],
     ["label[for=\"interest\"]", "Esta consulta es sobre"],
@@ -1412,7 +1381,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     ["#library h2", "Terciopelo, latón y una barra para su grupo."],
     ["#lib-desc", "The Library es nuestro íntimo speakeasy de inspiración 1900 en The Crescent House. Los asientos de terciopelo, un solo candelabro dorado y su propia barra lo convierten en un salón hecho para la buena conversación, los cócteles bien preparados y sus amigos más cercanos. Perfecto para cenas de ensayo, cumpleaños, fiestas de compromiso y horas de cóctel privadas."],
     ["#lib-glance", "De un vistazo"],
-    ["#lib-list li:nth-child(1)", "Hasta 30 invitados, los siete días de la semana"],
+    ["#lib-list li:nth-child(1)", "Disponible los siete días de la semana"],
     ["#lib-list li:nth-child(2)", "Reservas privadas de tres horas"],
     ["#lib-list li:nth-child(3)", "Desde $750 entre semana y $1,200 los fines de semana"],
     ["#lib-list li:nth-child(4)", "Complemento de boda: $500 al reservar con The Chimes Events"],
@@ -1422,7 +1391,7 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
   ];
 
   var I18N_ATTR = [
-    ["#heroVideo", "aria-label", "Vista panorámica de la veranda iluminada de The Chimes, el histórico Crescent Bath House de 1887 en el centro de Lake Elsinore"],
+    ["#heroVideo", "aria-label", "Vista panorámica de la veranda iluminada de The Crescent House, el histórico Crescent Bath House de 1887 en el centro de Lake Elsinore"],
     ["#guests", "placeholder", "Opcional"],
     ["#message", "placeholder", "Su visión, imprescindibles o cualquier pregunta."],
   ];

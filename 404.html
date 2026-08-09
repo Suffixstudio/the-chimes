@@ -4,8 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="color-scheme" content="light" />
-<title>Page Not Found · The Chimes · The Crescent House 1887</title>
-<meta name="description" content="That page does not exist at The Chimes. Head back to the historic 1887 Crescent Bath House in downtown Lake Elsinore." />
+<title>Page Not Found · The Crescent House 1887</title>
+<meta name="description" content="That page does not exist at The Crescent House. Head back to the historic 1887 Crescent Bath House in downtown Lake Elsinore." />
 <meta name="robots" content="noindex" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-weight='700' font-size='21' fill='%23F3ECDD' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  :root{
+  :root{--brass-ink:#7A5F2A;--smoke-ink:#6D6154;
     color-scheme: only light;
     --ink:#211A16; --forest:#2F4A3A; --forest-deep:#1E3227;
     --brass:#9A7B33; --brass-light:#C29B4E;
@@ -99,6 +99,65 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
 /* 5 Aug. A long address is one unbreakable word to a browser unless you say
    otherwise, and this page loads no shared stylesheet to say it in. */
 a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
+
+
+/* ==========================================================
+   TOUCH  ·  added 8 August
+   ========================================================== */
+
+/* No hover on a touch screen. See fix_touch.py for why the first tap
+   was being eaten. !important is needed only here: four pages declare
+   their own .btn-primary:hover in an inline style block that loads
+   after this file, and it is scoped to the transform, nothing else. */
+@media (hover: none) {
+  .btn:hover, .btn-primary:hover, .btn-ghost:hover, .btn-brass:hover,
+  .card-btn:hover, .path-card:hover, .space-card:hover, .evt-card:hover,
+  .pkg:hover, .g-tile:hover img, .space-card:hover .space-media img,
+  header.nav .nav-call:hover, header.nav .nav-call-mobile:hover {
+    transform: none !important;
+  }
+  /* Nothing worth hiding behind a hover that is never going to happen.
+     Both selectors are deliberately one step longer than the rules they
+     are overriding. A media query adds no specificity, and the rules that
+     hide these live in each page's own inline block, which loads after
+     this file, so an equal-specificity override would quietly lose. The
+     first version of this did lose, and the caption test caught it. */
+  .g-tile .g-cap { opacity: 1; transform: none; }
+  .space-card .space-media .zoom { opacity: 1; }
+}
+
+/* The press. A brass ring around the edge, not a colour across the
+   label, so the words stay readable while it is held down. */
+.btn:active, .card-btn:active, .faq-q:active,
+header.nav .menu-btn:active, header.nav .lang-toggle:active,
+.modal-close:active, .g-tile:active, .space-media:active {
+  box-shadow: 0 0 0 3px rgba(194,155,78,.6), 0 2px 7px -2px rgba(33,26,22,.55);
+  transition-duration: 0s;
+}
+.btn:active, .card-btn:active { transform: translateY(1px); }
+
+/* Safari draws this the instant a finger lands, before any transition
+   can run, so it is the fastest confirmation available. */
+a, button, .btn, .card-btn, .g-tile, .space-media, .faq-q,
+[data-modal-open], summary, label {
+  -webkit-tap-highlight-color: rgba(194,155,78,.32);
+}
+
+/* The date field. It gave itself a width from its own contents and a
+   grid child will not shrink below that unless told it may, so the box
+   grew out of line with the others the moment a date went in. And it
+   centres its value while every other field reads from the left. */
+.field-row > * { min-width: 0; }
+.field input[type="date"] { min-width: 0; width: 100%; }
+.field input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-height: 1.25em;
+  margin: 0;
+}
+.field input[type="date"]::-webkit-calendar-picker-indicator {
+  margin-inline-start: auto;
+  opacity: .55;
+}
 </style>
 </head>
 <body>
@@ -109,7 +168,7 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
   <a class="brand" href="index.html">
     <span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span></span>
   </a>
-  <button class="lang-toggle" type="button" aria-label="Cambiar idioma">Español</button>
+  <button class="lang-toggle" type="button" aria-label="Español, switch this page to Spanish">Español</button>
 </div>
 
 <main id="main">
@@ -140,7 +199,7 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
 </main>
 
 <footer>
-  <span data-es="© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA">© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</span>
+  <span data-es="© 2026 The Crescent House 1887 · Lake Elsinore, CA">© 2026 The Crescent House 1887 · Lake Elsinore, CA</span>
   <br />
   <a href="privacy.html" data-es="Política de Privacidad">Privacy Policy</a>
   <span class="sep">·</span>

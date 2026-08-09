@@ -13,7 +13,7 @@
        <link rel="stylesheet" href="interior.css" />
    ============================================================ */
 
-.eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass);display:inline-flex;align-items:center;gap:.7rem;}
+.eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-ink);display:inline-flex;align-items:center;gap:.7rem;}
 h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05;margin:0;color:var(--ink);}
 h1{font-size:clamp(2.9rem,7vw,5.4rem);letter-spacing:-.5px;}
 .container{width:min(1180px,92vw);margin-inline:auto;}
@@ -47,17 +47,17 @@ h1{font-size:clamp(2.9rem,7vw,5.4rem);letter-spacing:-.5px;}
 .hero-badge{position:absolute;bottom:-18px;left:-18px;background:var(--brass);color:#231a10;font-family:"Cinzel",serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:.7rem 1rem;border-radius:2px;line-height:1.4;box-shadow:0 12px 30px -12px rgba(0,0,0,.5);z-index:2;}
 .facts{border-bottom:1px solid var(--line);}
 .facts-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.9rem 1.4rem;padding:1.35rem 0;}
-.fact{font-family:"Cinzel",serif;font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke);display:inline-flex;align-items:center;gap:1.4rem;}
+.fact{font-family:"Cinzel",serif;font-size:.64rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--smoke-ink);display:inline-flex;align-items:center;gap:1.4rem;}
 .fact + .fact::before{content:"";width:6px;height:6px;background:var(--brass);transform:rotate(45deg);flex:none;}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.6rem,3vw,2.6rem);margin-top:3rem;text-align:center;}
-.step .dot{width:40px;height:40px;margin:0 auto .9rem;border:1px solid var(--brass);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cinzel",serif;color:var(--brass);font-size:.9rem;}
+.step .dot{width:40px;height:40px;margin:0 auto .9rem;border:1px solid var(--brass);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cinzel",serif;color:var(--brass-ink);font-size:.9rem;}
 .step h3{font-size:1.35rem;margin:0 0 .4rem;}
 .step p{font-size:.92rem;color:#473c34;margin:0;}
 .quote-inner{text-align:center;padding:clamp(3rem,5vw,4.2rem) 0;}
 .quote-inner p{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.6rem,3vw,2.4rem);color:var(--accent);max-width:26ch;margin:0 auto;line-height:1.25;}
 .setting{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.4rem);margin-top:3rem;}
 .set-card{background:var(--cream-card);border:1px solid var(--line);padding:clamp(1.8rem,2.5vw,2.4rem);}
-.set-card .n{font-family:"Cinzel",serif;font-size:.7rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass);}
+.set-card .n{font-family:"Cinzel",serif;font-size:.7rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--brass-ink);}
 .set-card h3{font-size:1.5rem;margin:.7rem 0 .7rem;}
 .set-card p{color:#473c34;font-size:.95rem;margin:0;}
 .charm{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.8rem,4vw,3.5rem);align-items:center;}
@@ -65,7 +65,7 @@ h1{font-size:clamp(2.9rem,7vw,5.4rem);letter-spacing:-.5px;}
 .charm p{color:#473c34;}
 .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.2rem,3vw,2.4rem) clamp(2rem,5vw,4rem);margin-top:3rem;}
 .why-item{display:flex;gap:1rem;align-items:flex-start;}
-.why-item .dot{width:34px;height:34px;flex:none;border:1px solid var(--brass);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cinzel",serif;color:var(--brass);font-size:.85rem;}
+.why-item .dot{width:34px;height:34px;flex:none;border:1px solid var(--brass);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Cinzel",serif;color:var(--brass-ink);font-size:.85rem;}
 .why-item h3{font-size:1.25rem;margin:.1rem 0 .4rem;}
 .why-item p{font-size:.92rem;color:#473c34;margin:0;}
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:3rem;}
@@ -77,7 +77,10 @@ h1{font-size:clamp(2.9rem,7vw,5.4rem);letter-spacing:-.5px;}
 .final .inner{position:relative;z-index:1;}
 .final .eyebrow{color:var(--brass-light);justify-content:center;}
 .final .eyebrow::before{background:var(--brass-light);}
-.final h2{color:#F6ECDA;margin:.7rem 0 1.2rem;}
+.final h2{color:#F6ECDA;margin:.7rem auto 1.2rem;}  /* auto, not 0. styles.css shrinks this heading to fit its text and then
+     centers it with margin-inline:auto. The shorthand here loaded later and
+     reset that to 0, so the heading sat flush left inside a centered block
+     on 4 of the 8 pages that have one. */
 .final p{color:rgba(241,230,211,.8);max-width:46ch;margin:0 auto 2.2rem;}
 .final .phone{margin-top:2rem;font-family:"Cinzel",serif;letter-spacing:.16em;font-size:.85rem;color:var(--brass-light);}
 .final .phone a{color:#F1E6D3;text-decoration:none;border-bottom:1px solid rgba(217,186,119,.4);}

@@ -220,7 +220,7 @@
     return (LABELS[lang] && LABELS[lang][topic]) || DEFAULT[lang];
   }
 
-  function openModal(topic) {
+  function openModal(topic, pack) {
     if (!modal) return;
     lastFocus = document.activeElement;
     closeMenu();                                  /* never leave the menu open behind it */
@@ -250,6 +250,15 @@
       var oldWarn = form.querySelector('#formError');
       if (oldWarn) oldWarn.textContent = '';
     }
+    var pkg = $('#package');
+    if (pkg) {
+      pkg.value = '';
+      if (pack) {
+        Array.prototype.forEach.call(pkg.options, function (o) {
+          if (o.value === pack) pkg.value = pack;
+        });
+      }
+    }
     window.currentTopic = topic;
     var title = $('#modalTitle');
     if (title) title.textContent = modalTitleFor(topic);
@@ -270,7 +279,9 @@
 
   if (modal) {
     $$('[data-modal-open]').forEach(function (b) {
-      b.addEventListener('click', function () { openModal(b.getAttribute('data-interest')); });
+      b.addEventListener('click', function () {
+        openModal(b.getAttribute('data-interest'), b.getAttribute('data-package'));
+      });
     });
     var mClose = $('#modalClose');
     if (mClose) mClose.addEventListener('click', closeModal);
@@ -296,6 +307,7 @@
     tour:      { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
     group:     { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
     office:    { guests: { label: 'People on your team',  max: 30,  ph: 'How many' }, date: 'Preferred start date' },
+    training:  { guests: { label: 'People in your group', max: 50,  ph: 'Up to 50' }, date: 'Preferred date' },
     virtual:   { guests: null,                                                        date: 'Preferred start date' },
     travel:    { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
     business:  { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
@@ -318,6 +330,11 @@
   function ruleFor(value) {
     var v = String(value || '').toLowerCase();
     if (FIELD_RULES[v]) return FIELD_RULES[v];
+    /* The Training Center has to be tested before the office
+       rule below. That rule caps the head count at 30, and this
+       room seats 32 classroom style and 50 theater style, so a
+       real number would have been silently wiped. */
+    if (/training/.test(v))                   return FIELD_RULES.training;
     if (/tour|scout/.test(v))                 return FIELD_RULES.tour;
     if (/workspace|desk|office|boardroom|meeting|offsite/.test(v)) return FIELD_RULES.office;
     if (/virtual/.test(v))                    return FIELD_RULES.virtual;
@@ -696,9 +713,19 @@
   var heroVideo = $('#heroVideo');
   if (heroVideo) {
     if (prefersReducedMotion) {
+      /* The visitor asked for less motion, and the stylesheet already
+         hides the video and shows the still instead. Leaving the address
+         in data-src means the file is never requested at all, so they are
+         no longer downloading three megabytes of video to look at a
+         photograph. */
       heroVideo.removeAttribute('loop');
-      heroVideo.pause();                   /* the visitor asked for less motion */
+      heroVideo.pause();
     } else {
+      /* The <source> carries the address in data-src, not src, so the
+         browser has nothing to fetch while the page is still loading. Fill
+         it in once everything else has arrived. Until then the poster is on
+         screen, and the poster is the video's own first frame, so there is
+         nothing to see happen. */
       var vStarted = false;
       var startVideo = function () {
         if (vStarted) return;
@@ -706,11 +733,28 @@
         var p = heroVideo.play();
         if (p && p.catch) p.catch(function () {});   /* browser refused. The poster stays. Fine. */
       };
-      if (heroVideo.readyState >= 4) {
-        startVideo();                      /* already buffered enough */
+      var beginLoading = function () {
+        var s = heroVideo.querySelector('source[data-src]');
+        if (s) {
+          s.src = s.getAttribute('data-src');
+          s.removeAttribute('data-src');
+          heroVideo.load();
+        }
+        if (heroVideo.readyState >= 3) {
+          startVideo();                    /* already buffered enough */
+        } else {
+          heroVideo.addEventListener('canplay', startVideo, { once: true });
+          setTimeout(startVideo, 4000);    /* slow line: start anyway rather
+                                              than sit dead */
+        }
+      };
+      /* wait for the page to finish, then one frame more */
+      if (document.readyState === 'complete') {
+        setTimeout(beginLoading, 200);
       } else {
-        heroVideo.addEventListener('canplaythrough', startVideo, { once: true });
-        setTimeout(startVideo, 4000);      /* slow line: start anyway rather than sit dead */
+        window.addEventListener('load', function () {
+          setTimeout(beginLoading, 200);
+        }, { once: true });
       }
     }
   }
@@ -802,7 +846,12 @@
         var small = b.classList.contains('lang-toggle-m') || b.classList.contains('nav-lang-mobile');
         b.textContent = es ? 'English' : 'Español';
       }
-      b.setAttribute('aria-label', es ? 'Switch to English' : 'Cambiar a español');
+      /* WCAG 2.5.3, Label in Name. The name has to start with the word
+         printed on the button, or somebody saying "click English" out loud
+         gets nothing. The rest of the name is in the language the reader is
+         reading right now. */
+      b.setAttribute('aria-label', es ? 'English, cambiar esta página a inglés'
+                                      : 'Español, switch this page to Spanish');
     });
 
     /* if the inquiry form is open, retitle it in the new language */
