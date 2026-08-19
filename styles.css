@@ -437,9 +437,9 @@ header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
   background:url("images/morris-wallpaper.jpg") repeat;background-size:760px auto;opacity:.24;}
 /* the scrim: strong on the left where the copy lives, clearing to the right */
 .theme-forest .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(100deg,rgba(34,54,69,.93) 0%,rgba(34,54,69,.86) 26%,
-             rgba(34,54,69,.55) 52%,rgba(34,54,69,.18) 78%,rgba(34,54,69,.05) 100%),
-             linear-gradient(0deg,rgba(12,24,34,.35),transparent 55%);}
+  background:linear-gradient(100deg,rgba(26,22,18,.70) 0%,rgba(26,22,18,.62) 26%,
+             rgba(26,22,18,.40) 52%,rgba(26,22,18,.14) 78%,rgba(26,22,18,.04) 100%),
+             linear-gradient(0deg,rgba(20,16,13,.28),transparent 55%);}
 .theme-forest .hero .container,.theme-forest .hero .hero-split{position:relative;z-index:2;}
 
 /* type lifted well clear of the pattern */
@@ -453,9 +453,9 @@ header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
 .theme-rose .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
   background:url("images/morris-wallpaper-black.jpg") repeat;background-size:760px auto;opacity:.24;}
 .theme-rose .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(100deg,rgba(20,16,15,.93) 0%,rgba(20,16,15,.86) 26%,
-             rgba(20,16,15,.55) 52%,rgba(20,16,15,.18) 78%,rgba(20,16,15,.05) 100%),
-             linear-gradient(0deg,rgba(8,6,6,.4),transparent 55%);}
+  background:linear-gradient(100deg,rgba(20,16,15,.68) 0%,rgba(20,16,15,.60) 26%,
+             rgba(20,16,15,.38) 52%,rgba(20,16,15,.14) 78%,rgba(20,16,15,.04) 100%),
+             linear-gradient(0deg,rgba(8,6,6,.30),transparent 55%);}
 .theme-rose .hero .container,.theme-rose .hero .hero-split{position:relative;z-index:2;}
 .theme-rose .hero .lead{color:#FBF6EA !important;text-shadow:0 1px 4px rgba(0,0,0,.8) !important;}
 .theme-rose .hero h1,.theme-rose .hero h2{color:#FDF8EC !important;text-shadow:0 2px 9px rgba(0,0,0,.75);}

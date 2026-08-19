@@ -791,6 +791,33 @@
           setTimeout(startVideo, 4000);    /* slow line: start anyway rather
                                               than sit dead */
         }
+
+        /* Sometimes the browser takes preload="none" at its word: it fetches
+           the first couple of hundred bytes, reads the header, and then stops
+           without ever asking for the picture data. The video then reports
+           itself as playing while sitting on readyState 0 forever, and the
+           poster never moves. Measured on the weddings page: a 206 response
+           of 0.2 kB out of a 1.17 MB file.
+
+           There is no event for "I decided not to finish", so the only way to
+           catch it is to look. Check twice, and if nothing has arrived, ask
+           again. A second load() is what clears it. */
+        var retries = 0;
+        var nudge = setInterval(function () {
+          if (heroVideo.readyState > 0 || retries >= 2) {
+            clearInterval(nudge);
+            /* Not startVideo(): the 4 second fallback above will already have
+               fired on an empty video and tripped its run-once flag, so that
+               call would silently do nothing. Ask the element directly. */
+            if (heroVideo.readyState >= 3 && heroVideo.paused) {
+              var q = heroVideo.play();
+              if (q && q.catch) q.catch(function () {});
+            }
+            return;
+          }
+          retries++;
+          heroVideo.load();
+        }, 1500);
       };
       /* wait for the page to finish, then one frame more */
       if (document.readyState === 'complete') {
