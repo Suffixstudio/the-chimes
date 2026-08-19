@@ -230,6 +230,46 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
   display:block !important;text-align:center !important;z-index:4;}
 .est-tag .rule{display:none !important;}
 .est-tag span{display:inline-block;}
+
+/* ------------------------------------------------------------------
+   PHONES ONLY
+
+   On a narrow screen the hero stacks into one column, so the copy sits
+   directly on top of the video and covers nearly all of it. Two changes,
+   neither of which touches the desktop layout:
+
+   1. Push the copy to the bottom of the hero rather than the top. The
+      video then shows through the upper half, which is where the building
+      actually is. Padding is left at the bottom so the copy clears the
+      LANDMARK REBORN strip.
+
+   2. Fade the darkening downward instead of sideways. The sideways fade
+      is built for the desktop layout, where the copy sits on the left. On
+      a phone the copy spans the full width, so a downward fade puts the
+      weight under the text and leaves the top of the frame clear.
+   ------------------------------------------------------------------ */
+@media (max-width:820px){
+  .hero-inner{
+    justify-content:flex-end !important;
+    align-self:end !important;
+    padding-top:0 !important;
+    padding-bottom:clamp(3.2rem,10vh,5rem) !important;
+  }
+  .hero-grid{
+    align-items:end !important;
+    padding-top:0 !important;
+  }
+  .hero-scrim{
+    background:
+      linear-gradient(180deg,
+        rgba(20,34,46,.05) 0%,
+        rgba(20,34,46,.09) 17%,
+        rgba(20,34,46,.56) 27%,
+        rgba(20,34,46,.76) 36%,
+        rgba(20,34,46,.83) 52%,
+        rgba(20,34,46,.86) 100%) !important;
+  }
+}
 </style>
 <style>
 /* ============================================================
