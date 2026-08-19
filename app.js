@@ -800,11 +800,24 @@
            of 0.2 kB out of a 1.17 MB file.
 
            There is no event for "I decided not to finish", so the only way to
-           catch it is to look. Check twice, and if nothing has arrived, ask
-           again. A second load() is what clears it. */
+           catch it is to look.
+
+           But look carefully. load() does not nudge a download along, it
+           throws the partial file away and starts again. So checking only
+           readyState is wrong: a large file on a slow connection is still at
+           readyState 0 after a second and a half, and calling load() there
+           discards real progress and restarts it. That produced visible
+           stuttering on the home page, whose video is the largest of the
+           three.
+
+           networkState is the missing piece. 2 means NETWORK_LOADING, the
+           browser is actively fetching. Only interfere when it is not. */
         var retries = 0;
         var nudge = setInterval(function () {
-          if (heroVideo.readyState > 0 || retries >= 2) {
+          var stillFetching = heroVideo.networkState === 2;
+          var haveData = heroVideo.readyState > 0;
+
+          if (haveData || retries >= 2) {
             clearInterval(nudge);
             /* Not startVideo(): the 4 second fallback above will already have
                fired on an empty video and tripped its run-once flag, so that
@@ -815,9 +828,10 @@
             }
             return;
           }
+          if (stillFetching) return;      /* working, leave it alone */
           retries++;
           heroVideo.load();
-        }, 1500);
+        }, 3000);
       };
       /* wait for the page to finish, then one frame more */
       if (document.readyState === 'complete') {
