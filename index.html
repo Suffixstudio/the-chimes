@@ -249,25 +249,37 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       weight under the text and leaves the top of the frame clear.
    ------------------------------------------------------------------ */
 @media (max-width:820px){
+  /* Fill the whole hero, then split the copy: the headline block stays at
+     the top, the buttons drop to the bottom, and the middle is left clear so
+     the video actually shows. margin-top:auto on the buttons is what creates
+     the gap: everything before it stays put, everything from it down is
+     pushed to the floor. */
+  .hero{align-items:stretch !important;}
   .hero-inner{
-    justify-content:flex-end !important;
-    align-self:end !important;
-    padding-top:0 !important;
-    padding-bottom:clamp(3.2rem,10vh,5rem) !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-self:stretch !important;
+    padding-top:clamp(.6rem,2vh,1.2rem) !important;
+    padding-bottom:clamp(2.6rem,7vh,3.6rem) !important;
   }
-  .hero-grid{
-    align-items:end !important;
-    padding-top:0 !important;
-  }
+  .hero-cta{margin-top:auto !important;}
+  /* the explore link sat a long way under the buttons; close it up */
+  .hero-explore{margin-top:.55rem !important;}
+
+  /* Darkening now needs to match that split: weight at the top behind the
+     headline, weight at the bottom behind the buttons, and a clear window
+     through the middle. Neutral rather than navy, because on a phone the
+     heavier covering made the whole frame read blue. */
   .hero-scrim{
     background:
       linear-gradient(180deg,
-        rgba(20,34,46,.05) 0%,
-        rgba(20,34,46,.09) 17%,
-        rgba(20,34,46,.56) 27%,
-        rgba(20,34,46,.76) 36%,
-        rgba(20,34,46,.83) 52%,
-        rgba(20,34,46,.86) 100%) !important;
+        rgba(19,18,17,.76) 0%,
+        rgba(19,18,17,.74) 36%,
+        rgba(19,18,17,.26) 45%,
+        rgba(19,18,17,.10) 56%,
+        rgba(19,18,17,.24) 68%,
+        rgba(19,18,17,.70) 77%,
+        rgba(19,18,17,.86) 100%) !important;
   }
 }
 </style>
