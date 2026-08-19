@@ -433,8 +433,12 @@ header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
    so the words sit on near-solid green and stay legible.
    ============================================================ */
 .theme-forest .hero{position:relative;isolation:isolate;background:#283F51 !important;}
+/* The wallpaper is an olive green. At .24 it was invisible under the old 93%
+   overlay, but with the overlay now light it shows through strongly and drags
+   the whole panel toward green: measured, the blue lead over green fell from
+   18 to 8. Eased back so the pattern still reads without tinting the brand. */
 .theme-forest .hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:url("images/morris-wallpaper.jpg") repeat;background-size:760px auto;opacity:.24;}
+  background:url("images/morris-wallpaper.jpg") repeat;background-size:760px auto;opacity:.16;}
 /* the scrim: strong on the left where the copy lives, clearing to the right */
 /* Kept in the brand blue, not a neutral: the hero background here is solid
    #283F51, so anything warm laid over it turns the panel muddy black and the
@@ -442,9 +446,9 @@ header.nav .nav-call-mobile:hover,header.nav .nav-call-mobile:focus-visible{
    plus the wallpaper, with no darkening at all, the gold italic already sits
    at 4.74:1 against a 3.0 requirement. This layer is for depth, not rescue. */
 .theme-forest .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(100deg,rgba(20,34,45,.45) 0%,rgba(20,34,45,.36) 26%,
-             rgba(20,34,45,.22) 52%,rgba(20,34,45,.08) 78%,rgba(20,34,45,.02) 100%),
-             linear-gradient(0deg,rgba(14,24,33,.22),transparent 55%);}
+  background:linear-gradient(100deg,rgba(14,34,60,.45) 0%,rgba(14,34,60,.36) 26%,
+             rgba(14,34,60,.22) 52%,rgba(14,34,60,.08) 78%,rgba(14,34,60,.02) 100%),
+             linear-gradient(0deg,rgba(10,26,48,.22),transparent 55%);}
 .theme-forest .hero .container,.theme-forest .hero .hero-split{position:relative;z-index:2;}
 
 /* type lifted well clear of the pattern */
