@@ -3,26 +3,27 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#283F51" />
 <meta name="color-scheme" content="only light" />
-<title>Privacy Policy · The Chimes · The Crescent House 1887</title>
+<title>Privacy Policy · The Crescent House 1887</title>
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Privacy Policy | The Chimes" />
-  <meta property="og:description" content="How The Chimes at Crescent House handles the information you give us." />
-  <meta property="og:image" content="https://the-chimes.netlify.app/images/og/privacy.jpg" />
-  <meta property="og:url" content="https://the-chimes.netlify.app/privacy.html" />
+  <meta property="og:title" content="Privacy Policy | The Crescent House 1887" />
+  <meta property="og:description" content="How The Crescent House 1887, LLC and The Chimes Events, LLC handle the information you give us." />
+  <meta property="og:image" content="https://thecrescenthouse1887.com/images/og/privacy.jpg" />
+  <meta property="og:url" content="https://thecrescenthouse1887.com/privacy.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy | The Chimes" />
-  <meta name="twitter:description" content="How The Chimes at Crescent House handles the information you give us." />
-  <meta name="twitter:image" content="https://the-chimes.netlify.app/images/og/privacy.jpg" />
-  <link rel="canonical" href="https://the-chimes.netlify.app/privacy.html" />
-<meta name="description" content="Privacy policy for The Chimes at Crescent House. What information we collect, how it is used, and your rights under California law." />
+  <meta name="twitter:title" content="Privacy Policy | The Crescent House 1887" />
+  <meta name="twitter:description" content="How The Crescent House 1887, LLC and The Chimes Events, LLC handle the information you give us." />
+  <meta name="twitter:image" content="https://thecrescenthouse1887.com/images/og/privacy.jpg" />
+  <link rel="canonical" href="https://thecrescenthouse1887.com/privacy.html" />
+<meta name="description" content="Privacy policy for The Crescent House 1887, LLC and The Chimes Events, LLC. What information we collect, how it is used, and your rights under California law." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232F4A3A'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23D9BA77' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display+SC:wght@400;700&family=Prata&family=Cinzel:wght@600;700&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display+SC:wght@400;700&amp;family=Prata&amp;family=Cinzel:wght@600;700&amp;family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
 <style>
-  :root{color-scheme:light;--ink:#211A16;--forest:#2F4A3A;--forest-deep:#1E3227;--brass:#9A7B33;--brass-light:#C29B4E;--parchment:#F3ECDD;--cream:#FBF7EE;--smoke:#6B5D4E;--line:rgba(33,26,22,.14);}
+  :root{--brass-ink:#7A5F2A;--smoke-ink:#6D6154;color-scheme:light;--ink:#211A16;--forest:#283F51;--forest-deep:#192A37;--brass:#9A7B33;--brass-light:#C29B4E;--parchment:#F3ECDD;--cream:#FBF7EE;--smoke:#6B5D4E;--line:rgba(33,26,22,.14);}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:"Hanken Grotesk",system-ui,sans-serif;color:#3a302a;background:var(--parchment);border-top:4px solid var(--forest);line-height:1.68;padding:0 20px 64px;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:760px;margin:0 auto;}
@@ -30,9 +31,37 @@
   .brand{text-decoration:none;color:var(--ink);line-height:1;}
   .brand b{font-family:"Cinzel",serif;font-weight:700;font-size:1.2rem;letter-spacing:.14em;display:block;}
   .brand .sub{font-family:"Cinzel",serif;font-weight:600;font-size:.48rem;letter-spacing:.22em;color:var(--smoke);display:block;margin-top:.3rem;text-transform:uppercase;}
+
+  /* The framed brand mark. These wm-* spans are styled in styles.css under a
+     "header.nav" selector, but this page has no header.nav and does not load
+     styles.css, so they were rendering as one run-together line:
+     "THECrescent HouseLake Elsinore - Est. 1887Terms". Same design as the nav,
+     re-scoped to this page's .brand and its own palette. */
+
+  /* The accessibility skip-link is styled in styles.css, which this page does
+     not load, so it was sitting visible above the header instead of staying
+     off-screen until a keyboard user tabs to it. */
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:9999;
+    background:var(--forest);color:#F1E6D3;padding:.75rem 1.25rem;
+    font-family:"Cinzel",serif;font-size:.72rem;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+    border:1px solid var(--brass-light);border-radius:0 0 3px 0;}
+  .skip-link:focus{left:0;outline:2px solid var(--brass-light);outline-offset:2px;}
+  .brand .wm-frame{display:inline-block;padding:.38rem .85rem;text-align:center;
+    border:1px solid var(--brass-light);outline:1px solid var(--brass-light);outline-offset:3px;}
+  .brand .wm-the{display:block;font-family:"Cinzel",serif;font-size:.56rem;font-weight:600;
+    letter-spacing:.34em;color:var(--brass-ink);line-height:1;margin-bottom:.16rem;}
+  .brand .wm-name{display:block;font-family:"Prata",Georgia,serif;font-size:1.25rem;
+    letter-spacing:.03em;color:var(--ink);line-height:1.05;white-space:nowrap;}
+  .brand .wm-est{display:block;font-family:"Cinzel",serif;font-size:.5rem;font-weight:600;
+    letter-spacing:.22em;color:var(--brass-ink);line-height:1;margin-top:.2rem;white-space:nowrap;}
+  .brand .wm-page{display:block;font-family:"Prata",Georgia,serif;font-size:.74rem;
+    letter-spacing:.02em;line-height:1.2;color:var(--brass-ink);margin-top:.22rem;
+    padding-top:.22rem;border-top:1px solid rgba(201,164,92,.45);text-transform:none;}
+
   .backhome{font-size:.85rem;font-weight:600;color:var(--forest);text-decoration:none;}
   .card{background:var(--cream);border:1px solid var(--line);border-top:3px solid var(--forest);border-radius:6px;padding:clamp(1.8rem,4vw,3rem);}
-  .eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass);}
+  .eyebrow{font-family:"Cinzel",serif;font-weight:600;font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--brass-ink);}
   h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2.2rem,5vw,3rem);color:var(--ink);line-height:1.05;margin:.5rem 0 .4rem;}
   .updated{font-size:.85rem;color:var(--smoke);margin-bottom:.6rem;}
   .draft{background:#FBF3DE;border:1px solid var(--brass-light);border-radius:4px;padding:.9rem 1.1rem;font-size:.85rem;color:#5a4a24;margin:1.2rem 0 1.8rem;}
@@ -65,14 +94,14 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://the-chimes.netlify.app/privacy.html#webpage",
-  "url": "https://the-chimes.netlify.app/privacy.html",
-  "name": "Privacy Policy · The Chimes · The Crescent House 1887",
+  "@id": "https://thecrescenthouse1887.com/privacy.html#webpage",
+  "url": "https://thecrescenthouse1887.com/privacy.html",
+  "name": "Privacy Policy · The Crescent House 1887",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://thecrescenthouse1887.com/#website",
     "name": "The Crescent House 1887",
-    "url": "https://the-chimes.netlify.app",
+    "url": "https://thecrescenthouse1887.com",
     "publisher": {
       "@id": "https://thecrescenthouse1887.com/#organization"
     }
@@ -87,9 +116,9 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
     "en-US",
     "es"
   ],
-  "description": "Privacy policy for The Chimes at Crescent House. What information we collect, how it is used, and your rights under California law.",
+  "description": "Privacy policy for The Crescent House 1887, LLC and The Chimes Events, LLC. What information we collect, how it is used, and your rights under California law.",
   "breadcrumb": {
-    "@id": "https://the-chimes.netlify.app/privacy.html#breadcrumb"
+    "@id": "https://thecrescenthouse1887.com/privacy.html#breadcrumb"
   }
 }
 </script>
@@ -97,13 +126,13 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "@id": "https://the-chimes.netlify.app/privacy.html#breadcrumb",
+  "@id": "https://thecrescenthouse1887.com/privacy.html#breadcrumb",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://the-chimes.netlify.app"
+      "item": "https://thecrescenthouse1887.com"
     },
     {
       "@type": "ListItem",
@@ -115,24 +144,24 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
 </script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main" data-es="Saltar al contenido">Skip to content</a>
     <main id="main">
     
   <div class="wrap">
     <div class="topbar">
-      <a class="brand" href="index.html"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Privacidad">Privacy</span></span></a>
+      <a class="brand" href="index.html"><span class="wm-frame"><span class="wm-the">THE</span><span class="wm-name">Crescent House</span><span class="wm-est" data-es="Lake Elsinore .  Fundada en 1887">Lake Elsinore &middot; Est. 1887</span><span class="wm-page" data-es="Privacidad">Privacy</span></span></a>
       <div class="topbar-right">
         <a class="backhome" href="index.html" data-es="&larr; Volver al sitio">&larr; Back to site</a>
-        <button class="lang-toggle" type="button" aria-label="Cambiar a español">Español</button>
+        <button class="lang-toggle" type="button" aria-label="Español, switch this page to Spanish">Español</button>
       </div>
     </div>
     <div class="card">
 
-      <span class="eyebrow" data-es="The Chimes at Crescent House">The Chimes at Crescent House</span>
+      <span class="eyebrow" data-es="The Crescent House 1887, LLC &middot; The Chimes Events, LLC">The Crescent House 1887, LLC &middot; The Chimes Events, LLC</span>
       <h1 data-es="Política de Privacidad">Privacy Policy</h1>
-      <p class="updated" data-es="Última actualización: 31 de julio de 2026">Last updated: July 31, 2026</p>
-      <div class="draft" data-es="<b>Borrador para revisión.</b> Esta página es una plantilla inicial preparada por Suffix Studio, no es asesoría legal. Por favor, hágala revisar por un abogado calificado antes de publicarla. Los elementos resaltados son marcadores pendientes de confirmación por parte de los propietarios."><b>Draft for review.</b> This page is a starting template prepared by Suffix Studio, not legal advice. Please have it reviewed by a qualified attorney before publishing. Highlighted items are placeholders awaiting confirmation from the owners.</div>
-      <p data-es="The Chimes at Crescent House (“nosotros”, “nuestro”), operado por The Crescent House 1887 LLC y The Chimes Events LLC, administra este sitio web. Esta política explica qué información recopilamos de los visitantes, cómo la usamos, y qué opciones tiene usted. La escribimos en lenguaje sencillo a propósito.">The Chimes at Crescent House ("we," "us," "our"), operated by The Crescent House 1887 LLC and The Chimes Events LLC, runs this website. This policy explains what information we collect from visitors, how we use it, and the choices you have. We keep it in plain English on purpose.</p>
+      <p class="updated" data-es="Última actualización: 18 de agosto de 2026">Last updated: August 18, 2026</p>
+      <div class="draft" data-es="<b>Borrador para revisión.</b> Esta página es una plantilla inicial preparada por Suffix Studio, no es asesoría legal. Por favor, hágala revisar por un abogado calificado antes de publicarla."><b>Draft for review.</b> This page is a starting template prepared by Suffix Studio, not legal advice. Please have it reviewed by a qualified attorney before publishing.</div>
+      <p data-es="The Crescent House 1887, LLC y The Chimes Events, LLC (“nosotros”, “nuestro”) administran este sitio web. Esta política explica qué información recopilamos de los visitantes, cómo la usamos, y qué opciones tiene usted. La escribimos en lenguaje sencillo a propósito.">The Crescent House 1887, LLC and The Chimes Events, LLC ("we," "us," "our") run this website. This policy explains what information we collect from visitors, how we use it, and the choices you have. We keep it in plain English on purpose.</p>
 
       <h2 data-es="Información que recopilamos">Information we collect</h2>
       <p data-es="Solo recopilamos la información que usted decide darnos. Cuando llena un formulario de consulta, recorrido, evento, espacio de trabajo o donativo en este sitio, recibimos los datos que escribe, que pueden incluir su nombre, el nombre de su negocio, su correo electrónico, su teléfono, el tipo de consulta que selecciona y su mensaje.">We only collect information you choose to give us. When you fill out an inquiry, tour, event, workspace, or donation form on this site, we receive the details you enter, which may include your name, business name, email address, phone number, the type of inquiry you select, and the message you write.</p>
@@ -148,21 +177,21 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
       <p data-es="No vendemos su información personal, y no la compartimos con terceros para su mercadotecnia.">We do not sell your personal information, and we do not share it with third parties for their marketing.</p>
 
       <h2 data-es="Quién procesa su información">Who processes your information</h2>
-      <p data-es="Los formularios de este sitio nos llegan a través de un servicio de procesamiento de formularios y aparecen en nuestro correo electrónico comercial. Este sitio está alojado con un proveedor externo. Si aceptamos pagos o donativos en línea, estos son procesados por un proveedor de pagos. Cada uno de estos proveedores procesa datos en nuestro nombre bajo sus propias prácticas de privacidad y seguridad.">Form submissions on this site are delivered to us through Netlify Forms, a form-processing service, and arrive in our business email (Google Gmail). This website is hosted on Netlify. If we accept online payments or donations, those are handled by a payments provider. Each of these providers processes data on our behalf under their own privacy and security practices.</p>
+      <p data-es="Los formularios de este sitio nos llegan a través de Netlify Forms, un servicio de procesamiento de formularios, y aparecen en nuestro correo electrónico comercial (Google Gmail). Este sitio web está alojado en Netlify. Las tipografías que usted lee las entrega Google Fonts, así que cargar una página envía su dirección IP a Google. Google Fonts no usa cookies, y Google declara que no utiliza estas solicitudes para crear perfiles publicitarios. Los donativos en línea los procesa Stripe, que gestiona el pago y los datos de la tarjeta; nosotros nunca vemos ni guardamos un número de tarjeta. Cada uno de estos proveedores procesa datos en nuestro nombre bajo sus propias prácticas de privacidad y seguridad.">Form submissions on this site are delivered to us through Netlify Forms, a form-processing service, and arrive in our business email (Google Gmail). This website is hosted on Netlify. The typefaces you are reading are served by Google Fonts, so loading a page sends your IP address to Google. Google Fonts sets no cookies, and Google states that it does not use these requests to build advertising profiles. Online donations are handled by Stripe, which processes the payment and the card details; we never see or store a card number. Each of these providers processes data on our behalf under their own privacy and security practices.</p>
 
       <h2 data-es="Cookies">Cookies</h2>
       <p data-es="Este sitio no usa cookies de publicidad ni de rastreo. Si en el futuro agregamos analítica de visitantes, actualizaremos esta política para describirla.">This site does not set advertising or tracking cookies. If we add visitor analytics in the future, we will update this policy to describe it.</p>
 
       <h2 data-es="Sus derechos de privacidad en California">Your California privacy rights</h2>
       <p data-es="Si usted es residente de California, tiene derecho a solicitar qué información personal tenemos sobre usted, a pedir que la eliminemos y a pedir que la corrijamos. Atendemos estas solicitudes sin importar si la ley se lo exige técnicamente a un negocio de nuestro tamaño. Nunca lo trataremos de manera diferente por ejercer estos derechos.">If you are a California resident, you have the right to request what personal information we have about you, to request that we delete it, and to request that we correct it. We honor these requests regardless of whether the law technically requires a business of our size to do so. We will never treat you differently for exercising these rights.</p>
-      <p data-es="Para hacer una solicitud, escríbanos por correo electrónico o llámenos. Verificaremos su identidad con los datos de contacto que nos haya proporcionado y responderemos dentro de los 45 días que exige la ley.">To make a request, email us at <a href="mailto:privacy@thecrescenthouse1887.com">privacy@thecrescenthouse1887.com</a> or call <a href="tel:+19517184204">(951) 718-4204</a>. We will verify your identity using the contact details you originally provided and respond within 45 days.</p>
+      <p data-es="Para hacer una solicitud, escríbanos a <a href='mailto:privacy@thecrescenthouse1887.com'>privacy@thecrescenthouse1887.com</a> o llámenos al <a href='tel:+19517184204'>(951) 718-4204</a>. Verificaremos su identidad con los datos de contacto que nos haya proporcionado y responderemos dentro de los 45 días que exige la ley.">To make a request, email us at <a href="mailto:privacy@thecrescenthouse1887.com">privacy@thecrescenthouse1887.com</a> or call <a href="tel:+19517184204">(951) 718-4204</a>. We will verify your identity using the contact details you originally provided and respond within 45 days.</p>
       <p data-es="Tambi&eacute;n puede escribirnos por correo postal a: The Crescent House 1887, 201 W. Graham Avenue, Lake Elsinore, CA 92530.">You may also write to us by mail at: The Crescent House 1887, 201 W. Graham Avenue, Lake Elsinore, CA 92530.</p>
 
       <h2 data-es="Señales de No Rastrear">Do Not Track</h2>
       <p data-es="Como este sitio no rastrea a los visitantes a través de otros sitios web, no responde de manera diferente a las señales de No Rastrear del navegador.">Because this site does not track visitors across other websites, it does not respond differently to browser "Do Not Track" signals. There is nothing to opt out of.</p>
 
       <h2 data-es="Privacidad de menores">Children's privacy</h2>
-      <p data-es="The Chimes es un lugar público que recibe visitantes de todas las edades para recorridos y eventos. Sin embargo, este sitio web está dirigido a adultos y no está diseñado para menores de 13 años. No recopilamos información personal de menores de 13 años a sabiendas. Si cree que un menor nos ha enviado información, comuníquese con nosotros y la eliminaremos.">The Chimes is a public venue that welcomes guests of all ages for tours and events. This website, however, is intended for adults arranging visits, rentals, and services, and it is not directed to children. We do not knowingly collect personal information online from children under 13. If you believe a child has provided us information through this site, please contact us and we will delete it.</p>
+      <p data-es="The Crescent House es un lugar público que recibe visitantes de todas las edades para recorridos y eventos. Sin embargo, este sitio web está dirigido a adultos que organizan visitas, rentas y servicios, y no está dirigido a niños. No recopilamos a sabiendas información personal en línea de menores de 13 años. Si cree que un menor nos ha enviado información a través de este sitio, comuníquese con nosotros y la eliminaremos.">The Crescent House is a public venue that welcomes guests of all ages for tours and events. This website, however, is intended for adults arranging visits, rentals, and services, and it is not directed to children. We do not knowingly collect personal information online from children under 13. If you believe a child has provided us information through this site, please contact us and we will delete it.</p>
 
       <h2 data-es="Cuánto tiempo conservamos la información">How long we keep information</h2>
       <p data-es="Conservamos los datos de consultas y reservaciones durante el tiempo necesario para responder y para atender cualquier reservación o evento que resulte, y después durante un tiempo razonable para nuestros registros comerciales. Puede solicitar su eliminación en cualquier momento usando los datos de contacto de arriba.">We keep inquiry and reservation details for as long as needed to respond and to service any resulting booking or event, and for reasonable business record-keeping afterward. You can request deletion at any time using the contact details above.</p>
@@ -171,23 +200,26 @@ a[href^="mailto:"],a[href^="tel:"]{overflow-wrap:anywhere;}
       <p data-es="Si cambiamos esta política, publicaremos la versión actualizada en esta página con una nueva fecha de última actualización.">If we change this policy, we will post the updated version on this page with a new "last updated" date.</p>
 
       <h2 data-es="Contacto">Contact</h2>
-      <p data-es="The Chimes at Crescent House. 201 W. Graham Ave, Lake Elsinore, CA. Correo electrónico y teléfono por confirmar.">The Chimes at Crescent House<br>
+      <p data-es="The Crescent House 1887, LLC y The Chimes Events, LLC<br>201 W. Graham Ave, Lake Elsinore, CA<br>Correo electrónico: <a href='mailto:privacy@thecrescenthouse1887.com'>privacy@thecrescenthouse1887.com</a><br>Teléfono: <a href='tel:+19517184204'>(951) 718-4204</a>">The Crescent House 1887, LLC and The Chimes Events, LLC<br>
       201 W. Graham Ave, Lake Elsinore, CA<br>
       Email: <a href="mailto:privacy@thecrescenthouse1887.com">privacy@thecrescenthouse1887.com</a><br>
       Phone: <a href="tel:+19517184204">(951) 718-4204</a></p>
 
-      <p class="governing" data-es="Esta página también está disponible en inglés. Si las dos versiones difieren en algo, la versión en inglés es la que aplica.">This page is also available in Spanish. If the two versions differ in any way, the English version is the one that applies.</p>
-      <a class="backlink" href="index.html" data-es="&larr; Volver a The Chimes">&larr; Back to The Chimes</a>
+      <p class="governing" data-es="Esta página también está disponible en español. Si hay alguna diferencia entre ambas versiones, prevalecerá la versión en inglés.">This page is also available in Spanish. If the two versions differ in any way, the English version is the one that applies.</p>
+      <a class="backlink" href="index.html" data-es="&larr; Volver a The Crescent House">&larr; Back to The Crescent House</a>
     </div>
   </div>
   </main>
     <footer>
-    <div>© 2026 The Chimes · Est. 1887 · Lake Elsinore, CA</div>
+    <div>© 2026 The Crescent House 1887 · Lake Elsinore, CA</div>
     <div class="legal-row"><a href="privacy.html" data-es="Política de Privacidad">Privacy Policy</a> · <a href="terms.html" data-es="Términos y Condiciones">Terms &amp; Conditions</a></div>
-    <div class="legal-row">Site by <a href="https://suffixstudio.com" target="_blank" rel="noopener" data-es="Desarrollado por Suffix Studio">Powered by Suffix Studio</a></div>
+    <div class="legal-row" data-es="&lt;a href=&quot;https://suffixstudio.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Desarrollado por Suffix Studio&lt;/a&gt;">Site by <a href="https://suffixstudio.com" target="_blank" rel="noopener">Powered by Suffix Studio</a></div>
   </footer>
 <script>
-  var I18N_META = { title: "Política de Privacidad · The Chimes · The Crescent House 1887" };
+  var I18N_META = {
+    title: "Política de Privacidad · The Crescent House 1887",
+    desc:  "Aviso de privacidad de The Crescent House 1887, LLC y The Chimes Events, LLC. Qué información recopilamos, cómo se usa y sus derechos bajo la ley de California."
+  };
 </script>
 <script src="app.js"></script>
 </body>

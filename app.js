@@ -101,7 +101,7 @@
     if (!navLinks) return;
     navLinks.classList.remove('open');
     if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('no-scroll');
+    unlockScroll();
   }
 
   if (menuBtn && navLinks) {
@@ -109,7 +109,7 @@
       var open = navLinks.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', open);
       /* lock the page behind the menu, otherwise it scrolls underneath */
-      document.body.classList.toggle('no-scroll', open);
+      if (open) { lockScroll(); } else { unlockScroll(); }
     });
     /* tapping any link closes the menu */
     $$('a', navLinks).forEach(function (a) { a.addEventListener('click', closeMenu); });
@@ -169,6 +169,25 @@
     if (!e.target.closest('header.nav .grp')) closeNavGroups(null);
   });
 
+  /* Only one dropdown may be visible at a time. Pointing at one group dismisses
+     every other, whether the other was opened by a click or is still matching
+     :hover. Leaving the nav clears the marks so plain hovering works again. */
+  var navBar = $('header.nav .nav-links') || $('header.nav');
+  function markOnly(active) {
+    navGroups.forEach(function (g) {
+      g.classList.toggle('nav-dismissed', !!active && g !== active);
+    });
+  }
+  navGroups.forEach(function (grp) {
+    var s = grp.querySelector('.sub');
+    grp.addEventListener('mouseenter', function () {
+      if (s && getComputedStyle(s).position !== 'absolute') return;  /* phone: inline list */
+      closeNavGroups(grp);
+      markOnly(grp);
+    });
+  });
+  if (navBar) navBar.addEventListener('mouseleave', function () { markOnly(null); });
+
   /* ---------- 3. FAQ: opening one answer closes the others ---------- */
   $$('.faq-item').forEach(function (item) {
     var q = $('.faq-q', item);
@@ -220,7 +239,32 @@
     return (LABELS[lang] && LABELS[lang][topic]) || DEFAULT[lang];
   }
 
-  function openModal(topic) {
+  /* ------------------------------------------------------------------
+     Holding the page still behind an overlay, without losing the reader's
+     place. styles.css puts position:fixed on the body under 1024px, and a
+     fixed body has no scroll position, so releasing it dropped everyone at
+     the top of the page. Steven found it on the wedding packages: open a
+     package, close it, and you are back at the masthead.
+
+     Record the offset, hold the body at minus that offset so nothing
+     appears to move while it is fixed, then scroll back on release. All
+     three overlays call these, so a fourth cannot forget.
+     ------------------------------------------------------------------ */
+  var scrollHeld = 0;
+  function lockScroll() {
+    if (document.body.classList.contains('no-scroll')) return;
+    scrollHeld = window.pageYOffset || document.documentElement.scrollTop || 0;
+    document.body.style.top = (-scrollHeld) + 'px';
+    document.body.classList.add('no-scroll');
+  }
+  function unlockScroll() {
+    if (!document.body.classList.contains('no-scroll')) return;
+    document.body.classList.remove('no-scroll');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollHeld);
+  }
+
+  function openModal(topic, pack) {
     if (!modal) return;
     lastFocus = document.activeElement;
     closeMenu();                                  /* never leave the menu open behind it */
@@ -250,13 +294,22 @@
       var oldWarn = form.querySelector('#formError');
       if (oldWarn) oldWarn.textContent = '';
     }
+    var pkg = $('#package');
+    if (pkg) {
+      pkg.value = '';
+      if (pack) {
+        Array.prototype.forEach.call(pkg.options, function (o) {
+          if (o.value === pack) pkg.value = pack;
+        });
+      }
+    }
     window.currentTopic = topic;
     var title = $('#modalTitle');
     if (title) title.textContent = modalTitleFor(topic);
     if (form) form.style.display = 'block';
     if (success) success.classList.remove('show');
     modal.classList.add('open');
-    document.body.classList.add('no-scroll');
+    lockScroll();
     setTimeout(function () { var nm = $('#name'); if (nm) nm.focus(); }, 180);
     if (window.applyFieldRules) window.applyFieldRules();
   }
@@ -264,13 +317,15 @@
   function closeModal() {
     if (!modal) return;
     modal.classList.remove('open');
-    document.body.classList.remove('no-scroll');
+    unlockScroll();
     if (lastFocus) lastFocus.focus();
   }
 
   if (modal) {
     $$('[data-modal-open]').forEach(function (b) {
-      b.addEventListener('click', function () { openModal(b.getAttribute('data-interest')); });
+      b.addEventListener('click', function () {
+        openModal(b.getAttribute('data-interest'), b.getAttribute('data-package'));
+      });
     });
     var mClose = $('#modalClose');
     if (mClose) mClose.addEventListener('click', closeModal);
@@ -296,6 +351,7 @@
     tour:      { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
     group:     { guests: { label: 'People in your group', max: 10,  ph: 'Up to 10' }, date: 'Preferred date' },
     office:    { guests: { label: 'People on your team',  max: 30,  ph: 'How many' }, date: 'Preferred start date' },
+    training:  { guests: { label: 'People in your group', max: 50,  ph: 'Up to 50' }, date: 'Preferred date' },
     virtual:   { guests: null,                                                        date: 'Preferred start date' },
     travel:    { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
     business:  { guests: { label: 'Travelers',            max: 20,  ph: 'Up to 20' }, date: 'Departure date' },
@@ -318,6 +374,11 @@
   function ruleFor(value) {
     var v = String(value || '').toLowerCase();
     if (FIELD_RULES[v]) return FIELD_RULES[v];
+    /* The Training Center has to be tested before the office
+       rule below. That rule caps the head count at 30, and this
+       room seats 32 classroom style and 50 theater style, so a
+       real number would have been silently wiped. */
+    if (/training/.test(v))                   return FIELD_RULES.training;
     if (/tour|scout/.test(v))                 return FIELD_RULES.tour;
     if (/workspace|desk|office|boardroom|meeting|offsite/.test(v)) return FIELD_RULES.office;
     if (/virtual/.test(v))                    return FIELD_RULES.virtual;
@@ -622,11 +683,11 @@
       if (lbImg) { lbImg.src = src; lbImg.alt = caption || ''; }
       if (lbCap) lbCap.textContent = caption || '';
       lb.classList.add('open');
-      document.body.classList.add('no-scroll');
+      lockScroll();
     }
     function closeLightbox() {
       lb.classList.remove('open');
-      document.body.classList.remove('no-scroll');
+      unlockScroll();
       if (lbImg) lbImg.src = '';
       if (lbLast) lbLast.focus();
     }
@@ -696,9 +757,19 @@
   var heroVideo = $('#heroVideo');
   if (heroVideo) {
     if (prefersReducedMotion) {
+      /* The visitor asked for less motion, and the stylesheet already
+         hides the video and shows the still instead. Leaving the address
+         in data-src means the file is never requested at all, so they are
+         no longer downloading three megabytes of video to look at a
+         photograph. */
       heroVideo.removeAttribute('loop');
-      heroVideo.pause();                   /* the visitor asked for less motion */
+      heroVideo.pause();
     } else {
+      /* The <source> carries the address in data-src, not src, so the
+         browser has nothing to fetch while the page is still loading. Fill
+         it in once everything else has arrived. Until then the poster is on
+         screen, and the poster is the video's own first frame, so there is
+         nothing to see happen. */
       var vStarted = false;
       var startVideo = function () {
         if (vStarted) return;
@@ -706,11 +777,28 @@
         var p = heroVideo.play();
         if (p && p.catch) p.catch(function () {});   /* browser refused. The poster stays. Fine. */
       };
-      if (heroVideo.readyState >= 4) {
-        startVideo();                      /* already buffered enough */
+      var beginLoading = function () {
+        var s = heroVideo.querySelector('source[data-src]');
+        if (s) {
+          s.src = s.getAttribute('data-src');
+          s.removeAttribute('data-src');
+          heroVideo.load();
+        }
+        if (heroVideo.readyState >= 3) {
+          startVideo();                    /* already buffered enough */
+        } else {
+          heroVideo.addEventListener('canplay', startVideo, { once: true });
+          setTimeout(startVideo, 4000);    /* slow line: start anyway rather
+                                              than sit dead */
+        }
+      };
+      /* wait for the page to finish, then one frame more */
+      if (document.readyState === 'complete') {
+        setTimeout(beginLoading, 200);
       } else {
-        heroVideo.addEventListener('canplaythrough', startVideo, { once: true });
-        setTimeout(startVideo, 4000);      /* slow line: start anyway rather than sit dead */
+        window.addEventListener('load', function () {
+          setTimeout(beginLoading, 200);
+        }, { once: true });
       }
     }
   }
@@ -802,7 +890,12 @@
         var small = b.classList.contains('lang-toggle-m') || b.classList.contains('nav-lang-mobile');
         b.textContent = es ? 'English' : 'Español';
       }
-      b.setAttribute('aria-label', es ? 'Switch to English' : 'Cambiar a español');
+      /* WCAG 2.5.3, Label in Name. The name has to start with the word
+         printed on the button, or somebody saying "click English" out loud
+         gets nothing. The rest of the name is in the language the reader is
+         reading right now. */
+      b.setAttribute('aria-label', es ? 'English, cambiar esta página a inglés'
+                                      : 'Español, switch this page to Spanish');
     });
 
     /* if the inquiry form is open, retitle it in the new language */

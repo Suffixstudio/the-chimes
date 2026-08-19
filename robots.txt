@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://the-chimes.netlify.app/sitemap.xml
+Sitemap: https://thecrescenthouse1887.com/sitemap.xml
