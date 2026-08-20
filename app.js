@@ -783,12 +783,16 @@
          Swipe out of Safari and back, or switch tabs, and the browser pauses
          the video. It then restores the page from memory rather than loading
          it again, so nothing re-runs and the video sits frozen on whatever
-         frame it stopped at. The only way back was a manual reload.
+         frame it stopped at.
 
-         Two events cover it. visibilitychange fires on a tab switch;
-         pageshow fires when a page is restored from the back/forward cache,
-         which is what a swipe out and back does on iOS. Both simply ask it to
-         carry on, and only if it is genuinely paused and has data. */
+         Two events were not enough. iOS is stricter than the desktop: it does
+         not always fire visibilitychange when you swipe between apps, and it
+         can refuse a play() that did not follow something the person did.
+         Low Power Mode blocks video autoplay outright.
+
+         So: listen for everything that signals a return, and keep a quiet
+         fallback on the first touch or scroll. If the browser refuses on the
+         way back, the next time the person touches the screen it starts. */
       var resumeVideo = function () {
         if (document.hidden) return;
         if (!heroVideo || heroVideo.readyState < 2) return;
@@ -798,6 +802,11 @@
       };
       document.addEventListener('visibilitychange', resumeVideo);
       window.addEventListener('pageshow', resumeVideo);
+      window.addEventListener('focus', resumeVideo);
+      /* passive: these must never delay a scroll */
+      ['touchstart', 'scroll', 'click'].forEach(function (evt) {
+        window.addEventListener(evt, resumeVideo, { passive: true });
+      });
       var beginLoading = function () {
         var s = heroVideo.querySelector('source[data-src]');
         if (s) {
