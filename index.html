@@ -249,6 +249,19 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
       weight under the text and leaves the top of the frame clear.
    ------------------------------------------------------------------ */
 @media (max-width:820px){
+  /* The video is 1920 wide and the frame is 390. To cover a 776-tall hero it
+     scales up until only about 28% of the picture width is left visible, which
+     is why it reads as a close-up rather than a room. Shortening the hero
+     widens that view to roughly 36%, and dropping the 6% zoom and easing the
+     brightness filter recover the rest. The filter is doubling up with the
+     fade below, which is what made it read so dark. */
+  section.hero{height:72svh !important;min-height:600px !important;}
+  .hero-img{
+    transform:none !important;
+    filter:brightness(.97) saturate(1.04) contrast(1.01) !important;
+  }
+  section.hero.in .hero-img{transform:none !important;}
+
   /* Fill the whole hero, then split the copy: the headline block stays at
      the top, the buttons drop to the bottom, and the middle is left clear so
      the video actually shows. margin-top:auto on the buttons is what creates
@@ -274,11 +287,11 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
     background:
       linear-gradient(180deg,
         rgba(19,18,17,.76) 0%,
-        rgba(19,18,17,.74) 36%,
-        rgba(19,18,17,.26) 45%,
-        rgba(19,18,17,.10) 56%,
-        rgba(19,18,17,.24) 68%,
-        rgba(19,18,17,.70) 77%,
+        rgba(19,18,17,.78) 53%,
+        rgba(19,18,17,.24) 58%,
+        rgba(19,18,17,.10) 62%,
+        rgba(19,18,17,.24) 66%,
+        rgba(19,18,17,.72) 71%,
         rgba(19,18,17,.86) 100%) !important;
   }
 }

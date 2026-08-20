@@ -777,6 +777,27 @@
         var p = heroVideo.play();
         if (p && p.catch) p.catch(function () {});   /* browser refused. The poster stays. Fine. */
       };
+
+      /* Coming back to a page you left.
+
+         Swipe out of Safari and back, or switch tabs, and the browser pauses
+         the video. It then restores the page from memory rather than loading
+         it again, so nothing re-runs and the video sits frozen on whatever
+         frame it stopped at. The only way back was a manual reload.
+
+         Two events cover it. visibilitychange fires on a tab switch;
+         pageshow fires when a page is restored from the back/forward cache,
+         which is what a swipe out and back does on iOS. Both simply ask it to
+         carry on, and only if it is genuinely paused and has data. */
+      var resumeVideo = function () {
+        if (document.hidden) return;
+        if (!heroVideo || heroVideo.readyState < 2) return;
+        if (!heroVideo.paused) return;
+        var p = heroVideo.play();
+        if (p && p.catch) p.catch(function () {});
+      };
+      document.addEventListener('visibilitychange', resumeVideo);
+      window.addEventListener('pageshow', resumeVideo);
       var beginLoading = function () {
         var s = heroVideo.querySelector('source[data-src]');
         if (s) {
