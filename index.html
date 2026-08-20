@@ -320,6 +320,15 @@ section.hero{padding-top:clamp(1.4rem,3vw,2.2rem);}
   .hero-headline .eyebrow{font-size:.62rem !important;letter-spacing:.16em !important;}
   .hero-headline h1{font-size:1.56rem !important;line-height:1.1 !important;
     margin-top:.25rem !important;}
+  /* .hero-inner carries the reveal class, which sets a transform before the
+     page settles. A transformed element becomes the reference point for
+     anything positioned absolutely inside it, so on first paint the headline
+     measured from here rather than from the top of the hero and landed on the
+     paragraph. Killing the transform on phones keeps the reference where it
+     belongs. The copy is above the fold here anyway, so there is nothing to
+     reveal on scroll. */
+  .hero-inner.reveal{transform:none !important;opacity:1 !important;
+    transition:none !important;}
   .hero-inner{position:static !important;display:block !important;
     padding-top:clamp(.7rem,2.6vw,1.05rem) !important;
     padding-bottom:clamp(2.2rem,7vw,3rem) !important;}

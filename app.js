@@ -800,6 +800,27 @@
         var p = heroVideo.play();
         if (p && p.catch) p.catch(function () {});
       };
+
+      /* iOS stops a background video for its own reasons: scrolling it out of
+         view, Low Power Mode, or simply deciding it is not needed. None of
+         those fire an event saying so, and the video then stays stopped even
+         once it is back on screen.
+
+         Watching whether it is actually visible handles all of them. On
+         screen and stopped, start it. Off screen, stop it, which is what a
+         phone wants anyway rather than decoding video nobody is looking at. */
+      if (window.IntersectionObserver) {
+        var seen = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              resumeVideo();
+            } else if (!heroVideo.paused) {
+              try { heroVideo.pause(); } catch (err) {}
+            }
+          });
+        }, { threshold: 0.15 });
+        seen.observe(heroVideo);
+      }
       document.addEventListener('visibilitychange', resumeVideo);
       window.addEventListener('pageshow', resumeVideo);
       window.addEventListener('focus', resumeVideo);
